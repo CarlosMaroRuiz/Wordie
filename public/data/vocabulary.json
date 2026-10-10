@@ -1,0 +1,87 @@
+[
+  {
+    "id": "dev-deploy",
+    "word": "Deploy",
+    "translation": "desplegar / implementar",
+    "partOfSpeech": "verb",
+    "domain": "developer",
+    "level": "A2",
+    "phonetic": "/dɪˈplɔɪ/",
+    "definition": "To move code from a local or staging environment into production where users can access it.",
+    "imageUrl": "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "We need to deploy the new feature to production today.",
+        "es": "Necesitamos desplegar la nueva funcionalidad a producción hoy."
+      }
+    ]
+  },
+  {
+    "id": "dev-refactor",
+    "word": "Refactor",
+    "translation": "refactorizar",
+    "partOfSpeech": "verb",
+    "domain": "developer",
+    "level": "B1",
+    "phonetic": "/riːˈfæktər/",
+    "definition": "Improve internal code structure without changing its external behavior.",
+    "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "We should refactor this authentication component before deploying.",
+        "es": "Deberíamos refactorizar este componente de autenticación antes de desplegar."
+      }
+    ]
+  },
+  {
+    "id": "dev-pull-request",
+    "word": "Pull Request",
+    "translation": "solicitud de cambios",
+    "partOfSpeech": "noun",
+    "domain": "developer",
+    "level": "A2",
+    "phonetic": "/pʊl rɪˈkwest/",
+    "definition": "A proposal to merge changes from a feature branch into the main codebase.",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "I opened a pull request for the login fix and tagged two reviewers.",
+        "es": "Abrí una solicitud de cambios para la corrección del login y etiqueté a dos revisores."
+      }
+    ]
+  },
+  {
+    "id": "dev-pipeline",
+    "word": "Pipeline",
+    "translation": "tubería / flujo automatizado",
+    "partOfSpeech": "noun",
+    "domain": "devops",
+    "level": "B2",
+    "phonetic": "/ˈpaɪp.laɪn/",
+    "definition": "A set of automated processes that execute builds, tests, and deployments.",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "The CI/CD pipeline failed during unit tests.",
+        "es": "El flujo automatizado falló durante las pruebas unitarias."
+      }
+    ]
+  },
+  {
+    "id": "dev-bottleneck",
+    "word": "Bottleneck",
+    "translation": "cuello de botella",
+    "partOfSpeech": "noun",
+    "domain": "database",
+    "level": "B2",
+    "phonetic": "/ˈbɑː.t̬əl.nek/",
+    "definition": "A point of congestion in a system that slows down the overall performance.",
+    "imageUrl": "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "The database queries are the main bottleneck in our application.",
+        "es": "Las consultas a la base de datos son el principal cuello de botella en nuestra aplicación."
+      }
+    ]
+  }
+]

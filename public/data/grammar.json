@@ -1,0 +1,768 @@
+[
+  {
+    "id": "present-simple",
+    "category": "Presente",
+    "level": "A1",
+    "title": "Present Simple",
+    "subtitle": "Rutinas, hechos y estados actuales",
+    "explanation": "Se utiliza para hablar de hábitos, rutinas diarias, verdades universales o estados permanentes.",
+    "examples": [
+      {
+        "en": "The database stores user credentials securely.",
+        "es": "La base de datos almacena las credenciales del usuario de forma segura."
+      },
+      {
+        "en": "We don't push directly to the main branch.",
+        "es": "No hacemos push directamente a la rama main."
+      },
+      {
+        "en": "Does the API return a 200 OK status?",
+        "es": "¿La API devuelve un estado 200 OK?"
+      }
+    ],
+    "note": "Nota práctica: Agrega -s o -es al verbo en la tercera persona del singular (he, she, it).",
+    "quizzes": [
+      {
+        "question": "¿Cuál oración usa el Present Simple correctamente?",
+        "options": [
+          "She is working every day.",
+          "The server returns a 200 status code.",
+          "They have pushed the commit."
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "En una Daily Standup, ¿qué frase expresa un hábito correcto?",
+        "options": [
+          "I am deploying to production every Friday.",
+          "I deploy to production every Friday.",
+          "I deploys to production every Friday."
+        ],
+        "correctIndex": 1
+      }
+    ],
+    "formulas": [
+      {
+        "label": "Afirmativa",
+        "value": "Subject + Verb(s/es) + Object"
+      },
+      {
+        "label": "Negativa",
+        "value": "Subject + don't/doesn't + Verb(base) + Object"
+      },
+      {
+        "label": "Interrogativa",
+        "value": "Do/Does + Subject + Verb(base) + Object?"
+      }
+    ],
+    "spellingRules": [
+      {
+        "rule": "Tercera persona singular (he, she, it): Se añade -s al verbo.",
+        "transformation": "Run ➔ Runs / Write ➔ Writes"
+      },
+      {
+        "rule": "Verbos terminados en -s, -sh, -ch, -x, -o: Se añade -es.",
+        "transformation": "Push ➔ Pushes / Catch ➔ Catches / Do ➔ Does"
+      },
+      {
+        "rule": "Verbos terminados en Consonante + -y: Cambia a -ies.",
+        "transformation": "Verify ➔ Verifies / Modify ➔ Modifies"
+      }
+    ],
+    "exceptions": [
+      {
+        "description": "El verbo \"Have\" es irregular en la tercera persona.",
+        "incorrect": "The server haves a memory leak.",
+        "correct": "The server has a memory leak."
+      }
+    ],
+    "additionalUses": [
+      {
+        "description": "Horarios fijos o programados (incluso en el futuro):",
+        "example": {
+          "en": "The cron job runs at midnight.",
+          "es": "El cron job se ejecuta a la medianoche."
+        }
+      }
+    ]
+  },
+  {
+    "id": "present-continuous",
+    "category": "Presente",
+    "level": "A2",
+    "title": "Present Continuous",
+    "subtitle": "Acciones en progreso o temporales",
+    "explanation": "Se usa para describir acciones que están ocurriendo en este momento exacto, o situaciones temporales.",
+    "examples": [
+      {
+        "en": "I am debugging the API right now.",
+        "es": "Estoy depurando la API ahora mismo."
+      },
+      {
+        "en": "She isn't testing the code.",
+        "es": "Ella no está probando el código."
+      },
+      {
+        "en": "Are you reviewing the pull request?",
+        "es": "¿Estás revisando el pull request?"
+      },
+      {
+        "en": "Why are you updating the server today?",
+        "es": "¿Por qué estás actualizando el servidor hoy?"
+      }
+    ],
+    "quizzes": [
+      {
+        "question": "¿Cuál es la forma correcta en Present Continuous?",
+        "options": [
+          "She debug the API right now.",
+          "We are reviewing the pull request.",
+          "They reviewed the code yesterday."
+        ],
+        "correctIndex": 1
+      }
+    ],
+    "formulas": [
+      {
+        "label": "Afirmativa",
+        "value": "Subject + am/is/are + Verb(-ing) + Object"
+      },
+      {
+        "label": "Negativa",
+        "value": "Subject + am/is/are + NOT + Verb(-ing) + Object"
+      },
+      {
+        "label": "Interrogativa (Yes/No)",
+        "value": "Am/Is/Are + Subject + Verb(-ing) + Object?"
+      },
+      {
+        "label": "Interrogativa (Wh-)",
+        "value": "Wh- + am/is/are + Subject + Verb(-ing)?"
+      }
+    ],
+    "spellingRules": [
+      {
+        "rule": "Verbos terminados en -e muda: Se elimina la -e y se añade -ing.",
+        "transformation": "Code ➔ Coding"
+      },
+      {
+        "rule": "Consonante + Vocal + Consonante (CVC) de 1 sílaba: Se duplica la última consonante.",
+        "transformation": "Run ➔ Running / Stop ➔ Stopping"
+      },
+      {
+        "rule": "Verbos terminados en -ie: Cambian a -ying.",
+        "transformation": "Die ➔ Dying / Lie ➔ Lying"
+      }
+    ],
+    "exceptions": [
+      {
+        "description": "Verbos de Estado (Stative Verbs): No se pueden usar en Present Continuous los verbos que expresan estados mentales, sentimientos o posesión (know, understand, want, like, belong, remember, believe, need).",
+        "incorrect": "I am needing a new laptop.",
+        "correct": "I need a new laptop. (Usar Present Simple)"
+      }
+    ],
+    "additionalUses": [
+      {
+        "description": "Planes futuros confirmados o ya organizados:",
+        "example": {
+          "en": "We are deploying the new release tomorrow morning.",
+          "es": "Desplegaremos la nueva versión mañana por la mañana."
+        }
+      },
+      {
+        "description": "Tendencias o cambios graduales:",
+        "example": {
+          "en": "More developers are learning Rust these days.",
+          "es": "Más desarrolladores están aprendiendo Rust en estos días."
+        }
+      }
+    ]
+  },
+  {
+    "id": "present-perfect",
+    "category": "Presente",
+    "level": "B1",
+    "title": "Present Perfect",
+    "subtitle": "Experiencia acumulada y resultados",
+    "explanation": "Expresa una acción pasada que tiene conexión directa con el presente: experiencia acumulada, resultados actuales o un tiempo aún no concluido.",
+    "examples": [
+      {
+        "en": "I have successfully migrated the database.",
+        "es": "He migrado la base de datos con éxito."
+      },
+      {
+        "en": "She hasn't finished the QA testing yet.",
+        "es": "Ella no ha terminado las pruebas de QA todavía."
+      },
+      {
+        "en": "Have you checked the server logs?",
+        "es": "¿Has revisado los logs del servidor?"
+      }
+    ],
+    "note": "Nota práctica: Usa 'have' para I/You/We/They y 'has' para He/She/It. Común en entrevistas y PRs.",
+    "quizzes": [
+      {
+        "question": "¿Cuál es la forma correcta?",
+        "options": [
+          "I have deployed the update yesterday.",
+          "I have just deployed the update.",
+          "I has deployed the update."
+        ],
+        "correctIndex": 1
+      }
+    ],
+    "formulas": [
+      {
+        "label": "Afirmativa",
+        "value": "Subject + have/has + Past Participle"
+      },
+      {
+        "label": "Negativa",
+        "value": "Subject + haven't/hasn't + Past Participle"
+      },
+      {
+        "label": "Interrogativa",
+        "value": "Have/Has + Subject + Past Participle?"
+      }
+    ],
+    "exceptions": [
+      {
+        "description": "Verbos irregulares en su forma de Participio Pasado.",
+        "incorrect": "I have wrote the tests.",
+        "correct": "I have written the tests."
+      }
+    ],
+    "additionalUses": [
+      {
+        "description": "Acciones muy recientes (usando \"just\"):",
+        "example": {
+          "en": "I have just merged the branch.",
+          "es": "Acabo de hacer merge a la rama."
+        }
+      },
+      {
+        "description": "Experiencias pasadas sin especificar cuándo ocurrieron:",
+        "example": {
+          "en": "We have used GraphQL in previous projects.",
+          "es": "Hemos usado GraphQL en proyectos anteriores."
+        }
+      }
+    ]
+  },
+  {
+    "id": "present-perfect-continuous",
+    "category": "Presente",
+    "level": "B2",
+    "title": "Present Perfect Continuous",
+    "subtitle": "Acciones iniciadas en el pasado que continúan",
+    "explanation": "Se enfoca en la duración o el proceso de una acción que empezó en el pasado y sigue ocurriendo ahora.",
+    "formula": "Subject + have/has been + Verb(ing)",
+    "examples": [
+      {
+        "en": "I have been refactoring this component all morning.",
+        "es": "He estado refactorizando este componente toda la mañana."
+      }
+    ],
+    "quizzes": [
+      {
+        "question": "¿Cuál expresa correctamente una acción continua desde el pasado?",
+        "options": [
+          "I am working on this bug since Monday.",
+          "I have been working on this bug since Monday.",
+          "I worked on this bug since Monday."
+        ],
+        "correctIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "past-simple",
+    "category": "Pasado",
+    "level": "A2",
+    "title": "Past Simple",
+    "subtitle": "Acciones finalizadas en el pasado",
+    "explanation": "Se utiliza para hablar de acciones o eventos que ocurrieron y terminaron en un momento específico del pasado.",
+    "examples": [
+      {
+        "en": "I fixed the authentication bug yesterday.",
+        "es": "Arreglé el bug de autenticación ayer."
+      },
+      {
+        "en": "We didn't deploy the new feature last week.",
+        "es": "No desplegamos la nueva funcionalidad la semana pasada."
+      },
+      {
+        "en": "Did you review my pull request?",
+        "es": "¿Revisaste mi pull request?"
+      }
+    ],
+    "note": "Nota práctica: Recuerda aprenderte los verbos irregulares, ya que no terminan en -ed (ej. build -> built).",
+    "quizzes": [
+      {
+        "question": "¿Cuál usa el Past Simple correctamente?",
+        "options": [
+          "We have pushed the fix yesterday.",
+          "We pushed the fix yesterday.",
+          "We are pushing the fix yesterday."
+        ],
+        "correctIndex": 1
+      }
+    ],
+    "formulas": [
+      {
+        "label": "Afirmativa",
+        "value": "Subject + Verb(-ed / irregular) + Object"
+      },
+      {
+        "label": "Negativa",
+        "value": "Subject + didn't + Verb(base) + Object"
+      },
+      {
+        "label": "Interrogativa",
+        "value": "Did + Subject + Verb(base) + Object?"
+      }
+    ],
+    "spellingRules": [
+      {
+        "rule": "Verbos regulares: Se añade -ed al infinitivo.",
+        "transformation": "Deploy ➔ Deployed / Test ➔ Tested"
+      },
+      {
+        "rule": "Verbos terminados en -e: Solo se añade -d.",
+        "transformation": "Update ➔ Updated / Clone ➔ Cloned"
+      },
+      {
+        "rule": "Consonante + -y: Cambia a -ied.",
+        "transformation": "Apply ➔ Applied / Retry ➔ Retried"
+      },
+      {
+        "rule": "CVC de una sílaba: Se duplica la consonante + ed.",
+        "transformation": "Commit ➔ Committed / Stop ➔ Stopped"
+      }
+    ],
+    "exceptions": [
+      {
+        "description": "Verbos irregulares (no usan -ed): Deben memorizarse.",
+        "incorrect": "I writed the script.",
+        "correct": "I wrote the script."
+      },
+      {
+        "description": "Build también es irregular.",
+        "incorrect": "We builded the app.",
+        "correct": "We built the app."
+      }
+    ]
+  },
+  {
+    "id": "past-continuous",
+    "category": "Pasado",
+    "level": "B1",
+    "title": "Past Continuous",
+    "subtitle": "Acciones en progreso en el pasado",
+    "explanation": "Describe una acción que estaba en desarrollo en un momento específico del pasado, a menudo interrumpida por otra acción.",
+    "formula": "Subject + was/were + Verb(ing)",
+    "examples": [
+      {
+        "en": "I was writing tests when the power went out.",
+        "es": "Estaba escribiendo pruebas cuando se cortó la luz."
+      }
+    ],
+    "quizzes": [
+      {
+        "question": "¿Cuál describe una acción en progreso en el pasado?",
+        "options": [
+          "She deployed the app when the alarm rang.",
+          "She was deploying the app when the alarm rang.",
+          "She has deployed the app when the alarm rang."
+        ],
+        "correctIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "past-perfect",
+    "category": "Pasado",
+    "level": "B1",
+    "title": "Past Perfect",
+    "subtitle": "El pasado del pasado",
+    "explanation": "Expresa una acción que ocurrió antes de otra acción en el pasado.",
+    "formula": "Subject + had + Past Participle (V3)",
+    "examples": [
+      {
+        "en": "The bug had already been fixed before I opened the ticket.",
+        "es": "El bug ya había sido arreglado antes de que abriera el ticket."
+      }
+    ],
+    "quizzes": [
+      {
+        "question": "¿Cuál expresa que algo ocurrió antes que otro evento en el pasado?",
+        "options": [
+          "The tests passed before I merged the PR.",
+          "The tests had already passed before I merged the PR.",
+          "The tests were passing before I merge the PR."
+        ],
+        "correctIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "past-perfect-continuous",
+    "category": "Pasado",
+    "level": "B2",
+    "title": "Past Perfect Continuous",
+    "subtitle": "Acción continua antes de otro evento en el pasado",
+    "explanation": "Expresa una acción que estuvo en progreso durante un tiempo en el pasado hasta que otra acción u otro punto en el pasado ocurrió.",
+    "formula": "Subject + had been + Verb(ing)",
+    "examples": [
+      {
+        "en": "We had been trying to fix the memory leak for hours before we found the root cause.",
+        "es": "Habíamos estado intentando arreglar la fuga de memoria por horas antes de encontrar la causa raíz."
+      }
+    ],
+    "quizzes": [
+      {
+        "question": "¿Cuál usa Past Perfect Continuous correctamente?",
+        "options": [
+          "We were debugging for hours before we found the issue.",
+          "We had been debugging for hours before we found the issue.",
+          "We have been debugging for hours before we found the issue."
+        ],
+        "correctIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "future-will",
+    "category": "Futuro",
+    "level": "A2",
+    "title": "Future (Will)",
+    "subtitle": "Decisiones espontáneas y promesas",
+    "explanation": "Se usa para decisiones tomadas en el momento, predicciones sin evidencia clara, promesas o voluntades.",
+    "examples": [
+      {
+        "en": "I will fix this issue immediately.",
+        "es": "Arreglaré este problema inmediatamente."
+      },
+      {
+        "en": "The script won't take long to execute.",
+        "es": "El script no tardará mucho en ejecutarse."
+      },
+      {
+        "en": "Will the new architecture support heavy traffic?",
+        "es": "¿La nueva arquitectura soportará tráfico pesado?"
+      }
+    ],
+    "quizzes": [
+      {
+        "question": "¿Cuál expresa una decisión espontánea con 'will'?",
+        "options": [
+          "I am going to refactor this next sprint.",
+          "I will handle this PR right away.",
+          "I handled the PR yesterday."
+        ],
+        "correctIndex": 1
+      }
+    ],
+    "formulas": [
+      {
+        "label": "Afirmativa",
+        "value": "Subject + will + Verb(base)"
+      },
+      {
+        "label": "Negativa",
+        "value": "Subject + won't + Verb(base)"
+      },
+      {
+        "label": "Interrogativa",
+        "value": "Will + Subject + Verb(base)?"
+      }
+    ],
+    "exceptions": [
+      {
+        "description": "Contracciones informales: En escritura muy formal técnica, evita contraer.",
+        "incorrect": "The server won't restart.",
+        "correct": "The server will not restart."
+      }
+    ],
+    "additionalUses": [
+      {
+        "description": "Decisiones espontáneas tomadas en el momento de hablar:",
+        "example": {
+          "en": "There is a bug? Ok, I will check it.",
+          "es": "¿Hay un bug? Ok, lo revisaré."
+        }
+      },
+      {
+        "description": "Promesas o compromisos (común en Dailies):",
+        "example": {
+          "en": "I will finish the documentation by tomorrow.",
+          "es": "Terminaré la documentación para mañana."
+        }
+      }
+    ]
+  },
+  {
+    "id": "future-going-to",
+    "category": "Futuro",
+    "level": "A2",
+    "title": "Future (Going to)",
+    "subtitle": "Planes e intenciones",
+    "explanation": "Utilizado para hablar de planes ya confirmados, intenciones premeditadas o predicciones con evidencia.",
+    "formula": "Subject + am/is/are + going to + Verb",
+    "examples": [
+      {
+        "en": "We are going to deploy the app tomorrow morning.",
+        "es": "Vamos a desplegar la aplicación mañana por la mañana."
+      }
+    ],
+    "quizzes": [
+      {
+        "question": "¿Cuál expresa un plan ya decidido?",
+        "options": [
+          "We will migrate the DB maybe.",
+          "We are going to migrate the DB next week.",
+          "We migrated the DB last week."
+        ],
+        "correctIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "future-continuous",
+    "category": "Futuro",
+    "level": "B1",
+    "title": "Future Continuous",
+    "subtitle": "Acciones en progreso en un momento futuro",
+    "explanation": "Describe una acción que estará sucediendo en un punto específico en el futuro.",
+    "formula": "Subject + will be + Verb(ing)",
+    "examples": [
+      {
+        "en": "At 10 AM, we will be discussing the architecture.",
+        "es": "A las 10 AM, estaremos discutiendo la arquitectura."
+      }
+    ],
+    "quizzes": [
+      {
+        "question": "¿Cuál describe algo que estará en progreso en el futuro?",
+        "options": [
+          "At noon, we are reviewing the code.",
+          "At noon, we will be reviewing the code.",
+          "At noon, we reviewed the code."
+        ],
+        "correctIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "future-perfect",
+    "category": "Futuro",
+    "level": "B2",
+    "title": "Future Perfect",
+    "subtitle": "Acción finalizada antes de un momento futuro",
+    "explanation": "Se usa para afirmar que una acción ya habrá terminado antes de cierto punto específico en el futuro.",
+    "formula": "Subject + will have + Past Participle (V3)",
+    "examples": [
+      {
+        "en": "By next Friday, we will have deployed the new microservices.",
+        "es": "Para el próximo viernes, ya habremos desplegado los nuevos microservicios."
+      }
+    ],
+    "quizzes": [
+      {
+        "question": "¿Cuál indica que algo estará completo antes de una fecha futura?",
+        "options": [
+          "By Monday, we will deploy the feature.",
+          "By Monday, we will have deployed the feature.",
+          "By Monday, we deployed the feature."
+        ],
+        "correctIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "future-perfect-continuous",
+    "category": "Futuro",
+    "level": "C1",
+    "title": "Future Perfect Continuous",
+    "subtitle": "Duración continua hasta un punto en el futuro",
+    "explanation": "Enfatiza cuánto tiempo habrá estado ocurriendo una acción continuada hasta llegar a un punto específico en el futuro.",
+    "formula": "Subject + will have been + Verb(ing)",
+    "examples": [
+      {
+        "en": "By December, I will have been maintaining this legacy system for three years.",
+        "es": "Para diciembre, habré estado manteniendo este sistema legacy por tres años."
+      }
+    ],
+    "quizzes": [
+      {
+        "question": "¿Cuál enfatiza la duración de una acción hasta un punto futuro?",
+        "options": [
+          "By next year, I will maintain this codebase for five years.",
+          "By next year, I will have been maintaining this codebase for five years.",
+          "By next year, I maintained this codebase for five years."
+        ],
+        "correctIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "zero-conditional",
+    "category": "Condicionales",
+    "level": "A2",
+    "title": "Zero Conditional",
+    "subtitle": "Causa y efecto siempre verdadero",
+    "explanation": "Se usa para reglas, verdades universales y situaciones donde la condición siempre produce el mismo resultado.",
+    "formula": "If + Present Simple, Present Simple",
+    "examples": [
+      {
+        "en": "If a user is inactive, the session expires.",
+        "es": "Si un usuario está inactivo, la sesión expira."
+      }
+    ],
+    "quizzes": [
+      {
+        "question": "¿Cuál es un ejemplo de Zero Conditional?",
+        "options": [
+          "If you push bad code, we will have problems.",
+          "If the build fails, the pipeline stops.",
+          "If I had time, I would refactor this."
+        ],
+        "correctIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "first-conditional",
+    "category": "Condicionales",
+    "level": "B1",
+    "title": "First Conditional",
+    "subtitle": "Situaciones reales posibles en el futuro",
+    "explanation": "Se utiliza para hablar de situaciones reales o muy probables en el futuro si se cumple una condición.",
+    "examples": [
+      {
+        "en": "If the tests pass, we will deploy to production.",
+        "es": "Si las pruebas pasan, desplegaremos a producción."
+      },
+      {
+        "en": "If you don't optimize the query, the app will crash.",
+        "es": "Si no optimizas la consulta, la aplicación fallará."
+      }
+    ],
+    "note": "Nota práctica: Nunca uses 'will' en la misma cláusula que 'if'.",
+    "quizzes": [
+      {
+        "question": "¿Cuál es un First Conditional correcto?",
+        "options": [
+          "If we will merge this, we break prod.",
+          "If we merge this, we will break prod.",
+          "If we merged this, we would break prod."
+        ],
+        "correctIndex": 1
+      }
+    ],
+    "formulas": [
+      {
+        "label": "Estructura principal",
+        "value": "If + Present Simple, Subject + will + Verb(base)"
+      },
+      {
+        "label": "Invertida",
+        "value": "Subject + will + Verb(base) + if + Present Simple"
+      }
+    ],
+    "exceptions": [
+      {
+        "description": "No usar \"will\" en la cláusula del \"If\".",
+        "incorrect": "If the server will fail, we will reboot it.",
+        "correct": "If the server fails, we will reboot it."
+      }
+    ],
+    "additionalUses": [
+      {
+        "description": "Usar modales (can/must/should) en lugar de \"will\":",
+        "example": {
+          "en": "If the token expires, you must log in again.",
+          "es": "Si el token expira, debes iniciar sesión de nuevo."
+        }
+      }
+    ]
+  },
+  {
+    "id": "second-conditional",
+    "category": "Condicionales",
+    "level": "B1",
+    "title": "Second Conditional",
+    "subtitle": "Situaciones hipotéticas e improbables",
+    "explanation": "Se utiliza para hablar de situaciones hipotéticas o irreales en el presente o futuro, y sus consecuencias.",
+    "formula": "If + Past Simple, would + Verb(infinitive)",
+    "examples": [
+      {
+        "en": "If I had more time, I would refactor the entire legacy code.",
+        "es": "Si tuviera más tiempo, refactorizaría todo el código legacy."
+      }
+    ],
+    "quizzes": [
+      {
+        "question": "¿Cuál es un Second Conditional correcto?",
+        "options": [
+          "If I have more budget, I will hire more devs.",
+          "If I had more budget, I would hire more devs.",
+          "If I had more budget, I will hire more devs."
+        ],
+        "correctIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "third-conditional",
+    "category": "Condicionales",
+    "level": "B2",
+    "title": "Third Conditional",
+    "subtitle": "Arrepentimientos y situaciones imposibles",
+    "explanation": "Describe una condición pasada que no sucedió y su resultado hipotético.",
+    "formula": "If + Past Perfect, would have + Past Participle",
+    "examples": [
+      {
+        "en": "If we had tested it better, the production crash wouldn't have happened.",
+        "es": "Si lo hubiéramos probado mejor, la caída en producción no habría ocurrido."
+      }
+    ],
+    "quizzes": [
+      {
+        "question": "¿Cuál es un Third Conditional correcto?",
+        "options": [
+          "If we tested it better, the crash wouldn't happen.",
+          "If we had tested it better, the crash wouldn't have happened.",
+          "If we have tested it, the crash wouldn't happened."
+        ],
+        "correctIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "mixed-conditional",
+    "category": "Condicionales",
+    "level": "C1",
+    "title": "Mixed Conditionals",
+    "subtitle": "Mezcla de tiempos hipotéticos",
+    "explanation": "Se usan cuando el tiempo de la condición (if) no es el mismo que el tiempo del resultado (generalmente una condición pasada con un resultado en el presente).",
+    "formula": "If + Past Perfect, would + Verb(infinitive)",
+    "examples": [
+      {
+        "en": "If we had documented the API properly, we wouldn't be struggling right now.",
+        "es": "Si hubiéramos documentado la API correctamente, no estaríamos batallando ahora."
+      }
+    ],
+    "quizzes": [
+      {
+        "question": "¿Cuál es un Mixed Conditional correcto?",
+        "options": [
+          "If we documented the API, we wouldn't have struggled.",
+          "If we had documented the API, we wouldn't be struggling now.",
+          "If we have documented the API, we would be fine."
+        ],
+        "correctIndex": 1
+      }
+    ]
+  }
+]
