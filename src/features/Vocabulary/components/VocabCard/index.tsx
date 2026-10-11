@@ -34,8 +34,8 @@ export const VocabCard = ({ card }: VocabCardProps) => {
         )}
 
         <div className="flex justify-between items-start w-full relative z-10">
-          {/* Domain Tag */}
-          <Chip size="sm" active as="span" className="bg-primary/90 text-white border-transparent pointer-events-none rounded-xl text-xs px-3 shadow-sm backdrop-blur-md">
+          {/* Domain Tag - Se eliminó la propiedad unsupported as="span" */}
+          <Chip size="sm" active className="bg-primary/90 text-white border-transparent pointer-events-none rounded-xl text-xs px-3 shadow-sm backdrop-blur-md">
             {card.domain}
           </Chip>
           

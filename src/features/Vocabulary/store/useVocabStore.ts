@@ -2,11 +2,11 @@ import { create } from 'zustand';
 import type { VocabCardDTO, VocabRawDTO, LeitnerBox } from '../dto';
 
 const INTERVALS: Record<LeitnerBox, number> = {
-  1: 60_000,        // 1 min
-  2: 600_000,       // 10 min
-  3: 86_400_000,    // 1 day
-  4: 259_200_000,   // 3 days
-  5: 604_800_000,   // 7 days
+  1: 60_000,       // 1 min
+  2: 600_000,      // 10 min
+  3: 86_400_000,   // 1 day
+  4: 259_200_000,  // 3 days
+  5: 604_800_000,  // 7 days
 };
 
 const STORAGE_KEY = 'wordie_vocab_progress';
@@ -51,13 +51,13 @@ export const useVocabStore = create<VocabState>((set, get) => ({
       if (savedItem) {
         return {
           ...item,
-          box: savedItem.box,
+          box: savedItem.box as LeitnerBox,
           nextReview: savedItem.nextReview,
         };
       }
       return {
         ...item,
-        box: 1,
+        box: 1 as LeitnerBox,
         nextReview: 0,
       };
     });
@@ -84,7 +84,8 @@ export const useVocabStore = create<VocabState>((set, get) => ({
     const { cards } = get();
     const updatedCards = cards.map(c => {
       if (c.id === id) {
-        return { ...c, box: 1, nextReview: 0 };
+        const defaultBox: LeitnerBox = 1;
+        return { ...c, box: defaultBox, nextReview: 0 };
       }
       return c;
     });

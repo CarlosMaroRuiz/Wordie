@@ -7,7 +7,7 @@ import { PracticeModal } from './components/PracticeModal';
 import { SkeletonPage } from '@common/components/SkeletonPage';
 import { ErrorState } from '@common/components/ErrorState';
 import { Button } from '@common/Button';
-import { Cards, CheckCircle } from '@phosphor-icons/react';
+import {CheckCircle } from '@phosphor-icons/react';
 
 export default function VocabularyModule() {
   const {
