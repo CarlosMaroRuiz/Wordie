@@ -3,9 +3,9 @@ import { Dialog, DialogPanel } from '@headlessui/react';
 import { PracticeHeader } from './PracticeHeader';
 import { PracticeComplete } from './PracticeComplete';
 import { PracticeCard } from './PracticeCard';
-import type { PracticeModalProps } from './types';
+import type { PracticeModalProps } from './type';
 
-export const PracticeModal = ({ open, onClose, cards, onEasy, onHard }: PracticeModalProps) => {
+export function PracticeModal({ open, onClose, cards, onEasy, onHard }: PracticeModalProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isRevealed, setIsRevealed] = useState(false);
   const [isDone, setIsDone] = useState(false);
@@ -59,4 +59,7 @@ export const PracticeModal = ({ open, onClose, cards, onEasy, onHard }: Practice
       </div>
     </Dialog>
   );
-};
+}
+
+export type { PracticeModalProps } from './type';
+

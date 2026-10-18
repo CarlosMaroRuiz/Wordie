@@ -3,7 +3,7 @@ import { useFetch } from '@common/hooks/useFetch';
 import { useVocabStore } from '../store/useVocabStore';
 import type { VocabRawDTO } from '../dto';
 
-export const useVocabulary = () => {
+export function useVocabulary() {
   const { data, isLoading: fetchLoading, error, refetch } = useFetch<VocabRawDTO[]>('/data/vocabulary.json');
   const { cards, isLoaded, loadCards } = useVocabStore();
   const [activeFilter, setActiveFilter] = useState<string>('all');
@@ -46,4 +46,4 @@ export const useVocabulary = () => {
     dueCards,
     domainOptions,
   };
-};
+}

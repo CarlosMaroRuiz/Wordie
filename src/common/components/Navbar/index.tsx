@@ -26,6 +26,7 @@ export type NavbarProps = {
   items: NavItem[]
   actions?: ReactNode
   showTopicSelector?: boolean
+  hideNavOnMobile?: boolean
   className?: string
 }
 
@@ -39,6 +40,7 @@ export function Navbar({
   items,
   actions,
   showTopicSelector = true,
+  hideNavOnMobile = false,
   className,
 }: NavbarProps) {
   const scrolled = useScrolled()
@@ -57,7 +59,11 @@ export function Navbar({
         </div>
 
         <div className={NAVBAR_NAV_ROW}>
-          <nav className={NAVBAR_NAV} aria-label="Navegación principal" data-tour="nav">
+          <nav
+            className={cn(NAVBAR_NAV, hideNavOnMobile && 'max-lg:hidden')}
+            aria-label="Navegación principal"
+            data-tour="nav"
+          >
             {items.map(item => {
               const Icon = item.icon
               return (

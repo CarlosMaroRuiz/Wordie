@@ -1,33 +1,107 @@
-import { CompassIcon } from '@phosphor-icons/react'
-import { Button } from '@common/Button'
+import { useNavigate } from 'react-router-dom'
 import { useTourStore } from '@common/components/OnboardingTour/hooks/useTourStore'
+import { PATHS } from '@core/routes/types/paths'
+import { HomeHero } from './components/HomeHero'
+import { LibraryStats } from './components/LibraryStats'
+import { ModuleGrid } from './components/ModuleGrid'
+import { PhraseOfDayCard } from './components/PhraseOfDayCard'
+import { ReviewWordsCard } from './components/ReviewWordsCard'
+import { SectionHead } from './components/SectionHead'
+import { StoryOfDayCard } from './components/StoryOfDayCard'
+import { VocabProgressCard } from './components/VocabProgressCard'
+import {
+  HOME_COPY,
+  HOME_GRID,
+  HOME_SECTION,
+  HOME_SPAN_5,
+  HOME_SPAN_7,
+} from './constant'
+import { useHomeStats } from './hooks/useHomeStats'
 
 export default function Home() {
-  const start = useTourStore(s => s.start)
-  const seen = useTourStore(s => s.seen)
+  const navigate = useNavigate()
+  const startTour = useTourStore(state => state.start)
+  const tourSeen = useTourStore(state => state.seen)
+  const { counts, vocab, reviewWords, previewWords, phrase, story, isLoading, error } =
+    useHomeStats()
 
   return (
-    <section className="mx-auto w-full max-w-3xl px-4 py-10">
-      <h1 className="text-3xl font-extrabold tracking-tight">Inicio</h1>
-      <p className="mt-2 text-text-secondary">
-        Dashboard de progreso y accesos a los módulos de estudio.
-      </p>
+    <div className="flex flex-col gap-10 pb-14 pt-4 sm:gap-14 sm:pt-8">
+      <HomeHero
+        previewWords={previewWords}
+        isLoadingPreview={isLoading.vocab}
+        tourSeen={tourSeen}
+        onStart={() => navigate(PATHS.Vocabulary)}
+        onStartTour={startTour}
+      />
 
-      <div className="mt-6 max-w-md">
-        <Button
-          variant="secondary"
-          size="md"
-          fullWidth={false}
-          onClick={start}
-          aria-label={seen ? 'Repetir tour de la aplicación' : 'Déjame darte un tour por la aplicación'}
-        >
-          <CompassIcon size={18} weight="bold" aria-hidden="true" />
-          {seen ? 'Repetir tour' : 'Déjame darte un tour'}
-        </Button>
-        <p className="mt-2 text-[13px] text-text-secondary">
-          Un recorrido corto por los módulos. Puedes cerrarlo cuando quieras.
-        </p>
-      </div>
-    </section>
+      <section aria-labelledby="home-progress-title" className={HOME_SECTION}>
+        <SectionHead
+          id="home-progress-title"
+          title={HOME_COPY.progressTitle}
+          hint={HOME_COPY.progressHint}
+        />
+        <div className={HOME_GRID}>
+          <VocabProgressCard
+            className={HOME_SPAN_7}
+            stats={vocab}
+            isLoading={isLoading.vocab}
+            hasError={error.vocab}
+            onPractice={() => navigate(PATHS.Vocabulary)}
+          />
+          <ReviewWordsCard
+            className={HOME_SPAN_5}
+            words={reviewWords}
+            isLoading={isLoading.vocab}
+            hasError={error.vocab}
+          />
+        </div>
+      </section>
+
+      <section aria-labelledby="home-daily-title" className={HOME_SECTION}>
+        <SectionHead
+          id="home-daily-title"
+          title={HOME_COPY.dailyTitle}
+          hint={HOME_COPY.dailyHint}
+        />
+        <div className={HOME_GRID}>
+          <PhraseOfDayCard
+            className={HOME_SPAN_7}
+            phrase={phrase}
+            isLoading={isLoading.counts}
+            hasError={error.counts}
+          />
+          <LibraryStats
+            className={HOME_SPAN_5}
+            counts={counts}
+            isLoading={isLoading.counts}
+            hasError={error.counts}
+          />
+        </div>
+      </section>
+
+      <section aria-labelledby="home-story-section" className={HOME_SECTION}>
+        <SectionHead
+          id="home-story-section"
+          title={HOME_COPY.storyTitle}
+          hint={HOME_COPY.storyHint}
+        />
+        <StoryOfDayCard
+          story={story}
+          isLoading={isLoading.counts}
+          hasError={error.counts}
+        />
+      </section>
+
+      <section aria-labelledby="home-modules-title" className={HOME_SECTION}>
+        <SectionHead
+          id="home-modules-title"
+          title={HOME_COPY.modulesTitle}
+          hint={HOME_COPY.modulesHint}
+        />
+        <ModuleGrid />
+      </section>
+    </div>
   )
 }
+

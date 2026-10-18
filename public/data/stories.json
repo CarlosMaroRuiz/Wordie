@@ -1,0 +1,614 @@
+[
+  {
+    "id": "dev-friday-deploy",
+    "title": "The Friday Deploy",
+    "readTime": "2 min",
+    "level": "B1 · Intermedio",
+    "topic": "dev",
+    "paragraphs": [
+      "Last Friday, our engineering team released a critical update to the checkout flow. The automated pipeline passed all unit tests and integration suites, so we decided to proceed with the deploy at 4:30 p.m.",
+      "Twenty minutes later, customer support reported an urgent issue: users could not submit payments on mobile devices. The telemetry dashboard showed an error rate spike of 40%.",
+      "We immediately triggered a rollback to restore the previous stable build and postponed the investigation until Monday morning.",
+      "On Monday, the team reproduced the failure in staging and traced it to a third-party payment SDK that had been updated silently. The mobile build had cached an older version of the library, which sent an unexpected field in the request payload.",
+      "The fix was small, but the process change was bigger: from that week on, every release included a canary phase with five percent of mobile traffic before reaching everyone."
+    ],
+    "keywords": [
+      {
+        "term": "deploy",
+        "translation": "desplegar código al servidor",
+        "definition": "Publicar el código compilado en el entorno de producción."
+      },
+      {
+        "term": "pipeline",
+        "translation": "flujo automatizado de build y test",
+        "definition": "Secuencia automatizada de integración y entrega continua (CI/CD)."
+      },
+      {
+        "term": "rollback",
+        "translation": "revertir a la versión anterior estable",
+        "definition": "Retornar al estado anterior tras detectar fallos críticos."
+      },
+      {
+        "term": "canary release",
+        "translation": "despliegue canario",
+        "definition": "Liberar un cambio a un porcentaje peque?o de usuarios antes del despliegue total."
+      },
+      {
+        "term": "error rate",
+        "translation": "tasa de errores",
+        "definition": "Porcentaje de peticiones que terminan en fallo en un periodo de tiempo."
+      },
+      {
+        "term": "telemetry",
+        "translation": "telemetr?a",
+        "definition": "M?tricas y eventos que la aplicaci?n env?a para monitorizar su comportamiento."
+      },
+      {
+        "term": "staging",
+        "translation": "entorno de preproducci?n",
+        "definition": "Copia del entorno real donde se prueban los cambios antes de publicarlos."
+      },
+      {
+        "term": "third-party SDK",
+        "translation": "SDK de terceros",
+        "definition": "Librer?a externa que el equipo integra pero no controla directamente."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "question": "Why did the team decide to trigger a rollback?",
+        "options": [
+          "The CI/CD pipeline failed during deployment",
+          "Users could not submit payments on mobile devices",
+          "The production server was completely unreachable"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Customer support reported payment failures on mobile devices, accompanied by a 40% spike in error rates."
+      },
+      {
+        "id": "q2",
+        "question": "When was the deployment originally executed?",
+        "options": [
+          "Friday afternoon at 4:30 p.m.",
+          "Monday morning before the standup",
+          "Saturday at midnight during scheduled maintenance"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The team decided to proceed with the deploy on Friday at 4:30 p.m."
+      },
+      {
+        "id": "q3",
+        "question": "What did the team discover on Monday?",
+        "options": [
+          "A third-party payment SDK had been updated silently",
+          "The database had been deleted",
+          "The checkout flow had never been tested"
+        ],
+        "correctAnswer": 0,
+        "explanation": "They traced the failure to a payment SDK that had been updated without the team noticing."
+      },
+      {
+        "id": "q4",
+        "question": "What process change did the team introduce after the incident?",
+        "options": [
+          "A canary phase with five percent of mobile traffic",
+          "A weekly deploy freeze",
+          "Removing mobile support"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Every release would now include a canary phase before reaching all users."
+      }
+    ]
+  },
+  {
+    "id": "work-async-standup",
+    "title": "The Asynchronous Standup",
+    "readTime": "2 min",
+    "level": "A2 · Básico",
+    "topic": "work",
+    "paragraphs": [
+      "Working across five different time zones made live video meetings exhausting. Our team decided to transition to an asynchronous standup model using Slack and Notion.",
+      "Every morning, each developer shares three concise bullet points: what they accomplished yesterday, what they plan to tackle today, and any blockers standing in their way.",
+      "This simple shift reduced meeting fatigue by 50% and allowed everyone to enjoy uninterrupted deep work blocks throughout the afternoon.",
+      "The hardest part was not the tooling but the discipline. People quickly learned that a vague update like still working on the API helped nobody, while a short note with a link to the pull request saved hours of questions.",
+      "Six months later, the team had cut internal meetings by half and had a written record of every decision. New members could read two weeks of updates and understand exactly where the project stood."
+    ],
+    "keywords": [
+      {
+        "term": "asynchronous",
+        "translation": "asíncrono",
+        "definition": "Comunicación donde las partes no necesitan responder simultáneamente en tiempo real."
+      },
+      {
+        "term": "blockers",
+        "translation": "impedimentos o bloqueos",
+        "definition": "Obstáculos que impiden a un miembro del equipo avanzar con su tarea asignada."
+      },
+      {
+        "term": "deep work",
+        "translation": "trabajo enfocado / profundo",
+        "definition": "Período de alta concentración sin interrupciones para resolver problemas complejos."
+      },
+      {
+        "term": "time zone",
+        "translation": "zona horaria",
+        "definition": "Franja horaria de referencia de cada regi?n del mundo."
+      },
+      {
+        "term": "update",
+        "translation": "parte / actualizaci?n de estado",
+        "definition": "Mensaje breve con el progreso y los siguientes pasos de una tarea."
+      },
+      {
+        "term": "pull request",
+        "translation": "solicitud de fusi?n de cambios",
+        "definition": "Propuesta de cambios en el c?digo que otro miembro del equipo revisa."
+      },
+      {
+        "term": "written record",
+        "translation": "registro escrito",
+        "definition": "Documento que conserva las decisiones para consultarlas m?s adelante."
+      },
+      {
+        "term": "meeting fatigue",
+        "translation": "fatiga de reuniones",
+        "definition": "Cansancio producido por un exceso de reuniones en la jornada."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "question": "What was the main reason the team switched to asynchronous standups?",
+        "options": [
+          "They experienced meeting fatigue across five different time zones",
+          "Their company internet connection was too slow for video calls",
+          "The engineering manager wanted to cut software subscriptions"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Working across five different time zones made live video meetings exhausting."
+      },
+      {
+        "id": "q2",
+        "question": "What was one of the positive outcomes of this shift?",
+        "options": [
+          "Developers worked fewer hours during the week",
+          "Meeting fatigue dropped by 50% and deep work increased",
+          "All team members moved to the same time zone"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Meeting fatigue was reduced by 50% and developers enjoyed uninterrupted deep work blocks."
+      },
+      {
+        "id": "q3",
+        "question": "What was the hardest part of the change?",
+        "options": [
+          "The discipline of writing useful updates",
+          "Buying new software",
+          "Learning a new programming language"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The hardest part was the discipline of writing updates that actually helped the team."
+      },
+      {
+        "id": "q4",
+        "question": "What benefit did new team members get?",
+        "options": [
+          "They could read past updates to understand the project",
+          "They could skip the onboarding process",
+          "They no longer needed pull requests"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Two weeks of written updates were enough to understand where the project stood."
+      }
+    ]
+  },
+  {
+    "id": "travel-gate-change",
+    "title": "The Unexpected Gate Change",
+    "readTime": "2 min",
+    "level": "A2 · Básico",
+    "topic": "travel",
+    "paragraphs": [
+      "I was sitting comfortably near Gate B12 at London Heathrow, reviewing my presentation slides while sipping a hot cappuccino. Boarding was scheduled to begin in twenty minutes.",
+      "Suddenly, an announcement came through the loudspeaker: the flight to San Francisco was moved to Gate C45 due to an aircraft maintenance delay. The new gate was a ten-minute walk away.",
+      "I packed my laptop quickly, followed the overhead signs toward the transit train, and arrived at Gate C45 just as the first boarding group was called.",
+      "While I was walking, I realized I had left my coffee on the table near the old gate. It was a small loss compared with missing the flight, so I kept moving and checked the departure screens every few minutes.",
+      "In the end, the flight left only fifteen minutes late. I used the extra time to review my slides, and I promised myself I would always check the gate again right before boarding."
+    ],
+    "keywords": [
+      {
+        "term": "boarding",
+        "translation": "embarque",
+        "definition": "El proceso en el que los pasajeros suben a la aeronave."
+      },
+      {
+        "term": "announcement",
+        "translation": "anuncio por megafonía",
+        "definition": "Mensaje sonoro público emitido por los altavoces de la terminal."
+      },
+      {
+        "term": "gate",
+        "translation": "puerta de embarque",
+        "definition": "Área de la terminal aérea asignada para el acceso de los pasajeros al vuelo."
+      },
+      {
+        "term": "departure screen",
+        "translation": "pantalla de salidas",
+        "definition": "Monitor que muestra la puerta y la hora actualizada de cada vuelo."
+      },
+      {
+        "term": "boarding group",
+        "translation": "grupo de embarque",
+        "definition": "Turno asignado a los pasajeros para subir al avi?n en orden."
+      },
+      {
+        "term": "maintenance delay",
+        "translation": "retraso por mantenimiento",
+        "definition": "Demora causada por una revisi?n t?cnica de la aeronave."
+      },
+      {
+        "term": "transit train",
+        "translation": "tren interno del aeropuerto",
+        "definition": "Transporte autom?tico que conecta terminales y puertas."
+      },
+      {
+        "term": "overhead signs",
+        "translation": "se?alizaci?n elevada",
+        "definition": "Carteles suspendidos del techo que indican direcciones en la terminal."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "question": "Why was the flight relocated to Gate C45?",
+        "options": [
+          "Due to adverse weather conditions in San Francisco",
+          "Due to an aircraft maintenance delay",
+          "Because Gate B12 was permanently closed"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The loudspeaker announcement mentioned an aircraft maintenance delay."
+      },
+      {
+        "id": "q2",
+        "question": "How did the traveler get to the new gate in time?",
+        "options": [
+          "By taking an airport taxi outside the terminal",
+          "By following the overhead signs toward the transit train",
+          "By waiting for an electric mobility cart"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The traveler followed the overhead signs toward the transit train and arrived just in time."
+      },
+      {
+        "id": "q3",
+        "question": "What did the traveler leave behind near the old gate?",
+        "options": [
+          "A coffee",
+          "A laptop",
+          "A boarding pass"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The traveler realized the coffee had been left on the table near the old gate."
+      },
+      {
+        "id": "q4",
+        "question": "What lesson did the traveler take from the experience?",
+        "options": [
+          "Always check the gate again before boarding",
+          "Never fly from Heathrow",
+          "Always travel without luggage"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The traveler promised to always check the gate again right before boarding."
+      }
+    ]
+  },
+  {
+    "id": "dev-incident-postmortem",
+    "title": "The Postmortem Nobody Wanted",
+    "readTime": "3 min",
+    "level": "B2 ? Avanzado",
+    "topic": "dev",
+    "paragraphs": [
+      "At 2:14 a.m., the on-call engineer received a page: the order service had stopped responding. Within minutes, the incident channel filled with alerts, dashboards, and half-awake engineers trying to understand what had changed.",
+      "The root cause turned out to be a configuration change deployed the previous afternoon. A single missing timeout value caused every request to hang until the connection pool was exhausted.",
+      "The team restored service in eighteen minutes by rolling back the change, but the real work started the next morning: a blameless postmortem with everyone involved.",
+      "Instead of asking who made the mistake, the facilitator asked what allowed the mistake to reach production unnoticed. The answers revealed three gaps: no load test for timeout settings, weak alerting on connection saturation, and a deploy checklist nobody had updated in months.",
+      "Two weeks later, the service had better alerts, an automated configuration check, and a shorter, clearer checklist. The incident was painful, but it made the system far more resilient."
+    ],
+    "keywords": [
+      {
+        "term": "on-call",
+        "translation": "de guardia",
+        "definition": "Persona disponible fuera del horario laboral para atender incidentes."
+      },
+      {
+        "term": "root cause",
+        "translation": "causa ra?z",
+        "definition": "El origen real del fallo, no solo su s?ntoma visible."
+      },
+      {
+        "term": "timeout",
+        "translation": "tiempo de espera m?ximo",
+        "definition": "L?mite de tiempo tras el cual una petici?n se cancela."
+      },
+      {
+        "term": "connection pool",
+        "translation": "pool de conexiones",
+        "definition": "Conjunto reutilizable de conexiones a la base de datos."
+      },
+      {
+        "term": "rollback",
+        "translation": "revertir a la versi?n anterior",
+        "definition": "Deshacer un despliegue para volver a un estado estable."
+      },
+      {
+        "term": "blameless postmortem",
+        "translation": "an?lisis posterior sin culpas",
+        "definition": "Revisi?n centrada en el sistema y el proceso, no en las personas."
+      },
+      {
+        "term": "alerting",
+        "translation": "sistema de alertas",
+        "definition": "Reglas que avisan al equipo cuando una m?trica cruza un umbral."
+      },
+      {
+        "term": "resilient",
+        "translation": "resiliente",
+        "definition": "Capaz de recuperarse r?pido y seguir funcionando tras un fallo."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "question": "What woke the on-call engineer at 2:14 a.m.?",
+        "options": [
+          "A customer complaint email",
+          "A page about the order service not responding",
+          "A scheduled deployment notification"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The on-call engineer received a page because the order service had stopped responding."
+      },
+      {
+        "id": "q2",
+        "question": "What was the root cause of the outage?",
+        "options": [
+          "A database hardware failure",
+          "A missing timeout value in a configuration change",
+          "A malicious traffic spike"
+        ],
+        "correctAnswer": 1,
+        "explanation": "A single missing timeout value made every request hang until the connection pool was exhausted."
+      },
+      {
+        "id": "q3",
+        "question": "How did the team restore service?",
+        "options": [
+          "By rolling back the change",
+          "By restarting every server manually",
+          "By disabling the order service"
+        ],
+        "correctAnswer": 0,
+        "explanation": "They restored service in eighteen minutes by rolling back the configuration change."
+      },
+      {
+        "id": "q4",
+        "question": "What was the purpose of the blameless postmortem?",
+        "options": [
+          "To identify who made the mistake",
+          "To understand how the mistake reached production and close the gaps",
+          "To reduce the number of engineers on call"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The facilitator focused on what allowed the mistake to reach production unnoticed."
+      }
+    ]
+  },
+  {
+    "id": "work-design-review",
+    "title": "The Design Review That Changed the Roadmap",
+    "readTime": "3 min",
+    "level": "B1 ? Intermedio",
+    "topic": "work",
+    "paragraphs": [
+      "Our team had spent three weeks building a dashboard that we were sure users would love. The design review was supposed to be a formality before the beta release.",
+      "Ten minutes into the session, a support agent shared a recording of a customer trying to find the export button. The customer clicked through four menus, gave up, and asked for help in the chat.",
+      "The room went quiet. We had optimized the dashboard for the metrics we found interesting, not for the tasks users actually performed every day.",
+      "Instead of defending the design, the product manager asked a simple question: what is the smallest change that would let this customer succeed? The answer was a permanent export shortcut on the main screen.",
+      "We shipped the shortcut in two days and delayed the beta by a week. The lesson stayed with us: feedback from real users is worth more than three weeks of confident assumptions."
+    ],
+    "keywords": [
+      {
+        "term": "roadmap",
+        "translation": "hoja de ruta",
+        "definition": "Plan de alto nivel con las prioridades y entregas del equipo."
+      },
+      {
+        "term": "beta release",
+        "translation": "versi?n beta",
+        "definition": "Primera versi?n abierta a un grupo reducido de usuarios para probarla."
+      },
+      {
+        "term": "support agent",
+        "translation": "agente de soporte",
+        "definition": "Persona que atiende las dudas y problemas de los clientes."
+      },
+      {
+        "term": "recording",
+        "translation": "grabaci?n",
+        "definition": "Registro en v?deo o audio de una sesi?n real de uso."
+      },
+      {
+        "term": "export button",
+        "translation": "bot?n de exportar",
+        "definition": "Control que permite descargar los datos fuera de la aplicaci?n."
+      },
+      {
+        "term": "shortcut",
+        "translation": "atajo / acceso directo",
+        "definition": "Acci?n r?pida que evita pasos intermedios."
+      },
+      {
+        "term": "assumption",
+        "translation": "suposici?n",
+        "definition": "Idea que se da por cierta sin haberla validado con datos."
+      },
+      {
+        "term": "feedback",
+        "translation": "retroalimentaci?n",
+        "definition": "Informaci?n que devuelven los usuarios sobre su experiencia."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "question": "What did the team expect from the design review?",
+        "options": [
+          "A formality before the beta release",
+          "A chance to redesign the whole product",
+          "A meeting with real customers"
+        ],
+        "correctAnswer": 0,
+        "explanation": "They believed the design review would be a formality before the beta."
+      },
+      {
+        "id": "q2",
+        "question": "What did the customer recording show?",
+        "options": [
+          "The customer could not find the export button",
+          "The dashboard was too slow to load",
+          "The customer wanted more metrics"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The customer clicked through four menus, gave up, and asked for help."
+      },
+      {
+        "id": "q3",
+        "question": "What had the team optimized the dashboard for?",
+        "options": [
+          "The tasks users performed every day",
+          "The metrics they found interesting",
+          "The loading speed of the page"
+        ],
+        "correctAnswer": 1,
+        "explanation": "They had optimized for the metrics they found interesting, not for real user tasks."
+      },
+      {
+        "id": "q4",
+        "question": "What did the team ship instead of defending the design?",
+        "options": [
+          "A permanent export shortcut",
+          "A new onboarding video",
+          "A completely new mobile app"
+        ],
+        "correctAnswer": 0,
+        "explanation": "They shipped a permanent export shortcut on the main screen in two days."
+      }
+    ]
+  },
+  {
+    "id": "travel-lost-luggage",
+    "title": "Lost Luggage in Lisbon",
+    "readTime": "3 min",
+    "level": "B1 ? Intermedio",
+    "topic": "travel",
+    "paragraphs": [
+      "After a nine-hour flight, I arrived in Lisbon ready for a week of workshops. The baggage carousel stopped, and my suitcase was nowhere to be seen.",
+      "At the service desk, the agent explained that my bag had been loaded onto a different flight and would probably arrive the next morning. She handed me a claim number and a small overnight kit.",
+      "The next day, I called the airline and practiced a sentence I had rehearsed many times: I would like to file a claim for delayed baggage. The agent asked for my boarding pass and the claim number.",
+      "My suitcase arrived thirty-six hours later, slightly damaged but complete. The airline covered the essentials I had bought and apologized for the inconvenience.",
+      "The trip taught me two things: always pack a spare shirt in your carry-on, and learn the vocabulary of problems before you actually need it."
+    ],
+    "keywords": [
+      {
+        "term": "baggage carousel",
+        "translation": "cinta de equipajes",
+        "definition": "Banda giratoria donde los pasajeros recogen sus maletas."
+      },
+      {
+        "term": "carry-on",
+        "translation": "equipaje de mano",
+        "definition": "Bolsa o maleta peque?a que se lleva en la cabina del avi?n."
+      },
+      {
+        "term": "claim number",
+        "translation": "n?mero de reclamaci?n",
+        "definition": "C?digo que identifica un expediente abierto con la aerol?nea."
+      },
+      {
+        "term": "delayed baggage",
+        "translation": "equipaje retrasado",
+        "definition": "Maleta que no llega en el mismo vuelo que el pasajero."
+      },
+      {
+        "term": "boarding pass",
+        "translation": "tarjeta de embarque",
+        "definition": "Documento que autoriza al pasajero a subir al avi?n."
+      },
+      {
+        "term": "damaged",
+        "translation": "da?ado",
+        "definition": "Que ha sufrido golpes o roturas durante el transporte."
+      },
+      {
+        "term": "inconvenience",
+        "translation": "inconveniente / molestia",
+        "definition": "F?rmula formal que usa la aerol?nea para disculparse por un problema."
+      },
+      {
+        "term": "essentials",
+        "translation": "art?culos b?sicos",
+        "definition": "Productos m?nimos necesarios para cubrir una necesidad inmediata."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "question": "Where was the traveler suitcase?",
+        "options": [
+          "Still on the plane",
+          "Loaded onto a different flight",
+          "Left at home"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The agent explained that the bag had been loaded onto a different flight."
+      },
+      {
+        "id": "q2",
+        "question": "What did the agent give the traveler?",
+        "options": [
+          "A claim number and an overnight kit",
+          "A brand new suitcase",
+          "A hotel voucher for a week"
+        ],
+        "correctAnswer": 0,
+        "explanation": "She handed the traveler a claim number and a small overnight kit."
+      },
+      {
+        "id": "q3",
+        "question": "How long did the suitcase take to arrive?",
+        "options": [
+          "Thirty-six hours later",
+          "Two hours later",
+          "One week later"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The suitcase arrived thirty-six hours later, slightly damaged but complete."
+      },
+      {
+        "id": "q4",
+        "question": "What did the airline cover?",
+        "options": [
+          "The essentials the traveler had bought",
+          "The full cost of the trip",
+          "Nothing at all"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The airline covered the essentials the traveler had bought and apologized."
+      }
+    ]
+  }
+]

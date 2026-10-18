@@ -13,6 +13,10 @@
       {
         "en": "We need to deploy the new feature to production today.",
         "es": "Necesitamos desplegar la nueva funcionalidad a producción hoy."
+      },
+      {
+        "en": "The team deploys every Thursday afternoon, after the regression suite passes.",
+        "es": "El equipo despliega cada jueves por la tarde, despu?s de que pase la suite de regresi?n."
       }
     ]
   },
@@ -30,6 +34,10 @@
       {
         "en": "We should refactor this authentication component before deploying.",
         "es": "Deberíamos refactorizar este componente de autenticación antes de desplegar."
+      },
+      {
+        "en": "Refactoring the parser reduced the file from 400 to 120 lines.",
+        "es": "Refactorizar el analizador redujo el archivo de 400 a 120 l?neas."
       }
     ]
   },
@@ -47,6 +55,10 @@
       {
         "en": "I opened a pull request for the login fix and tagged two reviewers.",
         "es": "Abrí una solicitud de cambios para la corrección del login y etiqueté a dos revisores."
+      },
+      {
+        "en": "Keep pull requests small so reviewers can focus.",
+        "es": "Mant?n las solicitudes de cambio peque?as para que los revisores puedan concentrarse."
       }
     ]
   },
@@ -64,6 +76,10 @@
       {
         "en": "The CI/CD pipeline failed during unit tests.",
         "es": "El flujo automatizado falló durante las pruebas unitarias."
+      },
+      {
+        "en": "Our pipeline runs lint, tests and a security scan on every push.",
+        "es": "Nuestro flujo automatizado ejecuta lint, pruebas y un escaneo de seguridad en cada push."
       }
     ]
   },
@@ -81,6 +97,745 @@
       {
         "en": "The database queries are the main bottleneck in our application.",
         "es": "Las consultas a la base de datos son el principal cuello de botella en nuestra aplicación."
+      },
+      {
+        "en": "Adding an index removed the bottleneck during peak hours.",
+        "es": "A?adir un ?ndice elimin? el cuello de botella en las horas punta."
+      }
+    ]
+  },
+  {
+    "id": "dev-bug",
+    "word": "Bug",
+    "translation": "error / fallo de software",
+    "partOfSpeech": "noun",
+    "domain": "developer",
+    "level": "A2",
+    "phonetic": "/b??/",
+    "definition": "A defect in the code that causes incorrect or unexpected behavior.",
+    "imageUrl": "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "We found a bug in the date parser that breaks the report.",
+        "es": "Encontramos un error en el analizador de fechas que rompe el informe."
+      },
+      {
+        "en": "Please report the bug with the steps to reproduce it.",
+        "es": "Por favor, reporta el fallo con los pasos para reproducirlo."
+      }
+    ]
+  },
+  {
+    "id": "dev-feature-branch",
+    "word": "Feature branch",
+    "translation": "rama de funcionalidad",
+    "partOfSpeech": "noun",
+    "domain": "developer",
+    "level": "B1",
+    "phonetic": "/?fi?.t??r br?nt?/",
+    "definition": "A separate branch where a single feature is developed without affecting the main code.",
+    "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "Create a feature branch before you start working on the new checkout.",
+        "es": "Crea una rama de funcionalidad antes de empezar a trabajar en el nuevo checkout."
+      },
+      {
+        "en": "The feature branch was merged after two approvals.",
+        "es": "La rama de funcionalidad se fusion? tras dos aprobaciones."
+      }
+    ]
+  },
+  {
+    "id": "dev-merge",
+    "word": "Merge",
+    "translation": "fusionar / integrar cambios",
+    "partOfSpeech": "verb",
+    "domain": "developer",
+    "level": "A2",
+    "phonetic": "/m??rd?/",
+    "definition": "To combine the changes from one branch into another.",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "Merge main into your branch before opening the pull request.",
+        "es": "Fusiona main en tu rama antes de abrir la solicitud de cambios."
+      },
+      {
+        "en": "The merge introduced two conflicts in the styles file.",
+        "es": "La fusi?n introdujo dos conflictos en el archivo de estilos."
+      }
+    ]
+  },
+  {
+    "id": "dev-code-review",
+    "word": "Code review",
+    "translation": "revisi?n de c?digo",
+    "partOfSpeech": "noun",
+    "domain": "developer",
+    "level": "B1",
+    "phonetic": "/ko?d r??vju?/",
+    "definition": "The process of examining someone else code before it is merged.",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "The code review caught a race condition before it reached production.",
+        "es": "La revisi?n de c?digo detect? una condici?n de carrera antes de llegar a producci?n."
+      },
+      {
+        "en": "We keep code reviews under thirty minutes to stay focused.",
+        "es": "Mantenemos las revisiones de c?digo por debajo de treinta minutos para no perder el foco."
+      }
+    ]
+  },
+  {
+    "id": "dev-commit",
+    "word": "Commit",
+    "translation": "commit / confirmaci?n de cambios",
+    "partOfSpeech": "noun",
+    "domain": "developer",
+    "level": "A2",
+    "phonetic": "/k??m?t/",
+    "definition": "A saved snapshot of changes recorded in version control.",
+    "imageUrl": "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "Write a clear commit message that explains the why.",
+        "es": "Escribe un mensaje de commit claro que explique el porqu?."
+      },
+      {
+        "en": "This commit only touches the vocabulary filters.",
+        "es": "Este commit solo modifica los filtros de vocabulario."
+      }
+    ]
+  },
+  {
+    "id": "dev-debug",
+    "word": "Debug",
+    "translation": "depurar",
+    "partOfSpeech": "verb",
+    "domain": "developer",
+    "level": "A2",
+    "phonetic": "/?di??b??/",
+    "definition": "To find and fix the cause of a problem in a program.",
+    "imageUrl": "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "I will debug the login flow with the browser console open.",
+        "es": "Voy a depurar el flujo de inicio de sesi?n con la consola del navegador abierta."
+      },
+      {
+        "en": "Debugging is faster when you can reproduce the issue reliably.",
+        "es": "Depurar es m?s r?pido cuando puedes reproducir el problema de forma fiable."
+      }
+    ]
+  },
+  {
+    "id": "dev-estimate",
+    "word": "Estimate",
+    "translation": "estimaci?n",
+    "partOfSpeech": "noun",
+    "domain": "developer",
+    "level": "B1",
+    "phonetic": "/?es.t?.m?t/",
+    "definition": "An approximate calculation of the effort or time a task will take.",
+    "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "My estimate for the refactor is three days, including tests.",
+        "es": "Mi estimaci?n para la refactorizaci?n es de tres d?as, incluyendo pruebas."
+      },
+      {
+        "en": "The estimate was optimistic because the API documentation was outdated.",
+        "es": "La estimaci?n fue optimista porque la documentaci?n de la API estaba desactualizada."
+      }
+    ]
+  },
+  {
+    "id": "ops-deployment",
+    "word": "Deployment",
+    "translation": "despliegue",
+    "partOfSpeech": "noun",
+    "domain": "devops",
+    "level": "B1",
+    "phonetic": "/d??pl??.m?nt/",
+    "definition": "The process of releasing a new version of an application to an environment.",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "The deployment to staging finished in four minutes.",
+        "es": "El despliegue a staging termin? en cuatro minutos."
+      },
+      {
+        "en": "Automate the deployment so nobody has to run scripts by hand.",
+        "es": "Automatiza el despliegue para que nadie tenga que ejecutar scripts a mano."
+      }
+    ]
+  },
+  {
+    "id": "ops-ci-cd",
+    "word": "CI/CD",
+    "translation": "integraci?n y entrega continuas",
+    "partOfSpeech": "noun",
+    "domain": "devops",
+    "level": "B2",
+    "phonetic": "/?si? a? si? ?di?/",
+    "definition": "Continuous integration and continuous delivery: automated steps that build, test and release code.",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "Our CI/CD pipeline blocks any merge that fails the tests.",
+        "es": "Nuestro flujo de CI/CD bloquea cualquier fusi?n que falle las pruebas."
+      },
+      {
+        "en": "CI/CD reduced the release cycle from two weeks to one day.",
+        "es": "CI/CD redujo el ciclo de publicaci?n de dos semanas a un d?a."
+      }
+    ]
+  },
+  {
+    "id": "ops-container",
+    "word": "Container",
+    "translation": "contenedor",
+    "partOfSpeech": "noun",
+    "domain": "devops",
+    "level": "B1",
+    "phonetic": "/k?n?te?.n?r/",
+    "definition": "A lightweight, isolated package that includes an application and its dependencies.",
+    "imageUrl": "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "Each service runs in its own container.",
+        "es": "Cada servicio se ejecuta en su propio contenedor."
+      },
+      {
+        "en": "The container image is rebuilt on every commit.",
+        "es": "La imagen del contenedor se reconstruye en cada commit."
+      }
+    ]
+  },
+  {
+    "id": "ops-orchestration",
+    "word": "Orchestration",
+    "translation": "orquestaci?n",
+    "partOfSpeech": "noun",
+    "domain": "devops",
+    "level": "B2",
+    "phonetic": "/???r.k??stre?.??n/",
+    "definition": "The automated coordination of containers across multiple machines.",
+    "imageUrl": "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "Kubernetes handles the orchestration of our microservices.",
+        "es": "Kubernetes se encarga de la orquestaci?n de nuestros microservicios."
+      },
+      {
+        "en": "Without orchestration, scaling manually would be impossible.",
+        "es": "Sin orquestaci?n, escalar manualmente ser?a imposible."
+      }
+    ]
+  },
+  {
+    "id": "ops-rollback",
+    "word": "Rollback",
+    "translation": "reversi?n",
+    "partOfSpeech": "noun",
+    "domain": "devops",
+    "level": "B1",
+    "phonetic": "/?ro?l.b?k/",
+    "definition": "Restoring the previous stable version after a failed release.",
+    "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "The rollback took less than two minutes.",
+        "es": "La reversi?n tom? menos de dos minutos."
+      },
+      {
+        "en": "We keep the previous image ready in case a rollback is needed.",
+        "es": "Mantenemos la imagen anterior lista por si hace falta revertir."
+      }
+    ]
+  },
+  {
+    "id": "ops-monitoring",
+    "word": "Monitoring",
+    "translation": "monitorizaci?n",
+    "partOfSpeech": "noun",
+    "domain": "devops",
+    "level": "B1",
+    "phonetic": "/?m??.n?.t?r.??/",
+    "definition": "The continuous observation of systems to detect failures and performance issues.",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "Monitoring alerted us before users noticed the outage.",
+        "es": "La monitorizaci?n nos avis? antes de que los usuarios notaran la ca?da."
+      },
+      {
+        "en": "Add monitoring to the new queue before launching it.",
+        "es": "A?ade monitorizaci?n a la nueva cola antes de lanzarla."
+      }
+    ]
+  },
+  {
+    "id": "ops-load-balancer",
+    "word": "Load balancer",
+    "translation": "balanceador de carga",
+    "partOfSpeech": "noun",
+    "domain": "devops",
+    "level": "B2",
+    "phonetic": "/lo?d ?b?l.?n.s?r/",
+    "definition": "A component that distributes incoming traffic across several servers.",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "The load balancer sends traffic only to healthy instances.",
+        "es": "El balanceador de carga env?a tr?fico solo a las instancias sanas."
+      },
+      {
+        "en": "We configured the load balancer to drain connections before a restart.",
+        "es": "Configuramos el balanceador para drenar las conexiones antes de un reinicio."
+      }
+    ]
+  },
+  {
+    "id": "ops-uptime",
+    "word": "Uptime",
+    "translation": "tiempo de actividad",
+    "partOfSpeech": "noun",
+    "domain": "devops",
+    "level": "B1",
+    "phonetic": "/??p.ta?m/",
+    "definition": "The percentage of time a service is available and working.",
+    "imageUrl": "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "The SLA promises 99.9% uptime.",
+        "es": "El SLA promete un 99,9% de tiempo de actividad."
+      },
+      {
+        "en": "Our uptime dropped after the database upgrade.",
+        "es": "Nuestro tiempo de actividad baj? tras la actualizaci?n de la base de datos."
+      }
+    ]
+  },
+  {
+    "id": "ops-incident",
+    "word": "Incident",
+    "translation": "incidente",
+    "partOfSpeech": "noun",
+    "domain": "devops",
+    "level": "B1",
+    "phonetic": "/??n.s?.d?nt/",
+    "definition": "An unplanned event that disrupts a service and requires a response.",
+    "imageUrl": "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "The incident was resolved in eighteen minutes.",
+        "es": "El incidente se resolvi? en dieciocho minutos."
+      },
+      {
+        "en": "Every incident gets a short written summary.",
+        "es": "Cada incidente recibe un breve resumen escrito."
+      }
+    ]
+  },
+  {
+    "id": "db-index",
+    "word": "Index",
+    "translation": "?ndice",
+    "partOfSpeech": "noun",
+    "domain": "database",
+    "level": "B1",
+    "phonetic": "/??n.deks/",
+    "definition": "A data structure that speeds up lookups on a table column.",
+    "imageUrl": "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "Adding an index on user_id made the query ten times faster.",
+        "es": "A?adir un ?ndice sobre user_id hizo la consulta diez veces m?s r?pida."
+      },
+      {
+        "en": "Too many indexes slow down inserts.",
+        "es": "Demasiados ?ndices ralentizan las inserciones."
+      }
+    ]
+  },
+  {
+    "id": "db-query",
+    "word": "Query",
+    "translation": "consulta",
+    "partOfSpeech": "noun",
+    "domain": "database",
+    "level": "A2",
+    "phonetic": "/?kw?r.i/",
+    "definition": "A request for data sent to a database.",
+    "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "This query returns the last ten orders.",
+        "es": "Esta consulta devuelve los ?ltimos diez pedidos."
+      },
+      {
+        "en": "The query was slow because it scanned the whole table.",
+        "es": "La consulta era lenta porque recorr?a toda la tabla."
+      }
+    ]
+  },
+  {
+    "id": "db-schema",
+    "word": "Schema",
+    "translation": "esquema",
+    "partOfSpeech": "noun",
+    "domain": "database",
+    "level": "B1",
+    "phonetic": "/?ski?.m?/",
+    "definition": "The structure that defines tables, columns and relationships in a database.",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "The schema changed after we added the payments table.",
+        "es": "El esquema cambi? despu?s de a?adir la tabla de pagos."
+      },
+      {
+        "en": "Review the schema before writing the migration.",
+        "es": "Revisa el esquema antes de escribir la migraci?n."
+      }
+    ]
+  },
+  {
+    "id": "db-migration",
+    "word": "Migration",
+    "translation": "migraci?n",
+    "partOfSpeech": "noun",
+    "domain": "database",
+    "level": "B1",
+    "phonetic": "/ma???re?.??n/",
+    "definition": "A versioned script that changes the database structure or data.",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "Run the migration in staging before production.",
+        "es": "Ejecuta la migraci?n en staging antes de producci?n."
+      },
+      {
+        "en": "The migration added a nullable column, so no data was lost.",
+        "es": "La migraci?n a?adi? una columna opcional, as? que no se perdi? ning?n dato."
+      }
+    ]
+  },
+  {
+    "id": "db-join",
+    "word": "Join",
+    "translation": "uni?n de tablas",
+    "partOfSpeech": "noun",
+    "domain": "database",
+    "level": "B1",
+    "phonetic": "/d???n/",
+    "definition": "An operation that combines rows from two or more tables.",
+    "imageUrl": "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "Use a join to fetch each order with its customer.",
+        "es": "Usa una uni?n para obtener cada pedido con su cliente."
+      },
+      {
+        "en": "That join is expensive because the columns are not indexed.",
+        "es": "Esa uni?n es costosa porque las columnas no est?n indexadas."
+      }
+    ]
+  },
+  {
+    "id": "db-transaction",
+    "word": "Transaction",
+    "translation": "transacci?n",
+    "partOfSpeech": "noun",
+    "domain": "database",
+    "level": "B2",
+    "phonetic": "/tr?n?z?k.??n/",
+    "definition": "A group of operations that either complete together or fail together.",
+    "imageUrl": "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "Wrap both updates in a transaction.",
+        "es": "Envuelve ambas actualizaciones en una transacci?n."
+      },
+      {
+        "en": "The transaction was rolled back when the second insert failed.",
+        "es": "La transacci?n se revirti? cuando fall? la segunda inserci?n."
+      }
+    ]
+  },
+  {
+    "id": "db-replica",
+    "word": "Replica",
+    "translation": "r?plica",
+    "partOfSpeech": "noun",
+    "domain": "database",
+    "level": "B2",
+    "phonetic": "/?rep.l?.k?/",
+    "definition": "A read-only copy of a database used to distribute load.",
+    "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "Reports run against the replica to avoid overloading the primary.",
+        "es": "Los informes se ejecutan contra la r?plica para no sobrecargar el primario."
+      },
+      {
+        "en": "The replica was two seconds behind the primary.",
+        "es": "La r?plica iba dos segundos por detr?s del primario."
+      }
+    ]
+  },
+  {
+    "id": "db-backup",
+    "word": "Backup",
+    "translation": "copia de seguridad",
+    "partOfSpeech": "noun",
+    "domain": "database",
+    "level": "A2",
+    "phonetic": "/?b?k.?p/",
+    "definition": "A copy of data stored separately so it can be restored.",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "We take a backup every night at 2 a.m.",
+        "es": "Hacemos una copia de seguridad cada noche a las 2 de la ma?ana."
+      },
+      {
+        "en": "Restore the backup and check that no rows are missing.",
+        "es": "Restaura la copia de seguridad y comprueba que no falte ninguna fila."
+      }
+    ]
+  },
+  {
+    "id": "db-shard",
+    "word": "Shard",
+    "translation": "fragmento de base de datos",
+    "partOfSpeech": "noun",
+    "domain": "database",
+    "level": "B2",
+    "phonetic": "/???rd/",
+    "definition": "A horizontal partition of data stored on a separate database server.",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "Users are distributed across four shards by region.",
+        "es": "Los usuarios se distribuyen en cuatro fragmentos por regi?n."
+      },
+      {
+        "en": "Adding a new shard requires rebalancing the data.",
+        "es": "A?adir un nuevo fragmento requiere reequilibrar los datos."
+      }
+    ]
+  },
+  {
+    "id": "qa-regression",
+    "word": "Regression",
+    "translation": "regresi?n",
+    "partOfSpeech": "noun",
+    "domain": "qa",
+    "level": "B1",
+    "phonetic": "/r???re?.?n/",
+    "definition": "A defect that reappears after a change, breaking functionality that used to work.",
+    "imageUrl": "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "The new caching layer caused a regression in the login flow.",
+        "es": "La nueva capa de cach? provoc? una regresi?n en el flujo de inicio de sesi?n."
+      },
+      {
+        "en": "Run the full regression suite before the release.",
+        "es": "Ejecuta toda la suite de regresi?n antes del lanzamiento."
+      }
+    ]
+  },
+  {
+    "id": "qa-test-case",
+    "word": "Test case",
+    "translation": "caso de prueba",
+    "partOfSpeech": "noun",
+    "domain": "qa",
+    "level": "A2",
+    "phonetic": "/test ke?s/",
+    "definition": "A documented set of steps and expected results used to verify a feature.",
+    "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "Write a test case for each acceptance criterion.",
+        "es": "Escribe un caso de prueba por cada criterio de aceptaci?n."
+      },
+      {
+        "en": "This test case covers the empty cart scenario.",
+        "es": "Este caso de prueba cubre el escenario del carrito vac?o."
+      }
+    ]
+  },
+  {
+    "id": "qa-bug-report",
+    "word": "Bug report",
+    "translation": "informe de error",
+    "partOfSpeech": "noun",
+    "domain": "qa",
+    "level": "B1",
+    "phonetic": "/b?? r??p??rt/",
+    "definition": "A structured description of a defect, including steps to reproduce it.",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "The bug report includes screenshots and the browser version.",
+        "es": "El informe de error incluye capturas y la versi?n del navegador."
+      },
+      {
+        "en": "A good bug report saves hours of back and forth.",
+        "es": "Un buen informe de error ahorra horas de idas y venidas."
+      }
+    ]
+  },
+  {
+    "id": "qa-flaky-test",
+    "word": "Flaky test",
+    "translation": "prueba inestable",
+    "partOfSpeech": "noun",
+    "domain": "qa",
+    "level": "B2",
+    "phonetic": "/?fle?.ki test/",
+    "definition": "A test that sometimes passes and sometimes fails without any code change.",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "The flaky test failed again on CI but passed locally.",
+        "es": "La prueba inestable volvi? a fallar en CI pero pas? en local."
+      },
+      {
+        "en": "Quarantine the flaky test until the race condition is fixed.",
+        "es": "A?sla la prueba inestable hasta que se corrija la condici?n de carrera."
+      }
+    ]
+  },
+  {
+    "id": "qa-edge-case",
+    "word": "Edge case",
+    "translation": "caso l?mite",
+    "partOfSpeech": "noun",
+    "domain": "qa",
+    "level": "B1",
+    "phonetic": "/ed? ke?s/",
+    "definition": "A rare or extreme scenario that is easy to overlook during testing.",
+    "imageUrl": "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "An empty username is an edge case we forgot to cover.",
+        "es": "Un nombre de usuario vac?o es un caso l?mite que olvidamos cubrir."
+      },
+      {
+        "en": "Test the edge cases before the happy path.",
+        "es": "Prueba los casos l?mite antes del camino feliz."
+      }
+    ]
+  },
+  {
+    "id": "qa-smoke-test",
+    "word": "Smoke test",
+    "translation": "prueba de humo",
+    "partOfSpeech": "noun",
+    "domain": "qa",
+    "level": "B2",
+    "phonetic": "/smo?k test/",
+    "definition": "A quick set of checks that confirms the main features work after a deployment.",
+    "imageUrl": "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "Run the smoke test right after the deploy.",
+        "es": "Ejecuta la prueba de humo justo despu?s del despliegue."
+      },
+      {
+        "en": "The smoke test caught a broken login page in two minutes.",
+        "es": "La prueba de humo detect? una p?gina de inicio de sesi?n rota en dos minutos."
+      }
+    ]
+  },
+  {
+    "id": "qa-acceptance-criteria",
+    "word": "Acceptance criteria",
+    "translation": "criterios de aceptaci?n",
+    "partOfSpeech": "noun",
+    "domain": "qa",
+    "level": "B2",
+    "phonetic": "/?k?sep.t?ns kra??t?r.i.?/",
+    "definition": "The conditions a feature must meet to be considered complete.",
+    "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "The ticket is not done until every acceptance criterion passes.",
+        "es": "El ticket no est? terminado hasta que pasa cada criterio de aceptaci?n."
+      },
+      {
+        "en": "We clarified the acceptance criteria before development started.",
+        "es": "Aclaramos los criterios de aceptaci?n antes de empezar el desarrollo."
+      }
+    ]
+  },
+  {
+    "id": "qa-staging",
+    "word": "Staging",
+    "translation": "entorno de preproducci?n",
+    "partOfSpeech": "noun",
+    "domain": "qa",
+    "level": "B1",
+    "phonetic": "/?ste?.d???/",
+    "definition": "An environment that mirrors production and is used for final testing.",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "QA validates the fix in staging before it reaches users.",
+        "es": "QA valida la correcci?n en staging antes de que llegue a los usuarios."
+      },
+      {
+        "en": "Staging and production should share the same configuration.",
+        "es": "Staging y producci?n deber?an compartir la misma configuraci?n."
+      }
+    ]
+  },
+  {
+    "id": "qa-defect",
+    "word": "Defect",
+    "translation": "defecto",
+    "partOfSpeech": "noun",
+    "domain": "qa",
+    "level": "B1",
+    "phonetic": "/d??fekt/",
+    "definition": "A flaw in the product that causes it to behave incorrectly.",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "The defect only appears on mobile Safari.",
+        "es": "El defecto solo aparece en Safari m?vil."
+      },
+      {
+        "en": "Log every defect with a severity level.",
+        "es": "Registra cada defecto con un nivel de severidad."
+      }
+    ]
+  },
+  {
+    "id": "qa-test-coverage",
+    "word": "Test coverage",
+    "translation": "cobertura de pruebas",
+    "partOfSpeech": "noun",
+    "domain": "qa",
+    "level": "B2",
+    "phonetic": "/test ?k?v.?r.?d?/",
+    "definition": "The percentage of code exercised by automated tests.",
+    "imageUrl": "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?q=80&w=800&auto=format&fit=crop",
+    "examples": [
+      {
+        "en": "Coverage rose from 42% to 78% after the refactor.",
+        "es": "La cobertura subi? del 42% al 78% tras la refactorizaci?n."
+      },
+      {
+        "en": "High coverage does not guarantee good tests.",
+        "es": "Una cobertura alta no garantiza pruebas de calidad."
       }
     ]
   }

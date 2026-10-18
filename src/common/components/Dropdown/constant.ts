@@ -1,26 +1,36 @@
 import type { DropdownSize } from './type'
 
+export const DROPDOWN_TOUCH_TARGET = '[@media(pointer:coarse)]:min-h-11'
+
 export const DROPDOWN_BUTTON =
-  'inline-flex w-full cursor-pointer items-center gap-2 rounded-[16px] border-[1.5px] border-border-subtle bg-surface font-semibold text-text-main transition-colors duration-150 ease-out hover:border-primary focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:cursor-not-allowed disabled:opacity-45 motion-reduce:transition-none'
+  'inline-flex w-full cursor-pointer items-center gap-2 rounded-[16px] border-[1.5px] border-border-subtle bg-surface font-semibold text-text-main transition-colors duration-150 ease-out hover:border-primary focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:cursor-not-allowed disabled:opacity-45 motion-reduce:transition-none ' +
+  DROPDOWN_TOUCH_TARGET
 
 export const DROPDOWN_CONTROL =
-  'inline-flex w-full items-center gap-2 rounded-[16px] border-[1.5px] border-border-subtle bg-surface font-semibold text-text-main transition-colors duration-150 ease-out hover:border-primary motion-reduce:transition-none'
+  'inline-flex w-full items-center gap-2 rounded-[16px] border-[1.5px] border-border-subtle bg-surface font-semibold text-text-main transition-colors duration-150 ease-out hover:border-primary motion-reduce:transition-none ' +
+  DROPDOWN_TOUCH_TARGET
+
+/** 16 px en móvil evita el auto-zoom de Safari iOS; en escritorio conserva la densidad. */
+export const DROPDOWN_TEXT_SIZE: Record<DropdownSize, string> = {
+  sm: 'text-base sm:text-[13px]',
+  md: 'text-base sm:text-sm',
+}
 
 export const DROPDOWN_SIZE: Record<DropdownSize, string> = {
-  sm: 'min-h-9 px-3.5 text-[13px]',
-  md: 'min-h-11 px-4 text-sm',
+  sm: `min-h-9 px-3.5 ${DROPDOWN_TEXT_SIZE.sm}`,
+  md: `min-h-11 px-4 ${DROPDOWN_TEXT_SIZE.md}`,
 }
 
 export const DROPDOWN_LABEL =
   'mb-1.5 block text-[12px] font-bold tracking-[0.5px] text-text-secondary uppercase'
 
 export const DROPDOWN_OPTIONS =
-  'z-50 max-h-72 overflow-auto rounded-[16px] border-[1.5px] border-border-subtle bg-surface p-1.5 shadow-[0_12px_36px_rgba(0,0,0,0.18)] focus:outline-none'
+  'z-50 max-h-72 overflow-auto overscroll-contain supports-[height:100dvh]:max-h-[min(18rem,45dvh)] rounded-[16px] border-[1.5px] border-border-subtle bg-surface p-1.5 shadow-[0_12px_36px_rgba(0,0,0,0.18)] focus:outline-none'
 
 export const DROPDOWN_PANEL_POSITION = 'absolute top-full left-0 mt-1.5 w-full'
 
 export const DROPDOWN_OPTION =
-  'group flex w-full cursor-pointer items-center gap-2.5 rounded-xl px-3 py-2.5 text-left text-sm font-semibold text-text-main transition-colors duration-100 ease-out data-focus:bg-primary-light data-focus:text-primary data-selected:font-bold motion-reduce:transition-none'
+  'group flex min-h-11 w-full cursor-pointer items-center gap-2.5 rounded-xl px-3 py-2.5 text-left text-sm font-semibold text-text-main transition-colors duration-100 ease-out data-focus:bg-primary-light data-focus:text-primary data-selected:font-bold motion-reduce:transition-none'
 
 export const DROPDOWN_OPTION_DESC = 'mt-0.5 text-[12px] font-normal text-text-secondary'
 

@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import type { VocabCardDTO, VocabRawDTO, LeitnerBox } from '../dto';
+import { readVocabProgress, toVocabCards, VOCAB_PROGRESS_KEY } from './progress';
 
 const INTERVALS: Record<LeitnerBox, number> = {
   1: 60_000,       // 1 min
@@ -8,12 +9,6 @@ const INTERVALS: Record<LeitnerBox, number> = {
   4: 259_200_000,  // 3 days
   5: 604_800_000,  // 7 days
 };
-
-const STORAGE_KEY = 'wordie_vocab_progress';
-
-interface ProgressData {
-  [id: string]: { box: LeitnerBox; nextReview: number };
-}
 
 interface VocabState {
   cards: VocabCardDTO[];
@@ -24,11 +19,11 @@ interface VocabState {
 }
 
 const _persist = (cards: VocabCardDTO[]) => {
-  const progress: ProgressData = {};
+  const progress: Record<string, { box: LeitnerBox; nextReview: number }> = {};
   cards.forEach(card => {
     progress[card.id] = { box: card.box, nextReview: card.nextReview };
   });
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+  localStorage.setItem(VOCAB_PROGRESS_KEY, JSON.stringify(progress));
 };
 
 export const useVocabStore = create<VocabState>((set, get) => ({
@@ -36,32 +31,7 @@ export const useVocabStore = create<VocabState>((set, get) => ({
   isLoaded: false,
 
   loadCards: (raw: VocabRawDTO[]) => {
-    let savedProgress: ProgressData = {};
-    try {
-      const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved) {
-        savedProgress = JSON.parse(saved);
-      }
-    } catch (error) {
-      console.error('Failed to parse vocabulary progress', error);
-    }
-
-    const cards: VocabCardDTO[] = raw.map((item) => {
-      const savedItem = savedProgress[item.id];
-      if (savedItem) {
-        return {
-          ...item,
-          box: savedItem.box as LeitnerBox,
-          nextReview: savedItem.nextReview,
-        };
-      }
-      return {
-        ...item,
-        box: 1 as LeitnerBox,
-        nextReview: 0,
-      };
-    });
-
+    const cards: VocabCardDTO[] = toVocabCards(raw, readVocabProgress());
     set({ cards, isLoaded: true });
   },
 

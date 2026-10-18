@@ -9,11 +9,11 @@ interface Props {
   itemVariants: Variants;
 }
 
-export const TabPractice = ({ topic, containerVariants, itemVariants }: Props) => {
+export function TabPractice({ topic, containerVariants, itemVariants }: Props) {
   if (!topic.quizzes) return null;
 
   return (
-    <motion.div key={`practica-${topic.id}`} variants={containerVariants} initial="hidden" animate="show" className="flex flex-col gap-8">
+    <motion.div key={`practica-${topic.id}`} variants={containerVariants} initial="hidden" animate="show" className="flex flex-col gap-8 pb-12">
       <motion.div variants={itemVariants}>
         <GrammarQuiz key={topic.id} quizzes={topic.quizzes} />
       </motion.div>
@@ -28,4 +28,4 @@ export const TabPractice = ({ topic, containerVariants, itemVariants }: Props) =
       </motion.div>
     </motion.div>
   );
-};
+}

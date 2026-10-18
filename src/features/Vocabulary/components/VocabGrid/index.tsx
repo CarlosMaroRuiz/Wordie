@@ -1,32 +1,13 @@
-import React from 'react';
 import { motion } from 'motion/react';
 import { VocabCard } from '../VocabCard';
-import type { VocabCardDTO } from '../../dto';
+import type { VocabGridProps } from './type';
+import { containerVariants, itemVariants } from './constant';
 
-interface VocabGridProps {
-  cards: VocabCardDTO[];
-}
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 }
-};
-
-export const VocabGrid: React.FC<VocabGridProps> = ({ cards }) => {
+export function VocabGrid({ cards }: VocabGridProps) {
   if (cards.length === 0) {
     return (
       <div className="py-12 text-center text-text-secondary bg-surface rounded-2xl border border-border-subtle">
-        <p className="text-lg">No vocabulary cards found.</p>
+        <p className="text-lg">No se encontraron tarjetas de vocabulario.</p>
       </div>
     );
   }
@@ -45,4 +26,4 @@ export const VocabGrid: React.FC<VocabGridProps> = ({ cards }) => {
       ))}
     </motion.div>
   );
-};
+}

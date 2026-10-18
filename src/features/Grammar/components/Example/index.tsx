@@ -1,14 +1,14 @@
 import { SpeakerHigh } from '@phosphor-icons/react';
 import { Button } from '@common/Button';
 import { motion } from 'motion/react';
+import { useSpeechSynthesis } from '@common/hooks/useSpeechSynthesis';
 import type { ExampleProps } from './types';
 
-export const Example = ({ en, es }: ExampleProps) => {
-    const speak = () => {
-        const utterance = new SpeechSynthesisUtterance(en);
-        utterance.lang = 'en-US';
-        utterance.rate = 0.9;
-        speechSynthesis.speak(utterance);
+export function Example({ en, es }: ExampleProps) {
+    const { speak } = useSpeechSynthesis();
+
+    const handleSpeak = () => {
+        speak(en, { rate: 0.9 });
     };
 
     return (
@@ -24,9 +24,9 @@ export const Example = ({ en, es }: ExampleProps) => {
                     {es}
                 </span>
             </div>
-            <Button variant="icon" size="sm" aria-label={`Pronunciar: ${en}`} onClick={speak}>
+            <Button variant="icon" size="sm" aria-label={`Pronunciar: ${en}`} onClick={handleSpeak}>
                 <SpeakerHigh size={20} weight="bold" />
             </Button>
         </motion.div>
     );
-};
+}

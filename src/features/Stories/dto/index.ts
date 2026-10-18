@@ -17,6 +17,7 @@ export interface StoryDTO {
   title: string;
   readTime: string;
   level: string;
+  topic?: string;
   paragraphs: string[];
   keywords: StoryKeywordDTO[];
   quiz: StoryQuizQuestionDTO[];

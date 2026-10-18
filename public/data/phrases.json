@@ -1,0 +1,282 @@
+[
+  {
+    "id": "pr-review-1",
+    "en": "Could you add a unit test for this edge case?",
+    "es": "¿Podrías añadir una prueba unitaria para este caso límite?",
+    "contextTag": "PR Review",
+    "note": "Úsala para solicitar tests sin sonar exigente."
+  },
+  {
+    "id": "pr-review-2",
+    "en": "Nice work! Just a small suggestion on the naming convention.",
+    "es": "¡Buen trabajo! Solo una pequeña sugerencia sobre la convención de nombres.",
+    "contextTag": "PR Review",
+    "note": "Abre con algo positivo antes de la sugerencia: reduce la resistencia al cambio."
+  },
+  {
+    "id": "pr-review-3",
+    "en": "This looks good to me — approved! Great refactor.",
+    "es": "Esto se ve bien para mí, ¡aprobado! Excelente refactorización.",
+    "contextTag": "PR Review",
+    "note": "Aprobaci?n expl?cita; si adem?s reconoces el esfuerzo, refuerzas la cultura de revisi?n."
+  },
+  {
+    "id": "pr-review-4",
+    "en": "Could we move this logic into a separate helper function?",
+    "es": "¿Podríamos mover esta lógica a una función auxiliar separada?",
+    "contextTag": "PR Review",
+    "note": "Promueve separación de responsabilidades sin ser directivo."
+  },
+  {
+    "id": "standup-1",
+    "en": "Today I am going to focus on resolving the login timeout bug.",
+    "es": "Hoy me voy a concentrar en resolver el error de tiempo de espera al iniciar sesión.",
+    "contextTag": "Daily Standup",
+    "note": "Empieza por el foco del d?a; es lo que el equipo necesita para coordinar."
+  },
+  {
+    "id": "standup-2",
+    "en": "Yesterday I finished the user profile endpoint and updated the docs.",
+    "es": "Ayer terminé el endpoint del perfil de usuario y actualicé la documentación.",
+    "contextTag": "Daily Standup",
+    "note": "Cierra el ciclo de ayer con un resultado verificable, no con actividad."
+  },
+  {
+    "id": "standup-3",
+    "en": "No blockers from my side — making steady progress on the dashboard.",
+    "es": "Sin impedimentos de mi parte; avanzando bien con el panel de control.",
+    "contextTag": "Daily Standup",
+    "note": "Decir que no hay bloqueos tambi?n aporta informaci?n al equipo."
+  },
+  {
+    "id": "blocker-1",
+    "en": "I am currently blocked by missing API credentials for the staging server.",
+    "es": "Actualmente tengo un bloqueo porque faltan las credenciales de API para el servidor de staging.",
+    "contextTag": "Blocker",
+    "note": "Nombra el recurso exacto que falta; as? alguien puede desbloquearlo sin preguntar."
+  },
+  {
+    "id": "blocker-2",
+    "en": "I need a review on this PR before I can move forward — it is blocking the next task.",
+    "es": "Necesito revisión en este PR antes de poder avanzar; está bloqueando la siguiente tarea.",
+    "contextTag": "Blocker",
+    "note": "Convierte la revisi?n pendiente en una petici?n concreta y con impacto visible."
+  },
+  {
+    "id": "commandment-1",
+    "en": "Always write tests before pushing to main.",
+    "es": "Siempre escribe pruebas antes de subir a la rama principal.",
+    "contextTag": "Commandment",
+    "note": "Regla de oro: sin pruebas no hay confianza para fusionar."
+  },
+  {
+    "id": "commandment-2",
+    "en": "Never deploy on Fridays unless you plan to work the weekend.",
+    "es": "Nunca hagas deploy los viernes a menos que planees trabajar el fin de semana.",
+    "contextTag": "Commandment",
+    "note": "El famoso mandamiento de ingeniería que todo equipo aprende a las malas."
+  },
+  {
+    "id": "commandment-3",
+    "en": "Leave the codebase cleaner than you found it.",
+    "es": "Deja la base de código más limpia de cómo la encontraste.",
+    "contextTag": "Commandment",
+    "note": "Regla del Boy Scout aplicada al desarrollo de software."
+  },
+  {
+    "id": "pr-review-5",
+    "en": "Could you clarify the intent behind this change? I want to make sure I review it correctly.",
+    "es": "?Podr?as aclarar la intenci?n de este cambio? Quiero asegurarme de revisarlo correctamente.",
+    "contextTag": "PR Review",
+    "note": "Pide contexto antes de opinar; evita revisar a ciegas."
+  },
+  {
+    "id": "pr-review-6",
+    "en": "I left a few comments inline, but none of them are blocking.",
+    "es": "Dej? algunos comentarios en l?nea, pero ninguno es bloqueante.",
+    "contextTag": "PR Review",
+    "note": "Distingue sugerencias de bloqueos; reduce la ansiedad del autor."
+  },
+  {
+    "id": "pr-review-7",
+    "en": "Do we have a rollback plan if this migration fails in production?",
+    "es": "?Tenemos un plan de reversi?n si esta migraci?n falla en producci?n?",
+    "contextTag": "PR Review",
+    "note": "Pregunta de riesgo, no de estilo: ?sala en cambios que tocan datos."
+  },
+  {
+    "id": "pr-review-8",
+    "en": "This naming is a bit ambiguous ? could we make it more explicit?",
+    "es": "Este nombre es algo ambiguo; ?podr?amos hacerlo m?s expl?cito?",
+    "contextTag": "PR Review",
+    "note": "Cr?tica al c?digo, nunca a la persona."
+  },
+  {
+    "id": "pr-review-9",
+    "en": "I would rather keep this PR focused; can we split the refactor into a follow-up?",
+    "es": "Preferir?a mantener este PR enfocado; ?podemos dividir la refactorizaci?n en uno posterior?",
+    "contextTag": "PR Review",
+    "note": "Ideal para PRs que crecen demasiado."
+  },
+  {
+    "id": "pr-review-10",
+    "en": "Thanks for the detailed description ? it made the review much faster.",
+    "es": "Gracias por la descripci?n detallada; hizo la revisi?n mucho m?s r?pida.",
+    "contextTag": "PR Review",
+    "note": "Refuerzo positivo concreto: reconoce el comportamiento que quieres repetir."
+  },
+  {
+    "id": "standup-4",
+    "en": "I am picking up the payment retry ticket today; I expect to open a PR by noon.",
+    "es": "Hoy tomo el ticket de reintentos de pago; espero abrir un PR al mediod?a.",
+    "contextTag": "Daily Standup",
+    "note": "Compromiso concreto con hora; evita el estoy trabajando en eso."
+  },
+  {
+    "id": "standup-5",
+    "en": "I spent yesterday debugging the flaky test suite; it turned out to be a race condition.",
+    "es": "Ayer estuve depurando la suite de pruebas inestable; result? ser una condici?n de carrera.",
+    "contextTag": "Daily Standup",
+    "note": "Cuenta el aprendizaje, no solo la actividad."
+  },
+  {
+    "id": "standup-6",
+    "en": "No blockers, but I could use a second pair of eyes on the cache invalidation logic.",
+    "es": "Sin bloqueos, pero me vendr?a bien una segunda opini?n sobre la l?gica de invalidaci?n de cach?.",
+    "contextTag": "Daily Standup",
+    "note": "Pedir ayuda sin dramatizar; second pair of eyes es muy natural."
+  },
+  {
+    "id": "standup-7",
+    "en": "I am waiting on the design review before I start the settings page.",
+    "es": "Estoy esperando la revisi?n de dise?o antes de empezar la p?gina de ajustes.",
+    "contextTag": "Daily Standup",
+    "note": "Bloqueo suave: informa una dependencia sin culpar a nadie."
+  },
+  {
+    "id": "standup-8",
+    "en": "I will be out for two hours this afternoon for an appointment.",
+    "es": "Estar? fuera dos horas esta tarde por una cita.",
+    "contextTag": "Daily Standup",
+    "note": "Avisa disponibilidad; no necesitas justificar el motivo."
+  },
+  {
+    "id": "standup-9",
+    "en": "Quick heads-up: I renamed the feature flag, so pull the latest changes before you test.",
+    "es": "Aviso r?pido: renombr? el feature flag, as? que actualiza tu rama antes de probar.",
+    "contextTag": "Daily Standup",
+    "note": "Heads-up es el registro est?ndar para avisos breves."
+  },
+  {
+    "id": "standup-10",
+    "en": "I am still blocked on the same issue as yesterday; I will escalate after the standup.",
+    "es": "Sigo bloqueado con el mismo problema de ayer; lo escalar? despu?s del standup.",
+    "contextTag": "Daily Standup",
+    "note": "Repetir un bloqueo es una se?al leg?tima para escalar."
+  },
+  {
+    "id": "blocker-3",
+    "en": "The build is failing on main because of a dependency conflict; I am reverting the last merge.",
+    "es": "El build est? fallando en main por un conflicto de dependencias; estoy revirtiendo el ?ltimo merge.",
+    "contextTag": "Blocker",
+    "note": "Describe el impacto y la acci?n inmediata en la misma frase."
+  },
+  {
+    "id": "blocker-4",
+    "en": "I cannot reproduce the bug locally, so I need access to the production logs.",
+    "es": "No puedo reproducir el error en local, as? que necesito acceso a los logs de producci?n.",
+    "contextTag": "Blocker",
+    "note": "Petici?n concreta de acceso; acelera la resoluci?n."
+  },
+  {
+    "id": "blocker-5",
+    "en": "We are blocked until the third-party API rate limit is raised.",
+    "es": "Estamos bloqueados hasta que se aumente el l?mite de peticiones de la API externa.",
+    "contextTag": "Blocker",
+    "note": "Bloqueo externo: nombra al proveedor y la condici?n de salida."
+  },
+  {
+    "id": "blocker-6",
+    "en": "I need someone with admin rights to rotate the expired certificate.",
+    "es": "Necesito a alguien con permisos de administrador para renovar el certificado vencido.",
+    "contextTag": "Blocker",
+    "note": "Identifica el rol exacto que necesitas, no un alguien gen?rico."
+  },
+  {
+    "id": "blocker-7",
+    "en": "This is blocking the release: the checkout flow returns a 500 on mobile Safari.",
+    "es": "Esto bloquea el lanzamiento: el flujo de pago devuelve un 500 en Safari m?vil.",
+    "contextTag": "Blocker",
+    "note": "Bloqueo cr?tico: incluye severidad y entorno."
+  },
+  {
+    "id": "blocker-8",
+    "en": "I am waiting on the schema migration to land before I can run the integration tests.",
+    "es": "Estoy esperando a que se aplique la migraci?n del esquema para poder ejecutar las pruebas de integraci?n.",
+    "contextTag": "Blocker",
+    "note": "Dependencia t?cnica clara, sin reproches."
+  },
+  {
+    "id": "blocker-9",
+    "en": "Could you unblock me by approving the access request when you have a minute?",
+    "es": "?Podr?as desbloquearme aprobando la solicitud de acceso cuando tengas un minuto?",
+    "contextTag": "Blocker",
+    "note": "Cierra con una petici?n cort?s y accionable."
+  },
+  {
+    "id": "blocker-10",
+    "en": "The staging environment is down, so QA cannot validate the fix today.",
+    "es": "El entorno de staging est? ca?do, as? que QA no puede validar la correcci?n hoy.",
+    "contextTag": "Blocker",
+    "note": "Habla del impacto en el equipo, no solo en tu tarea."
+  },
+  {
+    "id": "commandment-4",
+    "en": "Commit small and commit often; a giant diff is impossible to review.",
+    "es": "Haz commits peque?os y frecuentes; un diff gigante es imposible de revisar.",
+    "contextTag": "Commandment",
+    "note": "Principio de revisabilidad."
+  },
+  {
+    "id": "commandment-5",
+    "en": "Name variables for intent, not for type.",
+    "es": "Nombra las variables por su intenci?n, no por su tipo.",
+    "contextTag": "Commandment",
+    "note": "Legibilidad a largo plazo."
+  },
+  {
+    "id": "commandment-6",
+    "en": "If it is not tested, it does not exist.",
+    "es": "Si no est? probado, no existe.",
+    "contextTag": "Commandment",
+    "note": "Frase cl?sica de cultura de testing."
+  },
+  {
+    "id": "commandment-7",
+    "en": "Document the why, not the what.",
+    "es": "Documenta el porqu?, no el qu?.",
+    "contextTag": "Commandment",
+    "note": "Los comentarios deben explicar decisiones, no repetir el c?digo."
+  },
+  {
+    "id": "commandment-8",
+    "en": "Never merge your own pull request without a second review.",
+    "es": "Nunca fusiones tu propio pull request sin una segunda revisi?n.",
+    "contextTag": "Commandment",
+    "note": "Control de calidad y conocimiento compartido."
+  },
+  {
+    "id": "commandment-9",
+    "en": "Keep secrets out of the repository; use environment variables instead.",
+    "es": "Mant?n los secretos fuera del repositorio; usa variables de entorno.",
+    "contextTag": "Commandment",
+    "note": "Higiene de seguridad m?nima."
+  },
+  {
+    "id": "commandment-10",
+    "en": "Measure before you optimize; intuition lies about performance.",
+    "es": "Mide antes de optimizar; la intuici?n miente sobre el rendimiento.",
+    "contextTag": "Commandment",
+    "note": "Evita optimizaciones prematuras."
+  }
+]

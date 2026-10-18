@@ -1,12 +1,7 @@
 import { Chip } from '@common/Chip';
+import type { VocabFiltersProps } from './type';
 
-interface VocabFiltersProps {
-  domains: string[];
-  activeFilter: string;
-  onFilterChange: (filter: string) => void;
-}
-
-export const VocabFilters = ({ domains, activeFilter, onFilterChange }: VocabFiltersProps) => {
+export function VocabFilters({ domains, activeFilter, onFilterChange }: VocabFiltersProps) {
   return (
     <nav className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
       <Chip
@@ -26,4 +21,4 @@ export const VocabFilters = ({ domains, activeFilter, onFilterChange }: VocabFil
       ))}
     </nav>
   );
-};
+}

@@ -1,16 +1,16 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { Check, ArrowClockwise } from '@phosphor-icons/react';
 import { Button } from '@common/Button';
-import type { PracticeCardProps } from './types';
+import type { PracticeCardProps } from './type';
 
-export const PracticeCard = ({ 
+export function PracticeCard({ 
   card, 
   currentIndex, 
   totalCards, 
   isRevealed, 
   onReveal, 
   onNext 
-}: PracticeCardProps) => {
+}: PracticeCardProps) {
   return (
     <>
       <div className="text-sm font-medium text-text-secondary text-center mb-6">
@@ -88,4 +88,4 @@ export const PracticeCard = ({
       )}
     </>
   );
-};
+}

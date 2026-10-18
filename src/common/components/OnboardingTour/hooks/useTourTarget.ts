@@ -11,9 +11,22 @@ const RETRY_DELAY = 100
 
 const MAX_RETRIES = 20
 
+function findTargets(target: string): Element[] {
+  if (typeof document === 'undefined') return []
+  return Array.from(document.querySelectorAll(`[data-tour="${target}"]`))
+}
+
+/**
+ * Hay anclas duplicadas (nav superior en escritorio, nav inferior en móvil).
+ * Se elige la primera que esté realmente visible, no la primera del DOM.
+ */
 function findTarget(target: string): Element | null {
-  if (typeof document === 'undefined') return null
-  return document.querySelector(`[data-tour="${target}"]`)
+  return (
+    findTargets(target).find(element => {
+      const rect = element.getBoundingClientRect()
+      return rect.width > 0 && rect.height > 0
+    }) ?? null
+  )
 }
 
 function measure(target: string): TourRect | null {

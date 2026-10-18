@@ -91,6 +91,7 @@ export const GrammarModule = () => {
               setSelectedTopicId(id);
               if (window.innerWidth < 1024) {
                 setShowSidebar(false);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
               }
             }}
           />
@@ -98,9 +99,14 @@ export const GrammarModule = () => {
 
         {/* Panel Derecho (Detalle) */}
         <motion.div layout className={`relative flex flex-col h-full ${!showSidebar ? 'block' : 'hidden lg:block'}`}>
-          <motion.div layout className="sticky top-0 z-50 bg-bg-page/90 backdrop-blur-md pb-3 pt-3 mb-2 -mx-4 px-4 flex items-center lg:static lg:bg-transparent lg:backdrop-blur-none lg:p-0 lg:m-0 lg:mb-4 lg:z-auto">
+          <motion.div layout className="pb-3 pt-2 mb-2 flex items-center lg:mb-4">
             <button
-              onClick={() => setShowSidebar(!showSidebar)}
+              onClick={() => {
+                setShowSidebar(!showSidebar);
+                if (!showSidebar) {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+              }}
               className="flex items-center gap-2 text-primary font-bold hover:bg-primary-light/50 px-3 py-2 rounded-xl transition-all"
             >
               <span className="flex lg:hidden items-center gap-2">

@@ -27,6 +27,7 @@ import {
   DROPDOWN_OVERLAY_BUTTON,
   DROPDOWN_PANEL_POSITION,
   DROPDOWN_SIZE,
+  DROPDOWN_TEXT_SIZE,
 } from './constant'
 import type { DropdownOption, DropdownProps } from './type'
 
@@ -146,12 +147,16 @@ export function Dropdown<T extends string = string>({
 
               <ComboboxInput
                 ref={inputRef}
-                className={cn(DROPDOWN_INPUT, 'relative cursor-text')}
+                className={cn(DROPDOWN_INPUT, DROPDOWN_TEXT_SIZE[size], 'relative cursor-text')}
                 displayValue={() => selected?.label ?? ''}
                 onChange={e => setQuery(e.target.value)}
                 placeholder={selected ? undefined : placeholder}
                 aria-label={ariaLabel}
                 autoComplete="off"
+                autoCapitalize="off"
+                autoCorrect="off"
+                inputMode="search"
+                enterKeyHint="search"
                 spellCheck={false}
               />
 
