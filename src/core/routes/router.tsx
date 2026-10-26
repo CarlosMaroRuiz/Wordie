@@ -2,7 +2,6 @@ import { LoadSuspense } from '@core/helpers/WithSuspense'
 import { PATHS } from '@core/routes/types/paths'
 import { MainLayout } from '@common/layouts/MainLayout'
 import { RouteErrorFallback } from '@common/components/ErrorBoundary'
-import Home from '@features/Home'
 import { createBrowserRouter } from 'react-router-dom'
 
 export const routers = createBrowserRouter([
@@ -12,7 +11,7 @@ export const routers = createBrowserRouter([
     children: [
       {
         path: PATHS.Home,
-        element: <Home />,
+        element: LoadSuspense(() => import('@features/Home')),
       },
       {
         path: PATHS.Grammar,
