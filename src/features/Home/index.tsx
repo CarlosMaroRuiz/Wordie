@@ -22,19 +22,22 @@ export default function Home() {
   const navigate = useNavigate()
   const startTour = useTourStore(state => state.start)
   const tourSeen = useTourStore(state => state.seen)
-  const { counts, vocab, reviewWords, previewWords, phrase, story, isLoading, error } =
-    useHomeStats()
+  const { counts, vocab, reviewWords, phrase, story, isLoading, error } = useHomeStats()
 
   return (
     <div className="flex flex-col gap-10 pb-14 pt-4 sm:gap-14 sm:pt-8">
+      {/* Hero Section */}
       <HomeHero
-        previewWords={previewWords}
-        isLoadingPreview={isLoading.vocab}
         tourSeen={tourSeen}
+        counts={counts}
         onStart={() => navigate(PATHS.Vocabulary)}
         onStartTour={startTour}
       />
 
+      {/* Structured Modules Section */}
+      <ModuleGrid />
+
+      {/* Progress Section */}
       <section aria-labelledby="home-progress-title" className={HOME_SECTION}>
         <SectionHead
           id="home-progress-title"
@@ -58,6 +61,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Daily Content Section */}
       <section aria-labelledby="home-daily-title" className={HOME_SECTION}>
         <SectionHead
           id="home-daily-title"
@@ -80,6 +84,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Story of the Day Section */}
       <section aria-labelledby="home-story-section" className={HOME_SECTION}>
         <SectionHead
           id="home-story-section"
@@ -92,16 +97,6 @@ export default function Home() {
           hasError={error.counts}
         />
       </section>
-
-      <section aria-labelledby="home-modules-title" className={HOME_SECTION}>
-        <SectionHead
-          id="home-modules-title"
-          title={HOME_COPY.modulesTitle}
-          hint={HOME_COPY.modulesHint}
-        />
-        <ModuleGrid />
-      </section>
     </div>
   )
 }
-

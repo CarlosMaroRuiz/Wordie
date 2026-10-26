@@ -1,7 +1,8 @@
-import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { Chip } from '@common/Chip'
 import { Dropdown } from '@common/components/Dropdown'
+import { NavExtraMenu } from '@common/components/NavExtraMenu'
+import { EXTRA_NAV_ITEMS } from '@common/layouts/MainLayout/navItems'
 import { SlidersIcon } from '@phosphor-icons/react'
 import { useScrolled } from '@common/hooks/useScrolled'
 import { TOPICS } from '@common/layouts/MainLayout/topics'
@@ -18,17 +19,7 @@ import {
   NAVBAR_TOP_ROW,
   NAV_ICON_SIZE,
 } from './constant'
-import type { NavItem } from './type'
-
-export type NavbarProps = {
-  brand?: string
-  brandTo?: string
-  items: NavItem[]
-  actions?: ReactNode
-  showTopicSelector?: boolean
-  hideNavOnMobile?: boolean
-  className?: string
-}
+import type { NavbarProps } from './type'
 
 function cn(...classes: Array<string | false | null | undefined>) {
   return classes.filter(Boolean).join(' ')
@@ -38,6 +29,7 @@ export function Navbar({
   brand = 'Wordie',
   brandTo = '/',
   items,
+  extraItems = EXTRA_NAV_ITEMS,
   actions,
   showTopicSelector = true,
   hideNavOnMobile = false,
@@ -77,6 +69,10 @@ export function Navbar({
                 </Chip>
               )
             })}
+
+            {extraItems && extraItems.length > 0 ? (
+              <NavExtraMenu items={extraItems} />
+            ) : null}
           </nav>
 
           {showTopicSelector ? (
@@ -99,4 +95,4 @@ export function Navbar({
   )
 }
 
-export type { NavItem } from './type'
+export type { NavItem, NavbarProps } from './type'

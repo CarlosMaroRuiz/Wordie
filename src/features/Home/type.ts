@@ -12,6 +12,7 @@ export interface HomeModule {
   icon: ComponentType<{ size?: number | string; weight?: 'bold' | 'regular' }>
   accent: string
   bar: string
+  featured?: boolean
 }
 
 export interface HomeCounts {
@@ -41,7 +42,6 @@ export interface HomeStats {
   counts: HomeCounts | null
   vocab: VocabProgressStats
   reviewWords: VocabReviewItem[]
-  previewWords: VocabReviewItem[]
   phrase: HomePhrase | null
   story: HomeStory | null
   isLoading: { vocab: boolean; counts: boolean }

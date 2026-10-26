@@ -91,14 +91,9 @@ export function useHomeStats(): HomeStats {
     () => computeVocabStats(rawVocabulary, progress),
     [rawVocabulary, progress],
   )
-  const orderedItems = useMemo(
-    () => pickReviewItems(rawVocabulary, progress, REVIEW_LIMIT * 2),
+  const reviewWords = useMemo(
+    () => pickReviewItems(rawVocabulary, progress, REVIEW_LIMIT),
     [rawVocabulary, progress],
-  )
-  const reviewWords = useMemo(() => orderedItems.slice(0, REVIEW_LIMIT), [orderedItems])
-  const previewWords = useMemo(
-    () => orderedItems.slice(REVIEW_LIMIT, REVIEW_LIMIT * 2),
-    [orderedItems],
   )
   const phrase = useMemo(() => pickPhraseOfDay(phrases.data ?? []), [phrases.data])
   const story = useMemo(() => pickStoryOfDay(stories.data ?? []), [stories.data])
@@ -117,7 +112,6 @@ export function useHomeStats(): HomeStats {
     counts,
     vocab,
     reviewWords,
-    previewWords,
     phrase,
     story,
     isLoading: {

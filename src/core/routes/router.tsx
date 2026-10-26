@@ -1,12 +1,14 @@
 import { LoadSuspense } from '@core/helpers/WithSuspense'
 import { PATHS } from '@core/routes/types/paths'
 import { MainLayout } from '@common/layouts/MainLayout'
+import { RouteErrorFallback } from '@common/components/ErrorBoundary'
 import Home from '@features/Home'
 import { createBrowserRouter } from 'react-router-dom'
 
 export const routers = createBrowserRouter([
   {
     element: <MainLayout />,
+    errorElement: <RouteErrorFallback />,
     children: [
       {
         path: PATHS.Home,
@@ -27,6 +29,24 @@ export const routers = createBrowserRouter([
       {
         path: PATHS.Phrases,
         element: LoadSuspense(() => import('@features/Phrases')),
+      },
+      {
+        path: PATHS.Phonetics,
+        element: LoadSuspense(() => import('@features/Phonetics')),
+      },
+      {
+        path: PATHS.PhrasalVerbs,
+        element: LoadSuspense(() => import('@features/PhrasalVerbs')),
+      },
+      {
+        path: PATHS.Games,
+        element: LoadSuspense(() => import('@features/Games')),
+        children: [
+          {
+            path: 'memory',
+            element: LoadSuspense(() => import('@features/Games/features/Memory')),
+          },
+        ],
       },
     ],
   },

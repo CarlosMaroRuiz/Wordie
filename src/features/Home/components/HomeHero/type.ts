@@ -1,9 +1,8 @@
-import type { VocabReviewItem } from '@features/Vocabulary/store/progress'
+import type { HomeCounts } from '../../type'
 
 export interface HomeHeroProps {
-  previewWords: VocabReviewItem[]
-  isLoadingPreview: boolean
   tourSeen: boolean
+  counts?: HomeCounts | null
   onStart: () => void
   onStartTour: () => void
 }

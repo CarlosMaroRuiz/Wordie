@@ -1,0 +1,508 @@
+[
+  {
+    "id": "pv-give-up",
+    "verb": "give",
+    "particle": "up",
+    "phrasalVerb": "give up",
+    "translation": "rendirse / abandonar",
+    "definition": "To stop trying or doing something; to surrender or quit a habit.",
+    "category": "productivity",
+    "separable": true,
+    "transitive": true,
+    "level": "A2",
+    "examples": [
+      {
+        "en": "Never give up when facing a difficult bug.",
+        "es": "Nunca te rindas al enfrentarte a un error difícil."
+      },
+      {
+        "en": "She gave up coffee to sleep better.",
+        "es": "Ella dejó el café para dormir mejor."
+      }
+    ],
+    "tip": "Es separable con pronombres: 'Give it up', nunca 'Give up it'."
+  },
+  {
+    "id": "pv-figure-out",
+    "verb": "figure",
+    "particle": "out",
+    "phrasalVerb": "figure out",
+    "translation": "descifrar / comprender",
+    "definition": "To finally understand or solve something after thinking carefully.",
+    "category": "problem-solving",
+    "separable": true,
+    "transitive": true,
+    "level": "B1",
+    "examples": [
+      {
+        "en": "We need to figure out why the query is so slow.",
+        "es": "Tenemos que averiguar por qué la consulta es tan lenta."
+      },
+      {
+        "en": "He figured it out on his own.",
+        "es": "Lo resolvió por su cuenta."
+      }
+    ],
+    "tip": "Muy usado en resolución de problemas técnicos: 'figure out a solution'."
+  },
+  {
+    "id": "pv-look-into",
+    "verb": "look",
+    "particle": "into",
+    "phrasalVerb": "look into",
+    "translation": "investigar / examinar",
+    "definition": "To investigate or examine the facts about a problem or situation.",
+    "category": "problem-solving",
+    "separable": false,
+    "transitive": true,
+    "level": "B1",
+    "examples": [
+      {
+        "en": "I will look into this issue first thing tomorrow.",
+        "es": "Investigaré este problema a primera hora mañana."
+      },
+      {
+        "en": "The engineering team is looking into the server downtime.",
+        "es": "El equipo de ingeniería está investigando la caída del servidor."
+      }
+    ],
+    "tip": "Es inseparable: siempre decimos 'look into it', no 'look it into'."
+  },
+  {
+    "id": "pv-turn-down",
+    "verb": "turn",
+    "particle": "down",
+    "phrasalVerb": "turn down",
+    "translation": "rechazar / bajar volumen",
+    "definition": "To refuse an offer or request; or to reduce the volume or intensity.",
+    "category": "communication",
+    "separable": true,
+    "transitive": true,
+    "level": "B1",
+    "examples": [
+      {
+        "en": "She turned down the job offer because the salary was too low.",
+        "es": "Rechazó la oferta de trabajo porque el salario era muy bajo."
+      },
+      {
+        "en": "Could you turn down your microphone a little?",
+        "es": "¿Podrías bajar un poco el volumen de tu micrófono?"
+      }
+    ],
+    "tip": "Doble significado común: rechazar una propuesta o bajar el volumen/aire acondicionado."
+  },
+  {
+    "id": "pv-bring-up",
+    "verb": "bring",
+    "particle": "up",
+    "phrasalVerb": "bring up",
+    "translation": "mencionar un tema / sacar a relucir",
+    "definition": "To start talking about a subject or raise a point in a meeting.",
+    "category": "communication",
+    "separable": true,
+    "transitive": true,
+    "level": "B2",
+    "examples": [
+      {
+        "en": "I will bring up this concern during the sprint planning.",
+        "es": "Mencionaré esta inquietud durante la planificación del sprint."
+      },
+      {
+        "en": "Why did you bring that up now?",
+        "es": "¿Por qué sacaste ese tema a relucir ahora?"
+      }
+    ],
+    "tip": "Muy útil en reuniones profesionales: 'I'd like to bring up an idea'."
+  },
+  {
+    "id": "pv-break-down",
+    "verb": "break",
+    "particle": "down",
+    "phrasalVerb": "break down",
+    "translation": "descomponerse / desglosar en partes",
+    "definition": "To stop working (machinery); or to divide complex information into smaller parts.",
+    "category": "problem-solving",
+    "separable": true,
+    "transitive": false,
+    "level": "B1",
+    "examples": [
+      {
+        "en": "Let's break down this monolithic task into smaller tickets.",
+        "es": "Vamos a desglosar esta tarea monolítica en tickets más pequeños."
+      },
+      {
+        "en": "Our production server broke down yesterday.",
+        "es": "Nuestro servidor de producción se descompuso ayer."
+      }
+    ],
+    "tip": "Cuando no lleva objeto directo significa fallar/romperse. Con objeto significa dividir en partes."
+  },
+  {
+    "id": "pv-carry-out",
+    "verb": "carry",
+    "particle": "out",
+    "phrasalVerb": "carry out",
+    "translation": "llevar a cabo / ejecutar",
+    "definition": "To perform or complete a task, experiment, or plan.",
+    "category": "productivity",
+    "separable": true,
+    "transitive": true,
+    "level": "B2",
+    "examples": [
+      {
+        "en": "We carried out comprehensive tests before release.",
+        "es": "Llevamos a cabo pruebas exhaustivas antes del lanzamiento."
+      },
+      {
+        "en": "The robot carries out instructions precisely.",
+        "es": "El robot ejecuta instrucciones con precisión."
+      }
+    ],
+    "tip": "Más formal que 'do'. Muy habitual en entornos de ingeniería y reportes."
+  },
+  {
+    "id": "pv-point-out",
+    "verb": "point",
+    "particle": "out",
+    "phrasalVerb": "point out",
+    "translation": "señalar / hacer notar",
+    "definition": "To draw attention to a specific fact, error, or detail.",
+    "category": "communication",
+    "separable": true,
+    "transitive": true,
+    "level": "B1",
+    "examples": [
+      {
+        "en": "The reviewer pointed out a potential memory leak.",
+        "es": "El revisor señaló una potencial fuga de memoria."
+      },
+      {
+        "en": "Thank you for pointing that out.",
+        "es": "Gracias por hacerme notar eso."
+      }
+    ],
+    "tip": "Esencial en code reviews: 'I want to point out a typo here'."
+  },
+  {
+    "id": "pv-call-off",
+    "verb": "call",
+    "particle": "off",
+    "phrasalVerb": "call off",
+    "translation": "cancelar un evento",
+    "definition": "To cancel something that was scheduled or planned.",
+    "category": "daily-life",
+    "separable": true,
+    "transitive": true,
+    "level": "B1",
+    "examples": [
+      {
+        "en": "They called off the daily standup due to the holidays.",
+        "es": "Cancelaron la reunión diaria debido a las fiestas."
+      },
+      {
+        "en": "The deploy was called off at the last minute.",
+        "es": "El despliegue fue cancelado en el último minuto."
+      }
+    ],
+    "tip": "No confundir con 'put off' (posponer). 'Call off' es cancelación definitiva."
+  },
+  {
+    "id": "pv-put-off",
+    "verb": "put",
+    "particle": "off",
+    "phrasalVerb": "put off",
+    "translation": "posponer / aplazar",
+    "definition": "To delay doing something until a later date or time.",
+    "category": "productivity",
+    "separable": true,
+    "transitive": true,
+    "level": "B1",
+    "examples": [
+      {
+        "en": "Don't put off writing documentation for later.",
+        "es": "No pospongas la redacción de documentación para después."
+      },
+      {
+        "en": "We had to put the meeting off until Thursday.",
+        "es": "Tuvimos que posponer la reunión hasta el jueves."
+      }
+    ],
+    "tip": "Equivalente informal al verbo latino 'postpone'."
+  },
+  {
+    "id": "pv-set-up",
+    "verb": "set",
+    "particle": "up",
+    "phrasalVerb": "set up",
+    "translation": "configurar / instalar",
+    "definition": "To assemble, configure, or establish a system, tool, or organization.",
+    "category": "productivity",
+    "separable": true,
+    "transitive": true,
+    "level": "A2",
+    "examples": [
+      {
+        "en": "It took only 5 minutes to set up the dev environment.",
+        "es": "Tomó solo 5 minutos configurar el entorno de desarrollo."
+      },
+      {
+        "en": "Let's set up a quick 1-on-1 call.",
+        "es": "Coordinemos una llamada rápida uno a uno."
+      }
+    ],
+    "tip": "Como sustantivo se escribe junto o con guion: 'setup'."
+  },
+  {
+    "id": "pv-come-up-with",
+    "verb": "come",
+    "particle": "up with",
+    "phrasalVerb": "come up with",
+    "translation": "idear / ocurrírsele algo",
+    "definition": "To suggest, invent, or produce an idea, answer, or solution.",
+    "category": "problem-solving",
+    "separable": false,
+    "transitive": true,
+    "level": "B2",
+    "examples": [
+      {
+        "en": "The designer came up with a brilliant user interface.",
+        "es": "El diseñador ideó una interfaz de usuario brillante."
+      },
+      {
+        "en": "Can you come up with a better algorithm?",
+        "es": "¿Se te ocurre un algoritmo mejor?"
+      }
+    ],
+    "tip": "Phrasal verb de tres palabras (verbo + dos preposiciones). Siempre es inseparable."
+  },
+  {
+    "id": "pv-run-out-of",
+    "verb": "run",
+    "particle": "out of",
+    "phrasalVerb": "run out of",
+    "translation": "quedarse sin / agotar",
+    "definition": "To use all of something so that there is none left.",
+    "category": "daily-life",
+    "separable": false,
+    "transitive": true,
+    "level": "A2",
+    "examples": [
+      {
+        "en": "The server ran out of disk space during backup.",
+        "es": "El servidor se quedó sin espacio en disco durante el respaldo."
+      },
+      {
+        "en": "We are running out of time for the presentation.",
+        "es": "Se nos está acabando el tiempo para la presentación."
+      }
+    ],
+    "tip": "Tres palabras: siempre inseparable. 'We ran out of coffee'."
+  },
+  {
+    "id": "pv-look-forward-to",
+    "verb": "look",
+    "particle": "forward to",
+    "phrasalVerb": "look forward to",
+    "translation": "esperar con ilusión / ansias",
+    "definition": "To feel pleased and excited about something that is going to happen.",
+    "category": "communication",
+    "separable": false,
+    "transitive": true,
+    "level": "B1",
+    "examples": [
+      {
+        "en": "I look forward to working with you on this project.",
+        "es": "Espero con ilusión trabajar contigo en este proyecto."
+      },
+      {
+        "en": "We look forward to your reply.",
+        "es": "Esperamos su respuesta."
+      }
+    ],
+    "tip": "¡Ojo! La preposición 'to' va seguida de sustantivo o verbo en -ING: 'look forward to seeing you'."
+  },
+  {
+    "id": "pv-get-along-with",
+    "verb": "get",
+    "particle": "along with",
+    "phrasalVerb": "get along with",
+    "translation": "llevarse bien con alguien",
+    "definition": "To have a harmonious and friendly relationship with someone.",
+    "category": "communication",
+    "separable": false,
+    "transitive": true,
+    "level": "B1",
+    "examples": [
+      {
+        "en": "It is easy to get along with our team lead.",
+        "es": "Es fácil llevarse bien con nuestro líder de equipo."
+      },
+      {
+        "en": "Do you get along with your coworkers?",
+        "es": "¿Te llevas bien con tus compañeros de trabajo?"
+      }
+    ],
+    "tip": "En inglés británico también se usa 'get on with'."
+  },
+  {
+    "id": "pv-find-out",
+    "verb": "find",
+    "particle": "out",
+    "phrasalVerb": "find out",
+    "translation": "enterarse / descubrir",
+    "definition": "To discover or learn a piece of information for the first time.",
+    "category": "problem-solving",
+    "separable": true,
+    "transitive": true,
+    "level": "A2",
+    "examples": [
+      {
+        "en": "We found out that the API was deprecated.",
+        "es": "Nos enteramos de que la API estaba obsoleta."
+      },
+      {
+        "en": "Check the logs to find out what caused the crash.",
+        "es": "Revisa los registros para descubrir qué causó la caída."
+      }
+    ],
+    "tip": "A diferencia de 'find' (encontrar un objeto físico), 'find out' es descubrir información."
+  },
+  {
+    "id": "pv-back-up",
+    "verb": "back",
+    "particle": "up",
+    "phrasalVerb": "back up",
+    "translation": "respaldar / hacer copia de seguridad",
+    "definition": "To create a duplicate copy of data; or to support someone.",
+    "category": "productivity",
+    "separable": true,
+    "transitive": true,
+    "level": "A2",
+    "examples": [
+      {
+        "en": "Always back up your database before running migrations.",
+        "es": "Siempre respalda tu base de datos antes de ejecutar migraciones."
+      },
+      {
+        "en": "My colleague backed me up during the architecture debate.",
+        "es": "Mi colega me respaldó durante el debate arquitectónico."
+      }
+    ],
+    "tip": "Como sustantivo: 'backup'."
+  },
+  {
+    "id": "pv-work-out",
+    "verb": "work",
+    "particle": "out",
+    "phrasalVerb": "work out",
+    "translation": "hacer ejercicio / resolverse con éxito",
+    "definition": "To exercise physically; or for a problem to conclude successfully.",
+    "category": "daily-life",
+    "separable": false,
+    "transitive": false,
+    "level": "B1",
+    "examples": [
+      {
+        "en": "Don't worry, everything will work out in the end.",
+        "es": "No te preocupes, todo se resolverá al final."
+      },
+      {
+        "en": "I try to work out three times a week.",
+        "es": "Intento hacer ejercicio tres veces por semana."
+      }
+    ],
+    "tip": "Muy usado como expresión de aliento: 'It will work out'."
+  },
+  {
+    "id": "pv-end-up",
+    "verb": "end",
+    "particle": "up",
+    "phrasalVerb": "end up",
+    "translation": "terminar / parar en una situación",
+    "definition": "To finally be in a particular place or situation, often unexpectedly.",
+    "category": "daily-life",
+    "separable": false,
+    "transitive": false,
+    "level": "B1",
+    "examples": [
+      {
+        "en": "We ended up rewriting the entire authentication flow.",
+        "es": "Terminamos reescribiendo todo el flujo de autenticación."
+      },
+      {
+        "en": "If you don't sleep, you will end up exhausted.",
+        "es": "Si no duermes, terminarás exhausto."
+      }
+    ],
+    "tip": "Seguido típicamente de verbo con -ing o adjetivo: 'end up doing', 'end up broke'."
+  },
+  {
+    "id": "pv-hold-on",
+    "verb": "hold",
+    "particle": "on",
+    "phrasalVerb": "hold on",
+    "translation": "esperar un momento",
+    "definition": "To wait for a short period of time.",
+    "category": "communication",
+    "separable": false,
+    "transitive": false,
+    "level": "A2",
+    "examples": [
+      {
+        "en": "Hold on a second while I share my screen.",
+        "es": "Espera un segundo mientras comparto mi pantalla."
+      },
+      {
+        "en": "Hold on, can you repeat that last point?",
+        "es": "Espera, ¿puedes repetir ese último punto?"
+      }
+    ],
+    "tip": "Muy común en llamadas o videollamadas informales."
+  },
+  {
+    "id": "pv-cut-down-on",
+    "verb": "cut",
+    "particle": "down on",
+    "phrasalVerb": "cut down on",
+    "translation": "reducir el consumo",
+    "definition": "To reduce the amount or quantity of something you use or consume.",
+    "category": "daily-life",
+    "separable": false,
+    "transitive": true,
+    "level": "B2",
+    "examples": [
+      {
+        "en": "We need to cut down on unnecessary network requests.",
+        "es": "Necesitamos reducir las peticiones de red innecesarias."
+      },
+      {
+        "en": "I am cutting down on sugar this month.",
+        "es": "Estoy reduciendo el consumo de azúcar este mes."
+      }
+    ],
+    "tip": "Inseparable de tres palabras: 'cut down on stress', 'cut down on costs'."
+  },
+  {
+    "id": "pv-catch-up-with",
+    "verb": "catch",
+    "particle": "up with",
+    "phrasalVerb": "catch up with",
+    "translation": "ponerse al día con alguien",
+    "definition": "To reach someone or learn their recent news after a period apart.",
+    "category": "communication",
+    "separable": false,
+    "transitive": true,
+    "level": "B1",
+    "examples": [
+      {
+        "en": "Let's catch up over coffee this afternoon.",
+        "es": "Pongámonos al día con un café esta tarde."
+      },
+      {
+        "en": "I need to catch up with the team after my vacation.",
+        "es": "Necesito ponerme al día con el equipo tras mis vacaciones."
+      }
+    ],
+    "tip": "También se usa sin 'with': 'Let's catch up soon'."
+  }
+]

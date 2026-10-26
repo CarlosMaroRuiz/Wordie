@@ -3,15 +3,17 @@ import { PATHS } from '@core/routes/types/paths'
 import type { HomeCounts, HomeModule } from './type'
 
 export const HOME_COPY = {
-  eyebrow: 'WORDIE / INGLÉS APLICADO',
-  titleStart: 'El inglés que',
-  titleHighlight: 'de verdad',
-  titleEnd: 'usas, todos los días.',
-  subtitle: 'Vocabulario técnico, gramática aplicada y frases de trabajo. Sin relleno.',
-  start: 'Empezar por vocabulario',
+  titleLine1: 'Eleva Tu Inglés',
+  titleLine2: 'Técnico',
+  titleLine3: 'con Práctica Diaria',
+  subtitle: 'Vocabulario de ingeniería, gramática aplicada y frases de trabajo. Sin rodeos, directo a producción.',
+  statsPrefix: 'Con más de',
+  statsSuffix: '18 TEMAS · 6 HISTORIAS',
+  start: 'Empezar ahora',
   tourRepeat: 'Repetir tour',
-  tourStart: 'Déjame darte un tour',
-  tourHint: 'Un recorrido corto por los módulos.',
+  tourStart: 'Tomar tour',
+  modulesSectionTitle: 'Nuestros Módulos',
+  modulesSectionHint: 'Todo el material estructurado para acelerar tu fluidez en ingeniería.',
   progressTitle: 'Tu progreso',
   progressHint: 'Solo cuenta lo que practicas.',
   vocabTitle: 'Tu vocabulario',
@@ -35,8 +37,6 @@ export const HOME_COPY = {
   storyReading: 'Leer ahora',
   storyEmpty: 'Lectura no disponible.',
   storyError: 'No se pudo cargar la lectura.',
-  modulesTitle: 'Explora los módulos',
-  modulesHint: 'Cuatro formas de practicar.',
 } as const
 
 export const HOME_MODULES = [
@@ -49,6 +49,7 @@ export const HOME_MODULES = [
     icon: BookOpenIcon,
     accent: 'bg-lavender/15 text-lavender',
     bar: 'bg-lavender',
+    featured: false,
   },
   {
     id: 'vocabulary',
@@ -59,16 +60,18 @@ export const HOME_MODULES = [
     icon: CardsIcon,
     accent: 'bg-primary-light text-primary',
     bar: 'bg-primary',
+    featured: true,
   },
   {
     id: 'stories',
     index: '03',
     to: PATHS.Stories,
     title: 'Lectura',
-    description: 'Historias cortas con glosario y quiz.',
+    description: 'Historias cortas con glosario y quiz comprensivo.',
     icon: CoffeeIcon,
     accent: 'bg-cyan/15 text-cyan',
     bar: 'bg-cyan',
+    featured: false,
   },
   {
     id: 'phrases',
@@ -79,6 +82,7 @@ export const HOME_MODULES = [
     icon: ChatCircleIcon,
     accent: 'bg-accent/15 text-accent',
     bar: 'bg-accent',
+    featured: false,
   },
 ] as const satisfies readonly HomeModule[]
 
@@ -89,13 +93,9 @@ export const LIBRARY_ITEMS = [
   { key: 'phrases', label: 'Frases' },
 ] as const satisfies readonly { key: keyof HomeCounts; label: string }[]
 
-export const HOME_EYEBROW =
-  'font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-primary'
-export const HOME_HIGHLIGHT =
-  'whitespace-nowrap bg-[linear-gradient(transparent_62%,var(--color-yellow)_62%)]'
 export const HOME_SECTION = 'flex flex-col gap-4'
 export const HOME_SECTION_HEAD = 'flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1'
-export const HOME_SECTION_TITLE = 'text-xl font-extrabold tracking-tight text-text-main'
+export const HOME_SECTION_TITLE = 'text-xl font-extrabold tracking-tight text-text-main sm:text-2xl'
 export const HOME_SECTION_HINT = 'text-sm text-text-secondary'
 export const HOME_GRID = 'grid gap-5 md:grid-cols-2 lg:grid-cols-12'
 export const HOME_SPAN_7 = 'lg:col-span-7'
@@ -108,7 +108,6 @@ export const HOME_PILL =
   'inline-flex shrink-0 items-center rounded-full border border-border-subtle bg-bg-page px-2.5 py-1 font-mono text-[10px] font-medium uppercase tracking-[0.12em] text-text-secondary'
 export const HOME_SKELETON =
   'animate-pulse rounded-xl bg-border-subtle/70 motion-reduce:animate-none'
-export const HOME_STACK_ROTATION = ['-rotate-2', 'rotate-1', '-rotate-1'] as const
 
 export const REVIEW_LIMIT = 3
 export const COPY_RESET_MS = 2000

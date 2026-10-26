@@ -31,7 +31,7 @@
       {
         "term": "canary release",
         "translation": "despliegue canario",
-        "definition": "Liberar un cambio a un porcentaje peque?o de usuarios antes del despliegue total."
+        "definition": "Liberar un cambio a un porcentaje pequeño de usuarios antes del despliegue total."
       },
       {
         "term": "error rate",
@@ -40,18 +40,18 @@
       },
       {
         "term": "telemetry",
-        "translation": "telemetr?a",
-        "definition": "M?tricas y eventos que la aplicaci?n env?a para monitorizar su comportamiento."
+        "translation": "telemetría",
+        "definition": "Métricas y eventos que la aplicación envía para monitorizar su comportamiento."
       },
       {
         "term": "staging",
-        "translation": "entorno de preproducci?n",
+        "translation": "entorno de preproducción",
         "definition": "Copia del entorno real donde se prueban los cambios antes de publicarlos."
       },
       {
         "term": "third-party SDK",
         "translation": "SDK de terceros",
-        "definition": "Librer?a externa que el equipo integra pero no controla directamente."
+        "definition": "Librería externa que el equipo integra pero no controla directamente."
       }
     ],
     "quiz": [
@@ -133,22 +133,22 @@
       {
         "term": "time zone",
         "translation": "zona horaria",
-        "definition": "Franja horaria de referencia de cada regi?n del mundo."
+        "definition": "Franja horaria de referencia de cada región del mundo."
       },
       {
         "term": "update",
-        "translation": "parte / actualizaci?n de estado",
+        "translation": "parte / actualización de estado",
         "definition": "Mensaje breve con el progreso y los siguientes pasos de una tarea."
       },
       {
         "term": "pull request",
-        "translation": "solicitud de fusi?n de cambios",
-        "definition": "Propuesta de cambios en el c?digo que otro miembro del equipo revisa."
+        "translation": "solicitud de fusión de cambios",
+        "definition": "Propuesta de cambios en el código que otro miembro del equipo revisa."
       },
       {
         "term": "written record",
         "translation": "registro escrito",
-        "definition": "Documento que conserva las decisiones para consultarlas m?s adelante."
+        "definition": "Documento que conserva las decisiones para consultarlas más adelante."
       },
       {
         "term": "meeting fatigue",
@@ -240,21 +240,21 @@
       {
         "term": "boarding group",
         "translation": "grupo de embarque",
-        "definition": "Turno asignado a los pasajeros para subir al avi?n en orden."
+        "definition": "Turno asignado a los pasajeros para subir al avión en orden."
       },
       {
         "term": "maintenance delay",
         "translation": "retraso por mantenimiento",
-        "definition": "Demora causada por una revisi?n t?cnica de la aeronave."
+        "definition": "Demora causada por una revisión técnica de la aeronave."
       },
       {
         "term": "transit train",
         "translation": "tren interno del aeropuerto",
-        "definition": "Transporte autom?tico que conecta terminales y puertas."
+        "definition": "Transporte automótico que conecta terminales y puertas."
       },
       {
         "term": "overhead signs",
-        "translation": "se?alizaci?n elevada",
+        "translation": "señalización elevada",
         "definition": "Carteles suspendidos del techo que indican direcciones en la terminal."
       }
     ],
@@ -309,7 +309,7 @@
     "id": "dev-incident-postmortem",
     "title": "The Postmortem Nobody Wanted",
     "readTime": "3 min",
-    "level": "B2 ? Avanzado",
+    "level": "B2 · Avanzado",
     "topic": "dev",
     "paragraphs": [
       "At 2:14 a.m., the on-call engineer received a page: the order service had stopped responding. Within minutes, the incident channel filled with alerts, dashboards, and half-awake engineers trying to understand what had changed.",
@@ -326,13 +326,13 @@
       },
       {
         "term": "root cause",
-        "translation": "causa ra?z",
-        "definition": "El origen real del fallo, no solo su s?ntoma visible."
+        "translation": "causa raíz",
+        "definition": "El origen real del fallo, no solo su síntoma visible."
       },
       {
         "term": "timeout",
-        "translation": "tiempo de espera m?ximo",
-        "definition": "L?mite de tiempo tras el cual una petici?n se cancela."
+        "translation": "tiempo de espera máximo",
+        "definition": "Límite de tiempo tras el cual una petición se cancela."
       },
       {
         "term": "connection pool",
@@ -341,23 +341,23 @@
       },
       {
         "term": "rollback",
-        "translation": "revertir a la versi?n anterior",
+        "translation": "revertir a la versión anterior",
         "definition": "Deshacer un despliegue para volver a un estado estable."
       },
       {
         "term": "blameless postmortem",
-        "translation": "an?lisis posterior sin culpas",
-        "definition": "Revisi?n centrada en el sistema y el proceso, no en las personas."
+        "translation": "análisis posterior sin culpas",
+        "definition": "Revisión centrada en el sistema y el proceso, no en las personas."
       },
       {
         "term": "alerting",
         "translation": "sistema de alertas",
-        "definition": "Reglas que avisan al equipo cuando una m?trica cruza un umbral."
+        "definition": "Reglas que avisan al equipo cuando una métrica cruza un umbral."
       },
       {
         "term": "resilient",
         "translation": "resiliente",
-        "definition": "Capaz de recuperarse r?pido y seguir funcionando tras un fallo."
+        "definition": "Capaz de recuperarse rápido y seguir funcionando tras un fallo."
       }
     ],
     "quiz": [
@@ -411,7 +411,7 @@
     "id": "work-design-review",
     "title": "The Design Review That Changed the Roadmap",
     "readTime": "3 min",
-    "level": "B1 ? Intermedio",
+    "level": "B1 · Intermedio",
     "topic": "work",
     "paragraphs": [
       "Our team had spent three weeks building a dashboard that we were sure users would love. The design review was supposed to be a formality before the beta release.",
@@ -428,8 +428,8 @@
       },
       {
         "term": "beta release",
-        "translation": "versi?n beta",
-        "definition": "Primera versi?n abierta a un grupo reducido de usuarios para probarla."
+        "translation": "versión beta",
+        "definition": "Primera versión abierta a un grupo reducido de usuarios para probarla."
       },
       {
         "term": "support agent",
@@ -438,28 +438,28 @@
       },
       {
         "term": "recording",
-        "translation": "grabaci?n",
-        "definition": "Registro en v?deo o audio de una sesi?n real de uso."
+        "translation": "grabación",
+        "definition": "Registro en vídeo o audio de una sesión real de uso."
       },
       {
         "term": "export button",
-        "translation": "bot?n de exportar",
-        "definition": "Control que permite descargar los datos fuera de la aplicaci?n."
+        "translation": "botón de exportar",
+        "definition": "Control que permite descargar los datos fuera de la aplicación."
       },
       {
         "term": "shortcut",
         "translation": "atajo / acceso directo",
-        "definition": "Acci?n r?pida que evita pasos intermedios."
+        "definition": "Acción rápida que evita pasos intermedios."
       },
       {
         "term": "assumption",
-        "translation": "suposici?n",
+        "translation": "suposición",
         "definition": "Idea que se da por cierta sin haberla validado con datos."
       },
       {
         "term": "feedback",
-        "translation": "retroalimentaci?n",
-        "definition": "Informaci?n que devuelven los usuarios sobre su experiencia."
+        "translation": "retroalimentación",
+        "definition": "Información que devuelven los usuarios sobre su experiencia."
       }
     ],
     "quiz": [
@@ -513,7 +513,7 @@
     "id": "travel-lost-luggage",
     "title": "Lost Luggage in Lisbon",
     "readTime": "3 min",
-    "level": "B1 ? Intermedio",
+    "level": "B1 · Intermedio",
     "topic": "travel",
     "paragraphs": [
       "After a nine-hour flight, I arrived in Lisbon ready for a week of workshops. The baggage carousel stopped, and my suitcase was nowhere to be seen.",
@@ -531,12 +531,12 @@
       {
         "term": "carry-on",
         "translation": "equipaje de mano",
-        "definition": "Bolsa o maleta peque?a que se lleva en la cabina del avi?n."
+        "definition": "Bolsa o maleta pequeña que se lleva en la cabina del avión."
       },
       {
         "term": "claim number",
-        "translation": "n?mero de reclamaci?n",
-        "definition": "C?digo que identifica un expediente abierto con la aerol?nea."
+        "translation": "número de reclamación",
+        "definition": "Código que identifica un expediente abierto con la aerolínea."
       },
       {
         "term": "delayed baggage",
@@ -546,22 +546,22 @@
       {
         "term": "boarding pass",
         "translation": "tarjeta de embarque",
-        "definition": "Documento que autoriza al pasajero a subir al avi?n."
+        "definition": "Documento que autoriza al pasajero a subir al avión."
       },
       {
         "term": "damaged",
-        "translation": "da?ado",
+        "translation": "dañado",
         "definition": "Que ha sufrido golpes o roturas durante el transporte."
       },
       {
         "term": "inconvenience",
         "translation": "inconveniente / molestia",
-        "definition": "F?rmula formal que usa la aerol?nea para disculparse por un problema."
+        "definition": "Fórmula formal que usa la aerolínea para disculparse por un problema."
       },
       {
         "term": "essentials",
-        "translation": "art?culos b?sicos",
-        "definition": "Productos m?nimos necesarios para cubrir una necesidad inmediata."
+        "translation": "artículos básicos",
+        "definition": "Productos mínimos necesarios para cubrir una necesidad inmediata."
       }
     ],
     "quiz": [

@@ -1,4 +1,6 @@
 import { NavLink } from 'react-router-dom'
+import { NavExtraMenu } from '@common/components/NavExtraMenu'
+import { EXTRA_NAV_ITEMS } from '@common/layouts/MainLayout/navItems'
 import {
   BOTTOM_NAV_BASE,
   BOTTOM_NAV_INDICATOR,
@@ -10,10 +12,16 @@ import {
 } from './constant'
 import type { BottomNavProps } from './type'
 
-export function BottomNav({ items }: BottomNavProps) {
+function cn(...classes: Array<string | false | null | undefined>) {
+  return classes.filter(Boolean).join(' ')
+}
+
+export function BottomNav({ items, extraItems = EXTRA_NAV_ITEMS }: BottomNavProps) {
+  const hasExtras = Boolean(extraItems && extraItems.length > 0)
+
   return (
     <nav aria-label="Navegación principal" data-tour="nav" className={BOTTOM_NAV_BASE}>
-      <ul className="grid grid-cols-5">
+      <ul className={cn('grid', hasExtras ? 'grid-cols-6' : 'grid-cols-5')}>
         {items.map(item => {
           const Icon = item.icon
 
@@ -42,6 +50,12 @@ export function BottomNav({ items }: BottomNavProps) {
             </li>
           )
         })}
+
+        {hasExtras ? (
+          <li className="flex items-center justify-center">
+            <NavExtraMenu items={extraItems} align="start" buttonLabel="Más opciones" />
+          </li>
+        ) : null}
       </ul>
     </nav>
   )

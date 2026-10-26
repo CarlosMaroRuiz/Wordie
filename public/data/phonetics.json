@@ -1,0 +1,1366 @@
+[
+  {
+    "id": "vowel-short-i",
+    "symbol": "/ɪ/",
+    "name": "I corta (lax)",
+    "category": "short-vowel",
+    "soundType": "vowel",
+    "description": "Sonido corto y relajado entre la 'i' y la 'e' en español. La mandíbula baja un poco más que para decir 'i'.",
+    "tip": "No digas la 'i' tensa del español; si tensas los labios sonará a 'seat' en lugar de 'sit'.",
+    "examples": [
+      {
+        "word": "bit",
+        "phonetic": "/bɪt/",
+        "es": "bit / pedacito"
+      },
+      {
+        "word": "build",
+        "phonetic": "/bɪld/",
+        "es": "construir / compilar"
+      },
+      {
+        "word": "system",
+        "phonetic": "/ˈsɪs.təm/",
+        "es": "sistema"
+      },
+      {
+        "word": "input",
+        "phonetic": "/ˈɪn.pʊt/",
+        "es": "entrada"
+      }
+    ]
+  },
+  {
+    "id": "vowel-short-e",
+    "symbol": "/e/",
+    "name": "E corta",
+    "category": "short-vowel",
+    "soundType": "vowel",
+    "description": "Similar a la 'e' en español, pero con la boca ligeramente más abierta y relajada.",
+    "tip": "Mantén los labios relajados y la punta de la lengua detrás de los dientes inferiores.",
+    "examples": [
+      {
+        "word": "test",
+        "phonetic": "/test/",
+        "es": "prueba"
+      },
+      {
+        "word": "render",
+        "phonetic": "/ˈren.dər/",
+        "es": "renderizar"
+      },
+      {
+        "word": "get",
+        "phonetic": "/ɡet/",
+        "es": "obtener"
+      },
+      {
+        "word": "fetch",
+        "phonetic": "/fetʃ/",
+        "es": "traer / consultar"
+      }
+    ]
+  },
+  {
+    "id": "vowel-short-ae",
+    "symbol": "/æ/",
+    "name": "A abierta (Ash)",
+    "category": "short-vowel",
+    "soundType": "vowel",
+    "description": "Un sonido intermedio entre la 'a' y la 'e'. Abre la boca como para una 'a', pero mantén la lengua plana y empuja las comisuras hacia los lados como para una 'e'.",
+    "tip": "Crucial para distinguir 'cat' (/kæt/) de 'cut' (/kʌt/) y de 'bed' (/bed/).",
+    "examples": [
+      {
+        "word": "stack",
+        "phonetic": "/stæk/",
+        "es": "pila"
+      },
+      {
+        "word": "catch",
+        "phonetic": "/kætʃ/",
+        "es": "atrapar / capturar"
+      },
+      {
+        "word": "cache",
+        "phonetic": "/kæʃ/",
+        "es": "caché"
+      },
+      {
+        "word": "packet",
+        "phonetic": "/ˈpæk.ɪt/",
+        "es": "paquete"
+      }
+    ]
+  },
+  {
+    "id": "vowel-short-lambda",
+    "symbol": "/ʌ/",
+    "name": "A central corta (Cup)",
+    "category": "short-vowel",
+    "soundType": "vowel",
+    "description": "Sonido breve, seco y gutural en el centro de la boca, con la mandíbula caída de manera neutra.",
+    "tip": "Suena como un golpe de voz relajado desde la garganta, muy común en palabras con 'u' u 'o'.",
+    "examples": [
+      {
+        "word": "run",
+        "phonetic": "/rʌn/",
+        "es": "ejecutar / correr"
+      },
+      {
+        "word": "null",
+        "phonetic": "/nʌl/",
+        "es": "nulo"
+      },
+      {
+        "word": "bug",
+        "phonetic": "/bʌɡ/",
+        "es": "error de software"
+      },
+      {
+        "word": "button",
+        "phonetic": "/ˈbʌt.ən/",
+        "es": "botón"
+      }
+    ]
+  },
+  {
+    "id": "vowel-short-o",
+    "symbol": "/ɒ/",
+    "name": "O abierta corta",
+    "category": "short-vowel",
+    "soundType": "vowel",
+    "description": "Sonido corto con la boca abierta y labios ligeramente redondeados (típico en inglés británico; en americano a menudo se fusiona hacia /ɑː/).",
+    "tip": "Abre bien la boca en posición vertical.",
+    "examples": [
+      {
+        "word": "hot",
+        "phonetic": "/hɒt/",
+        "es": "caliente"
+      },
+      {
+        "word": "lock",
+        "phonetic": "/lɒk/",
+        "es": "bloquear / candado"
+      },
+      {
+        "word": "log",
+        "phonetic": "/lɒɡ/",
+        "es": "registro"
+      },
+      {
+        "word": "drop",
+        "phonetic": "/drɒp/",
+        "es": "soltar / descartar"
+      }
+    ]
+  },
+  {
+    "id": "vowel-short-u",
+    "symbol": "/ʊ/",
+    "name": "U corta (lax)",
+    "category": "short-vowel",
+    "soundType": "vowel",
+    "description": "Sonido corto y relajado entre la 'u' y la 'o' en español. No cierres completamente los labios.",
+    "tip": "Es el sonido de 'book', no digas 'buk' con labios tensos.",
+    "examples": [
+      {
+        "word": "put",
+        "phonetic": "/pʊt/",
+        "es": "colocar"
+      },
+      {
+        "word": "look",
+        "phonetic": "/lʊk/",
+        "es": "mirar"
+      },
+      {
+        "word": "hook",
+        "phonetic": "/hʊk/",
+        "es": "gancho (React hook)"
+      },
+      {
+        "word": "push",
+        "phonetic": "/pʊʃ/",
+        "es": "empujar (git push)"
+      }
+    ]
+  },
+  {
+    "id": "vowel-schwa",
+    "symbol": "/ə/",
+    "name": "Schwa (Vocal neutra)",
+    "category": "short-vowel",
+    "soundType": "vowel",
+    "description": "El sonido más frecuente del inglés. Es la vocal más relajada del mundo: boca entreabierta, sin tensión alguna, sin acento tónico.",
+    "tip": "Aparece en sílabas átonas. Domina el Schwa y tu acento en inglés mejorará un 50% de inmediato.",
+    "examples": [
+      {
+        "word": "data",
+        "phonetic": "/ˈdeɪ.tə/",
+        "es": "datos"
+      },
+      {
+        "word": "server",
+        "phonetic": "/ˈsɜː.vər/",
+        "es": "servidor"
+      },
+      {
+        "word": "about",
+        "phonetic": "/əˈbaʊt/",
+        "es": "acerca de"
+      },
+      {
+        "word": "router",
+        "phonetic": "/ˈraʊ.tər/",
+        "es": "enrutador"
+      }
+    ]
+  },
+  {
+    "id": "vowel-long-i",
+    "symbol": "/iː/",
+    "name": "I larga y tensa",
+    "category": "long-vowel",
+    "soundType": "vowel",
+    "description": "Sonido largo y sonriente con labios bien estirados hacia los lados y lengua alta.",
+    "tip": "Dura el doble que la /ɪ/ corta de 'bit'. 'Sheet' lleva /iː/, 'shit' lleva /ɪ/.",
+    "examples": [
+      {
+        "word": "key",
+        "phonetic": "/kiː/",
+        "es": "clave / llave"
+      },
+      {
+        "word": "feed",
+        "phonetic": "/fiːd/",
+        "es": "fuente / alimentar"
+      },
+      {
+        "word": "clean",
+        "phonetic": "/kliːn/",
+        "es": "limpio"
+      },
+      {
+        "word": "screen",
+        "phonetic": "/skriːn/",
+        "es": "pantalla"
+      }
+    ]
+  },
+  {
+    "id": "vowel-long-a",
+    "symbol": "/ɑː/",
+    "name": "A larga profunda",
+    "category": "long-vowel",
+    "soundType": "vowel",
+    "description": "Sonido largo y profundo en la parte posterior de la garganta, con la mandíbula baja como cuando vas al médico y dices 'ah'.",
+    "tip": "Boca bien abierta y garganta relajada.",
+    "examples": [
+      {
+        "word": "start",
+        "phonetic": "/stɑːt/",
+        "es": "iniciar"
+      },
+      {
+        "word": "path",
+        "phonetic": "/pɑːθ/",
+        "es": "ruta / camino"
+      },
+      {
+        "word": "hard",
+        "phonetic": "/hɑːd/",
+        "es": "difícil / duro"
+      },
+      {
+        "word": "parse",
+        "phonetic": "/pɑːz/",
+        "es": "analizar sintácticamente"
+      }
+    ]
+  },
+  {
+    "id": "vowel-long-o",
+    "symbol": "/ɔː/",
+    "name": "O larga",
+    "category": "long-vowel",
+    "soundType": "vowel",
+    "description": "Sonido largo de 'o' profunda con labios redondeados y empujados hacia adelante.",
+    "tip": "Mantén la redondez de los labios durante todo el sonido.",
+    "examples": [
+      {
+        "word": "call",
+        "phonetic": "/kɔːl/",
+        "es": "llamada / invocar"
+      },
+      {
+        "word": "port",
+        "phonetic": "/pɔːt/",
+        "es": "puerto"
+      },
+      {
+        "word": "store",
+        "phonetic": "/stɔːr/",
+        "es": "almacén de estado"
+      },
+      {
+        "word": "form",
+        "phonetic": "/fɔːm/",
+        "es": "formulario"
+      }
+    ]
+  },
+  {
+    "id": "vowel-long-u",
+    "symbol": "/uː/",
+    "name": "U larga tensa",
+    "category": "long-vowel",
+    "soundType": "vowel",
+    "description": "Sonido largo de 'u' con labios muy redondeados y apretados, expulsando el aire con tensión.",
+    "tip": "Diferencia 'pool' (/puːl/) de 'pull' (/pʊl/).",
+    "examples": [
+      {
+        "word": "loop",
+        "phonetic": "/luːp/",
+        "es": "bucle / ciclo"
+      },
+      {
+        "word": "root",
+        "phonetic": "/ruːt/",
+        "es": "raíz"
+      },
+      {
+        "word": "route",
+        "phonetic": "/ruːt/",
+        "es": "ruta"
+      },
+      {
+        "word": "queue",
+        "phonetic": "/kjuː/",
+        "es": "cola de espera"
+      }
+    ]
+  },
+  {
+    "id": "vowel-long-schwa",
+    "symbol": "/ɜː/",
+    "name": "Schwa largo / Vocal central",
+    "category": "long-vowel",
+    "soundType": "vowel",
+    "description": "Versión alargada y tónica del Schwa. Los labios y mandíbula se mantienen neutros mientras se prolonga la vibración.",
+    "tip": "Es el sonido clásico de 'bird', 'first' o 'server' acentuado.",
+    "examples": [
+      {
+        "word": "search",
+        "phonetic": "/sɜːtʃ/",
+        "es": "buscar"
+      },
+      {
+        "word": "term",
+        "phonetic": "/tɜːm/",
+        "es": "término"
+      },
+      {
+        "word": "word",
+        "phonetic": "/wɜːd/",
+        "es": "palabra"
+      },
+      {
+        "word": "merge",
+        "phonetic": "/mɜːdʒ/",
+        "es": "fusionar ramas"
+      }
+    ]
+  },
+  {
+    "id": "diphthong-ei",
+    "symbol": "/eɪ/",
+    "name": "Diptongo EI",
+    "category": "diphthong",
+    "soundType": "diphthong",
+    "description": "Comienza en una 'e' y se desliza suavemente hacia una 'i' corta.",
+    "tip": "Sonido de la letra 'A' en inglés (/eɪ/).",
+    "examples": [
+      {
+        "word": "state",
+        "phonetic": "/steɪt/",
+        "es": "estado"
+      },
+      {
+        "word": "create",
+        "phonetic": "/kriˈeɪt/",
+        "es": "crear"
+      },
+      {
+        "word": "save",
+        "phonetic": "/seɪv/",
+        "es": "guardar"
+      },
+      {
+        "word": "page",
+        "phonetic": "/peɪdʒ/",
+        "es": "página"
+      }
+    ]
+  },
+  {
+    "id": "diphthong-ai",
+    "symbol": "/aɪ/",
+    "name": "Diptongo AI",
+    "category": "diphthong",
+    "soundType": "diphthong",
+    "description": "Comienza en una 'a' abierta y se desliza hacia una 'i' corta.",
+    "tip": "Sonido de la letra 'I' en inglés (/aɪ/) o el pronombre 'I'.",
+    "examples": [
+      {
+        "word": "type",
+        "phonetic": "/taɪp/",
+        "es": "tipo"
+      },
+      {
+        "word": "find",
+        "phonetic": "/faɪnd/",
+        "es": "encontrar"
+      },
+      {
+        "word": "client",
+        "phonetic": "/ˈklaɪ.ənt/",
+        "es": "cliente"
+      },
+      {
+        "word": "lifecycle",
+        "phonetic": "/ˈlaɪfˌsaɪ.kəl/",
+        "es": "ciclo de vida"
+      }
+    ]
+  },
+  {
+    "id": "diphthong-oi",
+    "symbol": "/ɔɪ/",
+    "name": "Diptongo OI",
+    "category": "diphthong",
+    "soundType": "diphthong",
+    "description": "Comienza con labios redondeados en 'o' y se desliza hacia 'i'.",
+    "tip": "Muy parecido al diptongo 'oy' en español como en 'hoy'.",
+    "examples": [
+      {
+        "word": "join",
+        "phonetic": "/dʒɔɪn/",
+        "es": "unir"
+      },
+      {
+        "word": "point",
+        "phonetic": "/pɔɪnt/",
+        "es": "puntero / punto"
+      },
+      {
+        "word": "deploy",
+        "phonetic": "/dɪˈplɔɪ/",
+        "es": "desplegar"
+      },
+      {
+        "word": "choice",
+        "phonetic": "/tʃɔɪs/",
+        "es": "elección"
+      }
+    ]
+  },
+  {
+    "id": "diphthong-au",
+    "symbol": "/aʊ/",
+    "name": "Diptongo AU",
+    "category": "diphthong",
+    "soundType": "diphthong",
+    "description": "Comienza en 'a' y redondea rápidamente los labios hacia 'u'.",
+    "tip": "Similar al 'au' de 'auto', pero con el final más suave.",
+    "examples": [
+      {
+        "word": "cloud",
+        "phonetic": "/klaʊd/",
+        "es": "nube"
+      },
+      {
+        "word": "mount",
+        "phonetic": "/maʊnt/",
+        "es": "montar"
+      },
+      {
+        "word": "output",
+        "phonetic": "/ˈaʊt.pʊt/",
+        "es": "salida"
+      },
+      {
+        "word": "route",
+        "phonetic": "/raʊt/",
+        "es": "ruta (pronunciación US)"
+      }
+    ]
+  },
+  {
+    "id": "diphthong-ou",
+    "symbol": "/əʊ/",
+    "name": "Diptongo OU (Schwa-U)",
+    "category": "diphthong",
+    "soundType": "diphthong",
+    "description": "Comienza en Schwa neutro /ə/ y avanza hacia /ʊ/ redondeando los labios. En transcripción US a menudo se escribe /oʊ/.",
+    "tip": "La 'o' del inglés casi nunca es estática; siempre viaja hacia la 'u'. Di 'c-o-u-d' para 'code'.",
+    "examples": [
+      {
+        "word": "code",
+        "phonetic": "/kəʊd/",
+        "es": "código"
+      },
+      {
+        "word": "scope",
+        "phonetic": "/skəʊp/",
+        "es": "alcance"
+      },
+      {
+        "word": "close",
+        "phonetic": "/kləʊz/",
+        "es": "cerrar"
+      },
+      {
+        "word": "token",
+        "phonetic": "/ˈtəʊ.kən/",
+        "es": "token"
+      }
+    ]
+  },
+  {
+    "id": "diphthong-ia",
+    "symbol": "/ɪə/",
+    "name": "Diptongo IA",
+    "category": "diphthong",
+    "soundType": "diphthong",
+    "description": "Comienza en la 'i' corta y se relaja hacia un Schwa.",
+    "tip": "Es el sonido de 'clear' o 'here'.",
+    "examples": [
+      {
+        "word": "clear",
+        "phonetic": "/klɪər/",
+        "es": "limpiar"
+      },
+      {
+        "word": "peer",
+        "phonetic": "/pɪər/",
+        "es": "nodo par / peer"
+      },
+      {
+        "word": "near",
+        "phonetic": "/nɪər/",
+        "es": "cercano"
+      },
+      {
+        "word": "here",
+        "phonetic": "/hɪər/",
+        "es": "aquí"
+      }
+    ]
+  },
+  {
+    "id": "diphthong-ea",
+    "symbol": "/eə/",
+    "name": "Diptongo EA (Air)",
+    "category": "diphthong",
+    "soundType": "diphthong",
+    "description": "Comienza en 'e' y se desliza hacia un Schwa neutro.",
+    "tip": "Es el sonido de 'share' o 'software'.",
+    "examples": [
+      {
+        "word": "share",
+        "phonetic": "/ʃeər/",
+        "es": "compartir"
+      },
+      {
+        "word": "software",
+        "phonetic": "/ˈsɒft.weər/",
+        "es": "software"
+      },
+      {
+        "word": "layer",
+        "phonetic": "/ˈleɪ.ər/",
+        "es": "capa"
+      },
+      {
+        "word": "variable",
+        "phonetic": "/ˈveə.ri.ə.bəl/",
+        "es": "variable"
+      }
+    ]
+  },
+  {
+    "id": "diphthong-ua",
+    "symbol": "/ʊə/",
+    "name": "Diptongo UA (Tour)",
+    "category": "diphthong",
+    "soundType": "diphthong",
+    "description": "Comienza en la 'u' corta y se desliza hacia un Schwa.",
+    "tip": "Sonido de 'secure' o 'pure'.",
+    "examples": [
+      {
+        "word": "tour",
+        "phonetic": "/tʊər/",
+        "es": "recorrido / tour"
+      },
+      {
+        "word": "pure",
+        "phonetic": "/pjʊər/",
+        "es": "puro (función pura)"
+      },
+      {
+        "word": "secure",
+        "phonetic": "/sɪˈkjʊər/",
+        "es": "seguro"
+      },
+      {
+        "word": "cure",
+        "phonetic": "/kjʊər/",
+        "es": "curar"
+      }
+    ]
+  },
+  {
+    "id": "consonant-p",
+    "symbol": "/p/",
+    "name": "Oclusiva bilabial sorda",
+    "category": "consonant-voiceless",
+    "soundType": "consonant",
+    "description": "Se produce juntando ambos labios y soltando una ráfaga de aire sin hacer vibrar las cuerdas vocales (aspirada al inicio de sílaba).",
+    "tip": "Coloca una hoja de papel frente a tu boca: al decir 'pack' debe moverse por el aire.",
+    "examples": [
+      {
+        "word": "push",
+        "phonetic": "/pʊʃ/",
+        "es": "empujar"
+      },
+      {
+        "word": "prop",
+        "phonetic": "/prɒp/",
+        "es": "propiedad"
+      },
+      {
+        "word": "pipe",
+        "phonetic": "/paɪp/",
+        "es": "tubería / canal"
+      },
+      {
+        "word": "package",
+        "phonetic": "/ˈpæk.ɪdʒ/",
+        "es": "paquete"
+      }
+    ]
+  },
+  {
+    "id": "consonant-t",
+    "symbol": "/t/",
+    "name": "Oclusiva alveolar sorda",
+    "category": "consonant-voiceless",
+    "soundType": "consonant",
+    "description": "La punta de la lengua toca los alvéolos (detrás de los dientes superiores) y suelta aire seco sin vibración.",
+    "tip": "A diferencia del español, la lengua no toca los dientes, sino la encía superior.",
+    "examples": [
+      {
+        "word": "tag",
+        "phonetic": "/tæɡ/",
+        "es": "etiqueta"
+      },
+      {
+        "word": "test",
+        "phonetic": "/test/",
+        "es": "prueba"
+      },
+      {
+        "word": "token",
+        "phonetic": "/ˈtəʊ.kən/",
+        "es": "token"
+      },
+      {
+        "word": "target",
+        "phonetic": "/ˈtɑː.ɡɪt/",
+        "es": "objetivo"
+      }
+    ]
+  },
+  {
+    "id": "consonant-k",
+    "symbol": "/k/",
+    "name": "Oclusiva velar sorda",
+    "category": "consonant-voiceless",
+    "soundType": "consonant",
+    "description": "La parte trasera de la lengua toca el velo del paladar y libera aire con un chasquido sordo.",
+    "tip": "Aspirada al inicio de palabras: 'key' tiene un soplo de aire audible.",
+    "examples": [
+      {
+        "word": "key",
+        "phonetic": "/kiː/",
+        "es": "clave"
+      },
+      {
+        "word": "callback",
+        "phonetic": "/ˈkɔːl.bæk/",
+        "es": "retrollamada"
+      },
+      {
+        "word": "commit",
+        "phonetic": "/kəˈmɪt/",
+        "es": "confirmar cambio"
+      },
+      {
+        "word": "cache",
+        "phonetic": "/kæʃ/",
+        "es": "memoria caché"
+      }
+    ]
+  },
+  {
+    "id": "consonant-f",
+    "symbol": "/f/",
+    "name": "Fricativa labiodental sorda",
+    "category": "consonant-voiceless",
+    "soundType": "consonant",
+    "description": "Los dientes superiores tocan suavemente el labio inferior, dejando escapar aire continuamente sin vibrar.",
+    "tip": "Muy similar a la 'f' del español.",
+    "examples": [
+      {
+        "word": "file",
+        "phonetic": "/faɪl/",
+        "es": "archivo"
+      },
+      {
+        "word": "fetch",
+        "phonetic": "/fetʃ/",
+        "es": "solicitar"
+      },
+      {
+        "word": "flow",
+        "phonetic": "/fləʊ/",
+        "es": "flujo"
+      },
+      {
+        "word": "function",
+        "phonetic": "/ˈfʌŋk.ʃən/",
+        "es": "función"
+      }
+    ]
+  },
+  {
+    "id": "consonant-theta",
+    "symbol": "/θ/",
+    "name": "Fricativa dental sorda (Theta)",
+    "category": "consonant-voiceless",
+    "soundType": "consonant",
+    "description": "Coloca la punta de la lengua entre los dientes y sopla aire sin hacer vibrar la garganta. Es el sonido de 'th' en 'think'.",
+    "tip": "Similar a la 'z' de España en 'zapato'. Jamás lo pronuncies como 's' ni como 'f'.",
+    "examples": [
+      {
+        "word": "thread",
+        "phonetic": "/θred/",
+        "es": "hilo de ejecución"
+      },
+      {
+        "word": "think",
+        "phonetic": "/θɪŋk/",
+        "es": "pensar"
+      },
+      {
+        "word": "path",
+        "phonetic": "/pɑːθ/",
+        "es": "ruta"
+      },
+      {
+        "word": "method",
+        "phonetic": "/ˈmeθ.əd/",
+        "es": "método"
+      }
+    ]
+  },
+  {
+    "id": "consonant-s",
+    "symbol": "/s/",
+    "name": "Fricativa alveolar sorda",
+    "category": "consonant-voiceless",
+    "soundType": "consonant",
+    "description": "Aire silbante pasando por el canal estrecho entre la punta de la lengua y los alvéolos, sin vibración vocal.",
+    "tip": "En inglés, cuando una palabra empieza por 's' seguida de consonante (ej: 'state', 'stack'), no agregues una 'e' antes.",
+    "examples": [
+      {
+        "word": "stack",
+        "phonetic": "/stæk/",
+        "es": "pila"
+      },
+      {
+        "word": "state",
+        "phonetic": "/steɪt/",
+        "es": "estado"
+      },
+      {
+        "word": "string",
+        "phonetic": "/strɪŋ/",
+        "es": "cadena de texto"
+      },
+      {
+        "word": "script",
+        "phonetic": "/skrɪpt/",
+        "es": "guión / script"
+      }
+    ]
+  },
+  {
+    "id": "consonant-esh",
+    "symbol": "/ʃ/",
+    "name": "Fricativa postalveolar sorda (Sh)",
+    "category": "consonant-voiceless",
+    "soundType": "consonant",
+    "description": "Sonido de pedir silencio ('shhh'). Los labios se redondean ligeramente y la lengua se retrae hacia el paladar.",
+    "tip": "No confundir con la /s/ simple: 'shell' (/ʃel/) vs 'sell' (/sel/).",
+    "examples": [
+      {
+        "word": "shell",
+        "phonetic": "/ʃel/",
+        "es": "consola / terminal"
+      },
+      {
+        "word": "push",
+        "phonetic": "/pʊʃ/",
+        "es": "empujar"
+      },
+      {
+        "word": "hash",
+        "phonetic": "/hæʃ/",
+        "es": "resumen criptográfico"
+      },
+      {
+        "word": "shortcut",
+        "phonetic": "/ˈʃɔːt.kʌt/",
+        "es": "atajo"
+      }
+    ]
+  },
+  {
+    "id": "consonant-ch",
+    "symbol": "/tʃ/",
+    "name": "Africada postalveolar sorda (Ch)",
+    "category": "consonant-voiceless",
+    "soundType": "consonant",
+    "description": "Comienza deteniendo el aire con /t/ y se libera explosivamente como /ʃ/. Es como la 'ch' en 'charco'.",
+    "tip": "Explosivo y seco, sin vibrar cuerdas vocales.",
+    "examples": [
+      {
+        "word": "check",
+        "phonetic": "/tʃek/",
+        "es": "comprobar"
+      },
+      {
+        "word": "chunk",
+        "phonetic": "/tʃʌŋk/",
+        "es": "fragmento"
+      },
+      {
+        "word": "match",
+        "phonetic": "/mætʃ/",
+        "es": "coincidencia"
+      },
+      {
+        "word": "branch",
+        "phonetic": "/brɑːntʃ/",
+        "es": "rama"
+      }
+    ]
+  },
+  {
+    "id": "consonant-h",
+    "symbol": "/h/",
+    "name": "Fricativa glotal sorda",
+    "category": "consonant-voiceless",
+    "soundType": "consonant",
+    "description": "Exhalación suave de aire por la glotis abierta, como echando vaho para limpiar los lentes.",
+    "tip": "No es la 'j' áspera del español de México o España; es un aliento suave.",
+    "examples": [
+      {
+        "word": "host",
+        "phonetic": "/həʊst/",
+        "es": "anfitrión / host"
+      },
+      {
+        "word": "hook",
+        "phonetic": "/hʊk/",
+        "es": "gancho"
+      },
+      {
+        "word": "header",
+        "phonetic": "/ˈhed.ər/",
+        "es": "cabecera"
+      },
+      {
+        "word": "heap",
+        "phonetic": "/hiːp/",
+        "es": "montículo de memoria"
+      }
+    ]
+  },
+  {
+    "id": "consonant-b",
+    "symbol": "/b/",
+    "name": "Oclusiva bilabial sonora",
+    "category": "consonant-voiced",
+    "soundType": "consonant",
+    "description": "Ambos labios se juntan y sueltan aire mientras las cuerdas vocales vibran activamente.",
+    "tip": "Toca tu garganta: debes sentir vibración con /b/, a diferencia de /p/.",
+    "examples": [
+      {
+        "word": "bug",
+        "phonetic": "/bʌɡ/",
+        "es": "error"
+      },
+      {
+        "word": "build",
+        "phonetic": "/bɪld/",
+        "es": "construir"
+      },
+      {
+        "word": "byte",
+        "phonetic": "/baɪt/",
+        "es": "byte"
+      },
+      {
+        "word": "backend",
+        "phonetic": "/ˈbæk.end/",
+        "es": "backend"
+      }
+    ]
+  },
+  {
+    "id": "consonant-d",
+    "symbol": "/d/",
+    "name": "Oclusiva alveolar sonora",
+    "category": "consonant-voiced",
+    "soundType": "consonant",
+    "description": "La punta de la lengua presiona los alvéolos superiores mientras vibran las cuerdas vocales.",
+    "tip": "No pongas la lengua entre los dientes; eso generaría /ð/.",
+    "examples": [
+      {
+        "word": "debug",
+        "phonetic": "/diːˈbʌɡ/",
+        "es": "depurar"
+      },
+      {
+        "word": "dom",
+        "phonetic": "/dɒm/",
+        "es": "modelo de objetos del documento"
+      },
+      {
+        "word": "data",
+        "phonetic": "/ˈdeɪ.tə/",
+        "es": "datos"
+      },
+      {
+        "word": "deploy",
+        "phonetic": "/dɪˈplɔɪ/",
+        "es": "desplegar"
+      }
+    ]
+  },
+  {
+    "id": "consonant-g",
+    "symbol": "/ɡ/",
+    "name": "Oclusiva velar sonora",
+    "category": "consonant-voiced",
+    "soundType": "consonant",
+    "description": "La parte posterior de la lengua bloquea el velo del paladar y libera aire con vibración vocal.",
+    "tip": "Siempre suave y sonoro como en 'gato', nunca como la 'g' de 'gente'.",
+    "examples": [
+      {
+        "word": "git",
+        "phonetic": "/ɡɪt/",
+        "es": "control de versiones"
+      },
+      {
+        "word": "get",
+        "phonetic": "/ɡet/",
+        "es": "obtener"
+      },
+      {
+        "word": "grid",
+        "phonetic": "/ɡrɪd/",
+        "es": "cuadrícula"
+      },
+      {
+        "word": "garbage",
+        "phonetic": "/ˈɡɑː.bɪdʒ/",
+        "es": "basura"
+      }
+    ]
+  },
+  {
+    "id": "consonant-v",
+    "symbol": "/v/",
+    "name": "Fricativa labiodental sonora",
+    "category": "consonant-voiced",
+    "soundType": "consonant",
+    "description": "Los dientes superiores tocan el labio inferior mientras las cuerdas vocales vibran continuamente.",
+    "tip": "En español no distinguimos 'b' y 'v', pero en inglés es vital: 'berry' (/b/) vs 'very' (/v/).",
+    "examples": [
+      {
+        "word": "value",
+        "phonetic": "/ˈvæl.juː/",
+        "es": "valor"
+      },
+      {
+        "word": "view",
+        "phonetic": "/vjuː/",
+        "es": "vista"
+      },
+      {
+        "word": "variable",
+        "phonetic": "/ˈveə.ri.ə.bəl/",
+        "es": "variable"
+      },
+      {
+        "word": "server",
+        "phonetic": "/ˈsɜː.vər/",
+        "es": "servidor"
+      }
+    ]
+  },
+  {
+    "id": "consonant-eth",
+    "symbol": "/ð/",
+    "name": "Fricativa dental sonora (Eth)",
+    "category": "consonant-voiced",
+    "soundType": "consonant",
+    "description": "Punta de la lengua entre los dientes haciendo vibrar las cuerdas vocales con zumbido. Es el sonido de 'this'.",
+    "tip": "Siente la vibración en la garganta. Es la pareja sonora de /θ/ ('think').",
+    "examples": [
+      {
+        "word": "this",
+        "phonetic": "/ðɪs/",
+        "es": "este / esta"
+      },
+      {
+        "word": "then",
+        "phonetic": "/ðen/",
+        "es": "entonces"
+      },
+      {
+        "word": "with",
+        "phonetic": "/wɪð/",
+        "es": "con"
+      },
+      {
+        "word": "other",
+        "phonetic": "/ˈʌð.ər/",
+        "es": "otro"
+      }
+    ]
+  },
+  {
+    "id": "consonant-z",
+    "symbol": "/z/",
+    "name": "Fricativa alveolar sonora (Z)",
+    "category": "consonant-voiced",
+    "soundType": "consonant",
+    "description": "Igual que una /s/, pero las cuerdas vocales vibran como el zumbido de una abeja ('zzzzz').",
+    "tip": "En español casi no existe la 'z' sonora. Haz zumbar la garganta en 'size' y 'parse'.",
+    "examples": [
+      {
+        "word": "zip",
+        "phonetic": "/zɪp/",
+        "es": "comprimir"
+      },
+      {
+        "word": "size",
+        "phonetic": "/saɪz/",
+        "es": "tamaño"
+      },
+      {
+        "word": "zero",
+        "phonetic": "/ˈzɪə.rəʊ/",
+        "es": "cero"
+      },
+      {
+        "word": "parse",
+        "phonetic": "/pɑːz/",
+        "es": "parsear"
+      }
+    ]
+  },
+  {
+    "id": "consonant-ezh",
+    "symbol": "/ʒ/",
+    "name": "Fricativa postalveolar sonora (Ezh)",
+    "category": "consonant-voiced",
+    "soundType": "consonant",
+    "description": "Sonido como 'sh', pero con vibración vocal. Similar a la 'y'/'ll' en el español rioplatense (argentino).",
+    "tip": "Sonido presente en 'measure', 'vision', 'decision'.",
+    "examples": [
+      {
+        "word": "version",
+        "phonetic": "/ˈvɜː.ʒən/",
+        "es": "versión"
+      },
+      {
+        "word": "measure",
+        "phonetic": "/ˈmeʒ.ər/",
+        "es": "medida"
+      },
+      {
+        "word": "closure",
+        "phonetic": "/ˈkləʊ.ʒər/",
+        "es": "clausura de función"
+      },
+      {
+        "word": "visual",
+        "phonetic": "/ˈvɪʒ.u.əl/",
+        "es": "visual"
+      }
+    ]
+  },
+  {
+    "id": "consonant-dzh",
+    "symbol": "/dʒ/",
+    "name": "Africada postalveolar sonora (J)",
+    "category": "consonant-voiced",
+    "soundType": "consonant",
+    "description": "Comienza deteniendo aire con /d/ y liberándolo como /ʒ/ con vibración de cuerdas vocales.",
+    "tip": "Sonido de la 'J' en inglés: 'JSON' o 'join'.",
+    "examples": [
+      {
+        "word": "join",
+        "phonetic": "/dʒɔɪn/",
+        "es": "unir"
+      },
+      {
+        "word": "json",
+        "phonetic": "/ˈdʒeɪ.sən/",
+        "es": "formato json"
+      },
+      {
+        "word": "java",
+        "phonetic": "/ˈdʒɑː.və/",
+        "es": "lenguaje java"
+      },
+      {
+        "word": "edge",
+        "phonetic": "/edʒ/",
+        "es": "borde / extremo de red"
+      }
+    ]
+  },
+  {
+    "id": "consonant-m",
+    "symbol": "/m/",
+    "name": "Nasal bilabial sonora",
+    "category": "consonant-voiced",
+    "soundType": "consonant",
+    "description": "Labios cerrados, el aire sale por la cavidad nasal con vibración de cuerdas vocales.",
+    "tip": "Idéntica a la 'm' en español.",
+    "examples": [
+      {
+        "word": "module",
+        "phonetic": "/ˈmɒdʒ.uːl/",
+        "es": "módulo"
+      },
+      {
+        "word": "method",
+        "phonetic": "/ˈmeθ.əd/",
+        "es": "método"
+      },
+      {
+        "word": "memory",
+        "phonetic": "/ˈmem.ər.i/",
+        "es": "memoria"
+      },
+      {
+        "word": "map",
+        "phonetic": "/mæp/",
+        "es": "transformar / mapear"
+      }
+    ]
+  },
+  {
+    "id": "consonant-n",
+    "symbol": "/n/",
+    "name": "Nasal alveolar sonora",
+    "category": "consonant-voiced",
+    "soundType": "consonant",
+    "description": "Punta de la lengua bloquea los alvéolos superiores y el aire fluye por la nariz.",
+    "tip": "Idéntica a la 'n' en español.",
+    "examples": [
+      {
+        "word": "node",
+        "phonetic": "/nəʊd/",
+        "es": "nodo"
+      },
+      {
+        "word": "null",
+        "phonetic": "/nʌl/",
+        "es": "nulo"
+      },
+      {
+        "word": "network",
+        "phonetic": "/ˈnet.wɜːk/",
+        "es": "red"
+      },
+      {
+        "word": "native",
+        "phonetic": "/ˈneɪ.tɪv/",
+        "es": "nativo"
+      }
+    ]
+  },
+  {
+    "id": "consonant-eng",
+    "symbol": "/ŋ/",
+    "name": "Nasal velar sonora (Eng)",
+    "category": "consonant-voiced",
+    "soundType": "consonant",
+    "description": "La parte trasera de la lengua toca el velo del paladar mientras el aire sale por la nariz.",
+    "tip": "Es el sonido al final de palabras con '-ing' ('running', 'string'). ¡Nunca pronuncies una 'g' dura al final!",
+    "examples": [
+      {
+        "word": "string",
+        "phonetic": "/strɪŋ/",
+        "es": "cadena"
+      },
+      {
+        "word": "ping",
+        "phonetic": "/pɪŋ/",
+        "es": "latencia de red"
+      },
+      {
+        "word": "routing",
+        "phonetic": "/ˈraʊ.tɪŋ/",
+        "es": "enrutamiento"
+      },
+      {
+        "word": "rendering",
+        "phonetic": "/ˈren.dər.ɪŋ/",
+        "es": "renderizado"
+      }
+    ]
+  },
+  {
+    "id": "consonant-l",
+    "symbol": "/l/",
+    "name": "Aproximante lateral alveolar sonora",
+    "category": "consonant-voiced",
+    "soundType": "consonant",
+    "description": "La punta de la lengua toca los alvéolos superiores mientras el aire sale libremente por los costados.",
+    "tip": "Al final de sílaba se convierte en 'dark L' (/ɫ/), con la lengua retraída (ej: 'null', 'call').",
+    "examples": [
+      {
+        "word": "loop",
+        "phonetic": "/luːp/",
+        "es": "bucle"
+      },
+      {
+        "word": "lint",
+        "phonetic": "/lɪnt/",
+        "es": "análisis de código"
+      },
+      {
+        "word": "load",
+        "phonetic": "/ləʊd/",
+        "es": "cargar"
+      },
+      {
+        "word": "lazy",
+        "phonetic": "/ˈleɪ.zi/",
+        "es": "carga diferida"
+      }
+    ]
+  },
+  {
+    "id": "consonant-r",
+    "symbol": "/r/",
+    "name": "Aproximante postalveolar sonora",
+    "category": "consonant-voiced",
+    "soundType": "consonant",
+    "description": "La lengua se curva hacia atrás sin tocar jamás el paladar. La punta queda flotando.",
+    "tip": "¡No vibres la lengua como la 'rr' del español! Es un sonido suave donde la lengua nunca hace contacto.",
+    "examples": [
+      {
+        "word": "react",
+        "phonetic": "/riˈækt/",
+        "es": "reaccionar / react"
+      },
+      {
+        "word": "route",
+        "phonetic": "/ruːt/",
+        "es": "ruta"
+      },
+      {
+        "word": "render",
+        "phonetic": "/ˈren.dər/",
+        "es": "renderizar"
+      },
+      {
+        "word": "request",
+        "phonetic": "/rɪˈkwest/",
+        "es": "petición"
+      }
+    ]
+  },
+  {
+    "id": "consonant-w",
+    "symbol": "/w/",
+    "name": "Aproximante labiovelar sonora",
+    "category": "consonant-voiced",
+    "soundType": "consonant",
+    "description": "Labios muy redondeados que se abren rápidamente mientras vibran las cuerdas vocales.",
+    "tip": "Como la 'u' en 'hueso', sin sonido 'g' antes (no digas 'güeb', sino 'web').",
+    "examples": [
+      {
+        "word": "web",
+        "phonetic": "/web/",
+        "es": "red / web"
+      },
+      {
+        "word": "worker",
+        "phonetic": "/ˈwɜː.kər/",
+        "es": "hilo de fondo"
+      },
+      {
+        "word": "await",
+        "phonetic": "/əˈweɪt/",
+        "es": "esperar promesa"
+      },
+      {
+        "word": "window",
+        "phonetic": "/ˈwɪn.dəʊ/",
+        "es": "ventana"
+      }
+    ]
+  },
+  {
+    "id": "consonant-j",
+    "symbol": "/j/",
+    "name": "Aproximante palatal sonora (Yod)",
+    "category": "consonant-voiced",
+    "soundType": "consonant",
+    "description": "Sonido de la 'y' en 'yes'. La lengua sube cerca del paladar duro como una 'i' rápida.",
+    "tip": "En IPA se representa con el símbolo /j/, pero suena como la 'y' suave en 'yate'.",
+    "examples": [
+      {
+        "word": "yield",
+        "phonetic": "/jiːld/",
+        "es": "ceder valor (generador)"
+      },
+      {
+        "word": "yarn",
+        "phonetic": "/jɑːn/",
+        "es": "gestor de paquetes"
+      },
+      {
+        "word": "yes",
+        "phonetic": "/jes/",
+        "es": "sí"
+      },
+      {
+        "word": "unit",
+        "phonetic": "/ˈjuː.nɪt/",
+        "es": "unidad"
+      }
+    ]
+  }
+]
