@@ -151,18 +151,19 @@ Las métricas de Core Web Vitals para la página principal son actualmente:
 - **CLS:** 0.001 (bueno)
 - **TTFB:** 133 ms (bueno)
 
-## Desarrollo AI‑First
-El desarrollo está orientado a la inteligencia artificial desde la concepción del producto. Se adoptan principios como:
+## Servidor MCP (english-hub-mcp)
 
-- **Diseño impulsado por datos**: los flujos de UI se generan a partir de modelos de lenguaje que adaptan el contenido según el nivel y progreso del usuario.
-- **Pruebas automatizadas y CI/CD**: Vitest, Playwright y los pipelines de Vercel ejecutan pruebas y auditorías (`auditar_codigo`) en cada push, asegurando calidad constante.
-- **Instrumentación y monitoreo continuo**: el servidor MCP registra métricas de rendimiento y decisiones de arquitectura, facilitando retroalimentación automática para ajustar los modelos de IA, y ofrece soporte para actividades como auditoría de código, gestión de decisiones y generación de diagramas.
-- **Iteración rápida**: los cambios se despliegan automáticamente y los modelos pueden ser re‑entrenados o afinados sin interrumpir el servicio.
+El proyecto cuenta con un servidor MCP propio que actua como fuente unica de verdad para la arquitectura, calidad y datos de la aplicacion. Expone 30 herramientas organizadas en las siguientes categorias:
 
-Estas prácticas garantizan que la aplicación evolucione con mejoras de IA mientras mantiene estándares de ingeniería de software.
+- **Contexto y arquitectura:** `obtener_mapa_arquitectura`, `obtener_contexto_tarea`, `briefing_sesion` devuelven el estado completo del proyecto (rutas, features, stores, datos) para eliminar la amnesia entre sesiones de desarrollo.
+- **Diagramas dinamicos:** `generar_diagrama_arquitectura` produce diagramas Mermaid en multiples vistas (global, feature, flujo de datos, common, navegacion) con distintos niveles de profundidad. El diagrama de arquitectura de este README fue generado con esta herramienta.
+- **Analisis de impacto:** `analizar_impacto_cambio`, `inspeccionar_componente`, `detectar_componentes_huerfanos` y `detectar_componentes_hub` calculan el radio de afectacion antes de modificar cualquier componente o store.
+- **Auditoria y calidad (AST TypeScript):** `auditar_codigo`, `auditar_cambio` y `verificar_proyecto` analizan el codigo fuente con el parser AST oficial de TypeScript, verificando el cumplimiento de las reglas arquitecturales del proyecto.
+- **Catalogo y andamiaje:** `listar_catalogo_common`, `consultar_componente_common` y `generar_andamiaje_componente` permiten consultar la libreria de componentes reutilizables y generar la estructura modular de nuevos componentes (index, type, constant, stories, hook).
+- **Esquemas y datos:** `obtener_esquema_datos`, `validar_datos_json`, `generar_archivo_datos`, `detectar_drift` y `migrar_datos` gestionan los archivos JSON de `/public/data/`, validandolos contra los contratos TypeScript y detectando desincronizaciones.
+- **Bitacora de decisiones:** `registrar_decision`, `consultar_bitacora`, `generar_reporte_decisiones` y `exportar_bitacora` documentan el por que de cada cambio arquitectural, manteniendo un historial consultable en una base de datos SQLite.
+- **Hallazgos y mejoras:** `registrar_hallazgo`, `consultar_hallazgos` y `gestionar_hallazgo` permiten rastrear mejoras pendientes, bugs detectados y oportunidades de optimizacion.
+- **Workspace:** `estado_workspace`, `leer_archivo` y `buscar_en_proyecto` ofrecen acceso al repositorio Git y busqueda por expresiones regulares en el codigo fuente.
 
 ## Despliegue
 El repositorio está enlazado a Vercel. En cada push a `main`, Vercel construye y despliega la última versión. La URL pública es `https://wordie-beta.vercel.app/`.
-
-## Licencia
-Este proyecto está licenciado bajo la licencia MIT.
