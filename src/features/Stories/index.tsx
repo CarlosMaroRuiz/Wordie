@@ -3,8 +3,8 @@ import { ErrorState } from '@common/components/ErrorState'
 import { useStories } from './hooks/useStories'
 import { StorySelector } from './components/StorySelector'
 import { StoryCard } from './components/StoryCard'
-import { StoryGlossary } from './components/StoryGlossary'
 import { StoryQuiz } from './components/StoryQuiz'
+import { StoryKeywordModal } from './components/StoryKeywordModal'
 
 export default function Stories() {
   const {
@@ -12,12 +12,16 @@ export default function Stories() {
     currentStory,
     selectedStoryId,
     setSelectedStoryId,
-    activeTopic,
-    setActiveTopic,
+    activeKeyword,
     selectedKeyword,
-    setSelectedKeyword,
+    setActiveKeyword,
+    closeKeywordModal,
     isNarrating,
+    narratingParagraphIndex,
+    narratingCharIndex,
     toggleNarration,
+    playbackRate,
+    setPlaybackRate,
     quizAnswers,
     selectQuizAnswer,
     resetQuiz,
@@ -48,43 +52,39 @@ export default function Stories() {
       {/* Encabezado y selector de historias */}
       <div className="flex flex-col gap-2">
         <h1 className="text-2xl font-extrabold tracking-tight text-text-main sm:text-3xl">
-          Lectura técnica guiada
+          Lecturas y comprensión contextual
         </h1>
         <p className="text-sm text-text-secondary">
-          Historias y situaciones del día a día laboral con glosario y quiz integrado.
+          Historias reales con vocabulario interactivo, narración de audio y quiz de comprensión.
         </p>
 
         <div className="mt-3">
           <StorySelector
             stories={stories}
             selectedStoryId={selectedStoryId}
-            activeTopic={activeTopic}
             onSelectStory={setSelectedStoryId}
-            onSelectTopic={setActiveTopic}
           />
         </div>
       </div>
 
-      {/* Cuadrícula responsiva: lectura (65ch) + glosario y quiz pegajoso */}
+      {/* Cuadrícula responsiva: lectura (65ch) + quiz pegajoso */}
       {currentStory ? (
         <div className="mt-6 grid grid-cols-1 items-start gap-6 lg:grid-cols-[1.6fr_1fr]">
           <div className="w-full">
             <StoryCard
               story={currentStory}
               selectedKeyword={selectedKeyword}
-              onSelectKeyword={setSelectedKeyword}
+              onSelectKeyword={setActiveKeyword}
               isNarrating={isNarrating}
+              narratingParagraphIndex={narratingParagraphIndex}
+              narratingCharIndex={narratingCharIndex}
               onToggleNarration={toggleNarration}
+              playbackRate={playbackRate}
+              onPlaybackRateChange={setPlaybackRate}
             />
           </div>
 
           <aside className="space-y-5 lg:sticky lg:top-20">
-            <StoryGlossary
-              keywords={currentStory.keywords}
-              selectedKeyword={selectedKeyword}
-              onSelectKeyword={setSelectedKeyword}
-            />
-
             <StoryQuiz
               quiz={currentStory.quiz}
               answers={quizAnswers}
@@ -99,6 +99,14 @@ export default function Stories() {
           No hay historias disponibles para el tema seleccionado.
         </div>
       )}
+
+      {/* Modal interactivo al hacer clic sobre cualquier palabra clave */}
+      <StoryKeywordModal
+        keyword={activeKeyword}
+        isOpen={Boolean(activeKeyword)}
+        onClose={closeKeywordModal}
+        playbackRate={playbackRate}
+      />
     </section>
   )
 }

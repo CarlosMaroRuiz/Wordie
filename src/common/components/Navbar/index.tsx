@@ -50,7 +50,7 @@ export function Navbar({
           {actions ? <div className={NAVBAR_ACTIONS}>{actions}</div> : null}
         </div>
 
-        <div className={NAVBAR_NAV_ROW}>
+        <div className={cn(NAVBAR_NAV_ROW, !showTopicSelector && 'max-lg:hidden')}>
           <nav
             className={cn(NAVBAR_NAV, hideNavOnMobile && 'max-lg:hidden')}
             aria-label="Navegación principal"

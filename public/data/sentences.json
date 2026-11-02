@@ -1,0 +1,212 @@
+[
+  {
+    "id": "dev-1",
+    "topic": "dev",
+    "difficulty": "easy",
+    "es": "Ayer terminé de implementar la pantalla de inicio de sesión.",
+    "enWords": ["Yesterday", "I", "finished", "implementing", "the", "login", "screen."],
+    "distractors": ["to", "implement"],
+    "hint": "Después de \"finished\" usamos gerundio (-ing), no infinitivo.",
+    "explanation": "\"Finish\" se complementa con gerundio (implementing), no con to + infinitivo."
+  },
+  {
+    "id": "dev-2",
+    "topic": "dev",
+    "difficulty": "easy",
+    "es": "Hoy voy a desplegar el parche urgente a producción.",
+    "enWords": ["Today", "I", "will", "deploy", "the", "hotfix", "to", "production."],
+    "distractors": ["at", "deploying"],
+    "hint": "Para indicar destino hacia un entorno usamos \"to\".",
+    "explanation": "\"Deploy to production\" es la expresión estándar en equipos DevOps."
+  },
+  {
+    "id": "dev-3",
+    "topic": "dev",
+    "difficulty": "medium",
+    "es": "Actualmente estoy bloqueado por la migración de base de datos.",
+    "enWords": ["I", "am", "currently", "blocked", "by", "the", "database", "migration."],
+    "distractors": ["with", "block"],
+    "hint": "La voz pasiva de bloqueo usa \"blocked by\".",
+    "explanation": "En reuniones ágiles, \"I am blocked by [X]\" es la fórmula estándar de impedimento."
+  },
+  {
+    "id": "dev-4",
+    "topic": "dev",
+    "difficulty": "medium",
+    "es": "Deberíamos añadir pruebas unitarias antes de fusionar esta rama.",
+    "enWords": ["We", "should", "add", "unit", "tests", "before", "merging", "this", "branch."],
+    "distractors": ["merge", "must"],
+    "hint": "Después de la preposición temporal \"before\", el verbo va en gerundio (-ing).",
+    "explanation": "Las preposiciones exigen forma -ing para los verbos subsecuentes."
+  },
+  {
+    "id": "dev-5",
+    "topic": "dev",
+    "difficulty": "medium",
+    "es": "Por favor revisa los comentarios que dejé en tu pull request.",
+    "enWords": ["Please", "check", "the", "comments", "I", "left", "on", "your", "pull", "request."],
+    "distractors": ["in", "leaved"],
+    "hint": "Se utiliza \"on\" para referirse a comentarios en un PR.",
+    "explanation": "\"Leave comments on a PR\" es la convención habitual en GitHub/GitLab."
+  },
+  {
+    "id": "dev-6",
+    "topic": "dev",
+    "difficulty": "hard",
+    "es": "He estado investigando la fuga de memoria desde esta mañana.",
+    "enWords": ["I", "have", "been", "investigating", "the", "memory", "leak", "since", "this", "morning."],
+    "distractors": ["for", "investigated"],
+    "hint": "Usa Present Perfect Continuous (\"have been -ing\") y \"since\" para un punto de tiempo específico.",
+    "explanation": "\"Since\" señala cuándo inició la actividad continua; \"for\" indicaría duración total."
+  },
+  {
+    "id": "dev-7",
+    "topic": "dev",
+    "difficulty": "hard",
+    "es": "Necesitamos revertir el despliegue debido a un error crítico de base de datos.",
+    "enWords": ["We", "need", "to", "roll", "back", "the", "deployment", "due", "to", "a", "critical", "error."],
+    "distractors": ["because", "rollback"],
+    "hint": "\"Roll back\" como verbo se escribe en dos palabras; \"due to\" significa \"debido a\".",
+    "explanation": "\"Due to\" conecta el evento con la causa técnica directa."
+  },
+  {
+    "id": "travel-1",
+    "topic": "travel",
+    "difficulty": "easy",
+    "es": "¿Dónde puedo facturar mi equipaje?",
+    "enWords": ["Where", "can", "I", "check", "in", "my", "luggage?"],
+    "distractors": ["do", "checked"],
+    "hint": "\"Check in\" es la expresión para facturar en el aeropuerto.",
+    "explanation": "\"Check in my luggage\" es la frase estándar en mostradores de aerolínea."
+  },
+  {
+    "id": "travel-2",
+    "topic": "travel",
+    "difficulty": "easy",
+    "es": "Mi vuelo sale a las ocho de la mañana.",
+    "enWords": ["My", "flight", "departs", "at", "eight", "o'clock", "in", "the", "morning."],
+    "distractors": ["leaves", "on"],
+    "hint": "Para horarios usamos \"at\" con la hora exacta.",
+    "explanation": "\"Depart at [time]\" es el registro formal; \"leave at\" también es correcto pero más informal."
+  },
+  {
+    "id": "travel-3",
+    "topic": "travel",
+    "difficulty": "medium",
+    "es": "Me gustaría una habitación con vista al mar, por favor.",
+    "enWords": ["I", "would", "like", "a", "room", "with", "an", "ocean", "view,", "please."],
+    "distractors": ["want", "sea"],
+    "hint": "\"I would like\" es más formal y educado que \"I want\" en hotelería.",
+    "explanation": "En servicios hoteleros, \"I would like\" demuestra cortesía profesional."
+  },
+  {
+    "id": "travel-4",
+    "topic": "travel",
+    "difficulty": "medium",
+    "es": "Perdí mi pasaporte. ¿Puede ayudarme?",
+    "enWords": ["I", "have", "lost", "my", "passport.", "Can", "you", "help", "me?"],
+    "distractors": ["lost", "lose"],
+    "hint": "Usa Present Perfect (\"have lost\") para una acción reciente con efecto en el presente.",
+    "explanation": "\"I have lost\" indica que la pérdida ocurrió recientemente y sigue afectando la situación."
+  },
+  {
+    "id": "travel-5",
+    "topic": "travel",
+    "difficulty": "medium",
+    "es": "¿Este autobús para en el aeropuerto internacional?",
+    "enWords": ["Does", "this", "bus", "stop", "at", "the", "international", "airport?"],
+    "distractors": ["is", "stopping"],
+    "hint": "Las preguntas de rutina o hecho usan \"Does\" con el verbo en forma base.",
+    "explanation": "\"Does this bus stop\" usa Simple Present para preguntar sobre horarios y rutas fijas."
+  },
+  {
+    "id": "travel-6",
+    "topic": "travel",
+    "difficulty": "hard",
+    "es": "Si hubiera reservado antes, el hotel habría sido más barato.",
+    "enWords": ["If", "I", "had", "booked", "earlier,", "the", "hotel", "would", "have", "been", "cheaper."],
+    "distractors": ["have", "book"],
+    "hint": "Condicional 3: \"If + had + past participle, would + have + past participle\".",
+    "explanation": "El Third Conditional describe situaciones hipotéticas en el pasado que no ocurrieron."
+  },
+  {
+    "id": "travel-7",
+    "topic": "travel",
+    "difficulty": "hard",
+    "es": "El equipaje debería haber llegado antes que yo.",
+    "enWords": ["The", "luggage", "should", "have", "arrived", "before", "me."],
+    "distractors": ["has", "arrive"],
+    "hint": "\"Should have + past participle\" expresa algo esperado que no ocurrió.",
+    "explanation": "Modal perfecto \"should have arrived\" indica expectativa no cumplida."
+  },
+  {
+    "id": "work-1",
+    "topic": "work",
+    "difficulty": "easy",
+    "es": "¿Podría aclarar los criterios de aceptación de este ticket?",
+    "enWords": ["Could", "you", "clarify", "the", "acceptance", "criteria", "for", "this", "ticket?"],
+    "distractors": ["to", "clarifying"],
+    "hint": "Las peticiones educadas en contexto profesional inician con \"Could you...\".",
+    "explanation": "\"Could you clarify\" es más formal y cortés que \"Can you explain\"."
+  },
+  {
+    "id": "work-2",
+    "topic": "work",
+    "difficulty": "easy",
+    "es": "Agendemos una breve sincronización después del standup diario.",
+    "enWords": ["Let's", "schedule", "a", "quick", "sync", "after", "the", "daily", "standup."],
+    "distractors": ["at", "scheduling"],
+    "hint": "\"Let's\" es la contracción de \"let us\" y se acompaña del verbo en infinitivo simple.",
+    "explanation": "\"A quick sync\" es la frase idiomática habitual en equipos tech para una reunión rápida."
+  },
+  {
+    "id": "work-3",
+    "topic": "work",
+    "difficulty": "medium",
+    "es": "El informe mensual debe entregarse antes del viernes.",
+    "enWords": ["The", "monthly", "report", "must", "be", "submitted", "by", "Friday."],
+    "distractors": ["before", "submit"],
+    "hint": "\"By Friday\" significa \"a más tardar el viernes\"; \"before Friday\" sería antes del jueves.",
+    "explanation": "\"Must be submitted\" es voz pasiva obligatoria; \"by\" establece el límite de tiempo."
+  },
+  {
+    "id": "work-4",
+    "topic": "work",
+    "difficulty": "medium",
+    "es": "He estado trabajando en este proyecto durante tres meses.",
+    "enWords": ["I", "have", "been", "working", "on", "this", "project", "for", "three", "months."],
+    "distractors": ["since", "worked"],
+    "hint": "Present Perfect Continuous (\"have been working\") + \"for\" para indicar duración total.",
+    "explanation": "\"For three months\" indica duración; usa \"since\" solo con un punto de inicio específico."
+  },
+  {
+    "id": "work-5",
+    "topic": "work",
+    "difficulty": "medium",
+    "es": "Acordamos priorizar esta tarea técnica durante el próximo sprint.",
+    "enWords": ["We", "agreed", "to", "prioritize", "this", "technical", "task", "during", "the", "next", "sprint."],
+    "distractors": ["prioritizing", "at"],
+    "hint": "\"Agree to + infinitivo\" expresa un compromiso o acuerdo mutuo.",
+    "explanation": "\"Agreed to prioritize\" es pasado simple que registra el acuerdo tomado."
+  },
+  {
+    "id": "work-6",
+    "topic": "work",
+    "difficulty": "hard",
+    "es": "Si no hubiéramos comunicado el retraso, el cliente se habría quejado.",
+    "enWords": ["If", "we", "hadn't", "communicated", "the", "delay,", "the", "client", "would", "have", "complained."],
+    "distractors": ["complained", "have"],
+    "hint": "Third Conditional: \"If + hadn't + past participle, would + have + past participle\".",
+    "explanation": "\"Hadn't\" es la contracción de \"had not\" en el condicional pasado."
+  },
+  {
+    "id": "work-7",
+    "topic": "work",
+    "difficulty": "hard",
+    "es": "La reunión podría haberse evitado si hubiéramos actualizado la documentación.",
+    "enWords": ["The", "meeting", "could", "have", "been", "avoided", "if", "we", "had", "updated", "the", "documentation."],
+    "distractors": ["update", "being"],
+    "hint": "\"Could have been avoided\" es un modal perfecto en voz pasiva.",
+    "explanation": "Pasiva + modal perfecto: \"could have been + past participle\" expresa posibilidad no realizada."
+  }
+]

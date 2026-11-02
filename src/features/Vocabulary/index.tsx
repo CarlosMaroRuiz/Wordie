@@ -45,10 +45,10 @@ export default function VocabularyModule() {
       <header className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
         <div>
           <h1 className="text-3xl font-extrabold text-text-main mb-1 tracking-tight">
-            Vocabulario técnico
+            Vocabulario contextual
           </h1>
           <p className="text-text-secondary text-base max-w-2xl leading-relaxed">
-            Palabras de ingeniería con pronunciación, significado y código real.
+            Términos clave para desarrollo, viajes y trabajo con pronunciación, significado y práctica Leitner.
           </p>
         </div>
         

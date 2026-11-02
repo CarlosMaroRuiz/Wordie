@@ -1,13 +1,5 @@
-import type { StoryTopic } from '../../type'
+/**
+ * Constantes para el selector de lecturas dentro de un tema.
+ */
+export const STORY_SELECTOR_ID = 'story-selector'
 
-export interface TopicOption {
-  id: StoryTopic
-  label: string
-}
-
-export const TOPIC_OPTIONS: readonly TopicOption[] = [
-  { id: 'all', label: 'Todas las historias' },
-  { id: 'dev', label: 'Desarrollo de Software' },
-  { id: 'work', label: 'Trabajo y Equipos' },
-  { id: 'travel', label: 'Viajes e Idioma' },
-] as const

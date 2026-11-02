@@ -10,4 +10,5 @@ export const PATHS: Record<KeyRoutes, string> = {
   PhrasalVerbs: '/phrasal-verbs',
   Games: '/games',
   GamesMemory: '/games/memory',
+  GamesSentenceBuilder: '/games/sentence-builder',
 }

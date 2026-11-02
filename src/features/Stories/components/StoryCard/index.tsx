@@ -1,17 +1,21 @@
 import { motion } from 'motion/react'
-import { Clock, SpeakerHigh, Pause } from '@phosphor-icons/react'
+import { Clock } from '@phosphor-icons/react'
 import { CardBase } from '@common/CardBase'
-import { Button } from '@common/Button'
 import type { StoryCardProps } from './type'
 import { STORY_CARD_VARIANTS } from './constant'
 import { StoryParagraphs } from './StoryParagraphs'
+import { StoryAudioControls } from './StoryAudioControls'
 
 export function StoryCard({
   story,
   selectedKeyword,
   onSelectKeyword,
   isNarrating,
+  narratingParagraphIndex,
+  narratingCharIndex,
   onToggleNarration,
+  playbackRate,
+  onPlaybackRateChange,
 }: StoryCardProps) {
   return (
     <motion.article
@@ -37,39 +41,24 @@ export function StoryCard({
           {story.title}
         </h2>
 
-        {/* Párrafos interactivos */}
+        {/* Párrafos interactivos con marcado en vivo */}
         <StoryParagraphs
           paragraphs={story.paragraphs}
           keywords={story.keywords}
           selectedKeyword={selectedKeyword}
+          isNarrating={isNarrating}
+          narratingParagraphIndex={narratingParagraphIndex}
+          narratingCharIndex={narratingCharIndex}
           onSelectKeyword={onSelectKeyword}
         />
 
-        {/* Pie con reproductor de audio narración */}
-        <div className="mt-2 flex flex-wrap items-center justify-between gap-3 border-t border-border-subtle/60 pt-4">
-          <Button
-            variant={isNarrating ? 'primary' : 'secondary'}
-            size="sm"
-            onClick={onToggleNarration}
-            className="flex items-center gap-2"
-          >
-            {isNarrating ? (
-              <>
-                <Pause size={16} weight="bold" />
-                <span>Detener narración</span>
-              </>
-            ) : (
-              <>
-                <SpeakerHigh size={16} weight="bold" />
-                <span>Escuchar narración completa</span>
-              </>
-            )}
-          </Button>
-
-          <span className="text-xs text-text-secondary">
-            Haz clic en los términos resaltados para ver su traducción.
-          </span>
-        </div>
+        {/* Barra integrada de reproducción y configuración de audio */}
+        <StoryAudioControls
+          isNarrating={isNarrating}
+          onToggleNarration={onToggleNarration}
+          playbackRate={playbackRate}
+          onPlaybackRateChange={onPlaybackRateChange}
+        />
       </CardBase>
     </motion.article>
   )

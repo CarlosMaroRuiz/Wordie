@@ -5,20 +5,22 @@ import type { MemoryHeaderProps } from './type'
 
 export function MemoryHeader({ onRestart, onOpenHelp }: MemoryHeaderProps) {
   return (
-    <div className="flex items-center justify-between gap-3 sm:gap-4">
+    <div className="flex items-center gap-2 sm:gap-3">
+      <Link
+        to="/games"
+        aria-label="Volver a Minijuegos"
+        className="hidden min-h-11 shrink-0 touch-manipulation items-center gap-1.5 rounded-[14px] border-[1.5px] border-border-subtle bg-surface px-3 text-sm font-bold text-primary shadow-xs transition-colors hover:border-primary lg:inline-flex"
+      >
+        <ArrowLeftIcon size={16} weight="bold" />
+        <span className="hidden sm:inline">Volver a Minijuegos</span>
+        <span className="sm:hidden">Juegos</span>
+      </Link>
+
       <div className="min-w-0 flex-1">
-        <Link
-          to="/games"
-          className="mb-1 inline-flex items-center gap-1.5 text-xs font-semibold text-text-tertiary transition-colors hover:text-primary"
-        >
-          <ArrowLeftIcon size={14} weight="bold" />
-          <span className="hidden sm:inline">Volver a Minijuegos</span>
-          <span className="sm:hidden">Minijuegos</span>
-        </Link>
-        <h1 className="text-xl sm:text-3xl font-extrabold tracking-tight text-text-main truncate">
+        <h1 className="truncate text-xl font-extrabold tracking-tight text-text-main sm:text-3xl">
           Memorama
         </h1>
-        <p className="hidden sm:block mt-0.5 text-xs text-text-secondary">
+        <p className="mt-0.5 hidden text-xs text-text-secondary sm:block">
           Encuentra el par correcto entre la palabra en inglés y su traducción al español.
         </p>
       </div>
@@ -26,10 +28,9 @@ export function MemoryHeader({ onRestart, onOpenHelp }: MemoryHeaderProps) {
       <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
         {onOpenHelp ? (
           <Button
-            variant="ghost"
+            variant="icon"
             size="sm"
             onClick={onOpenHelp}
-            className="flex items-center justify-center p-2 text-text-secondary hover:text-primary"
             aria-label="Ver consejos pedagógicos"
           >
             <QuestionIcon size={18} weight="bold" />
@@ -40,7 +41,7 @@ export function MemoryHeader({ onRestart, onOpenHelp }: MemoryHeaderProps) {
           variant="secondary"
           size="sm"
           onClick={onRestart}
-          className="flex items-center gap-1.5 px-2.5 py-1.5 sm:px-3 sm:py-2"
+          className="min-h-11 min-w-11"
           aria-label="Reiniciar juego"
         >
           <ArrowClockwiseIcon size={16} weight="bold" />
@@ -50,5 +51,3 @@ export function MemoryHeader({ onRestart, onOpenHelp }: MemoryHeaderProps) {
     </div>
   )
 }
-
-export type { MemoryHeaderProps } from './type'

@@ -4,279 +4,559 @@
     "en": "Could you add a unit test for this edge case?",
     "es": "¿Podrías añadir una prueba unitaria para este caso límite?",
     "contextTag": "PR Review",
-    "note": "Úsala para solicitar tests sin sonar exigente."
+    "note": "Úsala para solicitar tests sin sonar exigente.",
+    "topic": "dev"
   },
   {
     "id": "pr-review-2",
     "en": "Nice work! Just a small suggestion on the naming convention.",
     "es": "¡Buen trabajo! Solo una pequeña sugerencia sobre la convención de nombres.",
     "contextTag": "PR Review",
-    "note": "Abre con algo positivo antes de la sugerencia: reduce la resistencia al cambio."
+    "note": "Abre con algo positivo antes de la sugerencia: reduce la resistencia al cambio.",
+    "topic": "dev"
   },
   {
     "id": "pr-review-3",
     "en": "This looks good to me — approved! Great refactor.",
     "es": "Esto se ve bien para mí, ¡aprobado! Excelente refactorización.",
     "contextTag": "PR Review",
-    "note": "Aprobación explícita; si además reconoces el esfuerzo, refuerzas la cultura de revisión."
+    "note": "Aprobación explícita; si además reconoces el esfuerzo, refuerzas la cultura de revisión.",
+    "topic": "dev"
   },
   {
     "id": "pr-review-4",
     "en": "Could we move this logic into a separate helper function?",
     "es": "¿Podríamos mover esta lógica a una función auxiliar separada?",
     "contextTag": "PR Review",
-    "note": "Promueve separación de responsabilidades sin ser directivo."
+    "note": "Promueve separación de responsabilidades sin ser directivo.",
+    "topic": "dev"
   },
   {
     "id": "standup-1",
     "en": "Today I am going to focus on resolving the login timeout bug.",
     "es": "Hoy me voy a concentrar en resolver el error de tiempo de espera al iniciar sesión.",
     "contextTag": "Daily Standup",
-    "note": "Empieza por el foco del día; es lo que el equipo necesita para coordinar."
+    "note": "Empieza por el foco del día; es lo que el equipo necesita para coordinar.",
+    "topic": "dev"
   },
   {
     "id": "standup-2",
     "en": "Yesterday I finished the user profile endpoint and updated the docs.",
     "es": "Ayer terminé el endpoint del perfil de usuario y actualicé la documentación.",
     "contextTag": "Daily Standup",
-    "note": "Cierra el ciclo de ayer con un resultado verificable, no con actividad."
+    "note": "Cierra el ciclo de ayer con un resultado verificable, no con actividad.",
+    "topic": "dev"
   },
   {
     "id": "standup-3",
     "en": "No blockers from my side — making steady progress on the dashboard.",
     "es": "Sin impedimentos de mi parte; avanzando bien con el panel de control.",
     "contextTag": "Daily Standup",
-    "note": "Decir que no hay bloqueos también aporta información al equipo."
+    "note": "Decir que no hay bloqueos también aporta información al equipo.",
+    "topic": "dev"
   },
   {
     "id": "blocker-1",
     "en": "I am currently blocked by missing API credentials for the staging server.",
     "es": "Actualmente tengo un bloqueo porque faltan las credenciales de API para el servidor de staging.",
     "contextTag": "Blocker",
-    "note": "Nombra el recurso exacto que falta; así alguien puede desbloquearlo sin preguntar."
+    "note": "Nombra el recurso exacto que falta; así alguien puede desbloquearlo sin preguntar.",
+    "topic": "dev"
   },
   {
     "id": "blocker-2",
     "en": "I need a review on this PR before I can move forward — it is blocking the next task.",
     "es": "Necesito revisión en este PR antes de poder avanzar; está bloqueando la siguiente tarea.",
     "contextTag": "Blocker",
-    "note": "Convierte la revisión pendiente en una petición concreta y con impacto visible."
+    "note": "Convierte la revisión pendiente en una petición concreta y con impacto visible.",
+    "topic": "dev"
   },
   {
     "id": "commandment-1",
     "en": "Always write tests before pushing to main.",
     "es": "Siempre escribe pruebas antes de subir a la rama principal.",
     "contextTag": "Commandment",
-    "note": "Regla de oro: sin pruebas no hay confianza para fusionar."
+    "note": "Regla de oro: sin pruebas no hay confianza para fusionar.",
+    "topic": "dev"
   },
   {
     "id": "commandment-2",
     "en": "Never deploy on Fridays unless you plan to work the weekend.",
     "es": "Nunca hagas deploy los viernes a menos que planees trabajar el fin de semana.",
     "contextTag": "Commandment",
-    "note": "El famoso mandamiento de ingeniería que todo equipo aprende a las malas."
+    "note": "El famoso mandamiento de ingeniería que todo equipo aprende a las malas.",
+    "topic": "dev"
   },
   {
     "id": "commandment-3",
     "en": "Leave the codebase cleaner than you found it.",
     "es": "Deja la base de código más limpia de cómo la encontraste.",
     "contextTag": "Commandment",
-    "note": "Regla del Boy Scout aplicada al desarrollo de software."
+    "note": "Regla del Boy Scout aplicada al desarrollo de software.",
+    "topic": "dev"
   },
   {
     "id": "pr-review-5",
     "en": "Could you clarify the intent behind this change? I want to make sure I review it correctly.",
     "es": "¿Podrías aclarar la intención de este cambio? Quiero asegurarme de revisarlo correctamente.",
     "contextTag": "PR Review",
-    "note": "Pide contexto antes de opinar; evita revisar a ciegas."
+    "note": "Pide contexto antes de opinar; evita revisar a ciegas.",
+    "topic": "dev"
   },
   {
     "id": "pr-review-6",
     "en": "I left a few comments inline, but none of them are blocking.",
     "es": "Dejé algunos comentarios en línea, pero ninguno es bloqueante.",
     "contextTag": "PR Review",
-    "note": "Distingue sugerencias de bloqueos; reduce la ansiedad del autor."
+    "note": "Distingue sugerencias de bloqueos; reduce la ansiedad del autor.",
+    "topic": "dev"
   },
   {
     "id": "pr-review-7",
     "en": "Do we have a rollback plan if this migration fails in production?",
     "es": "¿Tenemos un plan de reversión si esta migración falla en producción?",
     "contextTag": "PR Review",
-    "note": "Pregunta de riesgo, no de estilo: Úsala en cambios que tocan datos."
+    "note": "Pregunta de riesgo, no de estilo: Úsala en cambios que tocan datos.",
+    "topic": "dev"
   },
   {
     "id": "pr-review-8",
     "en": "This naming is a bit ambiguous — could we make it more explicit?",
     "es": "Este nombre es algo ambiguo; ¿podríamos hacerlo más explícito?",
     "contextTag": "PR Review",
-    "note": "Crítica al código, nunca a la persona."
+    "note": "Crítica al código, nunca a la persona.",
+    "topic": "dev"
   },
   {
     "id": "pr-review-9",
     "en": "I would rather keep this PR focused; can we split the refactor into a follow-up?",
     "es": "Preferiría mantener este PR enfocado; ¿podemos dividir la refactorización en uno posterior?",
     "contextTag": "PR Review",
-    "note": "Ideal para PRs que crecen demasiado."
+    "note": "Ideal para PRs que crecen demasiado.",
+    "topic": "dev"
   },
   {
     "id": "pr-review-10",
     "en": "Thanks for the detailed description — it made the review much faster.",
     "es": "Gracias por la descripción detallada; hizo la revisión mucho más rápida.",
     "contextTag": "PR Review",
-    "note": "Refuerzo positivo concreto: reconoce el comportamiento que quieres repetir."
+    "note": "Refuerzo positivo concreto: reconoce el comportamiento que quieres repetir.",
+    "topic": "dev"
   },
   {
     "id": "standup-4",
     "en": "I am picking up the payment retry ticket today; I expect to open a PR by noon.",
     "es": "Hoy tomo el ticket de reintentos de pago; espero abrir un PR al mediodía.",
     "contextTag": "Daily Standup",
-    "note": "Compromiso concreto con hora; evita el estoy trabajando en eso."
+    "note": "Compromiso concreto con hora; evita el estoy trabajando en eso.",
+    "topic": "dev"
   },
   {
     "id": "standup-5",
     "en": "I spent yesterday debugging the flaky test suite; it turned out to be a race condition.",
     "es": "Ayer estuve depurando la suite de pruebas inestable; resultó ser una condición de carrera.",
     "contextTag": "Daily Standup",
-    "note": "Cuenta el aprendizaje, no solo la actividad."
+    "note": "Cuenta el aprendizaje, no solo la actividad.",
+    "topic": "dev"
   },
   {
     "id": "standup-6",
     "en": "No blockers, but I could use a second pair of eyes on the cache invalidation logic.",
     "es": "Sin bloqueos, pero me vendría bien una segunda opinión sobre la lógica de invalidación de caché.",
     "contextTag": "Daily Standup",
-    "note": "Pedir ayuda sin dramatizar; second pair of eyes es muy natural."
+    "note": "Pedir ayuda sin dramatizar; second pair of eyes es muy natural.",
+    "topic": "dev"
   },
   {
     "id": "standup-7",
     "en": "I am waiting on the design review before I start the settings page.",
     "es": "Estoy esperando la revisión de diseño antes de empezar la página de ajustes.",
     "contextTag": "Daily Standup",
-    "note": "Bloqueo suave: informa una dependencia sin culpar a nadie."
+    "note": "Bloqueo suave: informa una dependencia sin culpar a nadie.",
+    "topic": "dev"
   },
   {
     "id": "standup-8",
     "en": "I will be out for two hours this afternoon for an appointment.",
     "es": "Estaré fuera dos horas esta tarde por una cita.",
     "contextTag": "Daily Standup",
-    "note": "Avisa disponibilidad; no necesitas justificar el motivo."
+    "note": "Avisa disponibilidad; no necesitas justificar el motivo.",
+    "topic": "dev"
   },
   {
     "id": "standup-9",
     "en": "Quick heads-up: I renamed the feature flag, so pull the latest changes before you test.",
     "es": "Aviso rápido: renombré el feature flag, así que actualiza tu rama antes de probar.",
     "contextTag": "Daily Standup",
-    "note": "Heads-up es el registro estándar para avisos breves."
+    "note": "Heads-up es el registro estándar para avisos breves.",
+    "topic": "dev"
   },
   {
     "id": "standup-10",
     "en": "I am still blocked on the same issue as yesterday; I will escalate after the standup.",
     "es": "Sigo bloqueado con el mismo problema de ayer; lo escalará después del standup.",
     "contextTag": "Daily Standup",
-    "note": "Repetir un bloqueo es una señal legítima para escalar."
+    "note": "Repetir un bloqueo es una señal legítima para escalar.",
+    "topic": "dev"
   },
   {
     "id": "blocker-3",
     "en": "The build is failing on main because of a dependency conflict; I am reverting the last merge.",
     "es": "El build está fallando en main por un conflicto de dependencias; estoy revirtiendo el último merge.",
     "contextTag": "Blocker",
-    "note": "Describe el impacto y la acción inmediata en la misma frase."
+    "note": "Describe el impacto y la acción inmediata en la misma frase.",
+    "topic": "dev"
   },
   {
     "id": "blocker-4",
     "en": "I cannot reproduce the bug locally, so I need access to the production logs.",
     "es": "No puedo reproducir el error en local, así que necesito acceso a los logs de producción.",
     "contextTag": "Blocker",
-    "note": "Petición concreta de acceso; acelera la resolución."
+    "note": "Petición concreta de acceso; acelera la resolución.",
+    "topic": "dev"
   },
   {
     "id": "blocker-5",
     "en": "We are blocked until the third-party API rate limit is raised.",
     "es": "Estamos bloqueados hasta que se aumente el límite de peticiones de la API externa.",
     "contextTag": "Blocker",
-    "note": "Bloqueo externo: nombra al proveedor y la condición de salida."
+    "note": "Bloqueo externo: nombra al proveedor y la condición de salida.",
+    "topic": "dev"
   },
   {
     "id": "blocker-6",
     "en": "I need someone with admin rights to rotate the expired certificate.",
     "es": "Necesito a alguien con permisos de administrador para renovar el certificado vencido.",
     "contextTag": "Blocker",
-    "note": "Identifica el rol exacto que necesitas, no un alguien genérico."
+    "note": "Identifica el rol exacto que necesitas, no un alguien genérico.",
+    "topic": "dev"
   },
   {
     "id": "blocker-7",
     "en": "This is blocking the release: the checkout flow returns a 500 on mobile Safari.",
     "es": "Esto bloquea el lanzamiento: el flujo de pago devuelve un 500 en Safari móvil.",
     "contextTag": "Blocker",
-    "note": "Bloqueo crítico: incluye severidad y entorno."
+    "note": "Bloqueo crítico: incluye severidad y entorno.",
+    "topic": "dev"
   },
   {
     "id": "blocker-8",
     "en": "I am waiting on the schema migration to land before I can run the integration tests.",
     "es": "Estoy esperando a que se aplique la migración del esquema para poder ejecutar las pruebas de integración.",
     "contextTag": "Blocker",
-    "note": "Dependencia técnica clara, sin reproches."
+    "note": "Dependencia técnica clara, sin reproches.",
+    "topic": "dev"
   },
   {
     "id": "blocker-9",
     "en": "Could you unblock me by approving the access request when you have a minute?",
     "es": "¿Podrías desbloquearme aprobando la solicitud de acceso cuando tengas un minuto?",
     "contextTag": "Blocker",
-    "note": "Cierra con una petición cortés y accionable."
+    "note": "Cierra con una petición cortés y accionable.",
+    "topic": "dev"
   },
   {
     "id": "blocker-10",
     "en": "The staging environment is down, so QA cannot validate the fix today.",
     "es": "El entorno de staging está caído, así que QA no puede validar la corrección hoy.",
     "contextTag": "Blocker",
-    "note": "Habla del impacto en el equipo, no solo en tu tarea."
+    "note": "Habla del impacto en el equipo, no solo en tu tarea.",
+    "topic": "dev"
   },
   {
     "id": "commandment-4",
     "en": "Commit small and commit often; a giant diff is impossible to review.",
     "es": "Haz commits pequeños y frecuentes; un diff gigante es imposible de revisar.",
     "contextTag": "Commandment",
-    "note": "Principio de revisabilidad."
+    "note": "Principio de revisabilidad.",
+    "topic": "dev"
   },
   {
     "id": "commandment-5",
     "en": "Name variables for intent, not for type.",
     "es": "Nombra las variables por su intención, no por su tipo.",
     "contextTag": "Commandment",
-    "note": "Legibilidad a largo plazo."
+    "note": "Legibilidad a largo plazo.",
+    "topic": "dev"
   },
   {
     "id": "commandment-6",
     "en": "If it is not tested, it does not exist.",
     "es": "Si no está probado, no existe.",
     "contextTag": "Commandment",
-    "note": "Frase clásica de cultura de testing."
+    "note": "Frase clásica de cultura de testing.",
+    "topic": "dev"
   },
   {
     "id": "commandment-7",
     "en": "Document the why, not the what.",
     "es": "Documenta el porqué, no el qué.",
     "contextTag": "Commandment",
-    "note": "Los comentarios deben explicar decisiones, no repetir el código."
+    "note": "Los comentarios deben explicar decisiones, no repetir el código.",
+    "topic": "dev"
   },
   {
     "id": "commandment-8",
     "en": "Never merge your own pull request without a second review.",
     "es": "Nunca fusiones tu propio pull request sin una segunda revisión.",
     "contextTag": "Commandment",
-    "note": "Control de calidad y conocimiento compartido."
+    "note": "Control de calidad y conocimiento compartido.",
+    "topic": "dev"
   },
   {
     "id": "commandment-9",
     "en": "Keep secrets out of the repository; use environment variables instead.",
     "es": "Mantén los secretos fuera del repositorio; usa variables de entorno.",
     "contextTag": "Commandment",
-    "note": "Higiene de seguridad mínima."
+    "note": "Higiene de seguridad mínima.",
+    "topic": "dev"
   },
   {
     "id": "commandment-10",
     "en": "Measure before you optimize; intuition lies about performance.",
     "es": "Mide antes de optimizar; la intuición miente sobre el rendimiento.",
     "contextTag": "Commandment",
-    "note": "Evita optimizaciones prematuras."
+    "note": "Evita optimizaciones prematuras.",
+    "topic": "dev"
+  },
+  {
+    "id": "travel-airport-1",
+    "en": "Excuse me, where is the baggage claim area for flight 402?",
+    "es": "Disculpe, ¿dónde está el área de reclamo de equipaje para el vuelo 402?",
+    "topic": "travel",
+    "contextTag": "Airport & Customs",
+    "note": "Úsala nada más aterrizar para orientarte rápidamente en la terminal."
+  },
+  {
+    "id": "travel-airport-2",
+    "en": "I have a connecting flight to London. Do I need to recheck my luggage?",
+    "es": "Tengo un vuelo de conexión a Londres. ¿Necesito volver a facturar mi equipaje?",
+    "topic": "travel",
+    "contextTag": "Airport & Customs",
+    "note": "Pregunta clave en escalas para evitar perder maletas en tránsito."
+  },
+  {
+    "id": "travel-airport-3",
+    "en": "Could you please tell me which gate the flight to Madrid is boarding from?",
+    "es": "¿Podría decirme por favor desde qué puerta está embarcando el vuelo a Madrid?",
+    "topic": "travel",
+    "contextTag": "Airport & Customs",
+    "note": "Formulación cortés cuando hay cambios de última hora en pantallas."
+  },
+  {
+    "id": "travel-airport-4",
+    "en": "Here is my passport and customs declaration form.",
+    "es": "Aquí tiene mi pasaporte y el formulario de declaración de aduanas.",
+    "topic": "travel",
+    "contextTag": "Airport & Customs",
+    "note": "Frase concisa y profesional al llegar al control de inmigración."
+  },
+  {
+    "id": "travel-hotel-1",
+    "en": "Hi, I have a reservation under the name Carlos for three nights.",
+    "es": "Hola, tengo una reserva a nombre de Carlos por tres noches.",
+    "topic": "travel",
+    "contextTag": "Hotel & Stay",
+    "note": "Fórmula estándar de check-in en cualquier hotel u hostal."
+  },
+  {
+    "id": "travel-hotel-2",
+    "en": "Could we request a late checkout tomorrow around 1:00 p.m.?",
+    "es": "¿Podríamos solicitar una salida tardía mañana alrededor de la 1:00 p.m.?",
+    "topic": "travel",
+    "contextTag": "Hotel & Stay",
+    "note": "Late checkout suele concederse gratis si lo pides con anticipación."
+  },
+  {
+    "id": "travel-hotel-3",
+    "en": "Could you please provide the Wi-Fi password and breakfast hours?",
+    "es": "¿Podría facilitarme la contraseña del Wi-Fi y los horarios de desayuno?",
+    "topic": "travel",
+    "contextTag": "Hotel & Stay",
+    "note": "Información esencial al momento de recibir la tarjeta de la habitación."
+  },
+  {
+    "id": "travel-hotel-4",
+    "en": "Is there a luggage storage where we can leave our bags until check-in?",
+    "es": "¿Hay consigna de equipaje donde podamos dejar las maletas hasta el check-in?",
+    "topic": "travel",
+    "contextTag": "Hotel & Stay",
+    "note": "Muy útil si llegas a la ciudad varias horas antes de que la habitación esté lista."
+  },
+  {
+    "id": "travel-transport-1",
+    "en": "How much is the fare to downtown from this terminal?",
+    "es": "¿Cuánto cuesta la tarifa al centro de la ciudad desde esta terminal?",
+    "topic": "travel",
+    "contextTag": "Transport",
+    "note": "Pregunta siempre la tarifa estimada antes de abordar un taxi o bus."
+  },
+  {
+    "id": "travel-transport-2",
+    "en": "Could you let me know when we get to Central Station?",
+    "es": "¿Podría avisarme cuando lleguemos a la Estación Central?",
+    "topic": "travel",
+    "contextTag": "Transport",
+    "note": "Ideal en autobuses o tranvías si no conoces las paradas intermedias."
+  },
+  {
+    "id": "travel-transport-3",
+    "en": "Is this the right platform for the airport express train?",
+    "es": "¿Es este el andén correcto para el tren expreso al aeropuerto?",
+    "topic": "travel",
+    "contextTag": "Transport",
+    "note": "Verificación rápida en estaciones de tren grandes."
+  },
+  {
+    "id": "travel-dining-1",
+    "en": "Could we have a table for two by the window, please?",
+    "es": "¿Podríamos tener una mesa para dos junto a la ventana, por favor?",
+    "topic": "travel",
+    "contextTag": "Dining",
+    "note": "Petición educada al entrar a un restaurante o cafetería."
+  },
+  {
+    "id": "travel-dining-2",
+    "en": "Does this dish contain any dairy or nuts? I have an allergy.",
+    "es": "¿Este plato contiene lácteos o frutos secos? Tengo una alergia.",
+    "topic": "travel",
+    "contextTag": "Dining",
+    "note": "Frase de seguridad alimentaria indispensable al viajar al extranjero."
+  },
+  {
+    "id": "travel-dining-3",
+    "en": "Could we please split the bill between two cards?",
+    "es": "¿Podríamos por favor dividir la cuenta entre dos tarjetas?",
+    "topic": "travel",
+    "contextTag": "Dining",
+    "note": "Pregunta común al pagar en grupo en cafés y restaurantes."
+  },
+  {
+    "id": "travel-dining-4",
+    "en": "Could you recommend a traditional local dish that you serve here?",
+    "es": "¿Podría recomendarme un plato tradicional local que sirvan aquí?",
+    "topic": "travel",
+    "contextTag": "Dining",
+    "note": "Excelente forma de interactuar con el personal y probar comida auténtica."
+  },
+  {
+    "id": "work-meeting-1",
+    "en": "Thank you all for joining today. Let's quickly review the agenda.",
+    "es": "Gracias a todos por unirse hoy. Revisemos rápidamente la agenda.",
+    "topic": "work",
+    "contextTag": "Meetings & Calls",
+    "note": "Apertura formal y estructurada para reuniones virtuales o presenciales."
+  },
+  {
+    "id": "work-meeting-2",
+    "en": "Sorry to interrupt, but could you clarify what you mean by that requirement?",
+    "es": "Perdón por interrumpir, pero ¿podrías aclarar a qué te refieres con ese requisito?",
+    "topic": "work",
+    "contextTag": "Meetings & Calls",
+    "note": "Interrupción educada que previene malentendidos costosos."
+  },
+  {
+    "id": "work-meeting-3",
+    "en": "Let's take this point offline so we don't derail the main discussion.",
+    "es": "Tratemos este punto fuera de la reunión para no desviar la discusión principal.",
+    "topic": "work",
+    "contextTag": "Meetings & Calls",
+    "note": "Frase clásica para mantener la reunión a tiempo y enfocada en los objetivos."
+  },
+  {
+    "id": "work-meeting-4",
+    "en": "I'd like to hand it over to Maria to walk us through the next milestones.",
+    "es": "Me gustaría cederle la palabra a María para que nos guíe por los próximos hitos.",
+    "topic": "work",
+    "contextTag": "Meetings & Calls",
+    "note": "Transición fluida y respetuosa entre oradores en una presentación."
+  },
+  {
+    "id": "work-presentation-1",
+    "en": "As you can see on this slide, our user engagement grew by fifteen percent.",
+    "es": "Como pueden ver en esta diapositiva, nuestra interacción creció un quince por ciento.",
+    "topic": "work",
+    "contextTag": "Presentations",
+    "note": "Dirige la mirada de la audiencia hacia métricas clave."
+  },
+  {
+    "id": "work-presentation-2",
+    "en": "Let's look at the key takeaways before opening the floor for Q&A.",
+    "es": "Veamos las conclusiones clave antes de abrir el espacio para preguntas y respuestas.",
+    "topic": "work",
+    "contextTag": "Presentations",
+    "note": "Señala el cierre de la exposición y prepara el debate ordenado."
+  },
+  {
+    "id": "work-presentation-3",
+    "en": "To put this in perspective, this change saves around five hours per week.",
+    "es": "Para poner esto en perspectiva, este cambio ahorra unas cinco horas por semana.",
+    "topic": "work",
+    "contextTag": "Presentations",
+    "note": "Convierte datos abstractos en impacto tangible de negocio."
+  },
+  {
+    "id": "work-presentation-4",
+    "en": "Please feel free to jump in if you have any questions at any point.",
+    "es": "Por favor, siéntanse libres de intervenir si tienen alguna pregunta en cualquier momento.",
+    "topic": "work",
+    "contextTag": "Presentations",
+    "note": "Crea una atmósfera participativa y cercana durante exposiciones."
+  },
+  {
+    "id": "work-negotiation-1",
+    "en": "We appreciate the proposal; however, we need to adjust the delivery timeline.",
+    "es": "Apreciamos la propuesta; sin embargo, necesitamos ajustar el cronograma de entrega.",
+    "topic": "work",
+    "contextTag": "Negotiation",
+    "note": "Contrapunto diplomático que reconoce el valor antes de pedir cambios."
+  },
+  {
+    "id": "work-negotiation-2",
+    "en": "From our perspective, keeping this scope within budget is the top priority.",
+    "es": "Desde nuestra perspectiva, mantener este alcance dentro del presupuesto es la máxima prioridad.",
+    "topic": "work",
+    "contextTag": "Negotiation",
+    "note": "Establece límites claros de negocio sin sonar agresivo."
+  },
+  {
+    "id": "work-negotiation-3",
+    "en": "I agree with your suggestion, provided that we don't delay the launch date.",
+    "es": "Estoy de acuerdo con tu sugerencia, siempre que no retrasemos la fecha de lanzamiento.",
+    "topic": "work",
+    "contextTag": "Negotiation",
+    "note": "Aceptación condicionada: protege los compromisos críticos."
+  },
+  {
+    "id": "work-negotiation-4",
+    "en": "Could we explore a phased rollout instead of an all-at-once migration?",
+    "es": "¿Podríamos explorar un despliegue por fases en lugar de una migración de golpe?",
+    "topic": "work",
+    "contextTag": "Negotiation",
+    "note": "Propuesta de compromiso que reduce riesgos operacionales para ambas partes."
+  },
+  {
+    "id": "work-email-1",
+    "en": "I'm following up on my previous email regarding the contract sign-off.",
+    "es": "Doy seguimiento a mi correo anterior respecto a la firma del contrato.",
+    "topic": "work",
+    "contextTag": "Email & Follow-up",
+    "note": "Recordatorio profesional sin sonar impaciente."
+  },
+  {
+    "id": "work-email-2",
+    "en": "Please let me know your availability for a quick 15-minute sync this week.",
+    "es": "Por favor, indícame tu disponibilidad para una breve llamada de 15 minutos esta semana.",
+    "topic": "work",
+    "contextTag": "Email & Follow-up",
+    "note": "Solicitud acotada en tiempo que aumenta drásticamente la tasa de respuesta."
+  },
+  {
+    "id": "work-email-3",
+    "en": "Attached is the summary of the action items agreed upon in our call.",
+    "es": "Adjunto el resumen de los puntos de acción acordados en nuestra llamada.",
+    "topic": "work",
+    "contextTag": "Email & Follow-up",
+    "note": "Documenta acuerdos y asigna responsables inmediatamente tras la reunión."
   }
 ]

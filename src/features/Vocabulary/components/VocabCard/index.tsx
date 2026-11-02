@@ -69,7 +69,7 @@ export function VocabCard({ card }: VocabCardProps) {
         {example && (
           <div>
             <h5 className="text-[10px] font-bold text-text-secondary uppercase tracking-widest mb-1">
-              Ejemplo Técnico
+              Ejemplo en contexto
             </h5>
             <p className="text-[13px] text-text-main font-medium leading-relaxed">
               {example.en}

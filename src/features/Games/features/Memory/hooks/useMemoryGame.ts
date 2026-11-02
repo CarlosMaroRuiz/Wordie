@@ -1,11 +1,24 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { useFetch } from '@common/hooks/useFetch'
 import { useSpeechSynthesis } from '@common/hooks/useSpeechSynthesis'
-import { MEMORY_WORD_PAIRS } from '../constant'
-import type { MemoryCardItem } from '../type'
+import { useTopicStore } from '@common/layouts/MainLayout/useTopicStore'
+import { PAIRS_PER_GAME } from '../constant'
+import type { MemoryCardItem, MemoryPairDTO } from '../type'
 
-function createDeck(): MemoryCardItem[] {
+function shuffle<T>(items: T[]): T[] {
+  const result = [...items]
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    const temp = result[i]!
+    result[i] = result[j]!
+    result[j] = temp
+  }
+  return result
+}
+
+function createDeck(pairs: MemoryPairDTO[]): MemoryCardItem[] {
   const cards: MemoryCardItem[] = []
-  for (const pair of MEMORY_WORD_PAIRS) {
+  for (const pair of pairs) {
     cards.push({
       uid: `${pair.id}-en`,
       pairId: pair.id,
@@ -24,20 +37,21 @@ function createDeck(): MemoryCardItem[] {
       isMatched: false,
     })
   }
+  return shuffle(cards)
+}
 
-  // Fisher-Yates shuffle
-  for (let i = cards.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    const temp = cards[i]!
-    cards[i] = cards[j]!
-    cards[j] = temp
-  }
-
-  return cards
+function selectGamePairs(allPairs: MemoryPairDTO[], topic: string): MemoryPairDTO[] {
+  const filtered = allPairs.filter((p) => p.topic === topic)
+  const pool = filtered.length >= PAIRS_PER_GAME ? filtered : allPairs
+  return shuffle(pool).slice(0, PAIRS_PER_GAME)
 }
 
 export function useMemoryGame() {
-  const [cards, setCards] = useState<MemoryCardItem[]>(createDeck)
+  const topic = useTopicStore((s) => s.topic)
+  const { data: allPairs, isLoading, error, refetch } = useFetch<MemoryPairDTO[]>('/data/memory.json')
+
+  const [cards, setCards] = useState<MemoryCardItem[]>([])
+  const [activePairsCount, setActivePairsCount] = useState(PAIRS_PER_GAME)
   const [flippedIndexes, setFlippedIndexes] = useState<number[]>([])
   const [isLocked, setIsLocked] = useState(false)
   const [moves, setMoves] = useState(0)
@@ -48,13 +62,32 @@ export function useMemoryGame() {
   const { speak } = useSpeechSynthesis()
   const timerRef = useRef<number | null>(null)
 
-  const isWon = matches === MEMORY_WORD_PAIRS.length
+  const isWon = cards.length > 0 && matches === activePairsCount
+
+  const initGame = useCallback((pairs: MemoryPairDTO[], currentTopic: string) => {
+    if (timerRef.current) clearInterval(timerRef.current)
+    const selected = selectGamePairs(pairs, currentTopic)
+    setActivePairsCount(selected.length)
+    setCards(createDeck(selected))
+    setFlippedIndexes([])
+    setIsLocked(false)
+    setMoves(0)
+    setMatches(0)
+    setSeconds(0)
+    setIsPlaying(false)
+  }, [])
+
+  // Inicializar o reiniciar cuando cambian los datos o el topic global
+  useEffect(() => {
+    if (!allPairs || allPairs.length === 0) return
+    initGame(allPairs, topic)
+  }, [allPairs, topic, initGame])
 
   // Timer loop
   useEffect(() => {
     if (isPlaying && !isWon) {
       timerRef.current = window.setInterval(() => {
-        setSeconds(s => s + 1)
+        setSeconds((s) => s + 1)
       }, 1000)
     } else if (timerRef.current) {
       clearInterval(timerRef.current)
@@ -81,21 +114,21 @@ export function useMemoryGame() {
 
       const nextFlipped = [...flippedIndexes, index]
 
-      setCards(prev =>
+      setCards((prev) =>
         prev.map((c, i) => (i === index ? { ...c, isFlipped: true } : c)),
       )
       setFlippedIndexes(nextFlipped)
 
       if (nextFlipped.length === 2) {
-        setMoves(m => m + 1)
+        setMoves((m) => m + 1)
         const [firstIdx, secondIdx] = nextFlipped
         const first = cards[firstIdx!]!
         const second = target
 
         if (first.pairId === second.pairId) {
           // Match!
-          setMatches(m => m + 1)
-          setCards(prev =>
+          setMatches((m) => m + 1)
+          setCards((prev) =>
             prev.map((c, i) =>
               i === firstIdx || i === secondIdx ? { ...c, isMatched: true } : c,
             ),
@@ -105,7 +138,7 @@ export function useMemoryGame() {
           // No match: turn back after delay
           setIsLocked(true)
           setTimeout(() => {
-            setCards(prev =>
+            setCards((prev) =>
               prev.map((c, i) =>
                 i === firstIdx || i === secondIdx ? { ...c, isFlipped: false } : c,
               ),
@@ -120,23 +153,21 @@ export function useMemoryGame() {
   )
 
   const restart = useCallback(() => {
-    if (timerRef.current) clearInterval(timerRef.current)
-    setCards(createDeck())
-    setFlippedIndexes([])
-    setIsLocked(false)
-    setMoves(0)
-    setMatches(0)
-    setSeconds(0)
-    setIsPlaying(false)
-  }, [])
+    if (!allPairs || allPairs.length === 0) return
+    initGame(allPairs, topic)
+  }, [allPairs, topic, initGame])
 
   return {
     cards,
     moves,
     matches,
-    totalPairs: MEMORY_WORD_PAIRS.length,
+    totalPairs: activePairsCount,
     seconds,
     isWon,
+    isLoading,
+    error,
+    topic,
+    refetch,
     flipCard,
     restart,
   }

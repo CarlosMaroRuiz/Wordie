@@ -1,0 +1,212 @@
+[
+  {
+    "id": "mem-dev-1",
+    "topic": "dev",
+    "en": "deploy",
+    "es": "desplegar",
+    "phonetic": "/dɪˈplɔɪ/"
+  },
+  {
+    "id": "mem-dev-2",
+    "topic": "dev",
+    "en": "queue",
+    "es": "cola de espera",
+    "phonetic": "/kjuː/"
+  },
+  {
+    "id": "mem-dev-3",
+    "topic": "dev",
+    "en": "thread",
+    "es": "hilo de ejecución",
+    "phonetic": "/θred/"
+  },
+  {
+    "id": "mem-dev-4",
+    "topic": "dev",
+    "en": "cache",
+    "es": "memoria rápida",
+    "phonetic": "/kæʃ/"
+  },
+  {
+    "id": "mem-dev-5",
+    "topic": "dev",
+    "en": "bug",
+    "es": "error de código",
+    "phonetic": "/bʌɡ/"
+  },
+  {
+    "id": "mem-dev-6",
+    "topic": "dev",
+    "en": "branch",
+    "es": "rama de versión",
+    "phonetic": "/brɑːntʃ/"
+  },
+  {
+    "id": "mem-dev-7",
+    "topic": "dev",
+    "en": "scope",
+    "es": "alcance de variable",
+    "phonetic": "/skəʊp/"
+  },
+  {
+    "id": "mem-dev-8",
+    "topic": "dev",
+    "en": "loop",
+    "es": "bucle iterativo",
+    "phonetic": "/luːp/"
+  },
+  {
+    "id": "mem-dev-9",
+    "topic": "dev",
+    "en": "merge",
+    "es": "fusionar código",
+    "phonetic": "/mɜːdʒ/"
+  },
+  {
+    "id": "mem-dev-10",
+    "topic": "dev",
+    "en": "pipeline",
+    "es": "tubería de procesos",
+    "phonetic": "/ˈpaɪp.laɪn/"
+  },
+  {
+    "id": "mem-travel-1",
+    "topic": "travel",
+    "en": "boarding pass",
+    "es": "pase de abordar",
+    "phonetic": "/ˈbɔː.dɪŋ ˌpɑːs/"
+  },
+  {
+    "id": "mem-travel-2",
+    "topic": "travel",
+    "en": "luggage",
+    "es": "equipaje de viaje",
+    "phonetic": "/ˈlʌɡ.ɪdʒ/"
+  },
+  {
+    "id": "mem-travel-3",
+    "topic": "travel",
+    "en": "flight",
+    "es": "vuelo aéreo",
+    "phonetic": "/flaɪt/"
+  },
+  {
+    "id": "mem-travel-4",
+    "topic": "travel",
+    "en": "passport",
+    "es": "pasaporte oficial",
+    "phonetic": "/ˈpɑːs.pɔːt/"
+  },
+  {
+    "id": "mem-travel-5",
+    "topic": "travel",
+    "en": "gate",
+    "es": "puerta de embarque",
+    "phonetic": "/ɡeɪt/"
+  },
+  {
+    "id": "mem-travel-6",
+    "topic": "travel",
+    "en": "customs",
+    "es": "control aduanero",
+    "phonetic": "/ˈkʌs.təmz/"
+  },
+  {
+    "id": "mem-travel-7",
+    "topic": "travel",
+    "en": "reservation",
+    "es": "reserva de hotel",
+    "phonetic": "/ˌrez.əˈveɪ.ʃən/"
+  },
+  {
+    "id": "mem-travel-8",
+    "topic": "travel",
+    "en": "ticket",
+    "es": "boleto de viaje",
+    "phonetic": "/ˈtɪk.ɪt/"
+  },
+  {
+    "id": "mem-travel-9",
+    "topic": "travel",
+    "en": "shuttle",
+    "es": "transporte al aeropuerto",
+    "phonetic": "/ˈʃʌt.əl/"
+  },
+  {
+    "id": "mem-travel-10",
+    "topic": "travel",
+    "en": "delay",
+    "es": "retraso o demora",
+    "phonetic": "/dɪˈleɪ/"
+  },
+  {
+    "id": "mem-work-1",
+    "topic": "work",
+    "en": "deadline",
+    "es": "fecha límite",
+    "phonetic": "/ˈded.laɪn/"
+  },
+  {
+    "id": "mem-work-2",
+    "topic": "work",
+    "en": "meeting",
+    "es": "reunión de trabajo",
+    "phonetic": "/ˈmiː.tɪŋ/"
+  },
+  {
+    "id": "mem-work-3",
+    "topic": "work",
+    "en": "schedule",
+    "es": "cronograma laboral",
+    "phonetic": "/ˈʃedʒ.uːl/"
+  },
+  {
+    "id": "mem-work-4",
+    "topic": "work",
+    "en": "feedback",
+    "es": "retroalimentación",
+    "phonetic": "/ˈfiːd.bæk/"
+  },
+  {
+    "id": "mem-work-5",
+    "topic": "work",
+    "en": "budget",
+    "es": "presupuesto del proyecto",
+    "phonetic": "/ˈbʌdʒ.ɪt/"
+  },
+  {
+    "id": "mem-work-6",
+    "topic": "work",
+    "en": "client",
+    "es": "cliente comercial",
+    "phonetic": "/ˈklaɪ.ənt/"
+  },
+  {
+    "id": "mem-work-7",
+    "topic": "work",
+    "en": "report",
+    "es": "informe de resultados",
+    "phonetic": "/rɪˈpɔːt/"
+  },
+  {
+    "id": "mem-work-8",
+    "topic": "work",
+    "en": "goal",
+    "es": "meta u objetivo",
+    "phonetic": "/ɡəʊl/"
+  },
+  {
+    "id": "mem-work-9",
+    "topic": "work",
+    "en": "task",
+    "es": "tarea asignada",
+    "phonetic": "/tɑːsk/"
+  },
+  {
+    "id": "mem-work-10",
+    "topic": "work",
+    "en": "agreement",
+    "es": "acuerdo laboral",
+    "phonetic": "/əˈɡriː.mənt/"
+  }
+]

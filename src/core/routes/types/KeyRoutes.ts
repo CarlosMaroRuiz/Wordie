@@ -8,5 +8,6 @@ type KeyRoutes =
   | 'PhrasalVerbs'
   | 'Games'
   | 'GamesMemory'
+  | 'GamesSentenceBuilder'
 
 export type { KeyRoutes }

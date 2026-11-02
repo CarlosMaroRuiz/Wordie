@@ -1,4 +1,5 @@
 import type { ComponentType } from 'react'
+import type { TopicValue } from '@common/layouts/MainLayout/topics'
 import type { VocabProgressStats, VocabReviewItem } from '@features/Vocabulary/store/progress'
 
 export type HomeModuleId = 'grammar' | 'vocabulary' | 'stories' | 'phrases'
@@ -26,6 +27,7 @@ export interface HomePhrase {
   id: string
   en: string
   es: string
+  topic?: TopicValue
   contextTag: string
 }
 
@@ -34,8 +36,18 @@ export interface HomeStory {
   title: string
   readTime: string
   level: string
-  topic: string
+  topic?: TopicValue
   excerpt: string
+}
+
+/** Forma cruda de una historia en `/public/data/stories.json`. */
+export interface HomeStoryRaw {
+  id: string
+  title: string
+  readTime: string
+  level: string
+  topic?: TopicValue
+  paragraphs: string[]
 }
 
 export interface HomeStats {
@@ -44,6 +56,8 @@ export interface HomeStats {
   reviewWords: VocabReviewItem[]
   phrase: HomePhrase | null
   story: HomeStory | null
+  topic: TopicValue
+  topicLabel: string
   isLoading: { vocab: boolean; counts: boolean }
   error: { vocab: boolean; counts: boolean }
 }

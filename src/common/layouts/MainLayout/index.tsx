@@ -1,21 +1,27 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 import { BottomNav } from '@common/components/BottomNav'
 import { Navbar } from '@common/components/Navbar'
 import { OnboardingTour } from '@common/components/OnboardingTour'
 import { useTourStore } from '@common/components/OnboardingTour/hooks/useTourStore'
+import { PATHS } from '@core/routes/types/paths'
 import { NAV_ITEMS } from './navItems'
 import { TOUR_STEPS } from './tourSteps'
 
 export function MainLayout() {
   const open = useTourStore(s => s.open)
   const close = useTourStore(s => s.close)
+  const { pathname } = useLocation()
+
+  /** En las pantallas de juego no se muestra el selector de tema. */
+  const isGamePlay =
+    pathname === PATHS.GamesMemory || pathname === PATHS.GamesSentenceBuilder
 
   return (
     <div className="min-h-svh bg-bg-page">
       <a href="#main" className="skip-link">
         Saltar al contenido
       </a>
-      <Navbar items={NAV_ITEMS} hideNavOnMobile />
+      <Navbar items={NAV_ITEMS} hideNavOnMobile showTopicSelector={!isGamePlay} />
       <main
         id="main"
         tabIndex={-1}

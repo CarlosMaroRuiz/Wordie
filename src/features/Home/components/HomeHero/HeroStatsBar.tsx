@@ -1,6 +1,7 @@
 import { ArrowRightIcon, CompassIcon } from '@phosphor-icons/react'
 import { Button } from '@common/Button'
-import { HOME_COPY } from '../../constant'
+import { cn } from '../../cn'
+import { HOME_COPY, HOME_SKELETON } from '../../constant'
 import type { HomeCounts } from '../../type'
 
 interface HeroStatsBarProps {
@@ -17,18 +18,24 @@ export function HeroStatsBar({
   onStartTour,
 }: HeroStatsBarProps) {
   const statsDetail = counts
-    ? `${counts.vocabulary} Palabras · ${counts.grammar} Temas · ${counts.stories} Historias`
-    : HOME_COPY.statsSuffix
+    ? `${counts.vocabulary} Palabras · ${counts.phrases} Frases · ${counts.stories} Historias`
+    : ''
 
   return (
     <div className="mt-10 flex w-full flex-col items-center justify-between gap-4 border-t border-border-subtle pt-6 sm:flex-row sm:gap-6">
       <div className="text-center sm:text-left">
-        <p className="font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-text-secondary">
-          {HOME_COPY.statsPrefix}
-        </p>
-        <p className="text-sm font-bold text-text-main sm:text-base">
-          {statsDetail}
-        </p>
+        {counts ? (
+          <>
+            <p className="font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-text-secondary">
+              {HOME_COPY.statsPrefix}
+            </p>
+            <p className="text-sm font-bold text-text-main sm:text-base">
+              {statsDetail}
+            </p>
+          </>
+        ) : (
+          <div className={cn(HOME_SKELETON, 'h-9 w-52')} aria-hidden="true" />
+        )}
       </div>
 
       <div className="flex w-full flex-col gap-2.5 min-[440px]:w-auto min-[440px]:flex-row">

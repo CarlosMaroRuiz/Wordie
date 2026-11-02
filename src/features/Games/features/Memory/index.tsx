@@ -1,5 +1,9 @@
 import { useState } from 'react'
+import { SkeletonPage } from '@common/components/SkeletonPage'
+import { ErrorState } from '@common/components/ErrorState'
 import { HelpModalDialog } from '@common/components/FloatingHelpButton'
+import { GameActionBar } from '@features/Games/components/GameActionBar'
+import { GameBackButton } from '@features/Games/components/GameBackButton'
 import { MemoryCard } from './components/MemoryCard'
 import { MemoryHeader } from './components/MemoryHeader'
 import { MemoryStats } from './components/MemoryStats'
@@ -36,12 +40,31 @@ export default function MemoryGameModule() {
     totalPairs,
     seconds,
     isWon,
+    isLoading,
+    error,
+    refetch,
     flipCard,
     restart,
   } = useMemoryGame()
 
+  if (isLoading) {
+    return <SkeletonPage />
+  }
+
+  if (error) {
+    return (
+      <div className="mx-auto w-full max-w-4xl px-4 py-8">
+        <ErrorState
+          title="Error al cargar el memorama"
+          message={error.message}
+          onRetry={refetch}
+        />
+      </div>
+    )
+  }
+
   return (
-    <div className="mx-auto flex max-w-5xl flex-col gap-3 sm:gap-6 p-2 sm:p-6 lg:p-8">
+    <div className="mx-auto flex max-w-5xl flex-col gap-3 p-2 pb-24 sm:gap-6 sm:p-6 lg:p-8 lg:pb-8">
       <MemoryHeader
         onRestart={restart}
         onOpenHelp={() => setIsHelpOpen(true)}
@@ -80,6 +103,10 @@ export default function MemoryGameModule() {
       >
         {MEMORY_TIPS}
       </HelpModalDialog>
+
+      <GameActionBar className="max-w-5xl">
+        <GameBackButton />
+      </GameActionBar>
     </div>
   )
 }

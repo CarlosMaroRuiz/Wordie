@@ -1,12 +1,15 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useFetch } from '@common/hooks/useFetch';
+import { useTopicStore } from '@common/layouts/MainLayout/useTopicStore';
 import { useVocabStore } from '../store/useVocabStore';
 import type { VocabRawDTO } from '../dto';
 
 export function useVocabulary() {
   const { data, isLoading: fetchLoading, error, refetch } = useFetch<VocabRawDTO[]>('/data/vocabulary.json');
+  const topic = useTopicStore((s) => s.topic);
   const { cards, isLoaded, loadCards } = useVocabStore();
   const [activeFilter, setActiveFilter] = useState<string>('all');
+  const [nowTimestamp] = useState(() => Date.now());
 
   useEffect(() => {
     if (data) {
@@ -14,30 +17,36 @@ export function useVocabulary() {
     }
   }, [data, loadCards]);
 
+  const topicCards = useMemo(() => {
+    return cards.filter(card => card.topic === topic || (!card.topic && topic === 'dev'));
+  }, [cards, topic]);
+
   const domainOptions = useMemo(() => {
     const domains = new Set<string>();
-    cards.forEach(card => {
+    topicCards.forEach(card => {
       if (card.domain) {
         domains.add(card.domain);
       }
     });
     return Array.from(domains);
-  }, [cards]);
+  }, [topicCards]);
 
   const filteredCards = useMemo(() => {
-    if (activeFilter === 'all') return cards;
-    return cards.filter(card => card.domain === activeFilter);
-  }, [cards, activeFilter]);
+    if (activeFilter === 'all') return topicCards;
+    const matches = topicCards.filter(card => card.domain === activeFilter);
+    return matches.length > 0 ? matches : topicCards;
+  }, [topicCards, activeFilter]);
 
   const dueCards = useMemo(() => {
-    const now = Date.now();
-    return filteredCards.filter(card => now >= card.nextReview);
-  }, [filteredCards]);
+    return filteredCards.filter(card => nowTimestamp >= card.nextReview);
+  }, [filteredCards, nowTimestamp]);
 
   const isLoading = fetchLoading || (!isLoaded && !error);
 
   return {
+    topic,
     cards: filteredCards,
+    allTopicCards: topicCards,
     isLoading,
     error,
     refetch,

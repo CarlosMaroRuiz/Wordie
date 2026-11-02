@@ -1,9 +1,6 @@
-export interface RawMemoryPair {
-  id: string
-  en: string
-  es: string
-  phonetic?: string
-}
+import type { MemoryPairDTO } from './dto'
+
+export type RawMemoryPair = MemoryPairDTO
 
 export interface MemoryCardItem {
   uid: string
@@ -22,3 +19,5 @@ export interface MemoryGameStats {
   seconds: number
   isWon: boolean
 }
+
+export type { MemoryPairDTO }

@@ -22,7 +22,7 @@ export default function Home() {
   const navigate = useNavigate()
   const startTour = useTourStore(state => state.start)
   const tourSeen = useTourStore(state => state.seen)
-  const { counts, vocab, reviewWords, phrase, story, isLoading, error } = useHomeStats()
+  const { counts, vocab, reviewWords, phrase, story, topicLabel, isLoading, error } = useHomeStats()
 
   return (
     <div className="flex flex-col gap-10 pb-14 pt-4 sm:gap-14 sm:pt-8">
@@ -41,7 +41,7 @@ export default function Home() {
       <section aria-labelledby="home-progress-title" className={HOME_SECTION}>
         <SectionHead
           id="home-progress-title"
-          title={HOME_COPY.progressTitle}
+          title={`${HOME_COPY.progressTitle} · ${topicLabel}`}
           hint={HOME_COPY.progressHint}
         />
         <div className={HOME_GRID}>
@@ -65,7 +65,7 @@ export default function Home() {
       <section aria-labelledby="home-daily-title" className={HOME_SECTION}>
         <SectionHead
           id="home-daily-title"
-          title={HOME_COPY.dailyTitle}
+          title={`${HOME_COPY.dailyTitle} · ${topicLabel}`}
           hint={HOME_COPY.dailyHint}
         />
         <div className={HOME_GRID}>

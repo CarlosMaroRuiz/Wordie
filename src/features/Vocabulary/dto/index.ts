@@ -1,3 +1,5 @@
+import type { TopicValue } from '@common/layouts/MainLayout/topics';
+
 export type LeitnerBox = 1 | 2 | 3 | 4 | 5;
 
 export interface VocabExampleDTO {
@@ -11,6 +13,7 @@ export interface VocabRawDTO {
   word: string;
   translation: string;
   partOfSpeech: string;
+  topic?: TopicValue;
   domain: string;
   level: string;
   phonetic: string;

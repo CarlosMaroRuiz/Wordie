@@ -12,6 +12,8 @@ type Owner = symbol | null;
  */
 let owner: Owner = null;
 const listeners = new Set<(next: Owner) => void>();
+const activeUtterances = new Set<SpeechSynthesisUtterance>();
+let activeTimeout: ReturnType<typeof setTimeout> | null = null;
 
 function canSpeak(): boolean {
   return typeof window !== 'undefined' && 'speechSynthesis' in window;
@@ -47,6 +49,11 @@ export function useSpeechSynthesis(): UseSpeechSynthesisResult {
   const stop = useCallback(() => {
     if (!canSpeak()) return;
     if (owner === idRef.current || owner === null) {
+      if (activeTimeout) {
+        clearTimeout(activeTimeout);
+        activeTimeout = null;
+      }
+      activeUtterances.clear();
       window.speechSynthesis.cancel();
       changeOwner(null);
     }
@@ -55,25 +62,107 @@ export function useSpeechSynthesis(): UseSpeechSynthesisResult {
   const speak = useCallback((text: string, options: SpeechOptions = {}) => {
     if (!canSpeak() || !text.trim()) return;
 
+    if (activeTimeout) {
+      clearTimeout(activeTimeout);
+      activeTimeout = null;
+    }
+    activeUtterances.clear();
     window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = options.lang ?? 'en-US';
-    utterance.rate = options.rate ?? 0.9;
-    utterance.pitch = options.pitch ?? 1;
-    utterance.volume = options.volume ?? 1;
+    window.speechSynthesis.resume();
 
     const id = idRef.current;
-    utterance.onend = () => {
-      if (owner !== id) return;
-      changeOwner(null);
-      options.onEnd?.();
-    };
-    utterance.onerror = () => {
-      if (owner === id) changeOwner(null);
+    changeOwner(id);
+
+    const repeatCount = Math.max(1, options.repeat ?? 1);
+    const trimmed = text.trim();
+    const utteranceText = /[.!?]$/.test(trimmed) ? trimmed : `${trimmed}.`;
+
+    let currentIndex = 0;
+
+    const speakItem = () => {
+      if (owner !== id) {
+        activeUtterances.clear();
+        return;
+      }
+
+      if (currentIndex >= repeatCount) {
+        activeUtterances.clear();
+        changeOwner(null);
+        options.onEnd?.();
+        return;
+      }
+
+      const repNumber = currentIndex + 1;
+      const utterance = new SpeechSynthesisUtterance(utteranceText);
+      utterance.lang = options.lang ?? 'en-US';
+      utterance.rate = options.rate ?? 0.9;
+      utterance.pitch = options.pitch ?? 1;
+      utterance.volume = options.volume ?? 1;
+
+      activeUtterances.add(utterance);
+
+      utterance.onstart = () => {
+        if (owner !== id) return;
+        options.onRepetitionStart?.(repNumber, repeatCount);
+      };
+
+      utterance.onend = () => {
+        activeUtterances.delete(utterance);
+        if (owner !== id) {
+          activeUtterances.clear();
+          return;
+        }
+        options.onRepetitionEnd?.(repNumber, repeatCount);
+        currentIndex++;
+        if (currentIndex < repeatCount) {
+          activeTimeout = setTimeout(() => {
+            activeTimeout = null;
+            if (owner === id) {
+              speakItem();
+            }
+          }, 300);
+        } else {
+          activeUtterances.clear();
+          changeOwner(null);
+          options.onEnd?.();
+        }
+      };
+
+      utterance.onerror = (e) => {
+        activeUtterances.delete(utterance);
+        if (owner !== id) {
+          activeUtterances.clear();
+          return;
+        }
+        if (e.error === 'canceled' || e.error === 'interrupted') {
+          activeUtterances.clear();
+          changeOwner(null);
+          return;
+        }
+        currentIndex++;
+        if (currentIndex < repeatCount) {
+          activeTimeout = setTimeout(() => {
+            activeTimeout = null;
+            if (owner === id) speakItem();
+          }, 200);
+        } else {
+          activeUtterances.clear();
+          changeOwner(null);
+          options.onEnd?.();
+        }
+      };
+
+      if (options.onBoundary && currentIndex === 0) {
+        utterance.onboundary = (e: SpeechSynthesisEvent) => {
+          if (owner !== id) return;
+          options.onBoundary?.(e);
+        };
+      }
+
+      window.speechSynthesis.speak(utterance);
     };
 
-    changeOwner(id);
-    window.speechSynthesis.speak(utterance);
+    speakItem();
   }, []);
 
   const toggle = useCallback(

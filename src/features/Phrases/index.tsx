@@ -12,6 +12,7 @@ export default function Phrases() {
     activeFilter,
     setFilter,
     filteredPhrases,
+    filterOptions,
     copiedId,
     copyPhrase,
     speakPhrase,
@@ -32,15 +33,18 @@ export default function Phrases() {
     <section className="mx-auto w-full max-w-5xl space-y-6 px-4 py-10">
       <header className="space-y-1">
         <h1 className="text-3xl font-extrabold tracking-tight text-text-main">
-          Frases listas para el trabajo
+          Frases listas para usar
         </h1>
         <p className="text-text-secondary">
-          Plantillas en ingles profesional para Pull Requests, Dailies y
-          comunicacion asincrona.
+          Expresiones contextuales para desarrollo, viajes y comunicación profesional en el trabajo.
         </p>
       </header>
 
-      <PhraseFilters activeFilter={activeFilter} onFilter={setFilter} />
+      <PhraseFilters
+        options={filterOptions}
+        activeFilter={activeFilter}
+        onFilter={setFilter}
+      />
 
       <PhraseGrid
         phrases={filteredPhrases}

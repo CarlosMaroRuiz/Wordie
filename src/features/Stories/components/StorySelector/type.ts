@@ -1,9 +1,7 @@
-import type { StoryDTO, StoryTopic } from '../../type'
+import type { StoryDTO } from '../../type'
 
 export interface StorySelectorProps {
   stories: StoryDTO[]
   selectedStoryId: string | null
-  activeTopic: StoryTopic
   onSelectStory: (id: string) => void
-  onSelectTopic: (topic: StoryTopic) => void
 }

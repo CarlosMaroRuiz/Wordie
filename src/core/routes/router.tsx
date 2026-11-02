@@ -45,6 +45,10 @@ export const routers = createBrowserRouter([
             path: 'memory',
             element: LoadSuspense(() => import('@features/Games/features/Memory')),
           },
+          {
+            path: 'sentence-builder',
+            element: LoadSuspense(() => import('@features/Games/features/SentenceBuilder')),
+          },
         ],
       },
     ],
