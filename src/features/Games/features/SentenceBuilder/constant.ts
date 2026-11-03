@@ -10,10 +10,10 @@ export const CHIP_PLACED_IDLE =
   'border-primary/40 bg-primary/10 text-primary hover:border-primary hover:bg-primary/20'
 
 export const CHIP_PLACED_CORRECT =
-  'border-emerald-500/40 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300'
+  'border-success/40 bg-success-light text-success'
 
 export const CHIP_PLACED_WRONG =
-  'border-red-500/40 bg-red-500/10 text-red-700 dark:text-red-300 hover:border-red-500'
+  'border-error/40 bg-error-light text-error hover:border-error'
 
 export const CHIP_BANK =
   'border-border-subtle bg-surface text-text-main hover:border-primary/50 hover:bg-bg-page hover:text-primary active:scale-95'

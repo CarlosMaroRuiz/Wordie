@@ -1,7 +1,7 @@
 import { ArrowUpRightIcon } from '@phosphor-icons/react'
 import { Link } from 'react-router-dom'
 import { CardBase } from '@common/CardBase'
-import { cn } from '../../cn'
+import { cn } from '@common/utils/cn'
 import type { ModuleCardProps } from './type'
 
 export function ModuleCard({ module }: ModuleCardProps) {
@@ -15,7 +15,7 @@ export function ModuleCard({ module }: ModuleCardProps) {
       className={cn(
         'group relative flex h-full flex-col justify-between overflow-hidden rounded-[26px] border transition-all duration-200 hover:-translate-y-1',
         isFeatured
-          ? 'border-primary bg-primary text-white shadow-md hover:shadow-xl'
+          ? 'border-primary bg-primary text-on-primary shadow-md hover:shadow-xl'
           : 'border-border-subtle bg-surface text-text-main hover:border-primary/40 hover:shadow-md',
       )}
     >
@@ -27,7 +27,7 @@ export function ModuleCard({ module }: ModuleCardProps) {
               aria-hidden="true"
               className={cn(
                 'font-mono text-[10px] font-bold uppercase tracking-[0.2em]',
-                isFeatured ? 'text-white/70' : 'text-text-secondary',
+                isFeatured ? 'text-on-primary/70' : 'text-text-secondary',
               )}
             >
               MÓDULO {module.index}
@@ -37,7 +37,7 @@ export function ModuleCard({ module }: ModuleCardProps) {
                 aria-hidden="true"
                 className={cn(
                   'grid size-8 place-items-center rounded-xl',
-                  isFeatured ? 'bg-white/15 text-white' : module.accent,
+                  isFeatured ? 'bg-on-primary/15 text-on-primary' : module.accent,
                 )}
               >
                 <Icon size={18} weight="bold" />
@@ -45,7 +45,7 @@ export function ModuleCard({ module }: ModuleCardProps) {
               <h3
                 className={cn(
                   'text-lg font-extrabold tracking-tight',
-                  isFeatured ? 'text-white' : 'text-text-main',
+                  isFeatured ? 'text-on-primary' : 'text-text-main',
                 )}
               >
                 {module.title}
@@ -59,8 +59,8 @@ export function ModuleCard({ module }: ModuleCardProps) {
             className={cn(
               'grid size-10 shrink-0 place-items-center rounded-full transition-transform duration-200 group-hover:scale-110',
               isFeatured
-                ? 'bg-accent text-white shadow-xs'
-                : 'bg-primary-light text-primary group-hover:bg-primary group-hover:text-white',
+                ? 'bg-on-primary/15 text-on-primary shadow-xs'
+                : 'bg-primary-light text-primary group-hover:bg-primary group-hover:text-on-primary',
             )}
           >
             <ArrowUpRightIcon size={18} weight="bold" />
@@ -71,7 +71,7 @@ export function ModuleCard({ module }: ModuleCardProps) {
         <p
           className={cn(
             'mt-3 text-sm leading-relaxed',
-            isFeatured ? 'text-white/85' : 'text-text-secondary',
+            isFeatured ? 'text-on-primary/85' : 'text-text-secondary',
           )}
         >
           {module.description}
@@ -83,7 +83,7 @@ export function ModuleCard({ module }: ModuleCardProps) {
         className={cn(
           'mt-auto border-t px-6 py-4',
           isFeatured
-            ? 'border-white/15 bg-white/5'
+            ? 'border-on-primary/15 bg-on-primary/5'
             : 'border-border-subtle/80 bg-bg-page/60',
         )}
       >
@@ -91,7 +91,7 @@ export function ModuleCard({ module }: ModuleCardProps) {
           <span
             className={cn(
               'font-mono font-medium',
-              isFeatured ? 'text-white/80' : 'text-text-secondary',
+              isFeatured ? 'text-on-primary/80' : 'text-text-secondary',
             )}
           >
             {module.id === 'vocabulary' && 'Sistema Leitner · 5 cajas'}
@@ -102,7 +102,7 @@ export function ModuleCard({ module }: ModuleCardProps) {
           <span
             className={cn(
               'font-bold',
-              isFeatured ? 'text-yellow' : 'text-primary',
+              isFeatured ? 'text-on-primary' : 'text-primary',
             )}
           >
             Explorar →

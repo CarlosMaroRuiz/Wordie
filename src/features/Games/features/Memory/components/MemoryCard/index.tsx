@@ -1,9 +1,6 @@
 import { BrainIcon, CheckCircleIcon, SpeakerHighIcon } from '@phosphor-icons/react'
+import { cn } from '@common/utils/cn'
 import type { MemoryCardProps } from './type'
-
-function cn(...classes: Array<string | false | null | undefined>) {
-  return classes.filter(Boolean).join(' ')
-}
 
 export function MemoryCard({ card, onClick }: MemoryCardProps) {
   const isVisible = card.isFlipped || card.isMatched
@@ -18,7 +15,7 @@ export function MemoryCard({ card, onClick }: MemoryCardProps) {
         'relative flex h-20 sm:h-32 min-h-[5rem] sm:min-h-[8rem] w-full flex-col items-center justify-between rounded-xl sm:rounded-2xl border p-1.5 sm:p-3 text-center transition-all duration-300 select-none focus-visible:outline-3 focus-visible:outline-primary',
         isVisible
           ? card.isMatched
-            ? 'border-emerald-500/40 bg-emerald-500/10 text-text-main shadow-xs cursor-default'
+            ? 'border-success/40 bg-success-light text-text-main shadow-xs cursor-default'
             : 'border-primary bg-surface shadow-md cursor-default scale-[1.02]'
           : 'border-border-subtle bg-surface-muted/60 text-text-tertiary hover:border-primary/40 hover:bg-surface-elevated hover:shadow-xs cursor-pointer active:scale-95',
       )}
@@ -31,7 +28,7 @@ export function MemoryCard({ card, onClick }: MemoryCardProps) {
                 'rounded sm:rounded-md px-1 py-0.5 sm:px-1.5 text-[8px] sm:text-[9px] font-bold uppercase tracking-wider',
                 card.lang === 'en'
                   ? 'bg-primary/10 text-primary'
-                  : 'bg-amber-500/10 text-amber-600 dark:text-amber-400',
+                  : 'bg-warning-light text-warning',
               )}
             >
               <span className="sm:hidden">{card.lang === 'en' ? 'EN' : 'ES'}</span>
@@ -39,7 +36,7 @@ export function MemoryCard({ card, onClick }: MemoryCardProps) {
             </span>
 
             {card.isMatched ? (
-              <CheckCircleIcon size={14} weight="bold" className="text-emerald-500" />
+              <CheckCircleIcon size={14} weight="bold" className="text-success" />
             ) : card.lang === 'en' ? (
               <SpeakerHighIcon size={14} weight="bold" className="text-primary/70" />
             ) : null}

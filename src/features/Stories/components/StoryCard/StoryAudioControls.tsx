@@ -57,7 +57,7 @@ export function StoryAudioControls({
                   title={`Velocidad ${rate.label}`}
                   className={`cursor-pointer rounded-lg px-2 py-0.5 text-xs font-bold transition-all ${
                     isSelected
-                      ? 'bg-primary text-white shadow-xs'
+                      ? 'bg-primary text-on-primary shadow-xs'
                       : 'text-text-secondary hover:bg-surface hover:text-text-main'
                   }`}
                 >

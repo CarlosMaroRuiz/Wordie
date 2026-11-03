@@ -2,6 +2,7 @@ import { useState, useCallback, useMemo, useEffect, useRef } from 'react'
 import { useFetch } from '@common/hooks/useFetch'
 import { useSpeechSynthesis } from '@common/hooks/useSpeechSynthesis'
 import { useTopicStore } from '@common/layouts/MainLayout/useTopicStore'
+import type { AsyncStatusShape } from '@common/types/async'
 import { ROUNDS_PER_GAME } from '../constant'
 import type { GameStatus, SentenceDTO, WordChip } from '../type'
 
@@ -199,5 +200,5 @@ export function useSentenceBuilder() {
     placeNextWordHint,
     speakCurrentSentence,
     restartGame,
-  }
+  } satisfies AsyncStatusShape
 }

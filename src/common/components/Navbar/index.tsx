@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { Chip } from '@common/Chip'
 import { Dropdown } from '@common/components/Dropdown'
 import { NavExtraMenu } from '@common/components/NavExtraMenu'
+import { ThemeToggle } from '@common/theme/ThemeToggle'
 import { EXTRA_NAV_ITEMS } from '@common/layouts/MainLayout/navItems'
 import { SlidersIcon } from '@phosphor-icons/react'
 import { useScrolled } from '@common/hooks/useScrolled'
@@ -21,9 +22,7 @@ import {
 } from './constant'
 import type { NavbarProps } from './type'
 
-function cn(...classes: Array<string | false | null | undefined>) {
-  return classes.filter(Boolean).join(' ')
-}
+import { cn } from '@common/utils/cn'
 
 export function Navbar({
   brand = 'Wordie',
@@ -47,7 +46,10 @@ export function Navbar({
             {brand}
           </Link>
 
-          {actions ? <div className={NAVBAR_ACTIONS}>{actions}</div> : null}
+          <div className={NAVBAR_ACTIONS}>
+            <ThemeToggle />
+            {actions ?? null}
+          </div>
         </div>
 
         <div className={cn(NAVBAR_NAV_ROW, !showTopicSelector && 'max-lg:hidden')}>

@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { useFetch } from '@common/hooks/useFetch'
 import { useSpeechSynthesis } from '@common/hooks/useSpeechSynthesis'
+import type { AsyncStatusShape } from '@common/types/async'
 import type { PhrasalVerbCategory, PhrasalVerbItemDTO } from '../types'
 
 export function usePhrasalVerbs() {
@@ -46,7 +47,7 @@ export function usePhrasalVerbs() {
     items,
     filteredItems,
     isLoading,
-    error: error?.message ?? null,
+    error,
     activeCategory,
     setActiveCategory,
     searchQuery,
@@ -55,5 +56,5 @@ export function usePhrasalVerbs() {
     setSeparableFilter,
     speak,
     refetch,
-  }
+  } satisfies AsyncStatusShape
 }

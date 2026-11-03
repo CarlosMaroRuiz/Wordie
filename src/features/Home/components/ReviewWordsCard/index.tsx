@@ -3,7 +3,7 @@ import { Button } from '@common/Button'
 import { CardBase } from '@common/CardBase'
 import { useSpeechSynthesis } from '@common/hooks/useSpeechSynthesis'
 import { getVocabHint } from '@features/Vocabulary/store/progress'
-import { cn } from '../../cn'
+import { cn } from '@common/utils/cn'
 import { HOME_CARD, HOME_COPY, HOME_PILL, HOME_SKELETON } from '../../constant'
 import type { ReviewWordsCardProps } from './type'
 

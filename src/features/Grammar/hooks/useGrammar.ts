@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react';
 import type { GrammarTopic, GrammarCategory } from '../types';
+import type { AsyncStatusShape } from '@common/types/async';
 import { useFetch } from '@common/hooks/useFetch';
 
 export const useGrammar = () => {
@@ -32,5 +33,5 @@ export const useGrammar = () => {
     selectedTopicId: effectiveId,
     setSelectedTopicId,
     refetch,
-  };
+  } satisfies AsyncStatusShape;
 };

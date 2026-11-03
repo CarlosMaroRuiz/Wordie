@@ -1,26 +1,19 @@
 import { Link } from 'react-router-dom'
 import { ArrowRightIcon } from '@phosphor-icons/react'
-import {
-  ACTIVE_CARD,
-  BADGE_CLASS,
-  DIFFICULTY_COLOR,
-  INACTIVE_CARD,
-} from './constant'
+import { Badge } from '@common/components/Badge'
+import { cn } from '@common/utils/cn'
+import { ACTIVE_CARD, DIFFICULTY_TONE, INACTIVE_CARD } from './constant'
 import type { GameCardProps } from './type'
-
-function cn(...classes: Array<string | false | null | undefined>) {
-  return classes.filter(Boolean).join(' ')
-}
 
 export function GameCard({ game }: GameCardProps) {
   const Icon = game.icon
 
   const cardContent = (
     <>
-      <div className="flex items-center justify-between gap-3 mb-6">
+      <div className="mb-6 flex items-center justify-between gap-3">
         <div
           className={cn(
-            'flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br text-primary shadow-xs transition-transform duration-200 group-hover:scale-105',
+            'flex size-14 items-center justify-center rounded-2xl text-primary shadow-xs transition-transform duration-200 group-hover:scale-105',
             game.color,
           )}
         >
@@ -28,21 +21,20 @@ export function GameCard({ game }: GameCardProps) {
         </div>
 
         <div className="flex items-center gap-2">
-          {game.badge ? <span className={BADGE_CLASS}>{game.badge}</span> : null}
-          <span
-            className={cn(
-              'rounded-full border px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider',
-              DIFFICULTY_COLOR[game.difficulty],
-            )}
-          >
+          {game.badge ? (
+            <Badge tone="brand-soft" size="sm">
+              {game.badge}
+            </Badge>
+          ) : null}
+          <Badge tone={DIFFICULTY_TONE[game.difficulty]} size="sm" uppercase>
             {game.difficulty}
-          </span>
+          </Badge>
         </div>
       </div>
 
       <div className="flex flex-1 flex-col justify-between">
         <div>
-          <h3 className="text-xl font-extrabold tracking-tight text-text-main group-hover:text-primary transition-colors">
+          <h3 className="text-xl font-extrabold tracking-tight text-text-main transition-colors group-hover:text-primary">
             {game.title}
           </h3>
           <p className="mt-2 text-xs leading-relaxed text-text-secondary">

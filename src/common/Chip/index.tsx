@@ -11,9 +11,7 @@ import {
 } from './constant'
 import type { ChipProps } from './type'
 
-function cn(...classes: Array<string | false | null | undefined>) {
-  return classes.filter(Boolean).join(' ')
-}
+import { cn } from '@common/utils/cn'
 
 const CHIP_SPRING = { type: 'spring', stiffness: 400, damping: 17 } as const
 

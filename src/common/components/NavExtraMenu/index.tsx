@@ -11,9 +11,7 @@ import {
 } from './constant'
 import type { NavExtraMenuProps } from './type'
 
-function cn(...classes: Array<string | false | null | undefined>) {
-  return classes.filter(Boolean).join(' ')
-}
+import { cn } from '@common/utils/cn'
 
 export function NavExtraMenu({
   items,

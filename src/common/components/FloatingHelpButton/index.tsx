@@ -4,9 +4,7 @@ import { FLOATING_HELP_BUTTON, FLOATING_HELP_TOOLTIP } from './constant'
 import { HelpModalDialog } from './HelpModalDialog'
 import type { FloatingHelpButtonProps } from './type'
 
-function cn(...classes: Array<string | false | null | undefined>) {
-  return classes.filter(Boolean).join(' ')
-}
+import { cn } from '@common/utils/cn'
 
 export function FloatingHelpButton({
   children,

@@ -1,7 +1,7 @@
 import { CheckIcon, CopyIcon } from '@phosphor-icons/react'
 import { Button } from '@common/Button'
 import { CardBase } from '@common/CardBase'
-import { cn } from '../../cn'
+import { cn } from '@common/utils/cn'
 import { HOME_CARD, HOME_COPY, HOME_PILL, HOME_SKELETON } from '../../constant'
 import { useCopyPhrase } from '../../hooks/useCopyPhrase'
 import type { PhraseOfDayCardProps } from './type'

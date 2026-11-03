@@ -88,7 +88,7 @@ export function StoryParagraphs({
         return (
           <span
             key={idx}
-            className="rounded bg-primary/25 px-1 font-bold text-primary transition-all duration-150 dark:bg-primary/40 shadow-xs"
+            className="rounded bg-primary/25 px-1 font-bold text-primary transition-all duration-150 shadow-xs"
           >
             {chunk}
           </span>
@@ -110,7 +110,7 @@ export function StoryParagraphs({
             key={pIdx}
             className={`my-4 transition-all duration-300 rounded-2xl ${
               isCurrentParagraph
-                ? 'bg-primary/8 border-l-4 border-primary p-4 -ml-4 dark:bg-primary/15 shadow-xs'
+                ? 'bg-primary/8 border-l-4 border-primary p-4 -ml-4 shadow-xs'
                 : isNarrating
                   ? 'opacity-55 p-1'
                   : 'p-1'
@@ -144,10 +144,10 @@ export function StoryParagraphs({
                       title={`Ver significado de "${match.term}"`}
                       className={`inline-flex items-center px-1.5 py-0.5 mx-0.5 rounded-md font-bold text-sm transition-all cursor-pointer ${
                         isSelected
-                          ? 'bg-primary text-white shadow-xs'
+                          ? 'bg-primary text-on-primary shadow-xs'
                           : isCurrentWord
-                            ? 'bg-primary text-white ring-2 ring-primary ring-offset-2 scale-105 shadow-sm'
-                            : 'bg-primary/10 text-primary hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30'
+                            ? 'bg-primary text-on-primary ring-2 ring-primary ring-offset-surface scale-105 shadow-sm'
+                            : 'bg-primary/10 text-primary hover:bg-primary/20'
                       }`}
                     >
                       {part.text}

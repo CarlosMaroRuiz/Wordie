@@ -19,7 +19,7 @@ export function ErrorBoundaryFallback({
         <div className="flex flex-col items-center text-center">
           <ErrorLottieAnimation />
 
-          <span className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-rose-500">
+          <span className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-error">
             {ERROR_BOUNDARY_TEXTS.SUBTITLE}
           </span>
           <h1 className="mt-1 text-2xl font-extrabold tracking-tight text-text-main sm:text-3xl">

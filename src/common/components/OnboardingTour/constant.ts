@@ -1,8 +1,8 @@
 export const TOUR_HIGHLIGHT =
-  'pointer-events-none rounded-[22px] ring-2 ring-primary shadow-[0_0_0_9999px_rgba(12,14,20,0.55)] transition-[top,left,width,height] duration-300 ease-out motion-reduce:transition-none'
+  'pointer-events-none rounded-[22px] ring-2 ring-primary shadow-spotlight transition-[top,left,width,height] duration-300 ease-out motion-reduce:transition-none'
 
 export const TOUR_POPOVER =
-  'fixed z-60 w-[min(20rem,calc(100vw-2rem))] rounded-[22px] border-[1.5px] border-border-subtle bg-surface p-5 shadow-[0_12px_36px_rgba(0,0,0,0.18)]'
+  'fixed z-60 w-[min(20rem,calc(100vw-2rem))] rounded-[22px] border-[1.5px] border-border-subtle bg-surface p-5 shadow-float'
 
 export const TOUR_BADGE =
   'inline-flex items-center gap-1.5 rounded-full bg-primary-light px-2.5 py-1 text-[12px] font-bold text-primary'

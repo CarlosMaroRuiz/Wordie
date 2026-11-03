@@ -1,11 +1,12 @@
 import { motion } from 'motion/react'
-import { Copy, Check, SpeakerHigh } from '@phosphor-icons/react'
+import { Copy, Check } from '@phosphor-icons/react'
 import { CardBase } from '@common/CardBase'
 import { Button } from '@common/Button'
+import { AudioButton } from '@common/components/AudioButton'
 import { ITEM_VARIANTS } from './constant'
 import type { PhraseCardProps } from './type'
 
-export function PhraseCard({ phrase, copiedId, onCopy, onSpeak }: PhraseCardProps) {
+export function PhraseCard({ phrase, copiedId, onCopy }: PhraseCardProps) {
   const isCopied = copiedId === phrase.id
 
   return (
@@ -15,9 +16,7 @@ export function PhraseCard({ phrase, copiedId, onCopy, onSpeak }: PhraseCardProp
           {phrase.contextTag}
         </span>
 
-        <p className="font-bold leading-snug text-text-main text-[1.0625rem]">
-          {phrase.en}
-        </p>
+        <p className="text-[1.0625rem] font-bold leading-snug text-text-main">{phrase.en}</p>
 
         <p className="text-sm text-text-secondary">{phrase.es}</p>
 
@@ -47,14 +46,7 @@ export function PhraseCard({ phrase, copiedId, onCopy, onSpeak }: PhraseCardProp
             )}
           </Button>
 
-          <Button
-            variant="icon"
-            size="sm"
-            onClick={() => onSpeak(phrase.en)}
-            aria-label="Pronunciar frase"
-          >
-            <SpeakerHigh size={16} weight="bold" />
-          </Button>
+          <AudioButton text={phrase.en} appearance="outlined" label="Pronunciar frase" />
         </div>
       </CardBase>
     </motion.div>

@@ -23,9 +23,7 @@ import { useTourStep } from './hooks/useTourStep'
 import { useTourTarget } from './hooks/useTourTarget'
 import type { OnboardingTourProps } from './type'
 
-function cn(...classes: Array<string | false | null | undefined>) {
-  return classes.filter(Boolean).join(' ')
-}
+import { cn } from '@common/utils/cn'
 
 export function OnboardingTour({ open, onClose, steps }: OnboardingTourProps) {
   const { index, step, isFirst, isLast, next, prev } = useTourStep(steps, { open, onClose })
@@ -53,7 +51,7 @@ export function OnboardingTour({ open, onClose, steps }: OnboardingTourProps) {
                 }}
               />
             ) : (
-              <div className="pointer-events-none fixed inset-0 z-55 bg-black/55" />
+              <div className="pointer-events-none fixed inset-0 z-55 bg-scrim/55" />
             )}
 
             <motion.div

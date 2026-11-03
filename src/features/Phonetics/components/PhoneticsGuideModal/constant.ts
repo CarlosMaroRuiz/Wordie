@@ -1,7 +1,7 @@
 import type { GuideSection } from './type'
 
 export const GUIDE_MODAL_BACKDROP =
-  'fixed inset-0 z-50 bg-black/50 backdrop-blur-sm transition-opacity duration-200 data-closed:opacity-0'
+  'fixed inset-0 z-50 bg-scrim/50 backdrop-blur-sm transition-opacity duration-200 data-closed:opacity-0'
 
 export const GUIDE_MODAL_PANEL =
   'fixed inset-x-4 top-1/2 z-50 mx-auto max-h-[85vh] max-w-2xl -translate-y-1/2 overflow-y-auto rounded-[32px] border border-border-subtle bg-surface p-6 shadow-2xl transition duration-200 data-closed:scale-95 data-closed:opacity-0 focus:outline-none sm:p-8'

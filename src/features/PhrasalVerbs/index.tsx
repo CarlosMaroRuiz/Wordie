@@ -1,6 +1,6 @@
-import { ErrorState } from '@common/components/ErrorState'
+import { AsyncBoundary } from '@common/components/AsyncBoundary'
+import { EmptyState } from '@common/components/EmptyState'
 import { FloatingHelpButton } from '@common/components/FloatingHelpButton'
-import { SkeletonPage } from '@common/components/SkeletonPage'
 import { PhrasalVerbCard } from './components/PhrasalVerbCard'
 import { PhrasalVerbFilters } from './components/PhrasalVerbFilters'
 import { PhrasalVerbHero } from './components/PhrasalVerbHero'
@@ -55,66 +55,57 @@ export default function PhrasalVerbsModule() {
     refetch,
   } = usePhrasalVerbs()
 
-  if (isLoading) {
-    return (
-      <div className="mx-auto max-w-7xl p-4 sm:p-6 lg:p-8">
-        <SkeletonPage />
-      </div>
-    )
-  }
-
-  if (error) {
-    return (
-      <div className="mx-auto max-w-md p-6">
-        <ErrorState onRetry={refetch} />
-      </div>
-    )
-  }
-
   return (
-    <div className="mx-auto flex max-w-7xl flex-col gap-8 p-4 sm:p-6 lg:p-8">
-      <PhrasalVerbHero
-        totalCount={items.length}
-        searchQuery={searchQuery}
-        onSearchChange={setSearchQuery}
-      />
+    <AsyncBoundary
+      isLoading={isLoading}
+      error={error}
+      onRetry={refetch}
+      errorTitle="No se pudieron cargar los Phrasal Verbs"
+    >
+      <div className="mx-auto flex max-w-7xl flex-col gap-8 p-4 sm:p-6 lg:p-8">
+        <PhrasalVerbHero
+          totalCount={items.length}
+          searchQuery={searchQuery}
+          onSearchChange={setSearchQuery}
+        />
 
-      <section className="flex flex-col gap-6">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-          <PhrasalVerbFilters
-            activeCategory={activeCategory}
-            onSelectCategory={setActiveCategory}
-            separableFilter={separableFilter}
-            onSeparableChange={setSeparableFilter}
-          />
-          <span className="shrink-0 text-xs font-semibold text-text-tertiary">
-            {filteredItems.length} de {items.length} verbos
-          </span>
-        </div>
-
-        {filteredItems.length === 0 ? (
-          <div className="rounded-3xl border border-dashed border-border-subtle p-12 text-center">
-            <p className="text-sm text-text-secondary">
-              No se encontraron Phrasal Verbs para &ldquo;{searchQuery}&rdquo;.
-            </p>
+        <section className="flex flex-col gap-6">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <PhrasalVerbFilters
+              activeCategory={activeCategory}
+              onSelectCategory={setActiveCategory}
+              separableFilter={separableFilter}
+              onSeparableChange={setSeparableFilter}
+            />
+            <span className="shrink-0 text-xs font-semibold text-text-tertiary">
+              {filteredItems.length} de {items.length} verbos
+            </span>
           </div>
-        ) : (
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {filteredItems.map(item => (
-              <PhrasalVerbCard key={item.id} item={item} onSpeak={speak} />
-            ))}
-          </div>
-        )}
-      </section>
 
-      <FloatingHelpButton
-        title="Guía de Phrasal Verbs"
-        subtitle="GUÍA DE ESTUDIO"
-        tooltip="¿Cómo estudiar Phrasal Verbs?"
-        closeLabel="¡Entendido, a practicar!"
-      >
-        {GUIDE_CONTENT}
-      </FloatingHelpButton>
-    </div>
+          {filteredItems.length === 0 ? (
+            <EmptyState
+              variant="dashed"
+              size="sm"
+              title={`No se encontraron Phrasal Verbs para “${searchQuery}”.`}
+            />
+          ) : (
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {filteredItems.map(item => (
+                <PhrasalVerbCard key={item.id} item={item} onSpeak={speak} />
+              ))}
+            </div>
+          )}
+        </section>
+
+        <FloatingHelpButton
+          title="Guía de Phrasal Verbs"
+          subtitle="GUÍA DE ESTUDIO"
+          tooltip="¿Cómo estudiar Phrasal Verbs?"
+          closeLabel="¡Entendido, a practicar!"
+        >
+          {GUIDE_CONTENT}
+        </FloatingHelpButton>
+      </div>
+    </AsyncBoundary>
   )
 }

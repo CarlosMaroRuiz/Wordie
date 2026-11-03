@@ -52,8 +52,8 @@ export function FormulaSlider({ formulas }: FormulaSliderProps) {
                 onClick={() => goTo(i)}
                 className={`cursor-pointer rounded-lg px-3 py-1.5 text-xs font-bold uppercase tracking-wider transition-all duration-200 ${
                   isActive
-                    ? 'bg-primary text-white shadow-xs'
-                    : 'bg-primary/10 text-primary hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30'
+                    ? 'bg-primary text-on-primary shadow-xs'
+                    : 'bg-primary/10 text-primary hover:bg-primary/20'
                 }`}
               >
                 {f.label}
@@ -90,7 +90,7 @@ export function FormulaSlider({ formulas }: FormulaSliderProps) {
       </div>
 
       {/* Cuadro principal interactivo deslizable */}
-      <div className="relative overflow-hidden rounded-2xl border border-primary/20 bg-primary/5 p-6 dark:bg-primary/10 shadow-xs sm:p-7">
+      <div className="relative overflow-hidden rounded-2xl border border-primary/20 bg-primary/5 p-6 shadow-xs sm:p-7">
         <AnimatePresence custom={direction} mode="wait">
           <motion.div
             key={current.label}

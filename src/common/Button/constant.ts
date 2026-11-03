@@ -5,17 +5,17 @@ export const BUTTON_BASE =
 
 export const BUTTON_VARIANT: Record<ButtonVariant, string> = {
   primary:
-    'border-0 bg-primary text-on-primary shadow-[0_4px_14px_rgba(108,92,231,0.25)] hover:bg-primary-hover hover:shadow-[0_6px_18px_rgba(108,92,231,0.32)]',
+    'border-0 bg-primary text-on-primary shadow-brand hover:bg-primary-hover hover:shadow-brand-strong',
   secondary:
     'border-[1.5px] border-border-subtle bg-surface text-primary shadow-none hover:border-primary',
   ghost: 'border-0 bg-transparent text-primary shadow-none',
   success:
-    'border-0 bg-success text-text-main shadow-[0_4px_14px_rgba(32,201,151,0.3)]',
+    'border-0 bg-success text-on-primary shadow-success-glow',
   danger:
-    'border-0 bg-error text-text-main shadow-[0_4px_14px_rgba(255,71,87,0.3)]',
-  icon: 'border-[1.5px] border-border-subtle bg-surface text-text-main shadow-[0_2px_6px_rgba(0,0,0,0.02)] hover:border-primary',
+    'border-0 bg-error text-on-primary shadow-error-glow',
+  icon: 'border-[1.5px] border-border-subtle bg-surface text-text-main shadow-icon hover:border-primary',
   iconPrimary:
-    'border-[1.5px] border-primary bg-primary text-on-primary shadow-[0_4px_12px_rgba(108,92,231,0.25)]',
+    'border-[1.5px] border-primary bg-primary text-on-primary shadow-brand',
 }
 
 export const BUTTON_SIZE: Record<ButtonSize, string> = {
@@ -39,7 +39,7 @@ export const BUTTON_SECONDARY_SIZE: Record<ButtonSize, string> = {
 }
 
 export const BUTTON_ARROW = {
-  wrap: 'ml-auto grid shrink-0 place-items-center rounded-full bg-white/22',
+  wrap: 'ml-auto grid shrink-0 place-items-center rounded-full bg-on-primary/22',
   wrapSize: {
     lg: 'size-7',
     md: 'size-6',

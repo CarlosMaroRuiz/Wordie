@@ -20,9 +20,9 @@ export function SentenceWorkspace({
         padding="md"
         className={`flex flex-col gap-2 transition-all duration-200 ${
           isCorrect
-            ? 'border-emerald-500 bg-emerald-500/5 ring-2 ring-emerald-500/20'
+            ? 'border-success bg-success-light ring-2 ring-success/20'
             : isIncorrect
-              ? 'border-red-500 bg-red-500/5 ring-2 ring-red-500/20 animate-shake'
+              ? 'border-error bg-error-light ring-2 ring-error/20 animate-shake'
               : 'border-border-subtle bg-surface'
         }`}
       >
@@ -32,13 +32,13 @@ export function SentenceWorkspace({
         >
           <span>Tu oración en inglés:</span>
           {isCorrect && (
-            <span className="flex items-center gap-1 font-bold text-emerald-600 dark:text-emerald-400">
+            <span className="flex items-center gap-1 font-bold text-success">
               <CheckCircle size={15} weight="fill" />
               ¡Excelente! Oración correcta
             </span>
           )}
           {isIncorrect && (
-            <span className="flex items-center gap-1 font-bold text-red-600 dark:text-red-400">
+            <span className="flex items-center gap-1 font-bold text-error">
               <WarningCircle size={15} weight="fill" />
               Revisa el orden de las palabras
             </span>

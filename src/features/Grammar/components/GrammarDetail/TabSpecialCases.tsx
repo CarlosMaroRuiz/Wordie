@@ -33,8 +33,8 @@ export const TabSpecialCases = ({ topic, containerVariants, itemVariants }: Prop
       )}
 
       {topic.note && (
-        <motion.div variants={itemVariants} className="text-sm text-text-main flex gap-2 items-start bg-yellow/10 p-4 rounded-xl border border-yellow/20">
-          <Lightbulb size={20} weight="fill" className="text-yellow shrink-0 mt-0.5" />
+        <motion.div variants={itemVariants} className="text-sm text-text-main flex gap-2 items-start bg-warning-light p-4 rounded-xl border border-warning/20">
+          <Lightbulb size={20} weight="fill" className="text-warning shrink-0 mt-0.5" />
           <p>{topic.note}</p>
         </motion.div>
       )}

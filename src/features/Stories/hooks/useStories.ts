@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
 import { useFetch } from '@common/hooks/useFetch'
 import { useSpeechSynthesis } from '@common/hooks/useSpeechSynthesis'
 import { useTopicStore } from '@common/layouts/MainLayout/useTopicStore'
+import type { AsyncStatusShape } from '@common/types/async'
 import type {
   StoryDTO,
   QuizState,
@@ -207,5 +208,5 @@ export function useStories() {
     isLoading,
     error,
     refetch,
-  }
+  } satisfies AsyncStatusShape
 }

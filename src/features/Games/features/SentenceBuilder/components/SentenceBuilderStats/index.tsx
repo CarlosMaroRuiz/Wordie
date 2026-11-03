@@ -28,7 +28,7 @@ export function SentenceBuilderStats({
         </div>
 
         <div className="flex min-w-0 items-center gap-1.5 rounded-xl px-1 py-1">
-          <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-amber-500/10 text-amber-600 dark:text-amber-400">
+          <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-warning-light text-warning">
             <Trophy size={16} weight="bold" />
           </span>
           <div className="flex min-w-0 flex-col">
@@ -41,7 +41,7 @@ export function SentenceBuilderStats({
           <span
             className={`flex size-7 shrink-0 items-center justify-center rounded-lg transition-colors ${
               streak > 0
-                ? 'bg-orange-500/15 text-orange-600 dark:text-orange-400'
+                ? 'bg-warning-light text-warning'
                 : 'bg-bg-page text-text-tertiary'
             }`}
           >
@@ -51,7 +51,7 @@ export function SentenceBuilderStats({
             <span className={METRIC_LABEL}>Racha</span>
             <span
               className={`text-[13px] font-extrabold leading-tight sm:text-sm ${
-                streak > 0 ? 'text-orange-600 dark:text-orange-400' : 'text-text-main'
+                streak > 0 ? 'text-warning' : 'text-text-main'
               }`}
             >
               {streak}
@@ -68,7 +68,7 @@ export function SentenceBuilderStats({
         aria-label="Escuchar pronunciación de la oración en inglés"
         className={`flex size-11 shrink-0 touch-manipulation items-center justify-center rounded-xl border transition-all ${
           isSpeaking
-            ? 'border-primary bg-primary text-white shadow-xs animate-pulse'
+            ? 'border-primary bg-primary text-on-primary shadow-xs animate-pulse'
             : 'border-border-subtle bg-bg-page text-text-secondary hover:border-primary/40 hover:bg-surface hover:text-primary'
         }`}
       >

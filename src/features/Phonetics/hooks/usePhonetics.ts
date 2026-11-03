@@ -1,5 +1,6 @@
 import { useCallback, useMemo, useState } from 'react'
 import { useFetch } from '@common/hooks/useFetch'
+import type { AsyncStatusShape } from '@common/types/async'
 import type { PhoneticCategory, PhoneticItemDTO } from '../types'
 
 export function usePhonetics() {
@@ -46,7 +47,7 @@ export function usePhonetics() {
     items,
     filteredItems,
     isLoading,
-    error: error?.message ?? null,
+    error,
     activeCategory,
     setActiveCategory,
     searchQuery,
@@ -55,5 +56,5 @@ export function usePhonetics() {
     setSelectedItem,
     speak,
     refetch,
-  }
+  } satisfies AsyncStatusShape
 }

@@ -1,6 +1,6 @@
 import { ArrowRightIcon, CompassIcon } from '@phosphor-icons/react'
 import { Button } from '@common/Button'
-import { cn } from '../../cn'
+import { cn } from '@common/utils/cn'
 import { HOME_COPY, HOME_SKELETON } from '../../constant'
 import type { HomeCounts } from '../../type'
 

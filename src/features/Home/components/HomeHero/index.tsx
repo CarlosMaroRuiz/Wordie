@@ -13,15 +13,6 @@ export function HomeHero({
       aria-labelledby="home-hero-title"
       className="relative overflow-hidden rounded-[32px] border-[1.5px] border-border-subtle bg-surface px-5 py-8 sm:px-10 sm:py-12 text-center shadow-sm"
     >
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -left-20 -top-24 size-[340px] bg-[radial-gradient(circle,var(--color-primary-light)_0%,transparent_70%)] opacity-70"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-20 -top-20 size-[320px] bg-[radial-gradient(circle,rgba(255,138,61,0.18)_0%,transparent_70%)] opacity-80"
-      />
-
       <div className="relative mx-auto flex max-w-3xl flex-col items-center">
         <h1
           id="home-hero-title"

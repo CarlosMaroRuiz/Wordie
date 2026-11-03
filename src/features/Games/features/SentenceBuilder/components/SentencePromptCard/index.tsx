@@ -3,9 +3,9 @@ import { CardBase } from '@common/CardBase'
 import type { SentencePromptCardProps } from './type'
 
 const DIFFICULTY_MAP = {
-  easy: { label: 'Básico', color: 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20' },
-  medium: { label: 'Intermedio', color: 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20' },
-  hard: { label: 'Avanzado', color: 'bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/20' },
+  easy: { label: 'Básico', color: 'bg-success-light text-success border-success/20' },
+  medium: { label: 'Intermedio', color: 'bg-info-light text-info border-info/20' },
+  hard: { label: 'Avanzado', color: 'bg-primary-light text-primary border-primary/20' },
 }
 
 export function SentencePromptCard({
@@ -46,7 +46,7 @@ export function SentencePromptCard({
           </button>
 
           {isHintActive && (
-            <div className="mt-1 rounded-xl border border-primary/15 bg-primary/5 p-3 text-xs leading-relaxed text-text-secondary dark:bg-primary/10">
+            <div className="mt-1 rounded-xl border border-primary/15 bg-primary/5 p-3 text-xs leading-relaxed text-text-secondary">
               <span className="font-bold text-primary">💡 Consejo: </span>
               {sentence.hint}
             </div>

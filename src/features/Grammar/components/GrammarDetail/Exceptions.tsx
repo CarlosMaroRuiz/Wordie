@@ -20,7 +20,7 @@ export const Exceptions = ({ exceptions }: ExceptionsProps) => {
           <motion.div 
             key={i} 
             whileHover={{ scale: 1.02 }}
-            className="bg-[#FFF4F4] border border-[#FFE1E1] p-5 rounded-xl hover:shadow-md hover:border-error/40 transition-all cursor-default"
+            className="bg-error-light border border-error/20 p-5 rounded-xl hover:shadow-md hover:border-error/40 transition-all cursor-default"
           >
             <p className="text-error font-semibold text-[15px] mb-4">{exc.description}</p>
             <div className="flex flex-col gap-2 text-sm">

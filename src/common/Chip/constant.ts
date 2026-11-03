@@ -16,4 +16,4 @@ export const CHIP_IDLE =
   'border-border-subtle bg-surface text-text-main hover:border-primary'
 
 export const CHIP_ACTIVE =
-  'border-primary bg-primary text-on-primary shadow-[0_4px_14px_rgba(108,92,231,0.25)]'
+  'border-primary bg-primary text-on-primary shadow-brand'

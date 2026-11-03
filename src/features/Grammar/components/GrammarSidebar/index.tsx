@@ -1,5 +1,6 @@
 import type { GrammarTopic } from '@features/Grammar/types';
 import { motion } from 'motion/react';
+import { EmptyState } from '@common/components/EmptyState';
 
 export interface GrammarSidebarProps {
   topics: GrammarTopic[];
@@ -60,9 +61,7 @@ export const GrammarSidebar = ({ topics, selectedId, onSelect }: GrammarSidebarP
         })}
         
         {topics.length === 0 && (
-          <p className="text-text-secondary py-8 text-center text-sm">
-            No hay lecciones en esta categoría.
-          </p>
+          <EmptyState size="sm" title="No hay lecciones en esta categoría." />
         )}
       </div>
     </div>

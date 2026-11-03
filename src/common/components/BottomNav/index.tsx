@@ -12,9 +12,7 @@ import {
 } from './constant'
 import type { BottomNavProps } from './type'
 
-function cn(...classes: Array<string | false | null | undefined>) {
-  return classes.filter(Boolean).join(' ')
-}
+import { cn } from '@common/utils/cn'
 
 export function BottomNav({ items, extraItems = EXTRA_NAV_ITEMS }: BottomNavProps) {
   const hasExtras = Boolean(extraItems && extraItems.length > 0)

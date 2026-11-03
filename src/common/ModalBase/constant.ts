@@ -1,5 +1,5 @@
 export const MODAL_BACKDROP =
-  'fixed inset-0 z-50 bg-black/60 backdrop-blur-sm transition-opacity duration-200 data-closed:opacity-0'
+  'fixed inset-0 z-50 bg-scrim/60 backdrop-blur-sm transition-opacity duration-200 data-closed:opacity-0'
 
 const MODAL_PANEL_BASE =
   'relative z-50 mx-auto w-full rounded-3xl border border-border-subtle shadow-2xl transition duration-200 data-closed:scale-95 data-closed:opacity-0 focus:outline-none overflow-hidden flex flex-col'

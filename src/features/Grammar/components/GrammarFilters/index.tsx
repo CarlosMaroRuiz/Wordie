@@ -1,10 +1,11 @@
-import { Chip } from '@common/Chip';
-import { CATEGORIES } from './constants';
-import type { GrammarFiltersProps } from './type';
+import { Chip } from '@common/Chip'
+import { ChipRow } from '@common/components/ChipRow'
+import { CATEGORIES } from './constants'
+import type { GrammarFiltersProps } from './type'
 
-export const GrammarFilters = ({ activeFilter, onFilterChange }: GrammarFiltersProps) => {
+export function GrammarFilters({ activeFilter, onFilterChange }: GrammarFiltersProps) {
   return (
-    <nav className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+    <ChipRow as="nav" label="Filtrar lecciones por categoría">
       {CATEGORIES.map(({ label, value }) => (
         <Chip
           key={value}
@@ -14,6 +15,6 @@ export const GrammarFilters = ({ activeFilter, onFilterChange }: GrammarFiltersP
           {label}
         </Chip>
       ))}
-    </nav>
-  );
-};
+    </ChipRow>
+  )
+}

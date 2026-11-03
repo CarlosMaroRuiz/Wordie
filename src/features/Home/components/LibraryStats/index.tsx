@@ -1,5 +1,5 @@
 import { CardBase } from '@common/CardBase'
-import { cn } from '../../cn'
+import { cn } from '@common/utils/cn'
 import { HOME_CARD, HOME_COPY, HOME_LABEL, HOME_VALUE, LIBRARY_ITEMS } from '../../constant'
 import type { LibraryStatsProps } from './type'
 

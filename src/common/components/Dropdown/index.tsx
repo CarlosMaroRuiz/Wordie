@@ -31,9 +31,7 @@ import {
 } from './constant'
 import type { DropdownOption, DropdownProps } from './type'
 
-function cn(...classes: Array<string | false | null | undefined>) {
-  return classes.filter(Boolean).join(' ')
-}
+import { cn } from '@common/utils/cn'
 
 const ICON_SIZE = 16
 

@@ -1,9 +1,7 @@
 import { CARD_BASE, CARD_HEADER, CARD_PADDING, CARD_VARIANT } from './constant'
 import type { CardProps } from './type'
 
-function cn(...classes: Array<string | false | null | undefined>) {
-  return classes.filter(Boolean).join(' ')
-}
+import { cn } from '@common/utils/cn'
 
 export function CardBase({
   variant = 'default',

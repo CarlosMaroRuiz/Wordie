@@ -1,6 +1,6 @@
 import { Button } from '@common/Button'
 import { CardBase } from '@common/CardBase'
-import { cn } from '../../cn'
+import { cn } from '@common/utils/cn'
 import { HOME_CARD, HOME_COPY, HOME_LABEL, HOME_VALUE } from '../../constant'
 import { ProgressRing } from '../ProgressRing'
 import type { VocabProgressCardProps } from './type'

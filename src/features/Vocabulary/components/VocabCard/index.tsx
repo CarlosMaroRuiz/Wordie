@@ -1,82 +1,66 @@
-import type { MouseEvent } from 'react';
-import { SpeakerHigh } from '@phosphor-icons/react';
-import { CardBase } from '@common/CardBase';
-import { Button } from '@common/Button';
-import { useSpeechSynthesis } from '@common/hooks/useSpeechSynthesis';
-import { CardMedia } from './CardMedia';
-import type { VocabCardProps } from './type';
+import { AudioButton } from '@common/components/AudioButton'
+import { CardBase } from '@common/CardBase'
+import { CardMedia } from './CardMedia'
+import type { VocabCardProps } from './type'
 
 export function VocabCard({ card }: VocabCardProps) {
-  const { speak: speakText } = useSpeechSynthesis();
-
-  const speak = (e: MouseEvent<HTMLButtonElement>, text: string) => {
-    e.stopPropagation();
-    speakText(text, { rate: 0.9 });
-  };
-
-  const example = card.examples[0];
+  const example = card.examples[0]
 
   return (
-    <CardBase padding="none" className="overflow-hidden flex flex-col items-start text-left bg-surface border border-border-subtle hover:border-primary/30 transition-colors shadow-sm">
-      <CardMedia 
+    <CardBase
+      padding="none"
+      className="flex flex-col items-start overflow-hidden border border-border-subtle bg-surface text-left shadow-sm transition-colors hover:border-primary/30"
+    >
+      <CardMedia
         imageUrl={card.imageUrl}
         word={card.word}
         domain={card.domain}
         box={card.box}
       />
 
-      <div className="p-6 flex flex-col gap-4 w-full">
-        <div className="flex justify-between items-start gap-4">
+      <div className="flex w-full flex-col gap-4 p-6">
+        <div className="flex items-start justify-between gap-4">
           <div>
-            <h3 className="text-[22px] font-extrabold text-text-main mb-0.5 tracking-tight">
+            <h3 className="mb-0.5 text-[22px] font-extrabold tracking-tight text-text-main">
               {card.word}
             </h3>
-            <p className="text-[13px] text-text-secondary font-medium">
+            <p className="text-[13px] font-medium text-text-secondary">
               {card.phonetic} · Caja {card.box}
             </p>
           </div>
-          <Button 
-            variant="icon"
-            size="sm"
-            onClick={(e) => speak(e, card.word)}
-            aria-label="Escuchar pronunciación"
-            className="shrink-0 text-text-secondary hover:text-primary hover:bg-primary-light/50 transition-colors"
-          >
-            <SpeakerHigh size={18} weight="regular" />
-          </Button>
+          <AudioButton
+            text={card.word}
+            appearance="outlined"
+            label="Escuchar pronunciación"
+            className="shrink-0 text-text-secondary transition-colors hover:bg-primary-light/50 hover:text-primary"
+          />
         </div>
 
         <div>
-          <h5 className="text-[10px] font-bold text-text-secondary uppercase tracking-widest mb-1">
+          <h5 className="mb-1 text-[10px] font-bold uppercase tracking-widest text-text-secondary">
             Traducción
           </h5>
-          <p className="font-bold text-text-main text-[15px]">
-            {card.translation}
-          </p>
+          <p className="text-[15px] font-bold text-text-main">{card.translation}</p>
         </div>
 
         {card.definition && (
           <div>
-            <h5 className="text-[10px] font-bold text-text-secondary uppercase tracking-widest mb-1">
+            <h5 className="mb-1 text-[10px] font-bold uppercase tracking-widest text-text-secondary">
               Definición
             </h5>
-            <p className="text-[13px] text-text-main leading-relaxed">
-              {card.definition}
-            </p>
+            <p className="text-[13px] leading-relaxed text-text-main">{card.definition}</p>
           </div>
         )}
 
         {example && (
           <div>
-            <h5 className="text-[10px] font-bold text-text-secondary uppercase tracking-widest mb-1">
+            <h5 className="mb-1 text-[10px] font-bold uppercase tracking-widest text-text-secondary">
               Ejemplo en contexto
             </h5>
-            <p className="text-[13px] text-text-main font-medium leading-relaxed">
-              {example.en}
-            </p>
+            <p className="text-[13px] font-medium leading-relaxed text-text-main">{example.en}</p>
           </div>
         )}
       </div>
     </CardBase>
-  );
+  )
 }

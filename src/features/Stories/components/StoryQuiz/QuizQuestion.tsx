@@ -28,11 +28,11 @@ export function QuizQuestion({
           let optionStyle = 'border-border-subtle bg-surface text-text-main hover:border-primary/60'
           if (isAnswered) {
             if (isSelected && isCorrect) {
-              optionStyle = 'border-success bg-success/15 text-text-main font-bold dark:bg-success/20'
+              optionStyle = 'border-success bg-success/15 text-text-main font-bold'
             } else if (isSelected && !isCorrect) {
-              optionStyle = 'border-error bg-error/15 text-text-main font-bold dark:bg-error/20'
+              optionStyle = 'border-error bg-error/15 text-text-main font-bold'
             } else if (isCorrect) {
-              optionStyle = 'border-success/60 bg-success/5 text-text-main dark:bg-success/10'
+              optionStyle = 'border-success/60 bg-success/5 text-text-main'
             } else {
               optionStyle = 'border-border-subtle/60 bg-surface text-text-secondary opacity-60'
             }

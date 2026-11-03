@@ -14,11 +14,11 @@ export function CardMedia({ imageUrl, word, domain, box }: CardMediaProps) {
         />
       )}
       {imageUrl && (
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-black/30 z-0" />
+        <div className="absolute inset-0 bg-scrim/30 z-0" />
       )}
 
       <div className="flex justify-between items-start w-full relative z-10">
-        <Chip size="sm" active className="bg-primary/90 text-white border-transparent pointer-events-none rounded-xl text-xs px-3 shadow-sm backdrop-blur-md">
+        <Chip size="sm" active className="bg-primary/90 text-on-primary border-transparent pointer-events-none rounded-xl text-xs px-3 shadow-sm backdrop-blur-md">
           {domain}
         </Chip>
         
@@ -26,7 +26,7 @@ export function CardMedia({ imageUrl, word, domain, box }: CardMediaProps) {
           {LEITNER_LEVELS.map(level => (
             <div 
               key={level} 
-              className={`h-1.5 w-4 rounded-full ${level <= box ? 'bg-orange-500' : 'bg-border-subtle/80'}`} 
+              className={`h-1.5 w-4 rounded-full ${level <= box ? 'bg-primary' : 'bg-border-subtle/80'}`} 
             />
           ))}
         </div>

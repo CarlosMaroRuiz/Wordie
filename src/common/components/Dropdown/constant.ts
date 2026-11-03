@@ -25,7 +25,7 @@ export const DROPDOWN_LABEL =
   'mb-1.5 block text-[12px] font-bold tracking-[0.5px] text-text-secondary uppercase'
 
 export const DROPDOWN_OPTIONS =
-  'z-50 max-h-72 overflow-auto overscroll-contain supports-[height:100dvh]:max-h-[min(18rem,45dvh)] rounded-[16px] border-[1.5px] border-border-subtle bg-surface p-1.5 shadow-[0_12px_36px_rgba(0,0,0,0.18)] focus:outline-none'
+  'z-50 max-h-72 overflow-auto overscroll-contain supports-[height:100dvh]:max-h-[min(18rem,45dvh)] rounded-[16px] border-[1.5px] border-border-subtle bg-surface p-1.5 shadow-float focus:outline-none'
 
 export const DROPDOWN_PANEL_POSITION = 'absolute top-full left-0 mt-1.5 w-full'
 

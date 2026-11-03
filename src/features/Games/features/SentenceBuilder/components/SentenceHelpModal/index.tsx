@@ -31,7 +31,7 @@ export function SentenceHelpModal({ open, onClose }: SentenceHelpModalProps) {
         </div>
 
         <div className="flex items-start gap-3 rounded-xl border border-border-subtle bg-bg-page/50 p-3">
-          <Lightbulb size={20} className="mt-0.5 shrink-0 text-amber-500" />
+          <Lightbulb size={20} className="mt-0.5 shrink-0 text-warning" />
           <div>
             <span className="font-bold text-text-main">2. Consejos gramaticales: </span>
             Usa "Ver pista gramatical" para recordar reglas de gerundios, preposiciones y verbos
@@ -40,7 +40,7 @@ export function SentenceHelpModal({ open, onClose }: SentenceHelpModalProps) {
         </div>
 
         <div className="flex items-start gap-3 rounded-xl border border-border-subtle bg-bg-page/50 p-3">
-          <Flame size={20} className="mt-0.5 shrink-0 text-orange-500" />
+          <Flame size={20} className="mt-0.5 shrink-0 text-warning" />
           <div>
             <span className="font-bold text-text-main">3. Multiplicador de racha: </span>
             Cada acierto consecutivo suma puntos extra por racha activa.

@@ -36,8 +36,8 @@ export function ErrorTechnicalDetails({
         >
           {copied ? (
             <>
-              <CheckIcon size={14} weight="bold" className="text-emerald-500" />
-              <span className="text-emerald-500">{ERROR_BOUNDARY_TEXTS.COPIED_BUTTON}</span>
+              <CheckIcon size={14} weight="bold" className="text-success" />
+              <span className="text-success">{ERROR_BOUNDARY_TEXTS.COPIED_BUTTON}</span>
             </>
           ) : (
             <>
@@ -48,7 +48,7 @@ export function ErrorTechnicalDetails({
         </button>
       </div>
 
-      <div className="max-h-48 overflow-y-auto rounded-xl border border-border-subtle bg-surface-muted/60 p-3 font-mono text-xs text-rose-600 dark:text-rose-400 select-all">
+      <div className="max-h-48 overflow-y-auto rounded-xl border border-border-subtle bg-surface-muted/60 p-3 font-mono text-xs text-error select-all">
         <p className="font-bold">
           {error?.name || 'Error'}: {error?.message || 'Error desconocido sin mensaje proporcionado.'}
         </p>

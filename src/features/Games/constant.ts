@@ -11,7 +11,7 @@ export const GAME_REGISTRY: GameRegistryItem[] = [
     icon: BrainIcon,
     difficulty: 'Fácil',
     active: true,
-    color: 'from-primary/20 to-primary/5',
+    color: 'bg-primary-light',
   },
   {
     id: 'sentence-builder',
@@ -23,7 +23,7 @@ export const GAME_REGISTRY: GameRegistryItem[] = [
     difficulty: 'Medio',
     badge: 'Nuevo',
     active: true,
-    color: 'from-blue-500/20 to-blue-500/5',
+    color: 'bg-info-light',
   },
   {
     id: 'hangman',
@@ -35,6 +35,6 @@ export const GAME_REGISTRY: GameRegistryItem[] = [
     difficulty: 'Medio',
     badge: 'Próximamente',
     active: false,
-    color: 'from-purple-500/20 to-purple-500/5',
+    color: 'bg-primary-light',
   },
 ]

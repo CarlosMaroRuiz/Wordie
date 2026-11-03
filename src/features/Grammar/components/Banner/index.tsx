@@ -1,4 +1,5 @@
 import type { BannerProps } from './type'
+import { Badge } from '@common/components/Badge'
 import { FormulaSlider } from './FormulaSlider'
 
 export function Banner({
@@ -20,9 +21,9 @@ export function Banner({
   return (
     <>
       <div className="flex items-center justify-between">
-        <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary dark:bg-primary/20">
+        <Badge tone="primary" size="md" uppercase>
           {category}
-        </span>
+        </Badge>
         <span className="text-sm font-bold text-text-main">Nivel {level}</span>
       </div>
 
@@ -36,9 +37,7 @@ export function Banner({
           Estructura Gramatical
         </span>
 
-        {items.length > 0 ? (
-          <FormulaSlider formulas={items} />
-        ) : null}
+        {items.length > 0 ? <FormulaSlider formulas={items} /> : null}
       </div>
     </>
   )

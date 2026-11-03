@@ -65,8 +65,8 @@ export function StoryKeywordModal({
             }
             className={`inline-flex h-9 w-9 items-center justify-center rounded-full transition-all cursor-pointer ${
               isSpeaking
-                ? 'bg-primary text-white shadow-sm ring-2 ring-primary/40 ring-offset-2 animate-pulse'
-                : 'bg-primary/10 text-primary hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30'
+                ? 'bg-primary text-on-primary shadow-sm ring-2 ring-primary/40 ring-offset-surface animate-pulse'
+                : 'bg-primary/10 text-primary hover:bg-primary/20'
             }`}
           >
             {isSpeaking ? (
@@ -86,7 +86,7 @@ export function StoryKeywordModal({
       }
     >
       {/* Traducción al español */}
-      <div className="flex items-start gap-3 rounded-2xl bg-primary/5 p-4 border border-primary/15 dark:bg-primary/10">
+      <div className="flex items-start gap-3 rounded-2xl bg-primary/5 p-4 border border-primary/15">
         <Translate size={22} weight="bold" className="mt-0.5 text-primary shrink-0" />
         <div>
           <span className="block text-xs font-bold uppercase tracking-wider text-text-tertiary">

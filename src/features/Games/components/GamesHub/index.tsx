@@ -1,4 +1,5 @@
 import { GameControllerIcon } from '@phosphor-icons/react'
+import { Badge } from '@common/components/Badge'
 import { FloatingHelpButton } from '@common/components/FloatingHelpButton'
 import { GAME_REGISTRY } from '../../constant'
 import { GameCard } from '../GameCard'
@@ -35,10 +36,14 @@ export default function GamesHub({ className = '' }: GamesHubProps) {
     <div className={`mx-auto flex max-w-7xl flex-col gap-8 p-4 sm:p-6 lg:p-8 ${className}`}>
       <div className="relative overflow-hidden rounded-[32px] border border-border-subtle bg-surface p-6 sm:p-10 shadow-sm">
         <div className="max-w-3xl">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-primary/10 px-3.5 py-1 text-xs font-bold text-primary">
-            <GameControllerIcon size={16} weight="bold" />
-            <span>LEARNING GAMES HUB · MINIJUEGOS</span>
-          </div>
+          <Badge
+            tone="primary"
+            size="lg"
+            className="mb-4 gap-2"
+            icon={<GameControllerIcon size={16} weight="bold" />}
+          >
+            LEARNING GAMES HUB · MINIJUEGOS
+          </Badge>
 
           <h1 className="text-3xl font-extrabold tracking-tight text-text-main sm:text-4xl">
             {GAMES_HERO_TITLE}

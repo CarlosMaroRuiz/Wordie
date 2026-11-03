@@ -1,6 +1,7 @@
 import { motion } from 'motion/react'
 import { Clock } from '@phosphor-icons/react'
 import { CardBase } from '@common/CardBase'
+import { Badge } from '@common/components/Badge'
 import type { StoryCardProps } from './type'
 import { STORY_CARD_VARIANTS } from './constant'
 import { StoryParagraphs } from './StoryParagraphs'
@@ -27,13 +28,18 @@ export function StoryCard({
       <CardBase padding="md" className="flex flex-col gap-4">
         {/* Metadatos superiores */}
         <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border-subtle/60 pb-3">
-          <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary dark:bg-primary/20">
+          <Badge tone="primary-tint" size="md">
             {story.level}
-          </span>
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-border-subtle bg-bg-page px-3 py-1 text-xs font-semibold text-text-secondary">
-            <Clock size={14} weight="bold" />
-            <span>{story.readTime} de lectura</span>
-          </span>
+          </Badge>
+          <Badge
+            tone="outline"
+            size="md"
+            weight="semibold"
+            className="gap-1.5"
+            icon={<Clock size={14} weight="bold" />}
+          >
+            {story.readTime} de lectura
+          </Badge>
         </div>
 
         {/* Título de la historia */}

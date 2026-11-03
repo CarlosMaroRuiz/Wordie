@@ -1,40 +1,94 @@
 @import "tailwindcss";
 
+/* El tema se controla por atributo (Zustand + localStorage), no por el SO directamente. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 @theme {
   /* Tipografía */
-  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Nunito', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
-  /* Fondo y Superficies */
-  --color-bg-page: #F8F9FD;
+  /* Neutros */
+  --color-bg-page: #FAFAFE;
   --color-surface: #FFFFFF;
+  --color-surface-muted: #F4F4FB;
+  --color-surface-elevated: #FFFFFF;
+  --color-border-subtle: #E6E6F2;
 
-  /* Identidad Primaria y Acentos */
-  --color-primary: #6C5CE7;
-  --color-primary-hover: #5A48DE;
-  --color-primary-light: #EDE9FE;
+  /* Marca: Slate Blue */
+  --color-primary: #5759EA;
+  --color-primary-hover: #4A4CD9;
+  --color-primary-light: #EEEEFD;
   --color-on-primary: #FFFFFF;
-  --color-accent: #FF8A3D;
-  --color-yellow: #FFD166;
 
-  /* Categorías y Secciones (Paleta Habitz) */
-  --color-pink: #FF5376;
-  --color-lavender: #A78BFA;
-  --color-cyan: #38BDF8;
+  /* Texto */
+  --color-text-main: #2B2740;
+  --color-text-secondary: #5C5870;
+  --color-text-tertiary: #6F6B85;
 
-  /* Tipografía y Textos */
-  --color-text-main: #14171F;
-  --color-text-secondary: #6B7280;
-  --color-text-tertiary: #9CA3AF;
+  /* Feedback semántico: tono vivo como tinte, variante oscura como texto */
+  --color-success: #317E28;
+  --color-success-light: #EEF9ED;
+  --color-warning: #A85C00;
+  --color-warning-light: #FFF6EB;
+  --color-error: #C73D3D;
+  --color-error-light: #FFF1F1;
+  --color-info: #15759E;
+  --color-info-light: #E4F4FB;
 
-  /* Bordes Estructurales */
-  --color-border-subtle: #EAECEF;
+  /* Scrim y sombras: el color vive aquí, nunca en los componentes */
+  --color-scrim: #2B2740;
+  --shadow-soft: 0 4px 20px rgb(43 39 64 / 0.06);
+  --shadow-icon: 0 2px 6px rgb(43 39 64 / 0.06);
+  --shadow-float: 0 12px 36px rgb(43 39 64 / 0.16);
+  --shadow-brand: 0 4px 14px rgb(87 89 234 / 0.28);
+  --shadow-brand-strong: 0 6px 18px rgb(87 89 234 / 0.36);
+  --shadow-success-glow: 0 4px 14px rgb(49 126 40 / 0.3);
+  --shadow-error-glow: 0 4px 14px rgb(199 61 61 / 0.3);
+  --shadow-spotlight: 0 0 0 9999px rgb(43 39 64 / 0.55);
+}
 
-  /* Estados de Feedback */
-  --color-success: #20C997;
-  --color-success-light: #E6FAF5;
-  --color-error: #FF4757;
-  --color-error-light: #FFEAEF;
+:root {
+  color-scheme: light;
+}
+
+/* Misma escala invertida: rellenos claros + texto oscuro (patrón Material 3). */
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-bg-page: #17151F;
+  --color-surface: #211E2B;
+  --color-surface-muted: #2A2739;
+  --color-surface-elevated: #2E2A3D;
+  --color-border-subtle: #3A3550;
+
+  --color-primary: #898BF0;
+  --color-primary-hover: #9A9CF3;
+  --color-primary-light: #2C2A45;
+  --color-on-primary: #17151F;
+
+  --color-text-main: #F5F3FA;
+  --color-text-secondary: #C9C5DB;
+  --color-text-tertiary: #A7A3BC;
+
+  --color-success: #75D06A;
+  --color-success-light: #28372D;
+  --color-warning: #FFB356;
+  --color-warning-light: #413129;
+  --color-error: #FF8B8B;
+  --color-error-light: #412A32;
+  --color-info: #1FA7E1;
+  --color-info-light: #182F42;
+
+  --color-scrim: #000000;
+  --shadow-soft: 0 4px 20px rgb(0 0 0 / 0.4);
+  --shadow-icon: 0 2px 6px rgb(0 0 0 / 0.3);
+  --shadow-float: 0 12px 36px rgb(0 0 0 / 0.5);
+  --shadow-brand: 0 4px 14px rgb(137 139 240 / 0.3);
+  --shadow-brand-strong: 0 6px 18px rgb(137 139 240 / 0.38);
+  --shadow-success-glow: 0 4px 14px rgb(117 208 106 / 0.3);
+  --shadow-error-glow: 0 4px 14px rgb(255 139 139 / 0.3);
+  --shadow-spotlight: 0 0 0 9999px rgb(0 0 0 / 0.7);
 }
 
 /*
@@ -71,7 +125,7 @@
   background-color: var(--color-surface);
   color: var(--color-primary);
   font-weight: 700;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  box-shadow: var(--shadow-float);
   outline: 3px solid var(--color-primary);
   outline-offset: 2px;
 }

@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useFetch } from '@common/hooks/useFetch';
 import { useTopicStore } from '@common/layouts/MainLayout/useTopicStore';
+import type { AsyncStatusShape } from '@common/types/async';
 import { useVocabStore } from '../store/useVocabStore';
 import type { VocabRawDTO } from '../dto';
 
@@ -54,5 +55,5 @@ export function useVocabulary() {
     setActiveFilter,
     dueCards,
     domainOptions,
-  };
+  } satisfies AsyncStatusShape;
 }

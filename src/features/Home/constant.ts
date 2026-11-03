@@ -46,8 +46,8 @@ export const HOME_MODULES = [
     title: 'Gramática',
     description: 'Estructuras de A1 a B1 con ejemplos de desarrollo, viajes y trabajo.',
     icon: BookOpenIcon,
-    accent: 'bg-lavender/15 text-lavender',
-    bar: 'bg-lavender',
+    accent: 'bg-primary-light text-primary',
+    bar: 'bg-primary',
     featured: false,
   },
   {
@@ -68,8 +68,8 @@ export const HOME_MODULES = [
     title: 'Lectura',
     description: 'Historias cortas con glosario y quiz comprensivo.',
     icon: CoffeeIcon,
-    accent: 'bg-cyan/15 text-cyan',
-    bar: 'bg-cyan',
+    accent: 'bg-primary-light text-primary',
+    bar: 'bg-primary',
     featured: false,
   },
   {
@@ -79,8 +79,8 @@ export const HOME_MODULES = [
     title: 'Frases',
     description: 'Plantillas para reuniones, viajes, oficina y tecnología.',
     icon: ChatCircleIcon,
-    accent: 'bg-accent/15 text-accent',
-    bar: 'bg-accent',
+    accent: 'bg-primary-light text-primary',
+    bar: 'bg-primary',
     featured: false,
   },
 ] as const satisfies readonly HomeModule[]

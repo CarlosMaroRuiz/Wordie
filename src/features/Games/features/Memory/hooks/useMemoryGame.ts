@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { useFetch } from '@common/hooks/useFetch'
 import { useSpeechSynthesis } from '@common/hooks/useSpeechSynthesis'
 import { useTopicStore } from '@common/layouts/MainLayout/useTopicStore'
+import type { AsyncStatusShape } from '@common/types/async'
 import { PAIRS_PER_GAME } from '../constant'
 import type { MemoryCardItem, MemoryPairDTO } from '../type'
 
@@ -170,5 +171,5 @@ export function useMemoryGame() {
     refetch,
     flipCard,
     restart,
-  }
+  } satisfies AsyncStatusShape
 }

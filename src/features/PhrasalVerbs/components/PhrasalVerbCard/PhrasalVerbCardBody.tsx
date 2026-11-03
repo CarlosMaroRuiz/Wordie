@@ -49,7 +49,7 @@ export function PhrasalVerbCardBody({ item, onSpeak }: CardBodyProps) {
           <LightbulbFilamentIcon
             size={14}
             weight="fill"
-            className="mt-0.5 shrink-0 text-amber-500"
+            className="mt-0.5 shrink-0 text-warning"
           />
           <span>{item.tip}</span>
         </div>

@@ -25,7 +25,7 @@ export function SentenceWinModal({
       size="md"
       title={
         <div className="flex items-center gap-2.5">
-          <span className="flex size-10 shrink-0 items-center justify-center rounded-2xl bg-amber-500/15 text-amber-500">
+          <span className="flex size-10 shrink-0 items-center justify-center rounded-2xl bg-warning-light text-warning">
             <Trophy size={22} weight="fill" />
           </span>
           <div className="min-w-0">
@@ -61,19 +61,19 @@ export function SentenceWinModal({
       <div className="flex flex-col gap-3 py-1 sm:gap-4 sm:py-2">
         <div className="grid grid-cols-3 gap-2 sm:gap-3">
           <div className="flex flex-col items-center justify-center rounded-2xl border border-border-subtle bg-bg-page/60 p-2.5 text-center sm:p-3">
-            <Trophy size={18} weight="bold" className="text-amber-500" />
+            <Trophy size={18} weight="bold" className="text-warning" />
             <span className="mt-1 text-[10px] text-text-tertiary sm:text-xs">Puntos</span>
             <span className="text-sm font-extrabold text-text-main sm:text-base">{score}</span>
           </div>
 
           <div className="flex flex-col items-center justify-center rounded-2xl border border-border-subtle bg-bg-page/60 p-2.5 text-center sm:p-3">
-            <Flame size={18} weight="fill" className="text-orange-500" />
+            <Flame size={18} weight="fill" className="text-warning" />
             <span className="mt-1 text-[10px] text-text-tertiary sm:text-xs">Racha final</span>
             <span className="text-sm font-extrabold text-text-main sm:text-base">{streak}</span>
           </div>
 
           <div className="flex flex-col items-center justify-center rounded-2xl border border-border-subtle bg-bg-page/60 p-2.5 text-center sm:p-3">
-            <CheckCircle size={18} weight="bold" className="text-emerald-500" />
+            <CheckCircle size={18} weight="bold" className="text-success" />
             <span className="mt-1 text-[10px] text-text-tertiary sm:text-xs">Precisión</span>
             <span className="text-sm font-extrabold text-text-main sm:text-base">{accuracy}%</span>
           </div>

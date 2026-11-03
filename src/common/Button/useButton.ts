@@ -12,9 +12,7 @@ import {
 } from './constant'
 import type { ButtonProps, ButtonSize, ButtonVariant } from './type'
 
-function cn(...classes: Array<string | false | null | undefined>) {
-  return classes.filter(Boolean).join(' ')
-}
+import { cn } from '@common/utils/cn'
 
 export function isIconVariant(variant: ButtonVariant) {
   return variant === 'icon' || variant === 'iconPrimary'

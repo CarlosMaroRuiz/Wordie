@@ -2,7 +2,7 @@ import { ArrowUpRightIcon } from '@phosphor-icons/react'
 import { Link } from 'react-router-dom'
 import { CardBase } from '@common/CardBase'
 import { PATHS } from '@core/routes/types/paths'
-import { cn } from '../../cn'
+import { cn } from '@common/utils/cn'
 import {
   HOME_COPY,
   HOME_PILL,

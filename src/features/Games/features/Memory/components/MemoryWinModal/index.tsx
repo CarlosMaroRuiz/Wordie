@@ -1,13 +1,8 @@
 import { TrophyIcon } from '@phosphor-icons/react'
 import { ModalBase } from '@common/ModalBase'
 import { Button } from '@common/Button'
+import { formatSeconds } from '@common/utils/formatTime'
 import type { MemoryWinModalProps } from './type'
-
-function formatSeconds(sec: number) {
-  const m = Math.floor(sec / 60)
-  const s = sec % 60
-  return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`
-}
 
 export function MemoryWinModal({
   isOpen,
@@ -23,7 +18,7 @@ export function MemoryWinModal({
       hideCloseButton
       headerSlot={
         <div className="text-center">
-          <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-2xl bg-amber-500/10 text-amber-500 shadow-xs">
+          <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-2xl bg-warning-light text-warning shadow-xs">
             <TrophyIcon size={36} weight="fill" />
           </div>
           <h2 className="text-2xl font-extrabold text-text-main">

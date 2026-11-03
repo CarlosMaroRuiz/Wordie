@@ -1,6 +1,11 @@
 import { useState, useEffect, useCallback } from 'react';
+import type { AsyncResource } from '@common/types/async';
 
-export const useFetch = <T,>(url: string) => {
+/**
+ * Descarga un JSON de `/public/data` y devuelve el contrato `AsyncResource<T>`
+ * (`data`, `isLoading`, `error` como `Error | null`, `refetch`).
+ */
+export const useFetch = <T,>(url: string): AsyncResource<T> => {
   const [data, setData] = useState<T | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<Error | null>(null);

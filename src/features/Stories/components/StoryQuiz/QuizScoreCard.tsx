@@ -6,7 +6,7 @@ export function QuizScoreCard({ correct, total, onReset }: QuizScoreCardProps) {
   const isPerfect = correct === total
 
   return (
-    <div className="flex flex-col gap-3 rounded-xl border border-success/40 bg-success/10 p-4 dark:bg-success/15">
+    <div className="flex flex-col gap-3 rounded-xl border border-success/40 bg-success/10 p-4">
       <div className="flex items-center gap-2 text-text-main">
         <Trophy size={20} weight="fill" className="text-success" />
         <span className="font-bold text-sm">

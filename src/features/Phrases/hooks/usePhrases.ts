@@ -1,22 +1,18 @@
 import { useState, useMemo } from 'react'
 import { useFetch } from '@common/hooks/useFetch'
-import { useSpeechSynthesis } from '@common/hooks/useSpeechSynthesis'
 import { useTopicStore } from '@common/layouts/MainLayout/useTopicStore'
+import type { AsyncStatus } from '@common/types/async'
 import type { PhraseDTO, PhraseFilter } from '../type'
 import type { PhraseFilterOption } from '../components/PhraseFilters/type'
 
-interface UsePhrasesReturn {
+interface UsePhrasesReturn extends AsyncStatus {
   phrases: PhraseDTO[]
-  isLoading: boolean
-  error: Error | null
-  refetch: () => void
   activeFilter: PhraseFilter
   setFilter: (f: PhraseFilter) => void
   filteredPhrases: PhraseDTO[]
   filterOptions: PhraseFilterOption[]
   copiedId: string | null
   copyPhrase: (id: string, text: string) => void
-  speakPhrase: (text: string) => void
 }
 
 export function usePhrases(): UsePhrasesReturn {
@@ -24,7 +20,6 @@ export function usePhrases(): UsePhrasesReturn {
   const topic = useTopicStore((s) => s.topic)
   const [activeFilter, setActiveFilter] = useState<PhraseFilter>('all')
   const [copiedId, setCopiedId] = useState<string | null>(null)
-  const { speak } = useSpeechSynthesis()
 
   const allPhrases = useMemo(() => data ?? [], [data])
 
@@ -60,10 +55,6 @@ export function usePhrases(): UsePhrasesReturn {
     })
   }
 
-  function speakPhrase(text: string) {
-    speak(text)
-  }
-
   return {
     phrases: topicPhrases,
     isLoading,
@@ -75,6 +66,5 @@ export function usePhrases(): UsePhrasesReturn {
     filterOptions,
     copiedId,
     copyPhrase,
-    speakPhrase,
   }
 }
