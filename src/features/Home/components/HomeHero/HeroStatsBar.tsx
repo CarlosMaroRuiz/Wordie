@@ -1,65 +1,54 @@
 import { ArrowRightIcon, CompassIcon } from '@phosphor-icons/react'
-import { Button } from '@common/Button'
-import { cn } from '@common/utils/cn'
-import { HOME_COPY, HOME_SKELETON } from '../../constant'
+import { HOME_COPY } from '../../constant'
 import type { HomeCounts } from '../../type'
 
 interface HeroStatsBarProps {
   counts?: HomeCounts | null
   tourSeen: boolean
-  onStart: () => void
   onStartTour: () => void
 }
 
-export function HeroStatsBar({
-  counts,
-  tourSeen,
-  onStart,
-  onStartTour,
-}: HeroStatsBarProps) {
-  const statsDetail = counts
-    ? `${counts.vocabulary} Palabras · ${counts.phrases} Frases · ${counts.stories} Historias`
-    : ''
-
+/**
+ * Banner de Tour interactivo intuitivo y accesible:
+ * Guía clara al usuario sobre el propósito del tour y cómo explorar la plataforma.
+ * Texto 100% limpio sin emojis.
+ */
+export function HeroStatsBar({ tourSeen, onStartTour }: HeroStatsBarProps) {
   return (
-    <div className="mt-10 flex w-full flex-col items-center justify-between gap-4 border-t border-border-subtle pt-6 sm:flex-row sm:gap-6">
-      <div className="text-center sm:text-left">
-        {counts ? (
-          <>
-            <p className="font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-text-secondary">
-              {HOME_COPY.statsPrefix}
-            </p>
-            <p className="text-sm font-bold text-text-main sm:text-base">
-              {statsDetail}
-            </p>
-          </>
-        ) : (
-          <div className={cn(HOME_SKELETON, 'h-9 w-52')} aria-hidden="true" />
-        )}
+    <div className="flex flex-col sm:flex-row items-center justify-between gap-3.5 rounded-2xl sm:rounded-3xl border border-primary/20 bg-surface/90 backdrop-blur-xs p-3.5 sm:px-5 sm:py-3.5 shadow-soft">
+      {/* Icono guía y mensaje contextual */}
+      <div className="flex items-center gap-3 w-full sm:w-auto">
+        <div className="flex size-11 shrink-0 items-center justify-center rounded-2xl border border-primary/20 bg-primary-light text-primary shadow-soft">
+          <CompassIcon size={24} weight="duotone" aria-hidden="true" />
+        </div>
+
+        <div className="min-w-0">
+          <p className="text-xs sm:text-sm font-black tracking-tight text-text-main">
+            {tourSeen ? 'Tour Guiado de la Plataforma' : '¿Primera vez aquí? Explora Wordie'}
+          </p>
+          <p className="text-[11px] sm:text-xs text-text-secondary leading-snug line-clamp-1 sm:line-clamp-none">
+            {tourSeen
+              ? 'Repasa el método Leitner, lecturas contextuales y dinámicas de juego.'
+              : 'Descubre en 30 segundos cómo acelerar tu fluidez diaria de forma práctica.'}
+          </p>
+        </div>
       </div>
 
-      <div className="flex w-full flex-col gap-2.5 min-[440px]:w-auto min-[440px]:flex-row">
-        <Button
-          size="md"
-          fullWidth={false}
-          onClick={onStart}
-          className="w-full sm:w-auto"
-        >
-          {HOME_COPY.start}
-          <ArrowRightIcon size={16} weight="bold" aria-hidden="true" />
-        </Button>
-        <Button
-          variant="secondary"
-          size="md"
-          fullWidth={false}
-          onClick={onStartTour}
-          aria-label={tourSeen ? HOME_COPY.tourRepeat : HOME_COPY.tourStart}
-          className="w-full sm:w-auto"
-        >
-          <CompassIcon size={18} weight="bold" aria-hidden="true" />
-          {tourSeen ? HOME_COPY.tourRepeat : HOME_COPY.tourStart}
-        </Button>
-      </div>
+      {/* Botón táctil en píldora interactiva con texto limpio y flecha funcional */}
+      <button
+        type="button"
+        onClick={onStartTour}
+        className="group flex w-full sm:w-auto shrink-0 items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-xs sm:text-sm font-black text-on-primary shadow-brand transition-all hover:bg-primary-hover active:scale-95 cursor-pointer"
+        aria-label={tourSeen ? HOME_COPY.tourRepeat : HOME_COPY.tourStart}
+      >
+        <span>{tourSeen ? HOME_COPY.tourRepeat : HOME_COPY.tourStart}</span>
+        <ArrowRightIcon
+          size={14}
+          weight="bold"
+          className="transition-transform group-hover:translate-x-1"
+          aria-hidden="true"
+        />
+      </button>
     </div>
   )
 }

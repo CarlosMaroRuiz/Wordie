@@ -37,26 +37,26 @@ export function VocabCard({ card }: VocabCardProps) {
         </div>
 
         <div>
-          <h5 className="mb-1 text-[10px] font-bold uppercase tracking-widest text-text-secondary">
+          <span className="mb-0.5 block text-xs font-semibold text-text-secondary">
             Traducción
-          </h5>
+          </span>
           <p className="text-[15px] font-bold text-text-main">{card.translation}</p>
         </div>
 
         {card.definition && (
           <div>
-            <h5 className="mb-1 text-[10px] font-bold uppercase tracking-widest text-text-secondary">
+            <span className="mb-0.5 block text-xs font-semibold text-text-secondary">
               Definición
-            </h5>
+            </span>
             <p className="text-[13px] leading-relaxed text-text-main">{card.definition}</p>
           </div>
         )}
 
         {example && (
           <div>
-            <h5 className="mb-1 text-[10px] font-bold uppercase tracking-widest text-text-secondary">
+            <span className="mb-0.5 block text-xs font-semibold text-text-secondary">
               Ejemplo en contexto
-            </h5>
+            </span>
             <p className="text-[13px] font-medium leading-relaxed text-text-main">{example.en}</p>
           </div>
         )}

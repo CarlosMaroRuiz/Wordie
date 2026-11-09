@@ -15,38 +15,38 @@ export function StoryAudioControls({
         {/* Botón principal de narración completa */}
         <Button
           variant={isNarrating ? 'primary' : 'secondary'}
-          size="sm"
+          size="md"
           onClick={onToggleNarration}
-          className="flex items-center gap-2"
+          className="flex items-center gap-2 rounded-full"
         >
           {isNarrating ? (
             <>
-              <Pause size={16} weight="bold" />
+              <Pause size={18} weight="bold" />
               <span>Detener narración</span>
             </>
           ) : (
             <>
-              <SpeakerHigh size={16} weight="bold" />
-              <span>Escuchar narración completa</span>
+              <SpeakerHigh size={18} weight="bold" />
+              <span>Escuchar narración</span>
             </>
           )}
         </Button>
 
-        {/* Ajuste de velocidad de voz */}
+        {/* Ajuste de velocidad de voz en píldora */}
         <div
-          className="flex items-center gap-1.5 rounded-xl border border-border-subtle bg-bg-page/80 px-2.5 py-1 text-xs"
+          className="flex items-center gap-1.5 rounded-full border border-border-subtle bg-surface px-3 py-1.5 text-xs shadow-soft"
           role="group"
           aria-label="Velocidad de reproducción de audio"
         >
           <span
-            className="flex items-center gap-1 font-semibold text-text-tertiary select-none"
+            className="flex items-center gap-1 font-bold text-text-tertiary select-none"
             title="Velocidad de reproducción de la narración y palabras clave"
           >
-            <Gauge size={14} weight="bold" />
+            <Gauge size={15} weight="bold" />
             <span>Velocidad:</span>
           </span>
-          <div className="flex items-center gap-0.5">
-            {PLAYBACK_RATE_OPTIONS.map((rate) => {
+          <div className="flex items-center gap-1">
+            {PLAYBACK_RATE_OPTIONS.map(rate => {
               const isSelected = playbackRate === rate.value
               return (
                 <button
@@ -55,10 +55,10 @@ export function StoryAudioControls({
                   onClick={() => onPlaybackRateChange(rate.value)}
                   aria-pressed={isSelected}
                   title={`Velocidad ${rate.label}`}
-                  className={`cursor-pointer rounded-lg px-2 py-0.5 text-xs font-bold transition-all ${
+                  className={`min-h-[28px] min-w-[36px] cursor-pointer rounded-full px-2.5 py-1 text-xs font-black transition-all ${
                     isSelected
-                      ? 'bg-primary text-on-primary shadow-xs'
-                      : 'text-text-secondary hover:bg-surface hover:text-text-main'
+                      ? 'bg-primary text-on-primary shadow-icon'
+                      : 'text-text-secondary hover:bg-surface-muted hover:text-text-main'
                   }`}
                 >
                   {rate.label}
@@ -71,7 +71,7 @@ export function StoryAudioControls({
 
       <p className="text-xs text-text-secondary">
         Haz clic en los términos resaltados para ver su traducción y escuchar su pronunciación (a{' '}
-        <span className="font-semibold text-text-main">{playbackRate}x</span> de velocidad).
+        <span className="font-bold text-text-main">{playbackRate}x</span> de velocidad).
       </p>
     </div>
   )

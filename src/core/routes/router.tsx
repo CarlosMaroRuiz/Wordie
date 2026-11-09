@@ -49,6 +49,22 @@ export const routers = createBrowserRouter([
             path: 'sentence-builder',
             element: LoadSuspense(() => import('@features/Games/features/SentenceBuilder')),
           },
+          {
+            path: 'tense',
+            element: LoadSuspense(() => import('@features/Games/features/TenseDetective')),
+          },
+          {
+            path: 'extra-word',
+            element: LoadSuspense(() => import('@features/Games/features/IntruderWord')),
+          },
+          {
+            path: 'connectors',
+            element: LoadSuspense(() => import('@features/Games/features/Connectors')),
+          },
+          {
+            path: 'fast-shifter',
+            element: LoadSuspense(() => import('@features/Games/features/FastShifter')),
+          },
         ],
       },
     ],

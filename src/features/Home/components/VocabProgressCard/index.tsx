@@ -1,3 +1,4 @@
+import { TrendUpIcon } from '@phosphor-icons/react'
 import { Button } from '@common/Button'
 import { CardBase } from '@common/CardBase'
 import { cn } from '@common/utils/cn'
@@ -37,27 +38,41 @@ export function VocabProgressCard({
           value={isLoading || hasError ? 0 : stats.percent}
           label="Porcentaje de palabras dominadas"
         />
-        <div className="min-w-0">
-          <h3 id="home-vocab-title" className="text-[17px] font-bold text-text-main">
+        <div className="min-w-0 flex-1">
+          <div className="flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-primary">
+            <TrendUpIcon size={14} weight="bold" aria-hidden="true" />
+            <span>Ritmo de Aprendizaje</span>
+          </div>
+          <h3 id="home-vocab-title" className="mt-0.5 text-lg font-black text-text-main">
             {HOME_COPY.vocabTitle}
           </h3>
-          <p className="mt-1 text-sm leading-relaxed text-text-secondary" aria-live="polite">
+          <p className="mt-1 text-xs sm:text-sm leading-relaxed text-text-secondary" aria-live="polite">
             {summary}
           </p>
         </div>
       </div>
 
-      <dl className="grid grid-cols-3 gap-3">
+      {/* Cuadrícula de 3 cajas Leitner en baldosas suaves */}
+      <dl className="grid grid-cols-3 gap-2.5">
         {HOME_COPY.vocabRows.map((row, index) => (
-          <div key={row}>
+          <div
+            key={row}
+            className="flex flex-col items-center justify-center rounded-2xl border border-border-subtle bg-surface/80 p-3 text-center shadow-soft"
+          >
             <dt className={HOME_LABEL}>{row}</dt>
             <dd className={HOME_VALUE}>{values[index]}</dd>
           </div>
         ))}
       </dl>
 
-      <div className="mt-auto pt-1">
-        <Button size="md" fullWidth={false} arrow onClick={onPractice} className="w-full sm:w-auto">
+      <div className="mt-auto pt-2">
+        <Button
+          size="md"
+          fullWidth={false}
+          arrow
+          onClick={onPractice}
+          className="w-full sm:w-auto rounded-full"
+        >
           {HOME_COPY.practice}
         </Button>
       </div>

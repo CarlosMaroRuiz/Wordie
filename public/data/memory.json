@@ -208,5 +208,173 @@
     "en": "agreement",
     "es": "acuerdo laboral",
     "phonetic": "/əˈɡriː.mənt/"
+  },
+{
+    "id": "mem-dev-11",
+    "topic": "dev",
+    "en": "refactor",
+    "es": "reorganizar el código",
+    "phonetic": "/ˌriːˈfæktər/"
+  },
+  {
+    "id": "mem-dev-12",
+    "topic": "dev",
+    "en": "release",
+    "es": "publicar una versión",
+    "phonetic": "/rɪˈliːs/"
+  },
+  {
+    "id": "mem-dev-13",
+    "topic": "dev",
+    "en": "server",
+    "es": "servidor de aplicaciones",
+    "phonetic": "/ˈsɜːrvər/"
+  },
+  {
+    "id": "mem-dev-14",
+    "topic": "dev",
+    "en": "commit",
+    "es": "confirmar cambios",
+    "phonetic": "/kəˈmɪt/"
+  },
+  {
+    "id": "mem-dev-15",
+    "topic": "dev",
+    "en": "endpoint",
+    "es": "punto de acceso API",
+    "phonetic": "/ˈendpɔɪnt/"
+  },
+  {
+    "id": "mem-dev-16",
+    "topic": "dev",
+    "en": "backend",
+    "es": "lado del servidor",
+    "phonetic": "/ˈbækend/"
+  },
+  {
+    "id": "mem-dev-17",
+    "topic": "dev",
+    "en": "variable",
+    "es": "valor almacenado",
+    "phonetic": "/ˈveriəbl/"
+  },
+  {
+    "id": "mem-dev-18",
+    "topic": "dev",
+    "en": "framework",
+    "es": "marco de trabajo",
+    "phonetic": "/ˈfreɪmwɜːrk/"
+  },
+  {
+    "id": "mem-travel-11",
+    "topic": "travel",
+    "en": "itinerary",
+    "es": "plan de viaje",
+    "phonetic": "/aɪˈtɪnəreri/"
+  },
+  {
+    "id": "mem-travel-12",
+    "topic": "travel",
+    "en": "layover",
+    "es": "escala entre vuelos",
+    "phonetic": "/ˈleɪoʊvər/"
+  },
+  {
+    "id": "mem-travel-13",
+    "topic": "travel",
+    "en": "aisle",
+    "es": "pasillo del avión",
+    "phonetic": "/aɪl/"
+  },
+  {
+    "id": "mem-travel-14",
+    "topic": "travel",
+    "en": "carry-on",
+    "es": "equipaje de mano",
+    "phonetic": "/ˈkæri ɑːn/"
+  },
+  {
+    "id": "mem-travel-15",
+    "topic": "travel",
+    "en": "currency",
+    "es": "moneda extranjera",
+    "phonetic": "/ˈkɜːrənsi/"
+  },
+  {
+    "id": "mem-travel-16",
+    "topic": "travel",
+    "en": "departure",
+    "es": "salida del vuelo",
+    "phonetic": "/dɪˈpɑːrtʃər/"
+  },
+  {
+    "id": "mem-travel-17",
+    "topic": "travel",
+    "en": "arrival",
+    "es": "llegada al destino",
+    "phonetic": "/əˈraɪvl/"
+  },
+  {
+    "id": "mem-travel-18",
+    "topic": "travel",
+    "en": "souvenir",
+    "es": "recuerdo de viaje",
+    "phonetic": "/ˌsuːvəˈnɪr/"
+  },
+  {
+    "id": "mem-work-11",
+    "topic": "work",
+    "en": "invoice",
+    "es": "factura del cliente",
+    "phonetic": "/ˈɪnvɔɪs/"
+  },
+  {
+    "id": "mem-work-12",
+    "topic": "work",
+    "en": "overtime",
+    "es": "horas extra",
+    "phonetic": "/ˈoʊvərtaɪm/"
+  },
+  {
+    "id": "mem-work-13",
+    "topic": "work",
+    "en": "colleague",
+    "es": "compañero de equipo",
+    "phonetic": "/ˈkɑːliːɡ/"
+  },
+  {
+    "id": "mem-work-14",
+    "topic": "work",
+    "en": "promotion",
+    "es": "ascenso laboral",
+    "phonetic": "/prəˈmoʊʃn/"
+  },
+  {
+    "id": "mem-work-15",
+    "topic": "work",
+    "en": "presentation",
+    "es": "exposición al equipo",
+    "phonetic": "/ˌpriːzenˈteɪʃn/"
+  },
+  {
+    "id": "mem-work-16",
+    "topic": "work",
+    "en": "contract",
+    "es": "contrato firmado",
+    "phonetic": "/ˈkɑːntrækt/"
+  },
+  {
+    "id": "mem-work-17",
+    "topic": "work",
+    "en": "agenda",
+    "es": "orden del día",
+    "phonetic": "/əˈdʒendə/"
+  },
+  {
+    "id": "mem-work-18",
+    "topic": "work",
+    "en": "workload",
+    "es": "carga de trabajo",
+    "phonetic": "/ˈwɜːrkloʊd/"
   }
 ]

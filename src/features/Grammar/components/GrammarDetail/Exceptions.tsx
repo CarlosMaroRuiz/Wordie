@@ -1,26 +1,24 @@
 import type { GrammarExceptionDTO } from '@features/Grammar/dto';
 import { WarningCircle, CheckCircle, XCircle } from '@phosphor-icons/react';
-import { motion } from 'motion/react';
 
 interface ExceptionsProps {
   exceptions: GrammarExceptionDTO[];
 }
 
-export const Exceptions = ({ exceptions }: ExceptionsProps) => {
+export function Exceptions({ exceptions }: ExceptionsProps) {
   if (!exceptions || exceptions.length === 0) return null;
 
   return (
     <>
-      <span className="block text-xs font-bold text-error uppercase tracking-widest mb-3 flex items-center gap-1.5">
+      <h3 className="mb-3 flex items-center gap-1.5 text-sm font-bold text-error">
         <WarningCircle size={16} weight="bold" />
-        EXCEPCIONES IMPORTANTES
-      </span>
+        Excepciones importantes
+      </h3>
       <div className="flex flex-col gap-4">
         {exceptions.map((exc, i) => (
-          <motion.div 
+          <div 
             key={i} 
-            whileHover={{ scale: 1.02 }}
-            className="bg-error-light border border-error/20 p-5 rounded-xl hover:shadow-md hover:border-error/40 transition-all cursor-default"
+            className="bg-error-light border border-error/20 p-5 rounded-2xl transition-colors cursor-default"
           >
             <p className="text-error font-semibold text-[15px] mb-4">{exc.description}</p>
             <div className="flex flex-col gap-2 text-sm">
@@ -33,9 +31,9 @@ export const Exceptions = ({ exceptions }: ExceptionsProps) => {
                 <span className="text-text-main font-bold">{exc.correct}</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </>
   );
-};
+}

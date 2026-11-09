@@ -1,7 +1,30 @@
-import { BrainIcon, GameControllerIcon, PuzzlePieceIcon } from '@phosphor-icons/react'
+import {
+  ArrowsClockwiseIcon,
+  BrainIcon,
+  ClockIcon,
+  GameControllerIcon,
+  LinkIcon,
+  MagnifyingGlassIcon,
+  PuzzlePieceIcon,
+} from '@phosphor-icons/react'
+import { PATHS } from '@core/routes/types/paths'
 import type { GameRegistryItem } from './type'
 
 export const GAME_REGISTRY: GameRegistryItem[] = [
+  {
+    id: 'fast-shifter',
+    to: PATHS.GamesFastShifter,
+    title: 'Fast Shifter',
+    description:
+      'Transforma oraciones activamente con los pulgares en móvil: cambia polaridad, tiempo y preguntas con reflejo rápido.',
+    icon: ArrowsClockwiseIcon,
+    difficulty: 'Medio',
+    category: 'grammar',
+    skill: 'Sentence Formation',
+    format: 'Reflejo <4.5s',
+    active: true,
+    color: 'bg-primary-light text-primary',
+  },
   {
     id: 'memory',
     to: '/games/memory',
@@ -10,8 +33,11 @@ export const GAME_REGISTRY: GameRegistryItem[] = [
       'Encuentra los pares de palabra ↔ traducción según el tema activo: desarrollo, viajes o trabajo.',
     icon: BrainIcon,
     difficulty: 'Fácil',
+    category: 'vocabulary',
+    skill: 'Active Recall',
+    format: '16 cartas 4×4',
     active: true,
-    color: 'bg-primary-light',
+    color: 'bg-primary-light text-primary',
   },
   {
     id: 'sentence-builder',
@@ -21,9 +47,53 @@ export const GAME_REGISTRY: GameRegistryItem[] = [
       'Ordena bloques de palabras para construir oraciones en inglés: desarrollo, viajes y trabajo.',
     icon: PuzzlePieceIcon,
     difficulty: 'Medio',
-    badge: 'Nuevo',
+    category: 'structure',
+    skill: 'Sintaxis & Orden',
+    format: '5 oraciones',
     active: true,
-    color: 'bg-info-light',
+    color: 'bg-info-light text-info',
+  },
+  {
+    id: 'tense-detective',
+    to: PATHS.GamesTenseDetective,
+    title: 'Detective de Tiempos',
+    description:
+      'Lee la oración, mira el verbo en inglés y elige cuál de los cuatro tiempos verbales corresponde.',
+    icon: ClockIcon,
+    difficulty: 'Medio',
+    category: 'grammar',
+    skill: 'Tense Recognition',
+    format: '8 tiempos',
+    active: true,
+    color: 'bg-success-light text-success',
+  },
+  {
+    id: 'intruder-word',
+    to: PATHS.GamesIntruderWord,
+    title: 'Palabra Intrusa',
+    description:
+      'En cada oración sobra una palabra. Encuéntrala: preposiciones de más, comparativos dobles o sujetos repetidos.',
+    icon: MagnifyingGlassIcon,
+    difficulty: 'Fácil',
+    category: 'grammar',
+    skill: 'Error Detection',
+    format: '6 trampas clave',
+    active: true,
+    color: 'bg-warning-light text-warning',
+  },
+  {
+    id: 'connectors',
+    to: PATHS.GamesConnectors,
+    title: 'Engranajes',
+    description:
+      'Cada párrafo pierde tres conectores. Elige los que encajen en significado y en estructura gramatical.',
+    icon: LinkIcon,
+    difficulty: 'Difícil',
+    category: 'structure',
+    skill: 'Discourse & Syntax',
+    format: '3 costuras/párrafo',
+    active: true,
+    color: 'bg-info-light text-info',
   },
   {
     id: 'hangman',
@@ -33,8 +103,11 @@ export const GAME_REGISTRY: GameRegistryItem[] = [
       'Adivina palabras clave de ingeniería en inglés letra a letra antes de agotar tus intentos.',
     icon: GameControllerIcon,
     difficulty: 'Medio',
+    category: 'vocabulary',
+    skill: 'Lexical Retrieval',
+    format: 'En desarrollo',
     badge: 'Próximamente',
     active: false,
-    color: 'bg-primary-light',
+    color: 'bg-surface-muted text-text-tertiary',
   },
 ]

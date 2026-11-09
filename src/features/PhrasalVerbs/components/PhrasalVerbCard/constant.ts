@@ -8,4 +8,4 @@ export const LEVEL_TONE: Record<string, BadgeTone> = {
 }
 
 export const CARD_CLASS =
-  'group flex flex-col overflow-hidden border border-border-subtle bg-surface shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-primary/40 hover:shadow-md'
+  'group flex flex-col overflow-hidden rounded-2xl border border-border-subtle bg-surface shadow-soft transition-colors duration-200 hover:border-primary/50'

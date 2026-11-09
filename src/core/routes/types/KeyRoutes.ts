@@ -9,5 +9,9 @@ type KeyRoutes =
   | 'Games'
   | 'GamesMemory'
   | 'GamesSentenceBuilder'
+  | 'GamesTenseDetective'
+  | 'GamesIntruderWord'
+  | 'GamesConnectors'
+  | 'GamesFastShifter'
 
 export type { KeyRoutes }

@@ -1,59 +1,65 @@
-import { motion, AnimatePresence } from 'motion/react';
-import { Check, ArrowClockwise } from '@phosphor-icons/react';
-import { Button } from '@common/Button';
-import type { PracticeCardProps } from './type';
+import { motion, AnimatePresence } from 'motion/react'
+import { Check, ArrowClockwise } from '@phosphor-icons/react'
+import { Button } from '@common/Button'
+import type { PracticeCardProps } from './type'
 
-export function PracticeCard({ 
-  card, 
-  currentIndex, 
-  totalCards, 
-  isRevealed, 
-  onReveal, 
-  onNext 
+export function PracticeCard({
+  card,
+  currentIndex,
+  totalCards,
+  isRevealed,
+  onReveal,
+  onNext,
 }: PracticeCardProps) {
   return (
     <>
-      <div className="text-sm font-medium text-text-secondary text-center mb-6">
+      <div className="mb-4 text-center text-xs sm:text-sm font-bold text-text-secondary">
         Tarjeta {currentIndex + 1} de {totalCards}
       </div>
-      
-      <div className="relative flex-grow flex items-center justify-center">
+
+      <div className="relative flex flex-grow items-center justify-center">
         <AnimatePresence mode="wait">
           <motion.div
             key={card.id}
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: -50, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="w-full bg-surface border border-border-subtle rounded-2xl p-8 flex flex-col items-center text-center shadow-sm"
+            transition={{ duration: 0.25 }}
+            className="flex w-full flex-col items-center rounded-[28px] border border-border-subtle bg-surface p-6 sm:p-8 text-center shadow-soft"
           >
-            <h2 className="text-4xl font-bold text-text-main mb-2">{card.word}</h2>
-            <p className="text-text-secondary text-lg mb-8">{card.phonetic}</p>
-            
-            <div className="w-full relative min-h-[120px] flex flex-col items-center justify-center">
+            <h2 className="mb-1 text-3xl sm:text-4xl font-black text-text-main">{card.word}</h2>
+            <p className="mb-6 font-mono text-base text-text-secondary">{card.phonetic}</p>
+
+            <div className="relative flex min-h-[140px] w-full flex-col items-center justify-center">
               {!isRevealed && (
-                <div className="absolute inset-0 flex flex-col items-center justify-center backdrop-blur-md bg-bg-page/50 rounded-xl z-10 border border-border-subtle">
-                  <Button variant="primary" onClick={onReveal}>
+                <div className="absolute inset-0 z-10 flex flex-col items-center justify-center rounded-2xl border border-border-subtle/80 bg-surface/90 backdrop-blur-xs p-4">
+                  <Button variant="primary" size="md" onClick={onReveal} className="rounded-full shadow-brand">
                     Mostrar respuesta
                   </Button>
                 </div>
               )}
-              
-              <div className={`transition-opacity duration-300 w-full ${!isRevealed ? 'opacity-20 blur-sm pointer-events-none' : 'opacity-100'}`}>
-                <p className="text-2xl font-bold text-primary mb-4">{card.translation}</p>
-                
+
+              <div
+                className={`w-full transition-opacity duration-200 ${
+                  !isRevealed ? 'pointer-events-none opacity-0' : 'opacity-100'
+                }`}
+              >
+                <p className="mb-4 text-2xl font-black text-primary">{card.translation}</p>
+
                 {card.definition && (
-                  <div className="bg-bg-page p-3 rounded-xl w-full mb-3 text-left">
-                    <p className="text-[11px] font-bold text-text-secondary uppercase tracking-widest mb-1">Definición</p>
-                    <p className="text-sm text-text-main leading-relaxed">{card.definition}</p>
+                  <div className="mb-3 w-full rounded-2xl border border-border-subtle/60 bg-surface-muted/50 p-3.5 text-left">
+                    <p className="mb-0.5 text-xs font-bold text-text-secondary">Definición</p>
+                    <p className="text-xs sm:text-sm leading-relaxed text-text-main">{card.definition}</p>
                   </div>
                 )}
 
                 {card.examples[0] && (
-                  <div className="bg-bg-page p-3 rounded-xl w-full text-left">
-                    <p className="text-[11px] font-bold text-text-secondary uppercase tracking-widest mb-1">Ejemplo</p>
-                    <p className="text-sm font-medium text-text-main italic mb-1">"{card.examples[0].en}"</p>
-                    <p className="text-sm text-text-secondary">"{card.examples[0].es}"</p>
+                  <div className="w-full rounded-2xl border border-border-subtle/60 bg-surface-muted/50 p-3.5 text-left">
+                    <p className="mb-0.5 text-xs font-bold text-text-secondary">Ejemplo</p>
+                    <p className="mb-0.5 text-xs sm:text-sm font-bold text-text-main italic">
+                      "{card.examples[0].en}"
+                    </p>
+                    <p className="text-xs text-text-secondary">"{card.examples[0].es}"</p>
                   </div>
                 )}
               </div>
@@ -63,29 +69,31 @@ export function PracticeCard({
       </div>
 
       {isRevealed && (
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          className="grid grid-cols-2 gap-4 mt-6"
+          className="mt-6 grid grid-cols-2 gap-3.5"
         >
-          <Button 
-            variant="danger" 
+          <Button
+            variant="danger"
+            size="md"
             onClick={() => onNext('hard')}
-            className="flex items-center justify-center gap-2"
+            className="flex items-center justify-center gap-2 rounded-full"
           >
-            <ArrowClockwise weight="bold" />
-            Difícil
+            <ArrowClockwise weight="bold" size={18} />
+            <span>Difícil</span>
           </Button>
-          <Button 
-            variant="success" 
+          <Button
+            variant="success"
+            size="md"
             onClick={() => onNext('easy')}
-            className="flex items-center justify-center gap-2"
+            className="flex items-center justify-center gap-2 rounded-full"
           >
-            <Check weight="bold" />
-            Fácil
+            <Check weight="bold" size={18} />
+            <span>Fácil</span>
           </Button>
         </motion.div>
       )}
     </>
-  );
+  )
 }

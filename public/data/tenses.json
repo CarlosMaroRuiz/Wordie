@@ -1,0 +1,362 @@
+[
+  {
+    "id": "tense-dev-1",
+    "topic": "dev",
+    "level": "A2",
+    "sentence": "She deploys the hotfix every Friday.",
+    "verb": "deploys",
+    "tense": "present-simple",
+    "es": "Ella despliega el parche cada viernes.",
+    "explanation": "\"Every Friday\" describe una rutina, así que va en Present Simple."
+  },
+  {
+    "id": "tense-dev-2",
+    "topic": "dev",
+    "level": "A2",
+    "sentence": "We are migrating the database right now.",
+    "verb": "are migrating",
+    "tense": "present-continuous",
+    "es": "Estamos migrando la base de datos ahora mismo.",
+    "explanation": "\"Right now\" indica algo en curso, por eso Present Continuous."
+  },
+  {
+    "id": "tense-dev-3",
+    "topic": "dev",
+    "level": "B1",
+    "sentence": "I have already pushed the changes to main.",
+    "verb": "have already pushed",
+    "tense": "present-perfect",
+    "es": "Ya subí los cambios a main.",
+    "explanation": "\"Already\" conecta el pasado con el presente: la acción importa ahora."
+  },
+  {
+    "id": "tense-dev-4",
+    "topic": "dev",
+    "level": "A2",
+    "sentence": "He fixed the bug before lunch.",
+    "verb": "fixed",
+    "tense": "past-simple",
+    "es": "Él arregló el bug antes de comer.",
+    "explanation": "\"Before lunch\" es un momento pasado cerrado: Past Simple."
+  },
+  {
+    "id": "tense-dev-5",
+    "topic": "dev",
+    "level": "B1",
+    "sentence": "They were testing the endpoint when the server crashed.",
+    "verb": "were testing",
+    "tense": "past-continuous",
+    "es": "Estaban probando el endpoint cuando el servidor se cayó.",
+    "explanation": "La acción larga de fondo va en Past Continuous; el corte, en Past Simple."
+  },
+  {
+    "id": "tense-dev-6",
+    "topic": "dev",
+    "level": "B2",
+    "sentence": "The pipeline had failed twice before we noticed.",
+    "verb": "had failed",
+    "tense": "past-perfect",
+    "es": "El pipeline había fallado dos veces antes de que lo notáramos.",
+    "explanation": "Un pasado anterior a otro pasado pide Past Perfect (had + participio)."
+  },
+  {
+    "id": "tense-dev-7",
+    "topic": "dev",
+    "level": "A2",
+    "sentence": "I will review your pull request tonight.",
+    "verb": "will review",
+    "tense": "future-will",
+    "es": "Revisaré tu pull request esta noche.",
+    "explanation": "Decisión espontánea sobre el futuro: will + verbo base."
+  },
+  {
+    "id": "tense-dev-8",
+    "topic": "dev",
+    "level": "A2",
+    "sentence": "We are going to refactor this module next sprint.",
+    "verb": "are going to refactor",
+    "tense": "going-to",
+    "es": "Vamos a refactorizar este módulo el próximo sprint.",
+    "explanation": "Un plan ya decidido se expresa con be going to, no con will."
+  },
+  {
+    "id": "tense-dev-9",
+    "topic": "dev",
+    "level": "B1",
+    "sentence": "The team has released three versions this month.",
+    "verb": "has released",
+    "tense": "present-perfect",
+    "es": "El equipo ha publicado tres versiones este mes.",
+    "explanation": "\"This month\" sigue abierto, por eso Present Perfect y no Past Simple."
+  },
+  {
+    "id": "tense-dev-10",
+    "topic": "dev",
+    "level": "A2",
+    "sentence": "She opened the issue yesterday.",
+    "verb": "opened",
+    "tense": "past-simple",
+    "es": "Ella abrió el issue ayer.",
+    "explanation": "\"Yesterday\" es tiempo pasado terminado: Past Simple."
+  },
+  {
+    "id": "tense-dev-11",
+    "topic": "dev",
+    "level": "B1",
+    "sentence": "The build will fail if you skip the tests.",
+    "verb": "will fail",
+    "tense": "future-will",
+    "es": "El build fallará si te saltas las pruebas.",
+    "explanation": "En el primer condicional la consecuencia usa will + verbo base."
+  },
+  {
+    "id": "tense-dev-12",
+    "topic": "dev",
+    "level": "B1",
+    "sentence": "The service is running on three replicas.",
+    "verb": "is running",
+    "tense": "present-continuous",
+    "es": "El servicio está corriendo en tres réplicas.",
+    "explanation": "Estado temporal y activo ahora mismo: Present Continuous."
+  },
+  {
+    "id": "tense-travel-1",
+    "topic": "travel",
+    "level": "A2",
+    "sentence": "The airport bus leaves every twenty minutes.",
+    "verb": "leaves",
+    "tense": "present-simple",
+    "es": "El autobús del aeropuerto sale cada veinte minutos.",
+    "explanation": "Un horario fijo se enuncia en Present Simple."
+  },
+  {
+    "id": "tense-travel-2",
+    "topic": "travel",
+    "level": "A2",
+    "sentence": "We are waiting for our luggage at carousel three.",
+    "verb": "are waiting",
+    "tense": "present-continuous",
+    "es": "Estamos esperando nuestro equipaje en la cinta tres.",
+    "explanation": "La acción ocurre mientras se habla: Present Continuous."
+  },
+  {
+    "id": "tense-travel-3",
+    "topic": "travel",
+    "level": "B1",
+    "sentence": "I have lost my boarding pass again.",
+    "verb": "have lost",
+    "tense": "present-perfect",
+    "es": "He perdido mi pase de abordar otra vez.",
+    "explanation": "El resultado importa ahora (no puedo embarcar): Present Perfect."
+  },
+  {
+    "id": "tense-travel-4",
+    "topic": "travel",
+    "level": "A2",
+    "sentence": "She booked the hotel two weeks ago.",
+    "verb": "booked",
+    "tense": "past-simple",
+    "es": "Ella reservó el hotel hace dos semanas.",
+    "explanation": "\"Two weeks ago\" fija un punto pasado concreto: Past Simple."
+  },
+  {
+    "id": "tense-travel-5",
+    "topic": "travel",
+    "level": "B1",
+    "sentence": "They were boarding when the flight was cancelled.",
+    "verb": "were boarding",
+    "tense": "past-continuous",
+    "es": "Estaban embarcando cuando se canceló el vuelo.",
+    "explanation": "Acción en desarrollo interrumpida por otra: Past Continuous."
+  },
+  {
+    "id": "tense-travel-6",
+    "topic": "travel",
+    "level": "B2",
+    "sentence": "The plane had already left when we reached the gate.",
+    "verb": "had already left",
+    "tense": "past-perfect",
+    "es": "El avión ya había salido cuando llegamos a la puerta.",
+    "explanation": "El avión salió antes de que llegáramos: Past Perfect."
+  },
+  {
+    "id": "tense-travel-7",
+    "topic": "travel",
+    "level": "A2",
+    "sentence": "I will call the airline tomorrow morning.",
+    "verb": "will call",
+    "tense": "future-will",
+    "es": "Llamaré a la aerolínea mañana por la mañana.",
+    "explanation": "Una decisión sobre el futuro se expresa con will + verbo base."
+  },
+  {
+    "id": "tense-travel-8",
+    "topic": "travel",
+    "level": "A2",
+    "sentence": "We are going to rent a car at the airport.",
+    "verb": "are going to rent",
+    "tense": "going-to",
+    "es": "Vamos a alquilar un coche en el aeropuerto.",
+    "explanation": "Intención ya planeada: be going to."
+  },
+  {
+    "id": "tense-travel-9",
+    "topic": "travel",
+    "level": "B1",
+    "sentence": "He has travelled to Japan three times.",
+    "verb": "has travelled",
+    "tense": "present-perfect",
+    "es": "Él ha viajado a Japón tres veces.",
+    "explanation": "Experiencias sin fecha concreta van en Present Perfect."
+  },
+  {
+    "id": "tense-travel-10",
+    "topic": "travel",
+    "level": "A2",
+    "sentence": "We visited the old town last summer.",
+    "verb": "visited",
+    "tense": "past-simple",
+    "es": "Visitamos el casco antiguo el verano pasado.",
+    "explanation": "\"Last summer\" es un periodo pasado cerrado: Past Simple."
+  },
+  {
+    "id": "tense-travel-11",
+    "topic": "travel",
+    "level": "A2",
+    "sentence": "The museum opens at nine on weekdays.",
+    "verb": "opens",
+    "tense": "present-simple",
+    "es": "El museo abre a las nueve entre semana.",
+    "explanation": "Horarios y rutinas se expresan en Present Simple."
+  },
+  {
+    "id": "tense-travel-12",
+    "topic": "travel",
+    "level": "B1",
+    "sentence": "She had packed everything before the taxi arrived.",
+    "verb": "had packed",
+    "tense": "past-perfect",
+    "es": "Ella había empacado todo antes de que llegara el taxi.",
+    "explanation": "El equipaje se preparó antes de la llegada del taxi: Past Perfect."
+  },
+  {
+    "id": "tense-work-1",
+    "topic": "work",
+    "level": "A2",
+    "sentence": "The team meets every Monday at ten.",
+    "verb": "meets",
+    "tense": "present-simple",
+    "es": "El equipo se reúne cada lunes a las diez.",
+    "explanation": "\"Every Monday\" es una rutina: Present Simple con -s."
+  },
+  {
+    "id": "tense-work-2",
+    "topic": "work",
+    "level": "A2",
+    "sentence": "I am preparing the slides for the client.",
+    "verb": "am preparing",
+    "tense": "present-continuous",
+    "es": "Estoy preparando las diapositivas para el cliente.",
+    "explanation": "Acción en progreso en este momento: Present Continuous."
+  },
+  {
+    "id": "tense-work-3",
+    "topic": "work",
+    "level": "B1",
+    "sentence": "We have finished the quarterly report.",
+    "verb": "have finished",
+    "tense": "present-perfect",
+    "es": "Hemos terminado el informe trimestral.",
+    "explanation": "El resultado ya está listo y afecta al presente: Present Perfect."
+  },
+  {
+    "id": "tense-work-4",
+    "topic": "work",
+    "level": "A2",
+    "sentence": "She sent the invoice yesterday.",
+    "verb": "sent",
+    "tense": "past-simple",
+    "es": "Ella envió la factura ayer.",
+    "explanation": "\"Yesterday\" exige Past Simple."
+  },
+  {
+    "id": "tense-work-5",
+    "topic": "work",
+    "level": "B1",
+    "sentence": "He was negotiating the contract when I called.",
+    "verb": "was negotiating",
+    "tense": "past-continuous",
+    "es": "Él estaba negociando el contrato cuando llamé.",
+    "explanation": "Acción de fondo en pasado interrumpida por otra: Past Continuous."
+  },
+  {
+    "id": "tense-work-6",
+    "topic": "work",
+    "level": "B2",
+    "sentence": "They had signed the agreement before the deadline.",
+    "verb": "had signed",
+    "tense": "past-perfect",
+    "es": "Habían firmado el acuerdo antes de la fecha límite.",
+    "explanation": "La firma es anterior a la fecha límite: Past Perfect."
+  },
+  {
+    "id": "tense-work-7",
+    "topic": "work",
+    "level": "A2",
+    "sentence": "I will forward you the agenda tonight.",
+    "verb": "will forward",
+    "tense": "future-will",
+    "es": "Te reenviaré la agenda esta noche.",
+    "explanation": "Promesa o decisión espontánea: will + verbo base."
+  },
+  {
+    "id": "tense-work-8",
+    "topic": "work",
+    "level": "A2",
+    "sentence": "We are going to hire two more colleagues.",
+    "verb": "are going to hire",
+    "tense": "going-to",
+    "es": "Vamos a contratar a dos compañeros más.",
+    "explanation": "Plan ya acordado: be going to."
+  },
+  {
+    "id": "tense-work-9",
+    "topic": "work",
+    "level": "B1",
+    "sentence": "The manager is reviewing our workload this week.",
+    "verb": "is reviewing",
+    "tense": "present-continuous",
+    "es": "El gerente está revisando nuestra carga de trabajo esta semana.",
+    "explanation": "Situación temporal en curso: Present Continuous."
+  },
+  {
+    "id": "tense-work-10",
+    "topic": "work",
+    "level": "A2",
+    "sentence": "The client approved the budget last Friday.",
+    "verb": "approved",
+    "tense": "past-simple",
+    "es": "El cliente aprobó el presupuesto el viernes pasado.",
+    "explanation": "\"Last Friday\" es un momento pasado cerrado: Past Simple."
+  },
+  {
+    "id": "tense-work-11",
+    "topic": "work",
+    "level": "B1",
+    "sentence": "She has led three teams in five years.",
+    "verb": "has led",
+    "tense": "present-perfect",
+    "es": "Ella ha liderado tres equipos en cinco años.",
+    "explanation": "Experiencia acumulada hasta hoy: Present Perfect."
+  },
+  {
+    "id": "tense-work-12",
+    "topic": "work",
+    "level": "B1",
+    "sentence": "The meeting will start as soon as everyone arrives.",
+    "verb": "will start",
+    "tense": "future-will",
+    "es": "La reunión empezará en cuanto lleguen todos.",
+    "explanation": "Tras \"as soon as\" el futuro va en Present Simple, pero la principal usa will."
+  }
+]

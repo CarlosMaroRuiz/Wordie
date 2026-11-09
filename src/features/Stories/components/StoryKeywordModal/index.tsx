@@ -63,9 +63,9 @@ export function StoryKeywordModal({
                 ? 'Detener pronunciación'
                 : `Escuchar pronunciación de ${keyword.term}`
             }
-            className={`inline-flex h-9 w-9 items-center justify-center rounded-full transition-all cursor-pointer ${
+            className={`inline-flex h-9 w-9 items-center justify-center rounded-xl transition-all cursor-pointer ${
               isSpeaking
-                ? 'bg-primary text-on-primary shadow-sm ring-2 ring-primary/40 ring-offset-surface animate-pulse'
+                ? 'bg-primary text-on-primary shadow-xs ring-2 ring-primary/40'
                 : 'bg-primary/10 text-primary hover:bg-primary/20'
             }`}
           >
@@ -89,7 +89,7 @@ export function StoryKeywordModal({
       <div className="flex items-start gap-3 rounded-2xl bg-primary/5 p-4 border border-primary/15">
         <Translate size={22} weight="bold" className="mt-0.5 text-primary shrink-0" />
         <div>
-          <span className="block text-xs font-bold uppercase tracking-wider text-text-tertiary">
+          <span className="block text-xs font-semibold text-text-secondary">
             Traducción
           </span>
           <p className="mt-0.5 text-base font-bold text-text-main">
@@ -103,7 +103,7 @@ export function StoryKeywordModal({
         <div className="flex items-start gap-3 rounded-2xl bg-bg-page/70 p-4 border border-border-subtle">
           <BookOpen size={22} weight="bold" className="mt-0.5 text-text-secondary shrink-0" />
           <div>
-            <span className="block text-xs font-bold uppercase tracking-wider text-text-tertiary">
+            <span className="block text-xs font-semibold text-text-secondary">
               Definición en contexto
             </span>
             <p className="mt-0.5 text-sm leading-relaxed text-text-secondary">

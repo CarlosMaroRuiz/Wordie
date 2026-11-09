@@ -1,7 +1,7 @@
 import type { CardPadding, CardVariant } from './type'
 
 export const CARD_BASE =
-  'rounded-[22px] border-[1.5px] transition-colors duration-150 ease-out motion-reduce:transition-none'
+  'rounded-[26px] border border-border-subtle transition-all duration-150 ease-out motion-reduce:transition-none'
 
 export const CARD_VARIANT: Record<CardVariant, string> = {
   default: 'border-border-subtle bg-surface shadow-soft',
@@ -12,7 +12,7 @@ export const CARD_VARIANT: Record<CardVariant, string> = {
 export const CARD_PADDING: Record<CardPadding, string> = {
   none: '',
   sm: 'p-4',
-  md: 'p-4 sm:p-5',
+  md: 'p-5 sm:p-6',
 }
 
-export const CARD_HEADER = 'mb-2.5 flex items-center justify-between gap-3'
+export const CARD_HEADER = 'mb-3 flex items-center justify-between gap-3'

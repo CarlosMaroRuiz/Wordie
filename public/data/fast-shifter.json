@@ -1,0 +1,517 @@
+[
+  {
+    "id": "fs-dev-01",
+    "topic": "dev",
+    "level": "A2",
+    "baseSentence": "The server responded to the ping request.",
+    "shiftType": "polarity",
+    "shiftInstruction": "Negativa en Pasado",
+    "tokens": [
+      { "type": "text", "text": "The server " },
+      { "type": "slot", "id": "aux", "label": "Auxiliar", "correct": "didn't", "options": ["doesn't", "didn't", "don't", "wasn't"] },
+      { "type": "slot", "id": "verb", "label": "Verbo", "correct": "respond", "options": ["respond", "responds", "responded", "responding"] },
+      { "type": "text", "text": " to the ping request." }
+    ],
+    "fullCorrect": "The server didn't respond to the ping request.",
+    "translation": "El servidor no respondió a la solicitud de ping.",
+    "trapExplanation": "Al usar el auxiliar de pasado 'didn't', el verbo principal vuelve obligatoriamente a su forma base: responded → respond."
+  },
+  {
+    "id": "fs-dev-02",
+    "topic": "dev",
+    "level": "B1",
+    "baseSentence": "We push code directly to production on Fridays.",
+    "shiftType": "polarity",
+    "shiftInstruction": "Negativa en Presente",
+    "tokens": [
+      { "type": "text", "text": "We " },
+      { "type": "slot", "id": "aux", "label": "Auxiliar", "correct": "don't", "options": ["doesn't", "don't", "didn't", "aren't"] },
+      { "type": "slot", "id": "verb", "label": "Verbo", "correct": "push", "options": ["push", "pushes", "pushed", "pushing"] },
+      { "type": "text", "text": " code directly to production on Fridays." }
+    ],
+    "fullCorrect": "We don't push code directly to production on Fridays.",
+    "translation": "No subimos código directamente a producción los viernes.",
+    "trapExplanation": "Con el sujeto 'We' (primera persona plural) se usa 'don't', no 'doesn't'."
+  },
+  {
+    "id": "fs-dev-03",
+    "topic": "dev",
+    "level": "A2",
+    "baseSentence": "You deployed the hotfix this morning.",
+    "shiftType": "inversion",
+    "shiftInstruction": "Pregunta Directa (Pasado)",
+    "tokens": [
+      { "type": "slot", "id": "aux", "label": "Auxiliar", "correct": "Did", "options": ["Do", "Did", "Does", "Have"] },
+      { "type": "text", "text": " you " },
+      { "type": "slot", "id": "verb", "label": "Verbo", "correct": "deploy", "options": ["deploy", "deploys", "deployed", "deploying"] },
+      { "type": "text", "text": " the hotfix this morning?" }
+    ],
+    "fullCorrect": "Did you deploy the hotfix this morning?",
+    "translation": "¿Desplegaste la corrección esta mañana?",
+    "trapExplanation": "En preguntas en pasado usamos el auxiliar 'Did' al inicio y el verbo principal en forma base: deployed → deploy."
+  },
+  {
+    "id": "fs-dev-04",
+    "topic": "dev",
+    "level": "B1",
+    "baseSentence": "The test suite catches regression bugs.",
+    "shiftType": "polarity",
+    "shiftInstruction": "Negativa en Presente",
+    "tokens": [
+      { "type": "text", "text": "The test suite " },
+      { "type": "slot", "id": "aux", "label": "Auxiliar", "correct": "doesn't", "options": ["don't", "doesn't", "didn't", "isn't"] },
+      { "type": "slot", "id": "verb", "label": "Verbo", "correct": "catch", "options": ["catch", "catches", "caught", "catching"] },
+      { "type": "text", "text": " regression bugs." }
+    ],
+    "fullCorrect": "The test suite doesn't catch regression bugs.",
+    "translation": "La suite de pruebas no detecta errores de regresión.",
+    "trapExplanation": "'The test suite' es tercera persona singular (it), por lo que requiere 'doesn't' y el verbo pierde la terminación -es: catches → catch."
+  },
+  {
+    "id": "fs-dev-05",
+    "topic": "dev",
+    "level": "B2",
+    "baseSentence": "The pipeline failed because of a missing dependency.",
+    "shiftType": "wh",
+    "shiftInstruction": "Preguntar con 'Why'",
+    "tokens": [
+      { "type": "text", "text": "Why " },
+      { "type": "slot", "id": "aux", "label": "Auxiliar", "correct": "did", "options": ["did", "does", "was", "had"] },
+      { "type": "text", "text": " the pipeline " },
+      { "type": "slot", "id": "verb", "label": "Verbo", "correct": "fail", "options": ["fail", "fails", "failed", "failing"] },
+      { "type": "text", "text": "?" }
+    ],
+    "fullCorrect": "Why did the pipeline fail?",
+    "translation": "¿Por qué falló el pipeline?",
+    "trapExplanation": "Estructura Wh-: [Why] + [auxiliar did] + [sujeto] + [verbo base fail]."
+  },
+  {
+    "id": "fs-dev-06",
+    "topic": "dev",
+    "level": "A2",
+    "baseSentence": "I write unit tests for every new feature.",
+    "shiftType": "tense",
+    "shiftInstruction": "Pasado Simple",
+    "tokens": [
+      { "type": "text", "text": "I " },
+      { "type": "slot", "id": "verb", "label": "Verbo en Pasado", "correct": "wrote", "options": ["writed", "wrote", "written", "writing"] },
+      { "type": "text", "text": " unit tests for every new feature." }
+    ],
+    "fullCorrect": "I wrote unit tests for every new feature.",
+    "translation": "Escribí pruebas unitarias para cada nueva funcionalidad.",
+    "trapExplanation": "'Write' es un verbo irregular cuyo pasado simple es 'wrote' (nunca 'writed')."
+  },
+  {
+    "id": "fs-dev-07",
+    "topic": "dev",
+    "level": "B1",
+    "baseSentence": "She reviews pull requests before merging.",
+    "shiftType": "inversion",
+    "shiftInstruction": "Pregunta Directa (Presente)",
+    "tokens": [
+      { "type": "slot", "id": "aux", "label": "Auxiliar", "correct": "Does", "options": ["Do", "Does", "Did", "Is"] },
+      { "type": "text", "text": " she " },
+      { "type": "slot", "id": "verb", "label": "Verbo", "correct": "review", "options": ["review", "reviews", "reviewed", "reviewing"] },
+      { "type": "text", "text": " pull requests before merging?" }
+    ],
+    "fullCorrect": "Does she review pull requests before merging?",
+    "translation": "¿Revisa ella los pull requests antes de integrarlos?",
+    "trapExplanation": "Con tercera persona 'she' en presente usamos 'Does', y el verbo pierde la -s: reviews → review."
+  },
+  {
+    "id": "fs-dev-08",
+    "topic": "dev",
+    "level": "B2",
+    "baseSentence": "They optimize database queries for high traffic.",
+    "shiftType": "tense",
+    "shiftInstruction": "Futuro con 'Will'",
+    "tokens": [
+      { "type": "text", "text": "They " },
+      { "type": "slot", "id": "aux", "label": "Auxiliar", "correct": "will", "options": ["will", "would", "shall", "are"] },
+      { "type": "slot", "id": "verb", "label": "Verbo", "correct": "optimize", "options": ["optimize", "optimizes", "optimized", "optimizing"] },
+      { "type": "text", "text": " database queries for high traffic." }
+    ],
+    "fullCorrect": "They will optimize database queries for high traffic.",
+    "translation": "Ellos optimizarán las consultas de base de datos para alto tráfico.",
+    "trapExplanation": "El modal 'will' siempre va acompañado del verbo en su forma base infinitiva sin 'to': optimize."
+  },
+  {
+    "id": "fs-dev-09",
+    "topic": "dev",
+    "level": "B1",
+    "baseSentence": "The API returned a 404 status code.",
+    "shiftType": "polarity",
+    "shiftInstruction": "Negativa en Pasado",
+    "tokens": [
+      { "type": "text", "text": "The API " },
+      { "type": "slot", "id": "aux", "label": "Auxiliar", "correct": "didn't", "options": ["doesn't", "didn't", "wasn't", "won't"] },
+      { "type": "slot", "id": "verb", "label": "Verbo", "correct": "return", "options": ["return", "returns", "returned", "returning"] },
+      { "type": "text", "text": " a 404 status code." }
+    ],
+    "fullCorrect": "The API didn't return a 404 status code.",
+    "translation": "La API no devolvió un código de estado 404.",
+    "trapExplanation": "No cometas la doble conjugación: 'didn't returned' es incorrecto; lo correcto es 'didn't return'."
+  },
+  {
+    "id": "fs-dev-10",
+    "topic": "dev",
+    "level": "B2",
+    "baseSentence": "You found the memory leak in the worker service.",
+    "shiftType": "wh",
+    "shiftInstruction": "Preguntar con 'Where'",
+    "tokens": [
+      { "type": "text", "text": "Where " },
+      { "type": "slot", "id": "aux", "label": "Auxiliar", "correct": "did", "options": ["did", "do", "have", "were"] },
+      { "type": "text", "text": " you " },
+      { "type": "slot", "id": "verb", "label": "Verbo", "correct": "find", "options": ["find", "finds", "found", "finding"] },
+      { "type": "text", "text": " the memory leak?" }
+    ],
+    "fullCorrect": "Where did you find the memory leak?",
+    "translation": "¿Dónde encontraste la fuga de memoria?",
+    "trapExplanation": "El verbo irregular 'found' vuelve a su forma base 'find' al usar el auxiliar de pregunta 'did'."
+  },
+
+  {
+    "id": "fs-travel-01",
+    "topic": "travel",
+    "level": "A2",
+    "baseSentence": "She booked the flight to London yesterday.",
+    "shiftType": "polarity",
+    "shiftInstruction": "Negativa en Presente",
+    "tokens": [
+      { "type": "text", "text": "She " },
+      { "type": "slot", "id": "aux", "label": "Auxiliar", "correct": "doesn't", "options": ["doesn't", "don't", "didn't", "isn't"] },
+      { "type": "slot", "id": "verb", "label": "Verbo", "correct": "book", "options": ["book", "books", "booked", "booking"] },
+      { "type": "text", "text": " flights to London online." }
+    ],
+    "fullCorrect": "She doesn't book flights to London online.",
+    "translation": "Ella no reserva vuelos a Londres por internet.",
+    "trapExplanation": "Con 'She' en presente negativo se usa 'doesn't' y el verbo principal en forma base: book."
+  },
+  {
+    "id": "fs-travel-02",
+    "topic": "travel",
+    "level": "A2",
+    "baseSentence": "You have your boarding pass ready.",
+    "shiftType": "inversion",
+    "shiftInstruction": "Pregunta Directa (Presente)",
+    "tokens": [
+      { "type": "slot", "id": "aux", "label": "Auxiliar", "correct": "Do", "options": ["Do", "Does", "Did", "Are"] },
+      { "type": "text", "text": " you " },
+      { "type": "slot", "id": "verb", "label": "Verbo", "correct": "have", "options": ["have", "has", "had", "having"] },
+      { "type": "text", "text": " your boarding pass ready?" }
+    ],
+    "fullCorrect": "Do you have your boarding pass ready?",
+    "translation": "¿Tienes tu tarjeta de embarque lista?",
+    "trapExplanation": "Pregunta estándar con 'you': auxiliar 'Do' + sujeto 'you' + verbo base 'have'."
+  },
+  {
+    "id": "fs-travel-03",
+    "topic": "travel",
+    "level": "B1",
+    "baseSentence": "The hotel receptionist spoke fluent English.",
+    "shiftType": "polarity",
+    "shiftInstruction": "Negativa en Pasado",
+    "tokens": [
+      { "type": "text", "text": "The hotel receptionist " },
+      { "type": "slot", "id": "aux", "label": "Auxiliar", "correct": "didn't", "options": ["doesn't", "didn't", "wasn't", "don't"] },
+      { "type": "slot", "id": "verb", "label": "Verbo", "correct": "speak", "options": ["speak", "speaks", "spoke", "spoken"] },
+      { "type": "text", "text": " fluent English." }
+    ],
+    "fullCorrect": "The hotel receptionist didn't speak fluent English.",
+    "translation": "El recepcionista del hotel no hablaba inglés fluido.",
+    "trapExplanation": "El pasado irregular 'spoke' debe convertirse en forma base 'speak' al negar con 'didn't'."
+  },
+  {
+    "id": "fs-travel-04",
+    "topic": "travel",
+    "level": "B1",
+    "baseSentence": "The airport shuttle leaves every twenty minutes.",
+    "shiftType": "polarity",
+    "shiftInstruction": "Negativa en Presente",
+    "tokens": [
+      { "type": "text", "text": "The airport shuttle " },
+      { "type": "slot", "id": "aux", "label": "Auxiliar", "correct": "doesn't", "options": ["don't", "doesn't", "didn't", "isn't"] },
+      { "type": "slot", "id": "verb", "label": "Verbo", "correct": "leave", "options": ["leave", "leaves", "left", "leaving"] },
+      { "type": "text", "text": " every twenty minutes." }
+    ],
+    "fullCorrect": "The airport shuttle doesn't leave every twenty minutes.",
+    "translation": "El autobús de enlace del aeropuerto no sale cada veinte minutos.",
+    "trapExplanation": "'The airport shuttle' es singular (it) → requiere 'doesn't' y 'leave' sin -s."
+  },
+  {
+    "id": "fs-travel-05",
+    "topic": "travel",
+    "level": "B2",
+    "baseSentence": "They arrived at terminal two by taxi.",
+    "shiftType": "wh",
+    "shiftInstruction": "Preguntar con 'How'",
+    "tokens": [
+      { "type": "text", "text": "How " },
+      { "type": "slot", "id": "aux", "label": "Auxiliar", "correct": "did", "options": ["did", "do", "were", "have"] },
+      { "type": "text", "text": " they " },
+      { "type": "slot", "id": "verb", "label": "Verbo", "correct": "arrive", "options": ["arrive", "arrives", "arrived", "arriving"] },
+      { "type": "text", "text": " at terminal two?" }
+    ],
+    "fullCorrect": "How did they arrive at terminal two?",
+    "translation": "¿Cómo llegaron ellos a la terminal dos?",
+    "trapExplanation": "En preguntas Wh- de pasado: How + did + sujeto + verbo en infinitivo (arrive)."
+  },
+  {
+    "id": "fs-travel-06",
+    "topic": "travel",
+    "level": "A2",
+    "baseSentence": "I take the subway to the city center.",
+    "shiftType": "tense",
+    "shiftInstruction": "Pasado Simple",
+    "tokens": [
+      { "type": "text", "text": "I " },
+      { "type": "slot", "id": "verb", "label": "Verbo en Pasado", "correct": "took", "options": ["taked", "took", "taken", "taking"] },
+      { "type": "text", "text": " the subway to the city center." }
+    ],
+    "fullCorrect": "I took the subway to the city center.",
+    "translation": "Tomé el metro hacia el centro de la ciudad.",
+    "trapExplanation": "'Take' es un verbo irregular; su forma en pasado simple es 'took'."
+  },
+  {
+    "id": "fs-travel-07",
+    "topic": "travel",
+    "level": "B1",
+    "baseSentence": "The airline lost our checked luggage.",
+    "shiftType": "polarity",
+    "shiftInstruction": "Negativa en Pasado",
+    "tokens": [
+      { "type": "text", "text": "The airline " },
+      { "type": "slot", "id": "aux", "label": "Auxiliar", "correct": "didn't", "options": ["doesn't", "didn't", "wasn't", "won't"] },
+      { "type": "slot", "id": "verb", "label": "Verbo", "correct": "lose", "options": ["lose", "loses", "lost", "losing"] },
+      { "type": "text", "text": " our checked luggage." }
+    ],
+    "fullCorrect": "The airline didn't lose our checked luggage.",
+    "translation": "La aerolínea no perdió nuestro equipaje facturado.",
+    "trapExplanation": "Forma base de 'lost' es 'lose'. Con 'didn't', el verbo vuelve a 'lose'."
+  },
+  {
+    "id": "fs-travel-08",
+    "topic": "travel",
+    "level": "B2",
+    "baseSentence": "You pay tourist tax upon check-in.",
+    "shiftType": "inversion",
+    "shiftInstruction": "Pregunta Directa (Futuro con 'Will')",
+    "tokens": [
+      { "type": "slot", "id": "aux", "label": "Auxiliar", "correct": "Will", "options": ["Do", "Will", "Did", "Shall"] },
+      { "type": "text", "text": " I " },
+      { "type": "slot", "id": "verb", "label": "Verbo", "correct": "pay", "options": ["pay", "pays", "paid", "paying"] },
+      { "type": "text", "text": " tourist tax upon check-in?" }
+    ],
+    "fullCorrect": "Will I pay tourist tax upon check-in?",
+    "translation": "¿Pagaré la tasa turística al registrarme?",
+    "trapExplanation": "Para preguntar en futuro: Will + sujeto + verbo base (pay)."
+  },
+  {
+    "id": "fs-travel-09",
+    "topic": "travel",
+    "level": "B1",
+    "baseSentence": "He showed his passport at the border control.",
+    "shiftType": "inversion",
+    "shiftInstruction": "Pregunta Directa (Pasado)",
+    "tokens": [
+      { "type": "slot", "id": "aux", "label": "Auxiliar", "correct": "Did", "options": ["Does", "Did", "Was", "Do"] },
+      { "type": "text", "text": " he " },
+      { "type": "slot", "id": "verb", "label": "Verbo", "correct": "show", "options": ["show", "shows", "showed", "showing"] },
+      { "type": "text", "text": " his passport at the border control?" }
+    ],
+    "fullCorrect": "Did he show his passport at the border control?",
+    "translation": "¿Mostró él su pasaporte en el control fronterizo?",
+    "trapExplanation": "Con 'Did', el verbo regular 'showed' pierde la terminación -ed y queda 'show'."
+  },
+  {
+    "id": "fs-travel-10",
+    "topic": "travel",
+    "level": "B2",
+    "baseSentence": "The museum opened at nine in the morning.",
+    "shiftType": "wh",
+    "shiftInstruction": "Preguntar con 'When'",
+    "tokens": [
+      { "type": "text", "text": "When " },
+      { "type": "slot", "id": "aux", "label": "Auxiliar", "correct": "did", "options": ["did", "does", "was", "is"] },
+      { "type": "text", "text": " the museum " },
+      { "type": "slot", "id": "verb", "label": "Verbo", "correct": "open", "options": ["open", "opens", "opened", "opening"] },
+      { "type": "text", "text": "?" }
+    ],
+    "fullCorrect": "When did the museum open?",
+    "translation": "¿Cuándo abrió el museo?",
+    "trapExplanation": "Estructura interrogativa en pasado: When + did + the museum + open."
+  },
+
+  {
+    "id": "fs-work-01",
+    "topic": "work",
+    "level": "A2",
+    "baseSentence": "We attended the quarterly budget review.",
+    "shiftType": "polarity",
+    "shiftInstruction": "Negativa en Pasado",
+    "tokens": [
+      { "type": "text", "text": "We " },
+      { "type": "slot", "id": "aux", "label": "Auxiliar", "correct": "didn't", "options": ["don't", "didn't", "weren't", "haven't"] },
+      { "type": "slot", "id": "verb", "label": "Verbo", "correct": "attend", "options": ["attend", "attends", "attended", "attending"] },
+      { "type": "text", "text": " the quarterly budget review." }
+    ],
+    "fullCorrect": "We didn't attend the quarterly budget review.",
+    "translation": "No asistimos a la revisión trimestral del presupuesto.",
+    "trapExplanation": "El verbo 'attended' vuelve a su forma base 'attend' tras el auxiliar negativo 'didn't'."
+  },
+  {
+    "id": "fs-work-02",
+    "topic": "work",
+    "level": "B1",
+    "baseSentence": "She approves vendor invoices every Monday.",
+    "shiftType": "polarity",
+    "shiftInstruction": "Negativa en Presente",
+    "tokens": [
+      { "type": "text", "text": "She " },
+      { "type": "slot", "id": "aux", "label": "Auxiliar", "correct": "doesn't", "options": ["doesn't", "don't", "didn't", "isn't"] },
+      { "type": "slot", "id": "verb", "label": "Verbo", "correct": "approve", "options": ["approve", "approves", "approved", "approving"] },
+      { "type": "text", "text": " vendor invoices every Monday." }
+    ],
+    "fullCorrect": "She doesn't approve vendor invoices every Monday.",
+    "translation": "Ella no aprueba las facturas de proveedores todos los lunes.",
+    "trapExplanation": "Con 'She' en presente negativo se utiliza 'doesn't' y el verbo principal pierde la -s: approve."
+  },
+  {
+    "id": "fs-work-03",
+    "topic": "work",
+    "level": "A2",
+    "baseSentence": "You sent the meeting invite to the client.",
+    "shiftType": "inversion",
+    "shiftInstruction": "Pregunta Directa (Pasado)",
+    "tokens": [
+      { "type": "slot", "id": "aux", "label": "Auxiliar", "correct": "Did", "options": ["Do", "Did", "Have", "Were"] },
+      { "type": "text", "text": " you " },
+      { "type": "slot", "id": "verb", "label": "Verbo", "correct": "send", "options": ["send", "sends", "sent", "sending"] },
+      { "type": "text", "text": " the meeting invite to the client?" }
+    ],
+    "fullCorrect": "Did you send the meeting invite to the client?",
+    "translation": "¿Enviaste la invitación de la reunión al cliente?",
+    "trapExplanation": "El pasado irregular de 'send' es 'sent'. Con 'Did', volvemos a la forma base 'send'."
+  },
+  {
+    "id": "fs-work-04",
+    "topic": "work",
+    "level": "B1",
+    "baseSentence": "The marketing manager agrees with the campaign deadline.",
+    "shiftType": "polarity",
+    "shiftInstruction": "Negativa en Presente",
+    "tokens": [
+      { "type": "text", "text": "The marketing manager " },
+      { "type": "slot", "id": "aux", "label": "Auxiliar", "correct": "doesn't", "options": ["don't", "doesn't", "isn't", "didn't"] },
+      { "type": "slot", "id": "verb", "label": "Verbo", "correct": "agree", "options": ["agree", "agrees", "agreed", "agreeing"] },
+      { "type": "text", "text": " with the campaign deadline." }
+    ],
+    "fullCorrect": "The marketing manager doesn't agree with the campaign deadline.",
+    "translation": "El gerente de marketing no está de acuerdo con la fecha límite de la campaña.",
+    "trapExplanation": "Sujeto singular de tercera persona → 'doesn't' + 'agree' en forma base."
+  },
+  {
+    "id": "fs-work-05",
+    "topic": "work",
+    "level": "B2",
+    "baseSentence": "The project was delayed because of staffing shortages.",
+    "shiftType": "wh",
+    "shiftInstruction": "Preguntar con 'Why'",
+    "tokens": [
+      { "type": "text", "text": "Why " },
+      { "type": "slot", "id": "aux", "label": "Auxiliar", "correct": "was", "options": ["was", "did", "is", "were"] },
+      { "type": "text", "text": " the project " },
+      { "type": "slot", "id": "verb", "label": "Verbo", "correct": "delayed", "options": ["delay", "delays", "delayed", "delaying"] },
+      { "type": "text", "text": "?" }
+    ],
+    "fullCorrect": "Why was the project delayed?",
+    "translation": "¿Por qué se retrasó el proyecto?",
+    "trapExplanation": "En voz pasiva usamos el verbo 'to be' como auxiliar: Why + was + the project + delayed."
+  },
+  {
+    "id": "fs-work-06",
+    "topic": "work",
+    "level": "A2",
+    "baseSentence": "They negotiate the service contract terms.",
+    "shiftType": "tense",
+    "shiftInstruction": "Pasado Simple",
+    "tokens": [
+      { "type": "text", "text": "They " },
+      { "type": "slot", "id": "verb", "label": "Verbo en Pasado", "correct": "negotiated", "options": ["negotiate", "negotiated", "negotiating", "negotiates"] },
+      { "type": "text", "text": " the service contract terms." }
+    ],
+    "fullCorrect": "They negotiated the service contract terms.",
+    "translation": "Ellos negociaron los términos del contrato de servicio.",
+    "trapExplanation": "Verbo regular terminado en 'e': solo agregamos -d para formar el pasado simple: negotiated."
+  },
+  {
+    "id": "fs-work-07",
+    "topic": "work",
+    "level": "B1",
+    "baseSentence": "He speaks directly with the regional director.",
+    "shiftType": "inversion",
+    "shiftInstruction": "Pregunta Directa (Presente)",
+    "tokens": [
+      { "type": "slot", "id": "aux", "label": "Auxiliar", "correct": "Does", "options": ["Do", "Does", "Is", "Did"] },
+      { "type": "text", "text": " he " },
+      { "type": "slot", "id": "verb", "label": "Verbo", "correct": "speak", "options": ["speak", "speaks", "spoke", "speaking"] },
+      { "type": "text", "text": " directly with the regional director?" }
+    ],
+    "fullCorrect": "Does he speak directly with the regional director?",
+    "translation": "¿Habla él directamente con el director regional?",
+    "trapExplanation": "Pregunta en presente con 'he': Does + he + speak (sin -s)."
+  },
+  {
+    "id": "fs-work-08",
+    "topic": "work",
+    "level": "B2",
+    "baseSentence": "The human resources team handles confidential reports.",
+    "shiftType": "tense",
+    "shiftInstruction": "Futuro con 'Will'",
+    "tokens": [
+      { "type": "text", "text": "The HR team " },
+      { "type": "slot", "id": "aux", "label": "Auxiliar", "correct": "will", "options": ["will", "would", "shall", "is"] },
+      { "type": "slot", "id": "verb", "label": "Verbo", "correct": "handle", "options": ["handle", "handles", "handled", "handling"] },
+      { "type": "text", "text": " confidential reports." }
+    ],
+    "fullCorrect": "The HR team will handle confidential reports.",
+    "translation": "El equipo de recursos humanos gestionará los informes confidenciales.",
+    "trapExplanation": "El auxiliar 'will' siempre va con el infinitivo sin to: handle."
+  },
+  {
+    "id": "fs-work-09",
+    "topic": "work",
+    "level": "B1",
+    "baseSentence": "We reached an agreement during the second round.",
+    "shiftType": "polarity",
+    "shiftInstruction": "Negativa en Pasado",
+    "tokens": [
+      { "type": "text", "text": "We " },
+      { "type": "slot", "id": "aux", "label": "Auxiliar", "correct": "didn't", "options": ["don't", "didn't", "weren't", "haven't"] },
+      { "type": "slot", "id": "verb", "label": "Verbo", "correct": "reach", "options": ["reach", "reaches", "reached", "reaching"] },
+      { "type": "text", "text": " an agreement during the second round." }
+    ],
+    "fullCorrect": "We didn't reach an agreement during the second round.",
+    "translation": "No llegamos a un acuerdo durante la segunda ronda.",
+    "trapExplanation": "Con 'didn't', el verbo 'reached' pierde la terminación de pasado: reach."
+  },
+  {
+    "id": "fs-work-10",
+    "topic": "work",
+    "level": "B2",
+    "baseSentence": "The presentation started at ten thirty.",
+    "shiftType": "wh",
+    "shiftInstruction": "Preguntar con 'What time'",
+    "tokens": [
+      { "type": "text", "text": "What time " },
+      { "type": "slot", "id": "aux", "label": "Auxiliar", "correct": "did", "options": ["did", "does", "was", "has"] },
+      { "type": "text", "text": " the presentation " },
+      { "type": "slot", "id": "verb", "label": "Verbo", "correct": "start", "options": ["start", "starts", "started", "starting"] },
+      { "type": "text", "text": "?" }
+    ],
+    "fullCorrect": "What time did the presentation start?",
+    "translation": "¿A qué hora comenzó la presentación?",
+    "trapExplanation": "Pregunta de tiempo en pasado: What time + did + subject + start."
+  }
+]

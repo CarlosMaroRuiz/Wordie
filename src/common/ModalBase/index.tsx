@@ -49,10 +49,10 @@ export function ModalBase({
 
   return (
     <Dialog open={open} onClose={onClose} className="relative z-50">
-      <DialogBackdrop className={MODAL_BACKDROP} />
+      <DialogBackdrop transition className={MODAL_BACKDROP} />
 
       <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-        <DialogPanel className={panelClasses}>
+        <DialogPanel transition className={panelClasses}>
           {/* Encabezado: slot personalizado o header estándar con título y botón cerrar */}
           {headerSlot !== undefined ? (
             headerSlot

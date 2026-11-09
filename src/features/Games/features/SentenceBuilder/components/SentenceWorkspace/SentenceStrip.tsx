@@ -15,16 +15,16 @@ export function SentenceStrip({ placedChips, gameStatus, onRemoveChip }: Sentenc
 
   return (
     <div
-      className={`flex max-h-20 min-h-14 flex-wrap content-start items-center gap-2 overflow-y-auto overscroll-contain rounded-xl border border-dashed p-2.5 transition-colors sm:min-h-20 sm:p-3 lg:max-h-none ${
+      className={`flex min-h-16 max-h-32 flex-wrap content-start items-center gap-2 overflow-y-auto overscroll-contain rounded-2xl border-2 border-dashed p-3 transition-colors sm:min-h-20 sm:max-h-none sm:p-4 ${
         placedChips.length === 0
-          ? 'border-border-subtle/80 bg-bg-page/50'
-          : 'border-primary/30 bg-surface'
+          ? 'border-border-subtle bg-surface-muted/40'
+          : 'border-primary/40 bg-surface shadow-soft'
       }`}
     >
       {placedChips.length === 0 ? (
-        <p className="flex w-full items-center justify-center gap-1.5 px-2 text-center text-[13px] leading-snug text-text-tertiary select-none sm:text-xs">
-          <CursorClick size={16} className="shrink-0" />
-          <span>Toca las palabras de abajo para armar la frase</span>
+        <p className="flex w-full items-center justify-center gap-1.5 px-2 text-center text-[13px] font-semibold leading-snug text-text-tertiary select-none sm:text-xs">
+          <CursorClick size={16} className="shrink-0 text-primary" />
+          <span>Toca las palabras del banco inferior para armar la oración</span>
         </p>
       ) : (
         <AnimatePresence mode="popLayout">

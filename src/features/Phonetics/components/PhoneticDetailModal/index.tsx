@@ -32,7 +32,7 @@ export function PhoneticDetailModal({ item, onClose, onSpeak }: PhoneticDetailMo
     >
       <div className="space-y-4 text-sm">
         <div>
-          <h3 className="font-mono text-[11px] font-bold uppercase tracking-wider text-text-tertiary">
+          <h3 className="text-xs font-bold text-text-secondary">
             Cómo articular el sonido
           </h3>
           <p className="mt-1 leading-relaxed text-text-secondary">{item.description}</p>
@@ -47,7 +47,7 @@ export function PhoneticDetailModal({ item, onClose, onSpeak }: PhoneticDetailMo
         </div>
 
         <div>
-          <h3 className="mb-2 font-mono text-[11px] font-bold uppercase tracking-wider text-text-tertiary">
+          <h3 className="mb-2 text-xs font-bold text-text-secondary">
             Palabras de ejemplo (Clic para escuchar)
           </h3>
           <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">

@@ -8,13 +8,13 @@ export interface GrammarSidebarProps {
   onSelect: (id: string) => void;
 }
 
-export const GrammarSidebar = ({ topics, selectedId, onSelect }: GrammarSidebarProps) => {
+export function GrammarSidebar({ topics, selectedId, onSelect }: GrammarSidebarProps) {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex justify-between items-center px-1">
-        <span className="text-xs font-bold text-text-secondary uppercase tracking-widest">
-          LECCIONES
-        </span>
+        <h3 className="text-sm font-bold text-text-secondary">
+          Lecciones
+        </h3>
         <span className="text-xs font-bold text-primary bg-primary-light px-2 py-0.5 rounded-full">
           {topics.length} temas
         </span>

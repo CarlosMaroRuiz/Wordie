@@ -30,7 +30,7 @@ export function PhrasalVerbFilters({
       </ChipRow>
 
       <div className="flex items-center gap-2">
-        <span className="text-[11px] font-bold uppercase tracking-wider text-text-tertiary">
+        <span className="text-xs font-semibold text-text-secondary">
           Separabilidad:
         </span>
         {SEPARABLE_OPTIONS.map(opt => (

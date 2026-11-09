@@ -18,14 +18,14 @@ export const TOPICS: DropdownOption<TopicValue>[] = [
   },
   {
     value: 'travel',
-    label: 'Travel',
+    label: 'Viajes',
     description: 'Situaciones y vocabulario de viaje',
     keywords: ['viaje', 'viajar', 'trip', 'airport', 'hotel'],
     icon: AirplaneTiltIcon,
   },
   {
     value: 'work',
-    label: 'Work',
+    label: 'Trabajo',
     description: 'Oficina, reuniones y comunicación',
     keywords: ['oficina', 'office', 'reunion', 'meeting', 'trabajo'],
     icon: BriefcaseIcon,

@@ -6,14 +6,14 @@ export function WordBank({ availableChips, gameStatus, onPlaceChip }: WordBankPr
   const isCorrect = gameStatus === 'correct'
 
   return (
-    <div className="flex flex-col gap-2 rounded-2xl border border-border-subtle bg-surface/60 p-2.5 shadow-xs sm:p-4">
-      <span className="text-[10px] font-semibold uppercase tracking-wider text-text-tertiary sm:text-xs">
+    <div className="flex flex-col gap-2 rounded-[24px] border border-border-subtle bg-surface/90 p-3 shadow-soft sm:p-4">
+      <span className="text-xs font-bold text-text-secondary">
         Banco de palabras
       </span>
 
-      <div className="flex max-h-24 min-h-12 flex-wrap items-center gap-2 overflow-y-auto overscroll-contain lg:max-h-none">
+      <div className="flex min-h-14 max-h-36 flex-wrap items-center gap-2 overflow-y-auto overscroll-contain sm:min-h-16 lg:max-h-none">
         {availableChips.length === 0 ? (
-          <p className="text-xs italic text-text-tertiary select-none">
+          <p className="text-xs italic font-semibold text-text-tertiary select-none">
             Todas las palabras han sido colocadas en la oración.
           </p>
         ) : (

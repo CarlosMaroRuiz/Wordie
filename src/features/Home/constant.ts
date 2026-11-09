@@ -30,57 +30,55 @@ export const HOME_COPY = {
   phraseEmpty: 'Frase no disponible.',
   libraryTitle: 'En la biblioteca',
   libraryHint: 'Contenido del tema activo.',
-  storyTitle: 'Lectura del día',
-  storyHint: 'Una historia corta, con glosario y quiz.',
-  storyLevel: 'Nivel',
-  storyReading: 'Leer ahora',
-  storyEmpty: 'Lectura no disponible.',
-  storyError: 'No se pudo cargar la lectura.',
 } as const
 
 export const HOME_MODULES = [
   {
-    id: 'grammar',
-    index: '01',
-    to: PATHS.Grammar,
-    title: 'Gramática',
-    description: 'Estructuras de A1 a B1 con ejemplos de desarrollo, viajes y trabajo.',
-    icon: BookOpenIcon,
-    accent: 'bg-primary-light text-primary',
-    bar: 'bg-primary',
-    featured: false,
-  },
-  {
     id: 'vocabulary',
-    index: '02',
     to: PATHS.Vocabulary,
     title: 'Vocabulario',
-    description: 'Palabras por tema con repaso espaciado Leitner.',
+    description: 'Palabras por tema con repaso espaciado Leitner y pronunciación nativa.',
     icon: CardsIcon,
     accent: 'bg-primary-light text-primary',
     bar: 'bg-primary',
+    badge: 'Sistema Leitner',
+    format: '5 Cajas de Repaso',
     featured: true,
   },
   {
+    id: 'grammar',
+    to: PATHS.Grammar,
+    title: 'Gramática',
+    description: 'Estructuras de A1 a B1 con fórmulas claras y ejemplos contextuales.',
+    icon: BookOpenIcon,
+    accent: 'bg-primary-light text-primary',
+    bar: 'bg-primary',
+    badge: 'Niveles A1 · B1',
+    format: 'Fórmulas & Reglas',
+    featured: false,
+  },
+  {
     id: 'stories',
-    index: '03',
     to: PATHS.Stories,
     title: 'Lectura',
-    description: 'Historias cortas con glosario y quiz comprensivo.',
+    description: 'Historias cortas con glosario interactivo, audio en vivo y quiz comprensivo.',
     icon: CoffeeIcon,
     accent: 'bg-primary-light text-primary',
     bar: 'bg-primary',
+    badge: 'Comprensión',
+    format: 'Glosario & Quiz',
     featured: false,
   },
   {
     id: 'phrases',
-    index: '04',
     to: PATHS.Phrases,
     title: 'Frases',
-    description: 'Plantillas para reuniones, viajes, oficina y tecnología.',
+    description: 'Plantillas prácticas para reuniones, viajes, oficina y tecnología diaria.',
     icon: ChatCircleIcon,
     accent: 'bg-primary-light text-primary',
     bar: 'bg-primary',
+    badge: 'Expresiones Clave',
+    format: 'Dev & Situacional',
     featured: false,
   },
 ] as const satisfies readonly HomeModule[]
@@ -93,28 +91,23 @@ export const LIBRARY_ITEMS = [
 ] as const satisfies readonly { key: keyof HomeCounts; label: string }[]
 
 export const HOME_SECTION = 'flex flex-col gap-4'
-export const HOME_SECTION_HEAD = 'flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1'
-export const HOME_SECTION_TITLE = 'text-xl font-extrabold tracking-tight text-text-main sm:text-2xl'
-export const HOME_SECTION_HINT = 'text-sm text-text-secondary'
+export const HOME_SECTION_HEAD = 'flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 px-1'
+export const HOME_SECTION_TITLE = 'text-xl font-black tracking-tight text-text-main sm:text-2xl'
+export const HOME_SECTION_HINT = 'text-xs sm:text-sm text-text-secondary'
 export const HOME_GRID = 'grid gap-5 md:grid-cols-2 lg:grid-cols-12'
 export const HOME_SPAN_7 = 'lg:col-span-7'
 export const HOME_SPAN_5 = 'lg:col-span-5'
 export const HOME_CARD = 'flex h-full flex-col gap-4'
-export const HOME_LABEL =
-  'font-mono text-[9px] font-medium uppercase tracking-[0.12em] text-text-secondary sm:text-[10px] sm:tracking-[0.16em]'
-export const HOME_VALUE = 'mt-1 text-2xl font-extrabold tabular-nums text-text-main'
+export const HOME_LABEL = 'text-xs font-bold text-text-secondary'
+export const HOME_VALUE = 'mt-1 text-2xl font-black tabular-nums text-text-main'
 export const HOME_PILL =
-  'inline-flex shrink-0 items-center rounded-full border border-border-subtle bg-bg-page px-2.5 py-1 font-mono text-[10px] font-medium uppercase tracking-[0.12em] text-text-secondary'
+  'inline-flex shrink-0 items-center rounded-full border border-border-subtle bg-surface px-3 py-1 text-xs font-bold text-text-secondary shadow-soft'
 export const HOME_SKELETON =
-  'animate-pulse rounded-xl bg-border-subtle/70 motion-reduce:animate-none'
+  'animate-pulse rounded-2xl bg-border-subtle/70 motion-reduce:animate-none'
 
 export const REVIEW_LIMIT = 3
 export const COPY_RESET_MS = 2000
 export const IDLE_TIMEOUT_MS = 1200
-export const STORY_EXCERPT_LENGTH = 150
-
-export const STORY_COVER_BASE = '/img/lectura'
-export const STORY_SIZES = '(min-width: 1280px) 719px, (min-width: 1024px) 56vw, 92vw'
 
 /** Semilla estable por carga: rota la frase del día sin leer el reloj en render. */
 export const DAY_SEED = Math.floor(Date.now() / 86_400_000)

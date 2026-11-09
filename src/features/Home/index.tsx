@@ -7,7 +7,6 @@ import { ModuleGrid } from './components/ModuleGrid'
 import { PhraseOfDayCard } from './components/PhraseOfDayCard'
 import { ReviewWordsCard } from './components/ReviewWordsCard'
 import { SectionHead } from './components/SectionHead'
-import { StoryOfDayCard } from './components/StoryOfDayCard'
 import { VocabProgressCard } from './components/VocabProgressCard'
 import {
   HOME_COPY,
@@ -22,7 +21,7 @@ export default function Home() {
   const navigate = useNavigate()
   const startTour = useTourStore(state => state.start)
   const tourSeen = useTourStore(state => state.seen)
-  const { counts, vocab, reviewWords, phrase, story, topicLabel, isLoading, error } = useHomeStats()
+  const { counts, vocab, reviewWords, phrase, topicLabel, isLoading, error } = useHomeStats()
 
   return (
     <div className="flex flex-col gap-10 pb-14 pt-4 sm:gap-14 sm:pt-8">
@@ -30,6 +29,7 @@ export default function Home() {
       <HomeHero
         tourSeen={tourSeen}
         counts={counts}
+        topicLabel={topicLabel}
         onStart={() => navigate(PATHS.Vocabulary)}
         onStartTour={startTour}
       />
@@ -82,20 +82,6 @@ export default function Home() {
             hasError={error.counts}
           />
         </div>
-      </section>
-
-      {/* Story of the Day Section */}
-      <section aria-labelledby="home-story-section" className={HOME_SECTION}>
-        <SectionHead
-          id="home-story-section"
-          title={HOME_COPY.storyTitle}
-          hint={HOME_COPY.storyHint}
-        />
-        <StoryOfDayCard
-          story={story}
-          isLoading={isLoading.counts}
-          hasError={error.counts}
-        />
       </section>
     </div>
   )

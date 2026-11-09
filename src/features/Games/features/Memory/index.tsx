@@ -1,12 +1,12 @@
 import { useState } from 'react'
+import { BrainIcon } from '@phosphor-icons/react'
 import { AsyncBoundary } from '@common/components/AsyncBoundary'
 import { HelpModalDialog } from '@common/components/FloatingHelpButton'
-import { GameActionBar } from '@features/Games/components/GameActionBar'
-import { GameBackButton } from '@features/Games/components/GameBackButton'
+import { formatSeconds } from '@common/utils/formatTime'
+import { GameIntroModal } from '@features/Games/components/GameIntroModal'
+import { GameProgressHUD } from '@features/Games/components/GameProgressHUD'
+import { GameResultModal } from '@features/Games/components/GameResultModal'
 import { MemoryCard } from './components/MemoryCard'
-import { MemoryHeader } from './components/MemoryHeader'
-import { MemoryStats } from './components/MemoryStats'
-import { MemoryWinModal } from './components/MemoryWinModal'
 import { useMemoryGame } from './hooks/useMemoryGame'
 
 const MEMORY_TIPS = (
@@ -32,6 +32,7 @@ const MEMORY_TIPS = (
 
 export default function MemoryGameModule() {
   const [isHelpOpen, setIsHelpOpen] = useState(false)
+  const [isIntroOpen, setIsIntroOpen] = useState(true)
   const {
     cards,
     moves,
@@ -53,42 +54,67 @@ export default function MemoryGameModule() {
       onRetry={refetch}
       errorTitle="Error al cargar el memorama"
     >
-      <div className="mx-auto flex max-w-5xl flex-col gap-3 p-2 pb-24 sm:gap-6 sm:p-6 lg:p-8 lg:pb-8">
-        <MemoryHeader onRestart={restart} onOpenHelp={() => setIsHelpOpen(true)} />
-
-        <MemoryStats
-          moves={moves}
-          matches={matches}
-          totalPairs={totalPairs}
-          seconds={seconds}
+      <div className="mx-auto flex h-[100dvh] w-full max-w-4xl flex-col justify-between overflow-hidden bg-bg-page select-none sm:h-auto sm:min-h-[85vh] sm:p-4">
+        {/* ZONA 1: Top HUD Duolingo */}
+        <GameProgressHUD
+          currentRound={matches}
+          totalRounds={totalPairs}
+          elapsedSeconds={seconds}
+          streak={moves > 0 ? moves : undefined}
+          onOpenHelp={() => setIsHelpOpen(true)}
         />
 
-        <div className="grid grid-cols-4 gap-1.5 sm:gap-4">
-          {cards.map((card, index) => (
-            <MemoryCard key={card.uid} card={card} onClick={() => flipCard(index)} />
-          ))}
+        <GameIntroModal
+          open={isIntroOpen}
+          onAccept={() => setIsIntroOpen(false)}
+          icon={<BrainIcon size={34} weight="duotone" />}
+          title="Memorama de Vocabulario"
+          description="Encuentra el par correcto entre la palabra en inglés y su traducción al español."
+          steps={[
+            'Voltea dos cartas por turno.',
+            'Si forman pareja, se quedan boca arriba.',
+            'Completa todos los pares con los menos intentos posible.',
+          ]}
+          note="Modo Enfoque Zero-Scroll: pantalla completa, cartas al alcance sin scroll."
+        />
+
+        {/* ZONA 2: Play Canvas Central con la cuadrícula 4x4 de cartas */}
+        <div className="flex min-h-0 flex-1 flex-col justify-center overflow-y-auto px-2 py-1.5 sm:overflow-visible sm:px-4 sm:py-3">
+          <div className="grid grid-cols-4 gap-1.5 sm:gap-3.5">
+            {cards.map((card, index) => (
+              <MemoryCard key={card.uid} card={card} onClick={() => flipCard(index)} />
+            ))}
+          </div>
         </div>
 
-        <MemoryWinModal
-          isOpen={isWon}
-          moves={moves}
-          seconds={seconds}
+        {/* ZONA 3: Bottom Status Bar */}
+        <div className="shrink-0 border-t border-border-subtle bg-bg-page px-3.5 py-2 pb-[calc(0.5rem+env(safe-area-inset-bottom,0px))] text-center text-xs font-semibold text-text-tertiary sm:px-4">
+          <span>Intentos: <strong className="text-text-main">{moves}</strong></span>
+          <span className="mx-2">•</span>
+          <span>Pares restantes: <strong className="text-text-main">{totalPairs - matches}</strong></span>
+        </div>
+
+        <GameResultModal
+          open={isWon}
+          title="¡Completado con Éxito!"
+          subtitle="Encontraste todos los pares de vocabulario correctamente."
+          metrics={[
+            { label: 'Intentos', value: moves },
+            { label: 'Tiempo Total', value: formatSeconds(seconds) },
+          ]}
           onPlayAgain={restart}
+          playAgainLabel="Jugar otra vez"
         />
 
         <HelpModalDialog
           isOpen={isHelpOpen}
           onClose={() => setIsHelpOpen(false)}
           title="Consejos para el Memorama"
-          subtitle="ESTRATEGIA COGNITIVA"
+          subtitle="Estrategia cognitiva"
           closeLabel="¡Entendido, a jugar!"
         >
           {MEMORY_TIPS}
         </HelpModalDialog>
-
-        <GameActionBar className="max-w-5xl">
-          <GameBackButton />
-        </GameActionBar>
       </div>
     </AsyncBoundary>
   )

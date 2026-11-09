@@ -12,10 +12,10 @@ export function QuizQuestion({
   return (
     <div className="flex flex-col gap-2.5">
       <div className="flex items-start gap-2">
-        <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-xs font-bold text-primary">
+        <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-xs font-black text-primary">
           {questionIndex + 1}
         </span>
-        <p className="font-semibold text-sm text-text-main leading-snug">
+        <p className="font-bold text-sm text-text-main leading-snug">
           {question.question}
         </p>
       </div>
@@ -28,11 +28,11 @@ export function QuizQuestion({
           let optionStyle = 'border-border-subtle bg-surface text-text-main hover:border-primary/60'
           if (isAnswered) {
             if (isSelected && isCorrect) {
-              optionStyle = 'border-success bg-success/15 text-text-main font-bold'
+              optionStyle = 'border-success bg-success-light text-text-main font-bold shadow-soft'
             } else if (isSelected && !isCorrect) {
-              optionStyle = 'border-error bg-error/15 text-text-main font-bold'
+              optionStyle = 'border-error bg-error-light text-text-main font-bold shadow-soft'
             } else if (isCorrect) {
-              optionStyle = 'border-success/60 bg-success/5 text-text-main'
+              optionStyle = 'border-success/60 bg-success-light/60 text-text-main'
             } else {
               optionStyle = 'border-border-subtle/60 bg-surface text-text-secondary opacity-60'
             }
@@ -44,15 +44,15 @@ export function QuizQuestion({
               type="button"
               disabled={isAnswered}
               onClick={() => onSelectAnswer(question.id, optIdx)}
-              className={`flex w-full items-center justify-between rounded-xl border px-3.5 py-2.5 text-left text-xs sm:text-sm transition-colors cursor-pointer disabled:cursor-default ${optionStyle}`}
+              className={`flex min-h-[44px] w-full items-center justify-between rounded-2xl border px-4 py-3 text-left text-xs sm:text-sm font-semibold transition-all cursor-pointer disabled:cursor-default ${optionStyle}`}
             >
               <span>{option}</span>
               {isAnswered && isSelected && (
                 <span className="ml-2 shrink-0">
                   {isCorrect ? (
-                    <Check size={16} weight="bold" className="text-success" />
+                    <Check size={18} weight="bold" className="text-success" />
                   ) : (
-                    <X size={16} weight="bold" className="text-error" />
+                    <X size={18} weight="bold" className="text-error" />
                   )}
                 </span>
               )}
@@ -62,7 +62,7 @@ export function QuizQuestion({
       </div>
 
       {isAnswered && (
-        <p className="rounded-lg bg-bg-page px-3 py-2 text-xs text-text-secondary">
+        <p className="rounded-2xl border border-border-subtle bg-surface-muted/60 p-3 text-xs leading-relaxed text-text-secondary">
           <span className="font-bold text-text-main">Explicación: </span>
           {question.explanation}
         </p>

@@ -110,7 +110,7 @@ export function StoryParagraphs({
             key={pIdx}
             className={`my-4 transition-all duration-300 rounded-2xl ${
               isCurrentParagraph
-                ? 'bg-primary/8 border-l-4 border-primary p-4 -ml-4 shadow-xs'
+                ? 'bg-primary-light/60 border border-primary/25 p-4 -mx-3 shadow-soft'
                 : isNarrating
                   ? 'opacity-55 p-1'
                   : 'p-1'

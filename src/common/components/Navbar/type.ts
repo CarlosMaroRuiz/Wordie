@@ -5,7 +5,7 @@ export type NavItem = {
   key: string
   to: string
   label: string
-  icon: ComponentType<{ size?: number | string }>
+  icon: ComponentType<{ size?: number | string; weight?: 'bold' | 'duotone' | 'fill' | 'light' | 'regular' | 'thin' }>
   tour?: string
 }
 

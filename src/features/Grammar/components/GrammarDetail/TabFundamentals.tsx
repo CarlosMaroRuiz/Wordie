@@ -9,7 +9,7 @@ interface Props {
   itemVariants: Variants;
 }
 
-export const TabFundamentals = ({ topic, containerVariants, itemVariants }: Props) => {
+export function TabFundamentals({ topic, containerVariants, itemVariants }: Props) {
   return (
     <motion.div key={`fundamentos-${topic.id}`} variants={containerVariants} initial="hidden" animate="show" className="flex flex-col gap-8">
       <motion.div variants={itemVariants}>
@@ -24,9 +24,9 @@ export const TabFundamentals = ({ topic, containerVariants, itemVariants }: Prop
       </motion.div>
 
       <motion.div variants={itemVariants}>
-        <span className="block text-xs font-bold text-text-secondary uppercase tracking-widest mb-3">
-          EJEMPLOS EN CONTEXTO
-        </span>
+        <h3 className="mb-3 text-sm font-bold text-text-secondary">
+          Ejemplos en contexto
+        </h3>
         {topic.examples.map((ex, index) => <Example key={index} en={ex.en} es={ex.es} />)}
       </motion.div>
     </motion.div>

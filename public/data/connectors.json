@@ -1,0 +1,677 @@
+[
+  {
+    "id": "gear-dev-1",
+    "topic": "dev",
+    "level": "B2",
+    "register": "formal",
+    "opening": "The team spent two weeks writing tests.",
+    "seams": [
+      {
+        "relation": "concession",
+        "answer": "Although",
+        "rest": "the coverage barely improved, they changed the strategy.",
+        "options": [
+          { "text": "Although", "relation": "concession", "pattern": "clause", "trap": null },
+          { "text": "However,", "relation": "contrast", "pattern": "clause", "trap": "patrón" },
+          { "text": "Moreover,", "relation": "addition", "pattern": "clause", "trap": "relación" },
+          { "text": "Despite", "relation": "concession", "pattern": "noun", "trap": "patrón" }
+        ],
+        "explanation": "«Although» y «despite» expresan lo mismo, pero solo «although» acepta una cláusula con sujeto y verbo."
+      },
+      {
+        "relation": "consequence",
+        "answer": "As a result,",
+        "rest": "they reduced the scope of the release.",
+        "options": [
+          { "text": "As a result,", "relation": "consequence", "pattern": "clause", "trap": null },
+          { "text": "For example,", "relation": "example", "pattern": "clause", "trap": "relación" },
+          { "text": "Because", "relation": "cause", "pattern": "clause", "trap": "patrón" },
+          { "text": "In contrast,", "relation": "contrast", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "Reducir el alcance es la consecuencia de lo anterior; «because» invertiría causa y efecto."
+      },
+      {
+        "relation": "addition",
+        "answer": "In addition,",
+        "rest": "they scheduled a review for Friday.",
+        "options": [
+          { "text": "In addition,", "relation": "addition", "pattern": "clause", "trap": null },
+          { "text": "Nevertheless,", "relation": "contrast", "pattern": "clause", "trap": "relación" },
+          { "text": "Such as", "relation": "example", "pattern": "noun", "trap": "patrón" },
+          { "text": "Therefore,", "relation": "consequence", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "Suma otra medida del mismo plan; «nevertheless» marcaría oposición."
+      }
+    ]
+  },
+  {
+    "id": "gear-dev-2",
+    "topic": "dev",
+    "level": "B1",
+    "register": "formal",
+    "opening": "The pull request was small.",
+    "seams": [
+      {
+        "relation": "cause",
+        "answer": "Because",
+        "rest": "it touched only one file, the review took ten minutes.",
+        "options": [
+          { "text": "Because", "relation": "cause", "pattern": "clause", "trap": null },
+          { "text": "Despite", "relation": "concession", "pattern": "noun", "trap": "patrón" },
+          { "text": "Therefore,", "relation": "consequence", "pattern": "clause", "trap": "relación" },
+          { "text": "Meanwhile,", "relation": "sequence", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "«Because» introduce la causa; «despite» pediría un sustantivo o un gerundio."
+      },
+      {
+        "relation": "concession",
+        "answer": "Even though",
+        "rest": "the change was tiny, it broke the build.",
+        "options": [
+          { "text": "Even though", "relation": "concession", "pattern": "clause", "trap": null },
+          { "text": "In addition,", "relation": "addition", "pattern": "clause", "trap": "relación" },
+          { "text": "Due to", "relation": "cause", "pattern": "noun", "trap": "patrón" },
+          { "text": "So", "relation": "consequence", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "Contrasta lo esperado con lo que pasó; «due to» no puede ir seguido de una cláusula."
+      },
+      {
+        "relation": "consequence",
+        "answer": "Consequently,",
+        "rest": "we added the missing test the same afternoon.",
+        "options": [
+          { "text": "Consequently,", "relation": "consequence", "pattern": "clause", "trap": null },
+          { "text": "For instance,", "relation": "example", "pattern": "clause", "trap": "relación" },
+          { "text": "However,", "relation": "contrast", "pattern": "clause", "trap": "relación" },
+          { "text": "Unless", "relation": "condition", "pattern": "clause", "trap": "patrón" }
+        ],
+        "explanation": "La prueba extra es la consecuencia del fallo anterior."
+      }
+    ]
+  },
+  {
+    "id": "gear-dev-3",
+    "topic": "dev",
+    "level": "B2",
+    "register": "formal",
+    "opening": "The database replica lagged for twenty minutes.",
+    "seams": [
+      {
+        "relation": "consequence",
+        "answer": "As a result,",
+        "rest": "some users saw stale data.",
+        "options": [
+          { "text": "As a result,", "relation": "consequence", "pattern": "clause", "trap": null },
+          { "text": "Moreover,", "relation": "addition", "pattern": "clause", "trap": "relación" },
+          { "text": "Even though", "relation": "concession", "pattern": "clause", "trap": "patrón" },
+          { "text": "On the other hand,", "relation": "contrast", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "Los datos viejos son el efecto directo del retraso."
+      },
+      {
+        "relation": "contrast",
+        "answer": "However,",
+        "rest": "the backups stayed consistent throughout the incident.",
+        "options": [
+          { "text": "However,", "relation": "contrast", "pattern": "clause", "trap": null },
+          { "text": "Therefore,", "relation": "consequence", "pattern": "clause", "trap": "relación" },
+          { "text": "Because", "relation": "cause", "pattern": "clause", "trap": "patrón" },
+          { "text": "In addition,", "relation": "addition", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "El dato positivo contrasta con el problema anterior."
+      },
+      {
+        "relation": "sequence",
+        "answer": "Afterwards,",
+        "rest": "we documented the recovery steps.",
+        "options": [
+          { "text": "Afterwards,", "relation": "sequence", "pattern": "clause", "trap": null },
+          { "text": "Nevertheless,", "relation": "contrast", "pattern": "clause", "trap": "relación" },
+          { "text": "Such as", "relation": "example", "pattern": "noun", "trap": "patrón" },
+          { "text": "Unless", "relation": "condition", "pattern": "clause", "trap": "patrón" }
+        ],
+        "explanation": "Marca el paso siguiente en el tiempo, no una objeción."
+      }
+    ]
+  },
+  {
+    "id": "gear-travel-1",
+    "topic": "travel",
+    "level": "B1",
+    "register": "neutral",
+    "opening": "Our flight was delayed by three hours.",
+    "seams": [
+      {
+        "relation": "consequence",
+        "answer": "As a result,",
+        "rest": "we missed the last train to the city.",
+        "options": [
+          { "text": "As a result,", "relation": "consequence", "pattern": "clause", "trap": null },
+          { "text": "For example,", "relation": "example", "pattern": "clause", "trap": "relación" },
+          { "text": "Although", "relation": "concession", "pattern": "clause", "trap": "patrón" },
+          { "text": "Besides,", "relation": "addition", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "Perder el tren es la consecuencia directa del retraso."
+      },
+      {
+        "relation": "concession",
+        "answer": "Even though",
+        "rest": "the airline offered a hotel, we decided to wait at the airport.",
+        "options": [
+          { "text": "Even though", "relation": "concession", "pattern": "clause", "trap": null },
+          { "text": "Because of", "relation": "cause", "pattern": "noun", "trap": "patrón" },
+          { "text": "Therefore,", "relation": "consequence", "pattern": "clause", "trap": "relación" },
+          { "text": "In addition,", "relation": "addition", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "Concede un hecho que no cambia la decisión; «because of» exige sustantivo."
+      },
+      {
+        "relation": "condition",
+        "answer": "Otherwise,",
+        "rest": "we would have spent the night in the terminal.",
+        "options": [
+          { "text": "Otherwise,", "relation": "condition", "pattern": "clause", "trap": null },
+          { "text": "Moreover,", "relation": "addition", "pattern": "clause", "trap": "relación" },
+          { "text": "Despite", "relation": "concession", "pattern": "noun", "trap": "patrón" },
+          { "text": "Similarly,", "relation": "addition", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "«Otherwise» plantea qué habría pasado sin la decisión anterior."
+      }
+    ]
+  },
+  {
+    "id": "gear-travel-2",
+    "topic": "travel",
+    "level": "A2",
+    "register": "neutral",
+    "opening": "The room was clean and quiet.",
+    "seams": [
+      {
+        "relation": "contrast",
+        "answer": "However,",
+        "rest": "the Wi-Fi did not work for two days.",
+        "options": [
+          { "text": "However,", "relation": "contrast", "pattern": "clause", "trap": null },
+          { "text": "Therefore,", "relation": "consequence", "pattern": "clause", "trap": "relación" },
+          { "text": "Such as", "relation": "example", "pattern": "noun", "trap": "patrón" },
+          { "text": "Moreover,", "relation": "addition", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "El fallo del Wi-Fi contrasta con lo bueno de la habitación."
+      },
+      {
+        "relation": "cause",
+        "answer": "Because",
+        "rest": "the Wi-Fi was down, I could not attend the meeting.",
+        "options": [
+          { "text": "Because", "relation": "cause", "pattern": "clause", "trap": null },
+          { "text": "Despite", "relation": "concession", "pattern": "noun", "trap": "patrón" },
+          { "text": "Consequently,", "relation": "consequence", "pattern": "clause", "trap": "relación" },
+          { "text": "In addition,", "relation": "addition", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "La caída del Wi-Fi es la causa de no poder asistir."
+      },
+      {
+        "relation": "addition",
+        "answer": "Moreover,",
+        "rest": "the staff never answered the phone.",
+        "options": [
+          { "text": "Moreover,", "relation": "addition", "pattern": "clause", "trap": null },
+          { "text": "Nevertheless,", "relation": "contrast", "pattern": "clause", "trap": "relación" },
+          { "text": "Unless", "relation": "condition", "pattern": "clause", "trap": "patrón" },
+          { "text": "For example,", "relation": "example", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "Suma otra queja a la anterior."
+      }
+    ]
+  },
+  {
+    "id": "gear-travel-3",
+    "topic": "travel",
+    "level": "B2",
+    "register": "neutral",
+    "opening": "We compared three airlines and two dates.",
+    "seams": [
+      {
+        "relation": "sequence",
+        "answer": "Then,",
+        "rest": "we booked the cheapest option with a flexible fare.",
+        "options": [
+          { "text": "Then,", "relation": "sequence", "pattern": "clause", "trap": null },
+          { "text": "However,", "relation": "contrast", "pattern": "clause", "trap": "relación" },
+          { "text": "Due to", "relation": "cause", "pattern": "noun", "trap": "patrón" },
+          { "text": "For instance,", "relation": "example", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "Describe el paso siguiente del proceso de compra."
+      },
+      {
+        "relation": "concession",
+        "answer": "Although",
+        "rest": "the fare was low, the layover lasted six hours.",
+        "options": [
+          { "text": "Although", "relation": "concession", "pattern": "clause", "trap": null },
+          { "text": "Despite", "relation": "concession", "pattern": "noun", "trap": "patrón" },
+          { "text": "Therefore,", "relation": "consequence", "pattern": "clause", "trap": "relación" },
+          { "text": "In addition,", "relation": "addition", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "«Although» + cláusula; con «despite» sería «despite the low fare»."
+      },
+      {
+        "relation": "consequence",
+        "answer": "Consequently,",
+        "rest": "we arrived exhausted but on time.",
+        "options": [
+          { "text": "Consequently,", "relation": "consequence", "pattern": "clause", "trap": null },
+          { "text": "For example,", "relation": "example", "pattern": "clause", "trap": "relación" },
+          { "text": "Even if", "relation": "condition", "pattern": "clause", "trap": "patrón" },
+          { "text": "Besides,", "relation": "addition", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "El cansancio es el resultado de la escala larga."
+      }
+    ]
+  },
+  {
+    "id": "gear-work-1",
+    "topic": "work",
+    "level": "B1",
+    "register": "formal",
+    "opening": "The client moved the deadline forward by a week.",
+    "seams": [
+      {
+        "relation": "consequence",
+        "answer": "Therefore,",
+        "rest": "the team had to drop two features from the sprint.",
+        "options": [
+          { "text": "Therefore,", "relation": "consequence", "pattern": "clause", "trap": null },
+          { "text": "In contrast,", "relation": "contrast", "pattern": "clause", "trap": "relación" },
+          { "text": "Despite", "relation": "concession", "pattern": "noun", "trap": "patrón" },
+          { "text": "For instance,", "relation": "example", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "Recortar funciones es la consecuencia del cambio de fecha."
+      },
+      {
+        "relation": "contrast",
+        "answer": "Nevertheless,",
+        "rest": "we delivered the core functionality on time.",
+        "options": [
+          { "text": "Nevertheless,", "relation": "contrast", "pattern": "clause", "trap": null },
+          { "text": "Because", "relation": "cause", "pattern": "clause", "trap": "patrón" },
+          { "text": "Moreover,", "relation": "addition", "pattern": "clause", "trap": "relación" },
+          { "text": "Such as", "relation": "example", "pattern": "noun", "trap": "patrón" }
+        ],
+        "explanation": "«Nevertheless» introduce un resultado que sorprende frente a la dificultad."
+      },
+      {
+        "relation": "addition",
+        "answer": "Furthermore,",
+        "rest": "the client asked for a second deadline on the next release.",
+        "options": [
+          { "text": "Furthermore,", "relation": "addition", "pattern": "clause", "trap": null },
+          { "text": "However,", "relation": "contrast", "pattern": "clause", "trap": "relación" },
+          { "text": "Unless", "relation": "condition", "pattern": "clause", "trap": "patrón" },
+          { "text": "In contrast,", "relation": "contrast", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "Añade otra petición del cliente a la lista."
+      }
+    ]
+  },
+  {
+    "id": "gear-work-2",
+    "topic": "work",
+    "level": "B2",
+    "register": "formal",
+    "opening": "Nobody had read the agenda before the meeting.",
+    "seams": [
+      {
+        "relation": "consequence",
+        "answer": "As a result,",
+        "rest": "the first thirty minutes were wasted on clarifications.",
+        "options": [
+          { "text": "As a result,", "relation": "consequence", "pattern": "clause", "trap": null },
+          { "text": "For example,", "relation": "example", "pattern": "clause", "trap": "relación" },
+          { "text": "Although", "relation": "concession", "pattern": "clause", "trap": "patrón" },
+          { "text": "Similarly,", "relation": "addition", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "La pérdida de tiempo es el efecto de no leer la agenda."
+      },
+      {
+        "relation": "condition",
+        "answer": "Unless",
+        "rest": "we share the document in advance, this will happen again.",
+        "options": [
+          { "text": "Unless", "relation": "condition", "pattern": "clause", "trap": null },
+          { "text": "Despite", "relation": "concession", "pattern": "noun", "trap": "patrón" },
+          { "text": "Therefore,", "relation": "consequence", "pattern": "clause", "trap": "relación" },
+          { "text": "Moreover,", "relation": "addition", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "«Unless» plantea la condición para evitar que se repita."
+      },
+      {
+        "relation": "addition",
+        "answer": "In addition,",
+        "rest": "we agreed to keep the agenda to three points.",
+        "options": [
+          { "text": "In addition,", "relation": "addition", "pattern": "clause", "trap": null },
+          { "text": "Nevertheless,", "relation": "contrast", "pattern": "clause", "trap": "relación" },
+          { "text": "Because", "relation": "cause", "pattern": "clause", "trap": "patrón" },
+          { "text": "For instance,", "relation": "example", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "Suma una segunda medida al acuerdo."
+      }
+    ]
+  },
+  {
+    "id": "gear-work-3",
+    "topic": "work",
+    "level": "A2",
+    "register": "formal",
+    "opening": "I have reviewed the invoice you sent.",
+    "seams": [
+      {
+        "relation": "contrast",
+        "answer": "However,",
+        "rest": "two items do not match the original quote.",
+        "options": [
+          { "text": "However,", "relation": "contrast", "pattern": "clause", "trap": null },
+          { "text": "Therefore,", "relation": "consequence", "pattern": "clause", "trap": "relación" },
+          { "text": "Such as", "relation": "example", "pattern": "noun", "trap": "patrón" },
+          { "text": "Moreover,", "relation": "addition", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "El desajuste contrasta con la revisión ya hecha."
+      },
+      {
+        "relation": "example",
+        "answer": "For example,",
+        "rest": "the hosting fee is duplicated in line four.",
+        "options": [
+          { "text": "For example,", "relation": "example", "pattern": "clause", "trap": null },
+          { "text": "Nevertheless,", "relation": "contrast", "pattern": "clause", "trap": "relación" },
+          { "text": "Despite", "relation": "concession", "pattern": "noun", "trap": "patrón" },
+          { "text": "In addition,", "relation": "addition", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "Concreta con un caso lo dicho en la frase anterior."
+      },
+      {
+        "relation": "consequence",
+        "answer": "Therefore,",
+        "rest": "I would appreciate a corrected version before Friday.",
+        "options": [
+          { "text": "Therefore,", "relation": "consequence", "pattern": "clause", "trap": null },
+          { "text": "For instance,", "relation": "example", "pattern": "clause", "trap": "relación" },
+          { "text": "Even though", "relation": "concession", "pattern": "clause", "trap": "patrón" },
+          { "text": "Similarly,", "relation": "addition", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "La petición es la consecuencia de los errores encontrados."
+      }
+    ]
+  },
+{
+    "id": "gear-dev-4",
+    "topic": "dev",
+    "level": "B2",
+    "register": "formal",
+    "opening": "The legacy module had no tests at all.",
+    "seams": [
+      {
+        "relation": "contrast",
+        "answer": "However,",
+        "rest": "every deploy still went through a manual review.",
+        "options": [
+          { "text": "However,", "relation": "contrast", "pattern": "clause", "trap": null },
+          { "text": "Therefore,", "relation": "consequence", "pattern": "clause", "trap": "relación" },
+          { "text": "Such as", "relation": "example", "pattern": "noun", "trap": "patrón" },
+          { "text": "Moreover,", "relation": "addition", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "La revisión manual contrasta con la falta de pruebas: hay un control, pero no el que debería."
+      },
+      {
+        "relation": "consequence",
+        "answer": "As a result,",
+        "rest": "the team scheduled a sprint to cover the critical paths.",
+        "options": [
+          { "text": "As a result,", "relation": "consequence", "pattern": "clause", "trap": null },
+          { "text": "For instance,", "relation": "example", "pattern": "clause", "trap": "relación" },
+          { "text": "Although", "relation": "concession", "pattern": "clause", "trap": "patrón" },
+          { "text": "In addition,", "relation": "addition", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "Programar el sprint es el efecto de descubrir la deuda de pruebas."
+      },
+      {
+        "relation": "addition",
+        "answer": "Furthermore,",
+        "rest": "they added a coverage check to the pipeline.",
+        "options": [
+          { "text": "Furthermore,", "relation": "addition", "pattern": "clause", "trap": null },
+          { "text": "Nevertheless,", "relation": "contrast", "pattern": "clause", "trap": "relación" },
+          { "text": "Due to", "relation": "cause", "pattern": "noun", "trap": "patrón" },
+          { "text": "Consequently,", "relation": "consequence", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "Suma otra medida del mismo plan de mejora."
+      }
+    ]
+  },
+  {
+    "id": "gear-dev-5",
+    "topic": "dev",
+    "level": "B1",
+    "register": "formal",
+    "opening": "The release candidate passed every test in staging.",
+    "seams": [
+      {
+        "relation": "concession",
+        "answer": "Even though",
+        "rest": "the metrics looked healthy, we monitored the logs for a full day.",
+        "options": [
+          { "text": "Even though", "relation": "concession", "pattern": "clause", "trap": null },
+          { "text": "Despite", "relation": "concession", "pattern": "noun", "trap": "patrón" },
+          { "text": "Therefore,", "relation": "consequence", "pattern": "clause", "trap": "relación" },
+          { "text": "For example,", "relation": "example", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "«Even though» admite una cláusula; con «despite» sería «despite the healthy metrics»."
+      },
+      {
+        "relation": "cause",
+        "answer": "Because",
+        "rest": "the traffic doubled overnight, we scaled the cluster twice.",
+        "options": [
+          { "text": "Because", "relation": "cause", "pattern": "clause", "trap": null },
+          { "text": "Despite", "relation": "concession", "pattern": "noun", "trap": "patrón" },
+          { "text": "Moreover,", "relation": "addition", "pattern": "clause", "trap": "relación" },
+          { "text": "As a result,", "relation": "consequence", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "El tráfico duplicado es la causa del escalado, no su consecuencia."
+      },
+      {
+        "relation": "sequence",
+        "answer": "Afterwards,",
+        "rest": "we wrote a postmortem and shared it with the whole team.",
+        "options": [
+          { "text": "Afterwards,", "relation": "sequence", "pattern": "clause", "trap": null },
+          { "text": "However,", "relation": "contrast", "pattern": "clause", "trap": "relación" },
+          { "text": "Unless", "relation": "condition", "pattern": "clause", "trap": "patrón" },
+          { "text": "In contrast,", "relation": "contrast", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "Marca el paso siguiente en el tiempo, no una objeción."
+      }
+    ]
+  },
+  {
+    "id": "gear-travel-4",
+    "topic": "travel",
+    "level": "B1",
+    "register": "neutral",
+    "opening": "We arrived at the airport three hours early.",
+    "seams": [
+      {
+        "relation": "consequence",
+        "answer": "As a result,",
+        "rest": "we had time for a proper meal before boarding.",
+        "options": [
+          { "text": "As a result,", "relation": "consequence", "pattern": "clause", "trap": null },
+          { "text": "For example,", "relation": "example", "pattern": "clause", "trap": "relación" },
+          { "text": "Because", "relation": "cause", "pattern": "clause", "trap": "patrón" },
+          { "text": "On the other hand,", "relation": "contrast", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "Llegar temprano tiene como consecuencia el tiempo libre."
+      },
+      {
+        "relation": "contrast",
+        "answer": "On the other hand,",
+        "rest": "the gate changed twice before boarding started.",
+        "options": [
+          { "text": "On the other hand,", "relation": "contrast", "pattern": "clause", "trap": null },
+          { "text": "Therefore,", "relation": "consequence", "pattern": "clause", "trap": "relación" },
+          { "text": "Such as", "relation": "example", "pattern": "noun", "trap": "patrón" },
+          { "text": "Moreover,", "relation": "addition", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "Contrasta lo bueno de llegar temprano con el problema de la puerta."
+      },
+      {
+        "relation": "condition",
+        "answer": "Otherwise,",
+        "rest": "we would have missed the announcement.",
+        "options": [
+          { "text": "Otherwise,", "relation": "condition", "pattern": "clause", "trap": null },
+          { "text": "Furthermore,", "relation": "addition", "pattern": "clause", "trap": "relación" },
+          { "text": "Despite", "relation": "concession", "pattern": "noun", "trap": "patrón" },
+          { "text": "Consequently,", "relation": "consequence", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "«Otherwise» plantea qué habría pasado sin llegar con margen."
+      }
+    ]
+  },
+  {
+    "id": "gear-travel-5",
+    "topic": "travel",
+    "level": "B2",
+    "register": "neutral",
+    "opening": "The hotel upgraded us to a suite on arrival.",
+    "seams": [
+      {
+        "relation": "concession",
+        "answer": "Although",
+        "rest": "the room was spacious, the air conditioning never worked.",
+        "options": [
+          { "text": "Although", "relation": "concession", "pattern": "clause", "trap": null },
+          { "text": "Despite", "relation": "concession", "pattern": "noun", "trap": "patrón" },
+          { "text": "Therefore,", "relation": "consequence", "pattern": "clause", "trap": "relación" },
+          { "text": "In addition,", "relation": "addition", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "«Although» + cláusula; «despite» necesitaría «the spacious room»."
+      },
+      {
+        "relation": "example",
+        "answer": "For example,",
+        "rest": "the shower ran cold water for two mornings.",
+        "options": [
+          { "text": "For example,", "relation": "example", "pattern": "clause", "trap": null },
+          { "text": "Nevertheless,", "relation": "contrast", "pattern": "clause", "trap": "relación" },
+          { "text": "Because", "relation": "cause", "pattern": "clause", "trap": "patrón" },
+          { "text": "Similarly,", "relation": "addition", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "Concreta con un caso más lo mal que funcionaba la instalación."
+      },
+      {
+        "relation": "consequence",
+        "answer": "Therefore,",
+        "rest": "we asked for a partial refund at checkout.",
+        "options": [
+          { "text": "Therefore,", "relation": "consequence", "pattern": "clause", "trap": null },
+          { "text": "For instance,", "relation": "example", "pattern": "clause", "trap": "relación" },
+          { "text": "Even though", "relation": "concession", "pattern": "clause", "trap": "patrón" },
+          { "text": "In contrast,", "relation": "contrast", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "Pedir el reembolso es la consecuencia de los fallos."
+      }
+    ]
+  },
+  {
+    "id": "gear-work-4",
+    "topic": "work",
+    "level": "B2",
+    "register": "formal",
+    "opening": "The quarterly review showed a clear improvement in delivery time.",
+    "seams": [
+      {
+        "relation": "cause",
+        "answer": "Since",
+        "rest": "the team had automated the release process, handoffs disappeared.",
+        "options": [
+          { "text": "Since", "relation": "cause", "pattern": "clause", "trap": null },
+          { "text": "Despite", "relation": "concession", "pattern": "noun", "trap": "patrón" },
+          { "text": "Therefore,", "relation": "consequence", "pattern": "clause", "trap": "relación" },
+          { "text": "For example,", "relation": "example", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "«Since» introduce la causa igual que «because»."
+      },
+      {
+        "relation": "addition",
+        "answer": "In addition,",
+        "rest": "the number of reopened tickets dropped by half.",
+        "options": [
+          { "text": "In addition,", "relation": "addition", "pattern": "clause", "trap": null },
+          { "text": "However,", "relation": "contrast", "pattern": "clause", "trap": "relación" },
+          { "text": "Such as", "relation": "example", "pattern": "noun", "trap": "patrón" },
+          { "text": "As a result,", "relation": "consequence", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "Suma un segundo indicador positivo al primero."
+      },
+      {
+        "relation": "consequence",
+        "answer": "Consequently,",
+        "rest": "the director approved two more engineers for the next quarter.",
+        "options": [
+          { "text": "Consequently,", "relation": "consequence", "pattern": "clause", "trap": null },
+          { "text": "For instance,", "relation": "example", "pattern": "clause", "trap": "relación" },
+          { "text": "Unless", "relation": "condition", "pattern": "clause", "trap": "patrón" },
+          { "text": "In contrast,", "relation": "contrast", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "La aprobación de más personal es el efecto de los resultados."
+      }
+    ]
+  },
+  {
+    "id": "gear-work-5",
+    "topic": "work",
+    "level": "B1",
+    "register": "formal",
+    "opening": "The new hire had never worked with a sprint board.",
+    "seams": [
+      {
+        "relation": "consequence",
+        "answer": "As a result,",
+        "rest": "her first week was mostly shadowing and reading.",
+        "options": [
+          { "text": "As a result,", "relation": "consequence", "pattern": "clause", "trap": null },
+          { "text": "For example,", "relation": "example", "pattern": "clause", "trap": "relación" },
+          { "text": "Although", "relation": "concession", "pattern": "clause", "trap": "patrón" },
+          { "text": "Moreover,", "relation": "addition", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "La semana de observación es la consecuencia de su falta de experiencia."
+      },
+      {
+        "relation": "concession",
+        "answer": "Even though",
+        "rest": "she had no experience with the board, she finished her first ticket on time.",
+        "options": [
+          { "text": "Even though", "relation": "concession", "pattern": "clause", "trap": null },
+          { "text": "Because of", "relation": "cause", "pattern": "noun", "trap": "patrón" },
+          { "text": "Therefore,", "relation": "consequence", "pattern": "clause", "trap": "relación" },
+          { "text": "In addition,", "relation": "addition", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "«Even though» + cláusula; «because of» exige un sustantivo detrás."
+      },
+      {
+        "relation": "addition",
+        "answer": "Furthermore,",
+        "rest": "she documented the process for the next newcomer.",
+        "options": [
+          { "text": "Furthermore,", "relation": "addition", "pattern": "clause", "trap": null },
+          { "text": "Nevertheless,", "relation": "contrast", "pattern": "clause", "trap": "relación" },
+          { "text": "Unless", "relation": "condition", "pattern": "clause", "trap": "patrón" },
+          { "text": "Consequently,", "relation": "consequence", "pattern": "clause", "trap": "relación" }
+        ],
+        "explanation": "Añade otra aportación de la nueva compañera al equipo."
+      }
+    ]
+  }
+]

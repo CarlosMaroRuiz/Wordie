@@ -11,4 +11,8 @@ export const PATHS: Record<KeyRoutes, string> = {
   Games: '/games',
   GamesMemory: '/games/memory',
   GamesSentenceBuilder: '/games/sentence-builder',
+  GamesTenseDetective: '/games/tense',
+  GamesIntruderWord: '/games/extra-word',
+  GamesConnectors: '/games/connectors',
+  GamesFastShifter: '/games/fast-shifter',
 }

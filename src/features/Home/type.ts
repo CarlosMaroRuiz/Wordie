@@ -6,13 +6,14 @@ export type HomeModuleId = 'grammar' | 'vocabulary' | 'stories' | 'phrases'
 
 export interface HomeModule {
   id: HomeModuleId
-  index: string
   to: string
   title: string
   description: string
-  icon: ComponentType<{ size?: number | string; weight?: 'bold' | 'regular' }>
+  icon: ComponentType<{ size?: number | string; weight?: 'bold' | 'regular' | 'duotone' | 'fill' }>
   accent: string
   bar: string
+  badge: string
+  format: string
   featured?: boolean
 }
 
@@ -31,15 +32,6 @@ export interface HomePhrase {
   contextTag: string
 }
 
-export interface HomeStory {
-  id: string
-  title: string
-  readTime: string
-  level: string
-  topic?: TopicValue
-  excerpt: string
-}
-
 /** Forma cruda de una historia en `/public/data/stories.json`. */
 export interface HomeStoryRaw {
   id: string
@@ -55,7 +47,6 @@ export interface HomeStats {
   vocab: VocabProgressStats
   reviewWords: VocabReviewItem[]
   phrase: HomePhrase | null
-  story: HomeStory | null
   topic: TopicValue
   topicLabel: string
   isLoading: { vocab: boolean; counts: boolean }

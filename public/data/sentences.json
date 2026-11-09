@@ -208,5 +208,155 @@
     "distractors": ["update", "being"],
     "hint": "\"Could have been avoided\" es un modal perfecto en voz pasiva.",
     "explanation": "Pasiva + modal perfecto: \"could have been + past participle\" expresa posibilidad no realizada."
+  },
+{
+    "id": "dev-8",
+    "topic": "dev",
+    "difficulty": "easy",
+    "es": "El nuevo endpoint devuelve una lista de usuarios.",
+    "enWords": ["The", "new", "endpoint", "returns", "a", "list", "of", "users."],
+    "distractors": ["return", "returning"],
+    "hint": "Tercera persona del singular: el verbo añade -s.",
+    "explanation": "\"The endpoint\" equivale a he/she/it, así que \"return\" pasa a \"returns\"."
+  },
+  {
+    "id": "dev-9",
+    "topic": "dev",
+    "difficulty": "easy",
+    "es": "Abrí un pull request ayer por la mañana.",
+    "enWords": ["I", "opened", "a", "pull", "request", "yesterday", "morning."],
+    "distractors": ["open", "opening"],
+    "hint": "Acción terminada en un momento concreto del pasado: pasado simple.",
+    "explanation": "\"Yesterday morning\" ya cerró, por eso \"opened\" y no \"have opened\"."
+  },
+  {
+    "id": "dev-10",
+    "topic": "dev",
+    "difficulty": "medium",
+    "es": "El build falló porque una de las pruebas era inestable.",
+    "enWords": ["The", "build", "failed", "because", "one", "of", "the", "tests", "was", "flaky."],
+    "distractors": ["fail", "were"],
+    "hint": "\"One of the tests\" es singular, aunque \"tests\" sea plural.",
+    "explanation": "El sujeto es \"one\", no \"tests\": por eso \"was\" y no \"were\"."
+  },
+  {
+    "id": "dev-11",
+    "topic": "dev",
+    "difficulty": "hard",
+    "es": "Si hubiéramos probado la migración, la caída no habría ocurrido.",
+    "enWords": ["Had", "we", "tested", "the", "migration,", "the", "outage", "would", "not", "have", "happened."],
+    "distractors": ["if", "happen"],
+    "hint": "Condicional invertido: \"Had we tested\" equivale a \"If we had tested\".",
+    "explanation": "En la tercera condicional se puede omitir \"if\" invirtiendo el auxiliar."
+  },
+  {
+    "id": "dev-12",
+    "topic": "dev",
+    "difficulty": "hard",
+    "es": "La bandera de funcionalidad debería haberse eliminado antes del lanzamiento.",
+    "enWords": ["The", "feature", "flag", "should", "have", "been", "removed", "before", "the", "release."],
+    "distractors": ["remove", "will"],
+    "hint": "Modal perfecto en pasiva: should + have + been + participio.",
+    "explanation": "\"Should have been removed\" expresa una obligación pasada que no se cumplió."
+  },
+  {
+    "id": "travel-8",
+    "topic": "travel",
+    "difficulty": "easy",
+    "es": "¿Cuánto cuesta el boleto?",
+    "enWords": ["How", "much", "does", "the", "ticket", "cost?"],
+    "distractors": ["do", "costs"],
+    "hint": "Con \"does\" el verbo principal vuelve al infinitivo.",
+    "explanation": "\"Does\" ya lleva la marca de tercera persona, así que \"cost\" va sin -s."
+  },
+  {
+    "id": "travel-9",
+    "topic": "travel",
+    "difficulty": "easy",
+    "es": "Necesito un taxi al centro de la ciudad.",
+    "enWords": ["I", "need", "a", "taxi", "to", "the", "city", "center."],
+    "distractors": ["for", "will"],
+    "hint": "Para destinos se usa \"to\", no \"for\".",
+    "explanation": "\"To the city center\" indica destino; \"for\" indicaría propósito."
+  },
+  {
+    "id": "travel-10",
+    "topic": "travel",
+    "difficulty": "medium",
+    "es": "La recepcionista me dijo que mi habitación aún no estaba lista.",
+    "enWords": ["The", "receptionist", "told", "me", "that", "my", "room", "was", "not", "ready", "yet."],
+    "distractors": ["says", "were"],
+    "hint": "Estilo indirecto: el verbo retrocede un tiempo.",
+    "explanation": "Al reportar lo que alguien dijo, \"is\" se convierte en \"was\"."
+  },
+  {
+    "id": "travel-11",
+    "topic": "travel",
+    "difficulty": "hard",
+    "es": "A menos que salgamos ahora, perderemos el vuelo de conexión.",
+    "enWords": ["Unless", "we", "leave", "now,", "we", "will", "miss", "the", "connecting", "flight."],
+    "distractors": ["if", "not"],
+    "hint": "\"Unless\" ya incluye la negación.",
+    "explanation": "\"Unless we leave now\" equivale a \"If we do not leave now\"."
+  },
+  {
+    "id": "travel-12",
+    "topic": "travel",
+    "difficulty": "hard",
+    "es": "La aerolínea se ofreció a alojarnos en un hotel durante la noche.",
+    "enWords": ["The", "airline", "offered", "to", "put", "us", "up", "in", "a", "hotel", "overnight."],
+    "distractors": ["offer", "down"],
+    "hint": "\"Put somebody up\" significa alojar a alguien.",
+    "explanation": "Es un phrasal separable: con pronombre va en medio, \"put us up\"."
+  },
+  {
+    "id": "work-8",
+    "topic": "work",
+    "difficulty": "easy",
+    "es": "Te enviaré la factura mañana.",
+    "enWords": ["I", "will", "send", "you", "the", "invoice", "tomorrow."],
+    "distractors": ["sent", "to"],
+    "hint": "Tras \"will\" el verbo va en infinitivo.",
+    "explanation": "El futuro con \"will\" no conjuga el verbo: \"send\", no \"sent\"."
+  },
+  {
+    "id": "work-9",
+    "topic": "work",
+    "difficulty": "easy",
+    "es": "Ella dirige la reunión semanal del equipo.",
+    "enWords": ["She", "leads", "the", "weekly", "team", "meeting."],
+    "distractors": ["lead", "leading"],
+    "hint": "Con she/he/it el verbo añade -s.",
+    "explanation": "\"She\" exige la forma \"leads\" en presente simple."
+  },
+  {
+    "id": "work-10",
+    "topic": "work",
+    "difficulty": "medium",
+    "es": "Nos estamos quedando sin tiempo para terminar la propuesta.",
+    "enWords": ["We", "are", "running", "out", "of", "time", "to", "finish", "the", "proposal."],
+    "distractors": ["run", "on"],
+    "hint": "\"Run out of\" significa quedarse sin algo.",
+    "explanation": "El phrasal verb va en presente continuo: \"are running out of\"."
+  },
+  {
+    "id": "work-11",
+    "topic": "work",
+    "difficulty": "hard",
+    "es": "El contrato debe firmarse antes de que empiece el proyecto.",
+    "enWords": ["The", "contract", "must", "be", "signed", "before", "the", "project", "starts."],
+    "distractors": ["sign", "will"],
+    "hint": "Pasiva con modal: must + be + participio.",
+    "explanation": "\"Must be signed\" impone la obligación sobre el contrato, no sobre quien firma."
+  },
+  {
+    "id": "work-12",
+    "topic": "work",
+    "difficulty": "hard",
+    "es": "No solo terminó el informe, sino que además lo presentó.",
+    "enWords": ["Not", "only", "did", "she", "finish", "the", "report,", "but", "she", "also", "presented", "it."],
+    "distractors": ["does", "present"],
+    "hint": "Con \"Not only\" al inicio se invierte el auxiliar.",
+    "explanation": "La inversión \"Not only did she finish\" es obligatoria en registro formal."
   }
 ]

@@ -3,16 +3,16 @@ import { motion } from 'motion/react';
 import { useGrammarQuiz } from './useGrammarQuiz';
 import type { GrammarQuizProps } from './type';
 
-export const GrammarQuiz = ({ quizzes }: GrammarQuizProps) => {
+export function GrammarQuiz({ quizzes }: GrammarQuizProps) {
   const { handleSelect, getOptionStyle, getOptionState } = useGrammarQuiz({ quizzes });
 
   return (
     <div className="border-t border-border-subtle pt-5 mt-5 flex flex-col gap-6">
       {quizzes.map((quiz, quizIndex) => (
         <div key={quizIndex} className="flex flex-col gap-3">
-          <span className="text-xs font-bold text-text-secondary uppercase tracking-widest">
-            {quizzes.length > 1 ? `PREGUNTA ${quizIndex + 1}` : 'MINI CHEQUEO DE COMPRENSIÓN'}
-          </span>
+          <h3 className="text-xs font-bold text-text-secondary">
+            {quizzes.length > 1 ? `Pregunta ${quizIndex + 1}` : 'Mini chequeo de comprensión'}
+          </h3>
 
           <p className="font-bold text-text-main text-base">{quiz.question}</p>
 

@@ -9,8 +9,8 @@ import {
   pickReviewItems,
   readVocabProgress,
 } from '@features/Vocabulary/store/progress'
-import { DAY_SEED, IDLE_TIMEOUT_MS, REVIEW_LIMIT, STORY_EXCERPT_LENGTH } from '../constant'
-import type { HomeCounts, HomePhrase, HomeStats, HomeStory, HomeStoryRaw } from '../type'
+import { DAY_SEED, IDLE_TIMEOUT_MS, REVIEW_LIMIT } from '../constant'
+import type { HomeCounts, HomePhrase, HomeStats, HomeStoryRaw } from '../type'
 
 /** Activa el trabajo secundario después del primer pintado. */
 function useDeferredWork(): boolean {
@@ -45,38 +45,6 @@ function filterByTopic<T extends { topic?: TopicValue }>(
 ): T[] {
   const matches = items.filter(item => (item.topic ?? 'dev') === topic)
   return matches.length > 0 ? matches : items
-}
-
-function excerptOf(paragraphs: string[]): string {
-  const source = paragraphs.find(paragraph => paragraph.trim().length > 0) ?? ''
-  const clean = source.replace(/\s+/g, ' ').trim()
-  if (clean.length <= STORY_EXCERPT_LENGTH) return clean
-
-  const cut = clean.slice(0, STORY_EXCERPT_LENGTH)
-  const lastSpace = cut.lastIndexOf(' ')
-  return `${(lastSpace > 80 ? cut.slice(0, lastSpace) : cut).trimEnd()}…`
-}
-
-function pickStoryOfDay(stories: HomeStoryRaw[]): HomeStory | null {
-  if (stories.length === 0) return null
-
-  const readable = stories.filter(story => {
-    const firstParagraph = story.paragraphs?.[0] ?? ''
-    return !hasBrokenText(story.title) && !hasBrokenText(firstParagraph)
-  })
-
-  const pool = readable.length > 0 ? readable : stories
-  const story = pool[DAY_SEED % pool.length]
-  if (!story) return null
-
-  return {
-    id: story.id,
-    title: story.title,
-    readTime: story.readTime,
-    level: story.level,
-    topic: story.topic,
-    excerpt: excerptOf(story.paragraphs ?? []),
-  }
 }
 
 function pickPhraseOfDay(phrases: HomePhrase[]): HomePhrase | null {
@@ -125,7 +93,6 @@ export function useHomeStats(): HomeStats {
     [topicVocabulary, progress],
   )
   const phrase = useMemo(() => pickPhraseOfDay(topicPhrases), [topicPhrases])
-  const story = useMemo(() => pickStoryOfDay(topicStories), [topicStories])
 
   const counts = useMemo<HomeCounts | null>(() => {
     if (!grammar.data || !stories.data || !phrases.data) return null
@@ -142,7 +109,6 @@ export function useHomeStats(): HomeStats {
     vocab,
     reviewWords,
     phrase,
-    story,
     topic,
     topicLabel,
     isLoading: {

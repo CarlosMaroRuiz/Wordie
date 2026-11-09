@@ -33,9 +33,9 @@ export function Banner({
       </div>
 
       <div className="mt-6">
-        <span className="mb-3 block text-xs font-bold uppercase tracking-widest text-text-secondary">
+        <h3 className="mb-3 text-sm font-bold text-text-secondary">
           Estructura Gramatical
-        </span>
+        </h3>
 
         {items.length > 0 ? <FormulaSlider formulas={items} /> : null}
       </div>

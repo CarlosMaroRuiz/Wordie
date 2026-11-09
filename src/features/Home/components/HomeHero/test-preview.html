@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Preview Pingo el Pingüino</title>
+  <style>
+    body {
+      background: #F8FAFC;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: system-ui, sans-serif;
+      margin: 0;
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 24px;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    svg {
+      width: 220px;
+      height: 220px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>«Pingo» — El Pingüino Cosmopolita</h2>
+    <!-- SVG de Pingo -->
+    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- Halo de fondo suave en color de marca -->
+        <radialGradient id="pingo-halo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(100 110) rotate(90) scale(85)">
+          <stop stop-color="#EEF2FF" stop-opacity="0.95" />
+          <stop offset="1" stop-color="#EEF2FF" stop-opacity="0" />
+        </radialGradient>
+
+        <!-- Sombra suave para volumen -->
+        <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="4" stdDeviation="3.5" flood-color="#1E1B4B" flood-opacity="0.12" />
+        </filter>
+
+        <!-- Degradado para el pico -->
+        <linearGradient id="beak-grad" x1="100" y1="86" x2="100" y2="104" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#FBBF24" />
+          <stop offset="1" stop-color="#F97316" />
+        </linearGradient>
+
+        <!-- Degradado para las patas palmeadas -->
+        <linearGradient id="feet-grad" x1="100" y1="162" x2="100" y2="178" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#FB923C" />
+          <stop offset="1" stop-color="#EA580C" />
+        </linearGradient>
+
+        <!-- Degradado de la maleta -->
+        <linearGradient id="luggage-grad" x1="38" y1="134" x2="38" y2="168" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#F59E0B" />
+          <stop offset="1" stop-color="#D97706" />
+        </linearGradient>
+      </defs>
+
+      <!-- 1. Halo de fondo -->
+      <circle cx="100" cy="110" r="82" fill="url(#pingo-halo)" />
+
+      <!-- Sombra en el suelo -->
+      <ellipse cx="102" cy="176" rx="58" ry="7" fill="#1E1B4B" opacity="0.1" />
+
+      <!-- 2. Maleta de viaje vintage al costado izquierdo -->
+      <g filter="url(#soft-shadow)">
+        <!-- Asa metálica -->
+        <path d="M34 135 C34 128 44 128 44 135" stroke="#78350F" stroke-width="2.5" stroke-linecap="round" fill="none" />
+        <!-- Cuerpo de maleta -->
+        <rect x="22" y="135" width="28" height="34" rx="5" fill="url(#luggage-grad)" />
+        <!-- Correas en Slate Blue -->
+        <line x1="28" y1="135" x2="28" y2="169" stroke="#5759EA" stroke-width="2" />
+        <line x1="44" y1="135" x2="44" y2="169" stroke="#5759EA" stroke-width="2" />
+        <!-- Esquineros dorados reforzados -->
+        <path d="M22 140 L26 135 H22 V140 Z" fill="#FDE68A" />
+        <path d="M50 140 L46 135 H50 V140 Z" fill="#FDE68A" />
+        <path d="M22 164 L26 169 H22 V164 Z" fill="#FDE68A" />
+        <path d="M50 164 L46 169 H50 V164 Z" fill="#FDE68A" />
+        <!-- Mini sello de viaje / etiqueta -->
+        <circle cx="36" cy="152" r="4.5" fill="#FFFFFF" opacity="0.9" />
+        <path d="M33.5 152 L38.5 152" stroke="#5759EA" stroke-width="1.2" stroke-linecap="round" />
+      </g>
+
+      <!-- 3. Patas palmeadas de pingüino (grandes, planas y auténticas) -->
+      <g fill="url(#feet-grad)" filter="url(#soft-shadow)">
+        <!-- Pata izquierda -->
+        <path d="M64 163 C52 163 46 171 48 175 C50 178 58 178 64 178 C70 179 78 178 82 174 C85 170 80 163 72 163 Z" />
+        <!-- Pata derecha -->
+        <path d="M128 163 C120 163 115 170 118 174 C122 178 130 179 136 178 C142 178 150 178 152 175 C154 171 148 163 136 163 Z" />
+      </g>
+
+      <!-- 4. Aleta izquierda (descansando sobre la maleta / cadera) -->
+      <path
+        d="M56 100 C42 108 36 126 44 140 C48 143 55 138 58 126 C61 116 60 105 56 100 Z"
+        fill="#1E1F35"
+        filter="url(#soft-shadow)"
+      />
+
+      <!-- 5. Cuerpo Principal de Pingüino (Silueta aperada perfecta) -->
+      <path
+        d="M100 44 C72 44 54 64 54 96 C54 114 46 132 46 150 C46 167 70 171 100 171 C130 171 154 167 154 150 C154 132 146 114 146 96 C146 64 128 44 100 44 Z"
+        fill="#1E1F35"
+        filter="url(#soft-shadow)"
+      />
+
+      <!-- Brillo sutil de la cabeza -->
+      <path d="M82 48 C90 46 110 46 118 48" stroke="#373859" stroke-width="3" stroke-linecap="round" />
+
+      <!-- 6. Aleta derecha (saludando enérgica hacia arriba) -->
+      <g filter="url(#soft-shadow)">
+        <!-- Parte exterior oscura de la aleta -->
+        <path
+          d="M144 98 C158 88 174 82 176 94 C177 106 162 120 148 122 C142 123 140 110 144 98 Z"
+          fill="#1E1F35"
+        />
+        <!-- Borde interior claro característico de aleta de pingüino -->
+        <path
+          d="M149 100 C159 92 170 87 172 95 C173 104 162 114 152 116 Z"
+          fill="#EEF2FF"
+          opacity="0.85"
+        />
+      </g>
+
+      <!-- 7. Pechera y Vientre blanco puro (El "Tuxedo" inconfundible de Pingüino) -->
+      <!-- Empieza como máscara facial suave y se abre en una gran barriga blanca -->
+      <path
+        d="M100 68 C82 68 70 78 70 95 C70 108 76 114 70 125 C64 136 66 162 100 162 C134 162 136 136 130 125 C124 114 130 108 130 95 C130 78 118 68 100 68 Z"
+        fill="#FFFFFF"
+      />
+      <!-- Sombra interior en la base del vientre para volumen 3D -->
+      <path
+        d="M78 152 C84 159 92 162 100 162 C108 162 116 159 122 152 C114 157 107 159 100 159 C93 159 86 157 78 152 Z"
+        fill="#E2E8F0"
+      />
+
+      <!-- 8. Pajarita / Bowtie elegante en Slate Blue (El Pingüino de Frac) -->
+      <g filter="url(#soft-shadow)">
+        <!-- Nudo central -->
+        <rect x="97" y="105" width="6" height="6" rx="2" fill="#4345C7" />
+        <!-- Ala izquierda -->
+        <polygon points="97,108 86,103 86,113" fill="#5759EA" />
+        <!-- Ala derecha -->
+        <polygon points="103,108 114,103 114,113" fill="#5759EA" />
+      </g>
+
+      <!-- 9. Rostro Adorable de Pingüino -->
+      <!-- Ojos grandes cartoon con brillo expressivo -->
+      <g>
+        <!-- Ojo izquierdo -->
+        <ellipse cx="86" cy="85" rx="7" ry="8" fill="#181829" />
+        <circle cx="84" cy="82.5" r="3" fill="#FFFFFF" />
+        <circle cx="88" cy="87.5" r="1.3" fill="#FFFFFF" />
+
+        <!-- Ojo derecho -->
+        <ellipse cx="114" cy="85" rx="7" ry="8" fill="#181829" />
+        <circle cx="112" cy="82.5" r="3" fill="#FFFFFF" />
+        <circle cx="116" cy="87.5" r="1.3" fill="#FFFFFF" />
+      </g>
+
+      <!-- Mejillas sonrosadas y amigables -->
+      <ellipse cx="76" cy="94" rx="5.5" ry="3.5" fill="#FDA4AF" opacity="0.75" />
+      <ellipse cx="124" cy="94" rx="5.5" ry="3.5" fill="#FDA4AF" opacity="0.75" />
+
+      <!-- 10. Pico Prominente de Pingüino (Curvado, 3D, cálido y sonriente) -->
+      <g filter="url(#soft-shadow)">
+        <!-- Cuerpo del pico superior -->
+        <path
+          d="M87 89 C87 89 100 86 113 89 C116 96 110 104 100 105 C90 104 84 96 87 89 Z"
+          fill="url(#beak-grad)"
+        />
+        <!-- Reflejo superior en el pico -->
+        <path d="M92 88.5 C96 87.5 104 87.5 108 88.5" stroke="#FEF08A" stroke-width="1.2" stroke-linecap="round" />
+        <!-- Sonrisa / boca inferior sutil -->
+        <path d="M93 94 C97 96 103 96 107 94" stroke="#B45309" stroke-width="1.3" stroke-linecap="round" />
+        <path d="M95 99 C97 102 103 102 105 99" fill="#EA580C" opacity="0.7" />
+      </g>
+
+      <!-- 11. Auriculares Modernos Slate Blue (Tech / Listening / Audio) -->
+      <g>
+        <!-- Diadema acolchada -->
+        <path
+          d="M68 64 C68 36 132 36 132 64"
+          stroke="#5759EA"
+          stroke-width="5"
+          stroke-linecap="round"
+          fill="none"
+        />
+        <!-- Almohadilla izquierda -->
+        <rect x="62" y="56" width="9" height="19" rx="4.5" fill="#5759EA" />
+        <rect x="64.5" y="59" width="4" height="13" rx="2" fill="#818CF8" />
+
+        <!-- Almohadilla derecha -->
+        <rect x="129" y="56" width="9" height="19" rx="4.5" fill="#5759EA" />
+        <rect x="131.5" y="59" width="4" height="13" rx="2" fill="#818CF8" />
+      </g>
+
+      <!-- 12. Destellos mágicos de aprendizaje -->
+      <path d="M162 48 L164 53 L169 55 L164 57 L162 62 L160 57 L155 55 L160 53 Z" fill="#F59E0B" />
+      <circle cx="168" cy="116" r="2" fill="#10B981" />
+      <circle cx="36" cy="80" r="2.5" fill="#5759EA" opacity="0.7" />
+    </svg>
+  </div>
+</body>
+</html>

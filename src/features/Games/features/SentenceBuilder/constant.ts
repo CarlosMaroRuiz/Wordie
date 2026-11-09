@@ -2,37 +2,24 @@ import type { Variants } from 'motion/react'
 
 export const ROUNDS_PER_GAME = 5
 
-/** Base compartida por las fichas: 44px de alto para cumplir el objetivo táctil. */
+/** Base compartida por las fichas estilo Duolingo: ergonomía táctil y feedback active. */
 export const CHIP_BASE =
-  'inline-flex min-h-11 cursor-pointer touch-manipulation select-none items-center rounded-xl border px-3.5 py-2 text-[15px] font-bold shadow-xs transition-all'
+  'inline-flex min-h-11 cursor-pointer touch-manipulation select-none items-center justify-center rounded-2xl border-2 px-3.5 py-2 text-sm sm:text-base font-black shadow-soft transition-all active:scale-95'
 
 export const CHIP_PLACED_IDLE =
-  'border-primary/40 bg-primary/10 text-primary hover:border-primary hover:bg-primary/20'
+  'border-primary bg-primary-light text-primary shadow-brand hover:bg-primary/20'
 
 export const CHIP_PLACED_CORRECT =
-  'border-success/40 bg-success-light text-success'
+  'border-success bg-success-light text-success shadow-soft'
 
 export const CHIP_PLACED_WRONG =
-  'border-error/40 bg-error-light text-error hover:border-error'
+  'border-error bg-error-light text-error shadow-soft hover:border-error'
 
 export const CHIP_BANK =
-  'border-border-subtle bg-surface text-text-main hover:border-primary/50 hover:bg-bg-page hover:text-primary active:scale-95'
-
-/** Cockpit de juego: franja + banco + acciones ancladas sobre el BottomNav. */
-export const COCKPIT =
-  'sticky bottom-[calc(4.5rem+env(safe-area-inset-bottom,0px))] z-20 -mx-4 mt-1 flex max-h-[calc(100dvh-4.5rem-env(safe-area-inset-bottom,0px))] flex-col gap-2 border-t border-border-subtle bg-bg-page/95 px-4 py-2.5 backdrop-blur-md sm:-mx-6 sm:px-6 lg:static lg:mx-0 lg:mt-0 lg:max-h-none lg:gap-5 lg:border-0 lg:bg-transparent lg:p-0 lg:backdrop-blur-none'
+  'border-border-subtle bg-surface text-text-main shadow-soft hover:border-primary/50 hover:bg-primary-light/40 hover:text-primary active:scale-95'
 
 export const CONTROLS_ROW =
   'flex items-center gap-2 lg:justify-between'
-
-export const CONTAINER_VARIANTS: Variants = {
-  hidden: { opacity: 0, y: 16 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { type: 'spring', stiffness: 280, damping: 24 },
-  },
-}
 
 export const CHIP_VARIANTS: Variants = {
   hidden: { opacity: 0, scale: 0.8 },

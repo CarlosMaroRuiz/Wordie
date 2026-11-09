@@ -50,7 +50,7 @@ export function FormulaSlider({ formulas }: FormulaSliderProps) {
                 key={f.label}
                 type="button"
                 onClick={() => goTo(i)}
-                className={`cursor-pointer rounded-lg px-3 py-1.5 text-xs font-bold uppercase tracking-wider transition-all duration-200 ${
+                className={`cursor-pointer rounded-lg px-3 py-1.5 text-xs font-bold capitalize transition-colors duration-200 ${
                   isActive
                     ? 'bg-primary text-on-primary shadow-xs'
                     : 'bg-primary/10 text-primary hover:bg-primary/20'
@@ -109,8 +109,8 @@ export function FormulaSlider({ formulas }: FormulaSliderProps) {
             className="cursor-grab active:cursor-grabbing flex flex-col justify-center"
           >
             <div className="flex items-center justify-between gap-2 border-b border-primary/15 pb-2.5">
-              <span className="font-mono text-xs font-bold uppercase tracking-widest text-primary/80">
-                Estructura {current.label}
+              <span className="text-xs font-bold text-primary">
+                Estructura: {current.label}
               </span>
               <span className="text-[11px] font-medium text-text-secondary select-none hidden sm:inline">
                 Desliza hacia los lados ↔
